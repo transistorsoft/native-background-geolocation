@@ -8,7 +8,7 @@ let package = Package(
         .binaryTarget(
             name: "TSLocationManager",
             url: "https://github.com/transistorsoft/native-background-geolocation/releases/download/4.0.0-beta.1/TSLocationManager.xcframework.zip",
-            checksum: "1f4c43c759d7d25157dadde05d62374d0d1dc9cc73f6c86d54dfaa0a741cba26"
+            checksum: "85957849bc9bf50b4f719c620a36bf3e6f50fb9ff0180d13031321f47ee26e46"
         )
     ]
 )
