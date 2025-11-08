@@ -3,6 +3,9 @@
 *.apk
 *.ap_
 
+# Ignore .build
+.build/
+
 # Files for the ART/Dalvik VM
 *.dex
 
