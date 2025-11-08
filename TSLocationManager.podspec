@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
   s.frameworks            = 'CoreLocation', 'SystemConfiguration', 'CoreTelephony'
   s.weak_frameworks       = 'BackgroundTasks'
   s.libraries             = 'sqlite3', 'z', 'c++'
+  s.dependency 'TSBackgroundFetch', '~> 4.0'
   s.pod_target_xcconfig   = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
   s.documentation_url      = 'https://www.transistorsoft.com/background-geolocation'
   s.social_media_url       = 'https://x.com/transistorsoft'
