@@ -1,2 +1,2 @@
 @_exported import TSBackgroundFetch
-@_exported import TSLocationManagerBinary
+@_exported import TSLocationManager
