@@ -16,17 +16,17 @@ let package = Package(
         .library(name: "TSLocationManager", targets: ["TSLocationManagerKit"])
     ],
     dependencies: [
-        // SPM dependency on TSBackgroundFetch (range; avoid churn)
+        // SPM dependency on TSBackgroundFetch (allow patch updates)
         .package(
             url: "https://github.com/transistorsoft/transistor-background-fetch.git",
-            from: "4.0.0"
+            .upToNextMinor(from: "4.0.6")
         )
     ],
     targets: [
         .binaryTarget(
             name: "TSLocationManager",
-            url: "https://github.com/transistorsoft/native-background-geolocation/releases/download/4.0.4/TSLocationManager.xcframework.zip",
-            checksum: "d6e76253c00c507399b4c8f465f0a153b4c523d89665d771eb88917ee97d1709"
+            url: "https://github.com/transistorsoft/native-background-geolocation/releases/download/4.0.7/TSLocationManager.xcframework.zip",
+            checksum: "595dd3b860d8205bb5f4de359743c033e1526aabb628267e96a217771e5c1738"
         ),
 
         // Wrapper Swift target that reexports the binary + TSBackgroundFetch
