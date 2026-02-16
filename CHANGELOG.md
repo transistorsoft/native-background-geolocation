@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.0.15 &mdash; 2026-02-15
+* Fix bugs in TSLocationRequestService location-satisfier
+
 ## 4.0.14 &mdash; 2026-02-07
 * Fix bug in Geofence DWELL not firing after refactor of TSLocationRequestService
 
