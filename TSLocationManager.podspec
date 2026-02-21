@@ -6,7 +6,6 @@
 Pod::Spec.new do |s|
   s.name         = 'TSLocationManager'
   s.version      = '4.0.17'
-  s.version      = '4.0.16'
   s.summary      = 'Enterprise-grade background geolocation.'
   s.description  = 'Reliable background location with SQLite-first persistence and robust HTTP uploader.'
 
