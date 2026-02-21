@@ -1,5 +1,6 @@
 # CHANGELOG
 
+
 ## 4.0.17 &mdash; 2016-02-21
 * loosen TSMotionChangeRequest props (desiredAccuracy 10 -> 20)
 * Support sparse config updates on LocationFilter
