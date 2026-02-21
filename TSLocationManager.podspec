@@ -5,6 +5,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'TSLocationManager'
+  s.version      = '4.0.17'
   s.version      = '4.0.16'
   s.summary      = 'Enterprise-grade background geolocation.'
   s.description  = 'Reliable background location with SQLite-first persistence and robust HTTP uploader.'
@@ -16,7 +17,8 @@ Pod::Spec.new do |s|
   s.author       = { 'Transistor Software' => 'info@transistorsoft.com' }
 
   # Binary distribution
-  s.source       = { :http => 'https://github.com/transistorsoft/native-background-geolocation/releases/download/4.0.16/TSLocationManager.xcframework.zip' }
+
+  s.source       = { :http => 'https://github.com/transistorsoft/native-background-geolocation/releases/download/4.0.17/TSLocationManager.xcframework.zip' }
   s.vendored_frameworks   = 'TSLocationManager.xcframework'
   s.static_framework      = true
 
