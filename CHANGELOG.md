@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 4.0.17 &mdash; 2016-02-21
+* loosen TSMotionChangeRequest props (desiredAccuracy 10 -> 20)
+* Support sparse config updates on LocationFilter
+
+## 4.0.16 &mdash; 2026-02-16
+* Don't enforce JWT format for access-token in TSAuthorization
+
 ## 4.0.15 &mdash; 2026-02-15
 * Fix bugs in TSLocationRequestService location-satisfier
 
