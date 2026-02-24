@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.author       = { 'Transistor Software' => 'info@transistorsoft.com' }
 
   # Binary distribution
-  s.source       = { :http => 'https://github.com/transistorsoft/native-background-geolocation/releases/download/4.0.19--create-branch/TSLocationManager.xcframework.zip' }
+  s.source       = { :http => 'https://github.com/transistorsoft/native-background-geolocation/releases/download/4.0.19/TSLocationManager.xcframework.zip' }
   s.vendored_frameworks   = 'TSLocationManager.xcframework'
   s.static_framework      = true
 
