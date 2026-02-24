@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## 4.0.18 &mdash; 2026-02-21
+* messed up build
 
 ## 4.0.17 &mdash; 2016-02-21
 * loosen TSMotionChangeRequest props (desiredAccuracy 10 -> 20)
