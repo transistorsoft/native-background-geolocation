@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 4.0.19 &mdash; 2026-02-24
+* Guard against posibility of creating `CLLocationManager` instances on background threads.  Can happen if getCurrentPosition called before ready.
+* LocationFilter enabled by default: v5 introduces an on-device geolocation.filter layer (Kalman + kinematic/outlier logic) which can change which samples are delivered to onLocation and how distance deltas are smoothed/adjusted.
+* Adaptive default for non-high accuracy: When geolocation.desiredAccuracy is not High/Navigation and the app has not explicitly configured geolocation.filter, the default geolocation.filter.policy now auto-relaxes to PassThrough to avoid overly aggressive rejection on low/medium accuracy profiles.
+* Preserve v4 behavior: Set geolocation.filter.policy = PassThrough (and optionally disable Kalman / thresholds) to retain pre-v5 “raw” location behavior.
+
 ## 4.0.18 &mdash; 2026-02-21
 * messed up build
 
