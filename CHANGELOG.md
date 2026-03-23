@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 4.0.22 &mdash; 2026-03-23
+- Add watchdog timer for HttpService.  
+- ensure http timeoutSeconds is used.
+- Fix Capacitor licensing
+
+## 4.0.21 &mdash; 2026-02-26
+* Fix bug in geofence event-handling when booted due to geofence event (monitoredGeofences cache is empty).
+
 ## 4.0.20 &mdash; 2026-02-24
 * Guard against posibility of creating `CLLocationManager` instances on background threads.  Can happen if getCurrentPosition called before ready.
 * LocationFilter enabled by default: v5 introduces an on-device geolocation.filter layer (Kalman + kinematic/outlier logic) which can change which samples are delivered to onLocation and how distance deltas are smoothed/adjusted.
