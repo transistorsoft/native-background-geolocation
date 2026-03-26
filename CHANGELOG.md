@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.0.24 &mdash; 2026-03-25
+- Don't show location authorization nag-dialog while !config.enabled
+
 ## 4.0.23 &mdash; 2026-03-25
 - Hardcode static URLs and license in podspec template
   Remove unnecessary ENV-based templating for homepage, documentation,
