@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.0.25 &mdash; 2026-03-26
+- Clean stale entries from Unreleased section
+- Add changelog generation to publish script
+
 ## 4.0.24 &mdash; 2026-03-25
 - Don't show location authorization nag-dialog while !config.enabled
 

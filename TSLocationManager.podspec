@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'TSLocationManager'
-  s.version      = '4.0.24'
+  s.version      = '4.0.25'
   s.summary      = 'Enterprise-grade background geolocation.'
   s.description  = 'Reliable background location with SQLite-first persistence and robust HTTP uploader.'
 
@@ -15,8 +15,7 @@ Pod::Spec.new do |s|
   s.author       = { 'Transistor Software' => 'info@transistorsoft.com' }
 
   # Binary distribution
-  s.source       = { :http => 'https://github.com/transistorsoft/native-background-geolocation/releases/download/4.0.24/TSLocationManager.xcframework.zip' }
-  s.vendored_frameworks   = 'TSLocationManager.xcframework'
+  s.source       = { :http => 'https://github.com/transistorsoft/native-background-geolocation/releases/download/4.0.25/TSLocationManager.xcframework.zip' }
   s.static_framework      = true
 
   s.ios.deployment_target = '12.0'
@@ -32,4 +31,22 @@ Pod::Spec.new do |s|
 
   s.documentation_url      = 'https://github.com/transistorsoft/native-background-geolocation'
   s.social_media_url       = 'https://x.com/transistorsoft'
+
+  # --- Subspecs ---
+
+  # Core: ObjC xcframework (default, backward-compatible)
+  s.subspec 'Core' do |core|
+    core.vendored_frameworks = 'TSLocationManager.xcframework'
+  end
+
+  # Swift: Pure Swift overlay for native SwiftUI developers.
+  # Uses a distinct module_name to avoid the TSLocationManager module/class collision.
+  s.subspec 'Swift' do |swift|
+    swift.source_files = 'SwiftInterface/**/*.swift'
+    swift.dependency 'TSLocationManager/Core'
+    swift.swift_version = '5.9'
+    swift.module_name = 'TSLocationManagerSwift'
+  end
+
+  s.default_subspecs = 'Core'
 end

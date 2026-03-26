@@ -12,8 +12,8 @@ let package = Package(
         .iOS(.v12)
     ],
     products: [
-        // Consumers import this product.
-        .library(name: "TSLocationManager", targets: ["TSLocationManagerKit"])
+        // Consumers: import BackgroundGeolocation
+        .library(name: "BackgroundGeolocation", targets: ["BackgroundGeolocation"])
     ],
     dependencies: [
         // SPM dependency on TSBackgroundFetch (allow patch updates)
@@ -25,18 +25,18 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "TSLocationManager",
-            url: "https://github.com/transistorsoft/native-background-geolocation/releases/download/4.0.24/TSLocationManager.xcframework.zip",
-            checksum: "62d44df5de0187258bb168805b6b0d0fa1336438c46625547013780d440bf869"
+            url: "https://github.com/transistorsoft/native-background-geolocation/releases/download/4.0.25/TSLocationManager.xcframework.zip",
+            checksum: "7c560255be9e75db044d958ea72933a343289290df228f757fc1a6f9767e80f3"
         ),
 
-        // Wrapper Swift target that reexports the binary + TSBackgroundFetch
+        // Swift overlay that reexports the binary + TSBackgroundFetch
         .target(
-            name: "TSLocationManagerKit",
+            name: "BackgroundGeolocation",
             dependencies: [
                 "TSLocationManager",
                 .product(name: "TSBackgroundFetch", package: "transistor-background-fetch")
             ],
-            path: "Sources/TSLocationManagerKit"
+            path: "Sources/BackgroundGeolocation"
         )
     ]
 )
