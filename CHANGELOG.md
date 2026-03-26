@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.0.27 &mdash; 2026-03-26
+- Remove CocoaPods Swift subspec -- SwiftInterface is SPM-only
+
 ## 4.0.25 &mdash; 2026-03-26
 - Clean stale entries from Unreleased section
 - Add changelog generation to publish script
