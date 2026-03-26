@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.0.29 &mdash; 2026-03-26
+- Set framework IPHONEOS_DEPLOYMENT_TARGET to 13.0 to match podspec
+
 ## 4.0.27 &mdash; 2026-03-26
 - Remove CocoaPods Swift subspec -- SwiftInterface is SPM-only
 
