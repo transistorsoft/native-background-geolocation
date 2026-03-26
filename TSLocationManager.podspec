@@ -5,18 +5,17 @@
 
 Pod::Spec.new do |s|
   s.name         = 'TSLocationManager'
-  s.version      = '4.0.22'
+  s.version      = '4.0.23'
   s.summary      = 'Enterprise-grade background geolocation.'
   s.description  = 'Reliable background location with SQLite-first persistence and robust HTTP uploader.'
 
   s.homepage               = 'https://github.com/transistorsoft/native-background-geolocation'
-  s.license                = { :type => 'Commercial', :text => 'Commercial license. See https://transistorsoft.com for details.' }
-  # Or: s.license          = { :type => 'Commercial', :file => 'LICENSE' }
+  s.license                = { :type => 'Commercial', :text => 'Commercial license. See https://www.transistorsoft.com/shop/products/react-native-background-geolocation/license' }
 
   s.author       = { 'Transistor Software' => 'info@transistorsoft.com' }
 
   # Binary distribution
-  s.source       = { :http => 'https://github.com/transistorsoft/native-background-geolocation/releases/download/4.0.22/TSLocationManager.xcframework.zip' }
+  s.source       = { :http => 'https://github.com/transistorsoft/native-background-geolocation/releases/download/4.0.23/TSLocationManager.xcframework.zip' }
   s.vendored_frameworks   = 'TSLocationManager.xcframework'
   s.static_framework      = true
 
@@ -31,6 +30,6 @@ Pod::Spec.new do |s|
 
   s.pod_target_xcconfig   = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
 
-  s.documentation_url      = 'https://github.com/transistorsoft/native-background-geolocation/tree/master/docs/ios'
+  s.documentation_url      = 'https://github.com/transistorsoft/native-background-geolocation'
   s.social_media_url       = 'https://x.com/transistorsoft'
 end
