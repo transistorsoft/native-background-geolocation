@@ -38,21 +38,13 @@ extension BGGeo {
             logger = BGGeo.LoggerConfig(c.logger)
         }
 
-        // MARK: - State
-
-        public var enabled: Bool { tsConfig.enabled }
-        public var isMoving: Bool { tsConfig.isMoving }
-        public var trackingMode: TrackingMode { TrackingMode(tsConfig.trackingMode) }
-        public var schedulerEnabled: Bool { tsConfig.schedulerEnabled }
-
         // MARK: - Query
 
-        public var isLocationTrackingMode: Bool { tsConfig.isLocationTrackingMode() }
         public var isFirstBoot: Bool { tsConfig.isFirstBoot() }
 
-        // MARK: - Batch Update
+        // MARK: - Edit
 
-        public func batchUpdate(_ block: @escaping (Config) -> Void) {
+        public func edit(_ block: @escaping (Config) -> Void) {
             tsConfig.batchUpdate { _ in block(self) }
         }
 

@@ -35,7 +35,7 @@ public class BGGeo {
     ///   - transistorAuthorizationToken: Optional token from ``TransistorAuthorizationService``.
     ///            When provided, auto-configures `http.url` and `authorization` for the Transistor demo server.
     ///            Always applied regardless of `reset`, since tokens may refresh between launches.
-    ///   - configure: Closure to set config properties. Executed inside a `batchUpdate`.
+    ///   - configure: Closure to set config properties. Executed inside a `config.edit`.
     ///
     /// ```swift
     /// // Standard: apply config every launch
@@ -61,20 +61,20 @@ public class BGGeo {
 
         if tsConfig.isFirstBoot() {
             // First install: always apply config regardless of reset flag
-            config.batchUpdate(configure)
+            config.edit(configure)
         } else if reset {
             // Subsequent launch + reset: wipe persisted config, re-apply from closure
             tsConfig.resetConfig(true)
-            config.batchUpdate(configure)
+            config.edit(configure)
         }
         // else: subsequent launch + reset:false → skip closure, use persisted config
 
         // Token rewrite: always applies (even when reset:false skips the closure),
         // since tokens may refresh between launches.
         if let token {
-            config.batchUpdate { config in
+            config.edit { config in
                 config.http.url = token.apiUrl
-                config.authorization.strategy = "jwt"
+                config.authorization.strategy = .jwt
                 config.authorization.accessToken = token.accessToken
                 config.authorization.refreshToken = token.refreshToken
                 config.authorization.refreshUrl = token.refreshUrl
@@ -119,8 +119,23 @@ public class BGGeo {
         manager.changePace(isMoving)
     }
 
-    public var enabled: Bool {
-        manager.enabled
+    // MARK: - State
+
+    /// Read-only snapshot of the SDK's current runtime state.
+    public var state: State {
+        let tsConfig = TSConfig.sharedInstance()
+        let odometer = TSOdometer.sharedInstance()
+        return State(
+            enabled: tsConfig.enabled,
+            isMoving: tsConfig.isMoving,
+            trackingMode: TrackingMode(tsConfig.trackingMode),
+            odometer: odometer.odometer,
+            odometerError: odometer.odometerError,
+            schedulerEnabled: tsConfig.schedulerEnabled,
+            didDeviceReboot: tsConfig.didDeviceReboot(),
+            didLaunchInBackground: tsConfig.didLaunchInBackground,
+            isFirstBoot: tsConfig.isFirstBoot()
+        )
     }
 
     // MARK: - Geolocation
@@ -178,8 +193,20 @@ public class BGGeo {
         }
     }
 
-    public var odometer: CLLocationDistance {
-        manager.getOdometer()
+    /// Reset the odometer to zero.
+    ///
+    /// Convenience for `setOdometer(0)`.
+    public func resetOdometer(
+        timeout: TimeInterval = 10,
+        desiredAccuracy: CLLocationAccuracy = kCLLocationAccuracyBest,
+        maximumAge: Int = 5000,
+        samples: Int = 3,
+        persist: Bool = true,
+        extras: [String: Any]? = nil
+    ) async throws -> LocationEvent {
+        try await setOdometer(0, timeout: timeout, desiredAccuracy: desiredAccuracy,
+                              maximumAge: maximumAge, samples: samples,
+                              persist: persist, extras: extras)
     }
 
     public func watchPosition(
@@ -203,10 +230,6 @@ public class BGGeo {
 
     public func stopWatchPosition(_ watchId: Int) {
         manager.stopWatchPosition(watchId)
-    }
-
-    public func getStationaryLocation() -> [String: Any]? {
-        manager.getStationaryLocation() as? [String: Any]
     }
 
     // MARK: - Event Listeners

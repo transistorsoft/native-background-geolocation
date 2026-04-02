@@ -7,13 +7,23 @@ import Foundation
 import TSLocationManager
 
 extension BGGeo {
+    public enum AuthorizationStrategy: String {
+        case jwt = "JWT"
+        case sas = "SAS"
+
+        init?(_ value: String?) {
+            guard let value else { return nil }
+            self.init(rawValue: value.uppercased())
+        }
+    }
+
     public class AuthorizationConfig {
         private let module: TSAuthorizationConfig
         init(_ module: TSAuthorizationConfig) { self.module = module }
 
-        public var strategy: String? {
-            get { module.strategy }
-            set { module.strategy = newValue }
+        public var strategy: AuthorizationStrategy? {
+            get { AuthorizationStrategy(module.strategy) }
+            set { module.strategy = newValue?.rawValue }
         }
         public var accessToken: String? {
             get { module.accessToken }

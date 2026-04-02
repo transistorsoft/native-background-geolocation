@@ -1,5 +1,40 @@
 # CHANGELOG
 
+## 4.0.31 &mdash; 2026-04-02
+- Update panel images
+- docs: rewrite README with setup, build, test, publish sections
+- remove Pods from version control
+- Migrate isPowerSaveMode -> new DeviceSettings class
+- feat(State): add isFirstBoot property
+- chore: pod install (regenerate Pods from Podfile.lock)
+- feat(Geofence): add entryState, stateUpdatedAt, hits from TSGeofence
+- refactor(Geofence): remove unnecessary dict initializer
+- Revert "feat(Geofence): make dict initializer public"
+- feat(Geofence): make dict initializer public
+- feat(GeofenceEvent): add geofence: BGGeo.Geofence property; add dict init to Geofence
+- feat(LocationEvent): add GeofenceTrigger nested struct and mock property
+- Add typed State struct, remove getStationaryLocation()
+- Rename ConnectivityChangeEvent.hasConnection → isConnected
+- Align Swift API naming with Kotlin for cross-platform parity
+- Type GeofenceEvent.location as LocationEvent instead of raw dictionary
+- Add age and extras properties to LocationEvent
+- Add uuid property to LocationEvent
+- Add resetOdometer(), type authorization returns with CoreLocation enums
+- Move DocsExamplesCompileTest to DemoApp2Tests target
+- Add query params to Logger.getLog/emailLog, add uploadLog method
+- Update CHANGELOG for 4.0.30
+- Remove dead BackgroundGeolocationPlugin class name check
+- Add retry to asset checksum verification in publish-ios.sh
+- Update CHANGELOG for 4.0.29
+- Set framework IPHONEOS_DEPLOYMENT_TARGET to 13.0 to match podspec
+- Update CHANGELOG for 4.0.27
+- Remove CocoaPods Swift subspec -- SwiftInterface is SPM-only
+- Add --local flag to build-ios.sh for local SPM testing
+- Don't commit version wtih --bump and --dry-run
+- Update CHANGELOG for 4.0.24
+- Clean stale entries from Unreleased section
+- Add changelog generation to publish script
+
 ## 4.0.30 &mdash; 2026-03-26
 - Fix Capacitor validation
 - Add retry to asset checksum verification in publish-ios.sh

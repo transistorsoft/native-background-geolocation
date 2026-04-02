@@ -12,10 +12,9 @@ extension BGGeo {
 
         init() {}
 
-        public var isMotionHardwareAvailable: Bool { manager.isMotionHardwareAvailable() }
-        public var isDeviceMotionAvailable: Bool { manager.isDeviceMotionAvailable() }
-        public var isAccelerometerAvailable: Bool { manager.isAccelerometerAvailable() }
-        public var isGyroAvailable: Bool { manager.isGyroAvailable() }
-        public var isMagnetometerAvailable: Bool { manager.isMagnetometerAvailable() }
+        public var hasAccelerometer: Bool { manager.isAccelerometerAvailable() }
+        public var hasGyroscope: Bool { manager.isGyroAvailable() }
+        public var hasMagnetometer: Bool { manager.isMagnetometerAvailable() }
+        public var hasSignificantMotion: Bool { manager.isMotionHardwareAvailable() }
     }
 }

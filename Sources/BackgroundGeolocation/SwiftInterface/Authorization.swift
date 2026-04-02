@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import CoreLocation
 import TSLocationManager
 
 extension BGGeo {
@@ -16,10 +17,13 @@ extension BGGeo {
             BGGeo.ProviderChangeEvent(manager.getProviderState())
         }
 
-        public func requestPermission() async throws -> Int {
+        public func requestPermission() async throws -> CLAuthorizationStatus {
             try await withCheckedThrowingContinuation { continuation in
                 manager.requestPermission(
-                    { status in continuation.resume(returning: status.intValue) },
+                    { status in
+                        let authStatus = CLAuthorizationStatus(rawValue: status.int32Value) ?? .notDetermined
+                        continuation.resume(returning: authStatus)
+                    },
                     failure: { status in
                         continuation.resume(throwing: NSError(
                             domain: "BGGeo", code: status.intValue,
@@ -30,10 +34,13 @@ extension BGGeo {
             }
         }
 
-        public func requestTemporaryFullAccuracy(purpose: String) async throws -> Int {
+        public func requestTemporaryFullAccuracy(purpose: String) async throws -> CLAccuracyAuthorization {
             try await withCheckedThrowingContinuation { continuation in
                 manager.requestTemporaryFullAccuracy(purpose,
-                    success: { continuation.resume(returning: Int($0)) },
+                    success: {
+                        let accuracy = CLAccuracyAuthorization(rawValue: Int($0)) ?? .reducedAccuracy
+                        continuation.resume(returning: accuracy)
+                    },
                     failure: { continuation.resume(throwing: $0) }
                 )
             }

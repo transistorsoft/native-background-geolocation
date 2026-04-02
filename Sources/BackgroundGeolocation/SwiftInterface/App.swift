@@ -12,16 +12,12 @@ extension BGGeo {
 
         init() {}
 
-        public func createBackgroundTask() -> UIBackgroundTaskIdentifier {
+        public func startBackgroundTask() -> UIBackgroundTaskIdentifier {
             manager.createBackgroundTask()
         }
 
         public func stopBackgroundTask(_ taskId: UIBackgroundTaskIdentifier) {
             manager.stopBackgroundTask(taskId)
-        }
-
-        public var isPowerSaveMode: Bool {
-            manager.isPowerSaveMode()
         }
     }
 }

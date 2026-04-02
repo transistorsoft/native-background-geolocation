@@ -64,7 +64,7 @@ extension BGGeo {
             }
         }
 
-        public func getAll() -> [BGGeo.Geofence] {
+        public func getAll() async -> [BGGeo.Geofence] {
             (manager.getGeofences() as? [TSGeofence] ?? []).map { BGGeo.Geofence($0) }
         }
 

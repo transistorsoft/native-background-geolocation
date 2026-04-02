@@ -12,6 +12,11 @@ import TSLocationManager
 
 extension BGGeo {
     public struct Geofence {
+        public enum EntryState {
+            case outside
+            case inside
+        }
+
         public let identifier: String
         public let latitude: Double
         public let longitude: Double
@@ -23,6 +28,9 @@ extension BGGeo {
         public let extras: [String: Any]?
         public let vertices: [[Double]]?
         public let isPolygon: Bool
+        public let entryState: EntryState
+        public let stateUpdatedAt: Date?
+        public let hits: Int
 
         public var center: CLLocationCoordinate2D {
             CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
@@ -53,6 +61,9 @@ extension BGGeo {
             self.extras = extras
             self.vertices = nil
             self.isPolygon = false
+            self.entryState = .outside
+            self.stateUpdatedAt = nil
+            self.hits = 0
         }
 
         /// Create a polygon geofence.
@@ -76,6 +87,9 @@ extension BGGeo {
             self.extras = extras
             self.vertices = vertices
             self.isPolygon = true
+            self.entryState = .outside
+            self.stateUpdatedAt = nil
+            self.hits = 0
         }
 
         // MARK: - Internal (hydrating from ObjC)
@@ -91,6 +105,9 @@ extension BGGeo {
             self.loiteringDelay = obj.loiteringDelay
             self.extras = obj.extras as? [String: Any]
             self.isPolygon = obj.isPolygon()
+            self.entryState = obj.entryState == .inside ? .inside : .outside
+            self.stateUpdatedAt = obj.stateUpdatedAt > 0 ? Date(timeIntervalSince1970: obj.stateUpdatedAt) : nil
+            self.hits = obj.hits
 
             if let verts = obj.vertices {
                 self.vertices = verts.map { $0.map { $0.doubleValue } }

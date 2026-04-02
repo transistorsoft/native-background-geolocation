@@ -47,10 +47,10 @@ extension BGGeo {
     }
 
     public struct ConnectivityChangeEvent: Sendable {
-        public let hasConnection: Bool
+        public let isConnected: Bool
 
         public init(_ obj: TSConnectivityChangeEvent) {
-            self.hasConnection = obj.hasConnection
+            self.isConnected = obj.hasConnection
         }
     }
 

@@ -36,28 +36,44 @@ extension BGGeo {
             public let confidence: Int?
         }
 
+        public struct GeofenceTrigger {
+            public let identifier: String?
+            public let action: String?
+            public let timestamp: String?
+            public let extras: [String: Any]?
+        }
+
         public let timestamp: Date?
         public let timestampString: String
 
         public let data: [String: Any]
         public let location: CLLocation
+        public let uuid: String?
         public let event: String?
         public let isMoving: Bool
+        public let mock: Bool?
         public let sample: Bool
+        public let age: Int?
+        public let extras: [String: Any]?
         public let odometer: Double?
         public let odometerError: Double?
 
         public let coords: Coords?
         public let battery: Battery?
         public let activity: Activity?
+        public let geofence: GeofenceTrigger?
 
         public init(_ obj: TSLocationEvent) {
             self.timestampString = obj.timestamp
             self.timestamp = ISO8601DateFormatter.fullParsing.date(from: obj.timestamp)
             self.data = obj.toDictionary() as? [String: Any] ?? [:]
             self.location = obj.location
+            self.uuid = data["uuid"] as? String
             self.isMoving = obj.isMoving
+            self.mock = data["mock"] as? Bool
             self.sample = data.keys.contains("sample")
+            self.age = data.intOpt("age")
+            self.extras = data["extras"] as? [String: Any]
             self.odometer = data["odometer"] as? Double
             self.odometerError = data["odometer_error"] as? Double
             self.event = obj.event
@@ -96,6 +112,17 @@ extension BGGeo {
                 )
             } else {
                 activity = nil
+            }
+
+            if let g = data["geofence"] as? [String: Any] {
+                geofence = GeofenceTrigger(
+                    identifier: g["identifier"] as? String,
+                    action:     g["action"] as? String,
+                    timestamp:  g["timestamp"] as? String,
+                    extras:     g["extras"] as? [String: Any]
+                )
+            } else {
+                geofence = nil
             }
         }
     }

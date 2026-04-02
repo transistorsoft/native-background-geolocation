@@ -15,18 +15,11 @@ extension BGGeo {
         public let identifier: String
         public let action: String
         public let timestamp: Date
-        public let location: [String: Any]
+        public let location: BGGeo.LocationEvent
+        public let geofence: BGGeo.Geofence
         public let extras: [String: Any]?
 
-        // Geofence center & radius (MEC for polygons)
-        public let latitude: Double
-        public let longitude: Double
-        public let radius: Double
-        public var center: CLLocationCoordinate2D {
-            CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        }
-
-        // Trigger coordinate extracted from location dict
+        // Trigger coordinate extracted from location coords
         public let triggerCoordinate: CLLocationCoordinate2D?
         public let triggerHeading: Double?
 
@@ -34,21 +27,23 @@ extension BGGeo {
             self.identifier = obj.identifier
             self.action = obj.action
             self.timestamp = obj.timestamp
-            self.location = obj.location as? [String: Any] ?? [:]
+            let locationDict = obj.location as? [String: Any] ?? [:]
+            let coordsDict = locationDict["coords"] as? [String: Any]
+            let clLocation = CLLocation(
+                latitude: (coordsDict?["latitude"] as? NSNumber)?.doubleValue ?? 0,
+                longitude: (coordsDict?["longitude"] as? NSNumber)?.doubleValue ?? 0
+            )
+            self.location = BGGeo.LocationEvent(TSLocationEvent(locationDictionary: obj.location, location: clLocation))
+            self.geofence = BGGeo.Geofence(obj.geofence)
             self.extras = obj.extras as? [String: Any]
 
-            self.latitude = obj.geofence.latitude
-            self.longitude = obj.geofence.longitude
-            self.radius = obj.geofence.radius
-
-            let coords = self.location["coords"] as? [String: Any]
-            if let lat = coords?["latitude"] as? Double,
-               let lng = coords?["longitude"] as? Double {
+            if let lat = coordsDict?["latitude"] as? Double,
+               let lng = coordsDict?["longitude"] as? Double {
                 self.triggerCoordinate = CLLocationCoordinate2D(latitude: lat, longitude: lng)
             } else {
                 self.triggerCoordinate = nil
             }
-            let heading = (coords?["heading"] as? NSNumber)?.doubleValue
+            let heading = (coordsDict?["heading"] as? NSNumber)?.doubleValue
             self.triggerHeading = (heading != nil && heading! >= 0) ? heading : nil
         }
     }
