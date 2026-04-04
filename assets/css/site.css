@@ -345,3 +345,8 @@ h1 .platform-badge { font-size: 0.5rem; }
     text-decoration: underline;
     cursor: pointer;
 }
+
+/* Right-align the About + Context tabs in the top navigation bar */
+.md-tabs__list > .md-tabs__item:nth-last-child(2) {
+    margin-left: auto;
+}
