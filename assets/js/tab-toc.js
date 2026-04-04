@@ -13,8 +13,9 @@
 
   // Map tab label text → platform icon slug (must match assets/images/platforms/<slug>.svg)
   var PLATFORM_ICONS = {
-    "React Native": "react-native",
-    "Expo":         "expo",
+    "React Native":       "react-native",
+    "React Native / Expo": "react-native",
+    "Expo":               "expo",
     "Capacitor":    "capacitor",
     "Flutter":      "flutter",
     "Swift":        "swift",
