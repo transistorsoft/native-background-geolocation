@@ -1,783 +1,783 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/</loc>
+         <loc>https://docs.transistorsoft.com/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/ActivityConfig/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/ActivityConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/ActivityType/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/ActivityType/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/AppConfig/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/AppConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/AuthorizationConfig/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/AuthorizationConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/AuthorizationEvent/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/AuthorizationEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/BackgroundGeolocation/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/BackgroundGeolocation/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/Battery/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/Battery/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/Config/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/Config/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/ConnectivityChangeEvent/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/ConnectivityChangeEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/Coords/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/Coords/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/DesiredAccuracy/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/DesiredAccuracy/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/DeviceInfo/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/DeviceInfo/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/DeviceSettings/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/DeviceSettings/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/DeviceSettingsRequest/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/DeviceSettingsRequest/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/Event/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/Event/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/GeoConfig/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/GeoConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/Geofence/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/Geofence/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/GeofenceEvent/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/GeofenceEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/GeofencesChangeEvent/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/GeofencesChangeEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/HeadlessEvent/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/HeadlessEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/HeartbeatEvent/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/HeartbeatEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/HttpConfig/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/HttpConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/HttpEvent/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/HttpEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/KalmanProfile/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/KalmanProfile/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/Location/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/Location/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/LocationFilter/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/LocationFilter/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/LocationFilterPolicy/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/LocationFilterPolicy/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/LogLevel/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/LogLevel/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/Logger/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/Logger/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/LoggerConfig/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/LoggerConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/MotionActivity/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/MotionActivity/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/NotificationConfig/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/NotificationConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/NotificationPriority/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/NotificationPriority/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/PermissionRationale/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/PermissionRationale/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/PersistMode/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/PersistMode/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/PersistenceConfig/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/PersistenceConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/ProviderChangeEvent/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/ProviderChangeEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/SQLQuery/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/SQLQuery/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/Sensors/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/Sensors/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/State/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/State/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/TransistorAuthorizationToken/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/TransistorAuthorizationToken/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/flutter/setup/</loc>
+         <loc>https://docs.transistorsoft.com/flutter/setup/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/AccuracyAuthorization/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/AccuracyAuthorization/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/ActivityChangeEvent/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/ActivityChangeEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/ActivityConfig/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/ActivityConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/App/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/App/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/AppConfig/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/AppConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/Authorization/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/Authorization/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/AuthorizationConfig/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/AuthorizationConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/AuthorizationEvent/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/AuthorizationEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/AuthorizationStrategy/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/AuthorizationStrategy/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/BGGeo/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/BGGeo/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/Config/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/Config/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/ConnectivityChangeEvent/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/ConnectivityChangeEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/DataStore/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/DataStore/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/DesiredAccuracy/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/DesiredAccuracy/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/DeviceSettings/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/DeviceSettings/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/DeviceSettingsRequest/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/DeviceSettingsRequest/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/Geofence/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/Geofence/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/GeofenceEvent/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/GeofenceEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/GeofenceManager/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/GeofenceManager/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/GeofencesChangeEvent/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/GeofencesChangeEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/GeolocationConfig/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/GeolocationConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/HeartbeatEvent/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/HeartbeatEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/HttpConfig/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/HttpConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/HttpEvent/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/HttpEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/HttpMethod/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/HttpMethod/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/KalmanProfile/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/KalmanProfile/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/LocationAuthorizationRequest/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/LocationAuthorizationRequest/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/LocationEvent/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/LocationEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/LocationFilterConfig/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/LocationFilterConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/LocationFilterPolicy/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/LocationFilterPolicy/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/LocationsOrderDirection/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/LocationsOrderDirection/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/LogLevel/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/LogLevel/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/Logger/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/Logger/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/LoggerConfig/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/LoggerConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/NotificationConfig/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/NotificationConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/NotificationPriority/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/NotificationPriority/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/PermissionStatus/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/PermissionStatus/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/PersistMode/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/PersistMode/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/PersistenceConfig/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/PersistenceConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/ProviderChangeEvent/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/ProviderChangeEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/Sensors/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/Sensors/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/State/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/State/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/TrackingMode/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/TrackingMode/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/TransistorAuthorizationService/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/TransistorAuthorizationService/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/TransistorToken/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/TransistorToken/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/kotlin/setup/</loc>
+         <loc>https://docs.transistorsoft.com/kotlin/setup/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/</loc>
+         <loc>https://docs.transistorsoft.com/swift/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/Activity/</loc>
+         <loc>https://docs.transistorsoft.com/swift/Activity/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/ActivityChangeEvent/</loc>
+         <loc>https://docs.transistorsoft.com/swift/ActivityChangeEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/ActivityConfig/</loc>
+         <loc>https://docs.transistorsoft.com/swift/ActivityConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/App/</loc>
+         <loc>https://docs.transistorsoft.com/swift/App/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/AppConfig/</loc>
+         <loc>https://docs.transistorsoft.com/swift/AppConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/Authorization/</loc>
+         <loc>https://docs.transistorsoft.com/swift/Authorization/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/AuthorizationConfig/</loc>
+         <loc>https://docs.transistorsoft.com/swift/AuthorizationConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/AuthorizationEvent/</loc>
+         <loc>https://docs.transistorsoft.com/swift/AuthorizationEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/AuthorizationStrategy/</loc>
+         <loc>https://docs.transistorsoft.com/swift/AuthorizationStrategy/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/BGGeo/</loc>
+         <loc>https://docs.transistorsoft.com/swift/BGGeo/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/Battery/</loc>
+         <loc>https://docs.transistorsoft.com/swift/Battery/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/Config/</loc>
+         <loc>https://docs.transistorsoft.com/swift/Config/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/ConnectivityChangeEvent/</loc>
+         <loc>https://docs.transistorsoft.com/swift/ConnectivityChangeEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/Coords/</loc>
+         <loc>https://docs.transistorsoft.com/swift/Coords/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/DataStore/</loc>
+         <loc>https://docs.transistorsoft.com/swift/DataStore/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/DeviceSettings/</loc>
+         <loc>https://docs.transistorsoft.com/swift/DeviceSettings/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/Geofence/</loc>
+         <loc>https://docs.transistorsoft.com/swift/Geofence/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/GeofenceEvent/</loc>
+         <loc>https://docs.transistorsoft.com/swift/GeofenceEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/GeofenceManager/</loc>
+         <loc>https://docs.transistorsoft.com/swift/GeofenceManager/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/GeofencesChangeEvent/</loc>
+         <loc>https://docs.transistorsoft.com/swift/GeofencesChangeEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/GeolocationConfig/</loc>
+         <loc>https://docs.transistorsoft.com/swift/GeolocationConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/HeartbeatEvent/</loc>
+         <loc>https://docs.transistorsoft.com/swift/HeartbeatEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/HttpConfig/</loc>
+         <loc>https://docs.transistorsoft.com/swift/HttpConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/HttpEvent/</loc>
+         <loc>https://docs.transistorsoft.com/swift/HttpEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/HttpMethod/</loc>
+         <loc>https://docs.transistorsoft.com/swift/HttpMethod/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/KalmanProfile/</loc>
+         <loc>https://docs.transistorsoft.com/swift/KalmanProfile/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/LocationAuthorizationRequest/</loc>
+         <loc>https://docs.transistorsoft.com/swift/LocationAuthorizationRequest/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/LocationEvent/</loc>
+         <loc>https://docs.transistorsoft.com/swift/LocationEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/LocationFilterConfig/</loc>
+         <loc>https://docs.transistorsoft.com/swift/LocationFilterConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/LocationFilterPolicy/</loc>
+         <loc>https://docs.transistorsoft.com/swift/LocationFilterPolicy/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/LocationsOrderDirection/</loc>
+         <loc>https://docs.transistorsoft.com/swift/LocationsOrderDirection/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/LogLevel/</loc>
+         <loc>https://docs.transistorsoft.com/swift/LogLevel/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/Logger/</loc>
+         <loc>https://docs.transistorsoft.com/swift/Logger/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/LoggerConfig/</loc>
+         <loc>https://docs.transistorsoft.com/swift/LoggerConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/PersistMode/</loc>
+         <loc>https://docs.transistorsoft.com/swift/PersistMode/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/PersistenceConfig/</loc>
+         <loc>https://docs.transistorsoft.com/swift/PersistenceConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/ProviderChangeEvent/</loc>
+         <loc>https://docs.transistorsoft.com/swift/ProviderChangeEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/Sensors/</loc>
+         <loc>https://docs.transistorsoft.com/swift/Sensors/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/State/</loc>
+         <loc>https://docs.transistorsoft.com/swift/State/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/TrackingMode/</loc>
+         <loc>https://docs.transistorsoft.com/swift/TrackingMode/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/TransistorAuthorizationService/</loc>
+         <loc>https://docs.transistorsoft.com/swift/TransistorAuthorizationService/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/swift/setup/</loc>
+         <loc>https://docs.transistorsoft.com/swift/setup/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/AccuracyAuthorization/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/AccuracyAuthorization/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/ActivityConfig/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/ActivityConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/ActivityType/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/ActivityType/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/AppConfig/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/AppConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/AuthorizationConfig/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/AuthorizationConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/AuthorizationEvent/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/AuthorizationEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/AuthorizationStatus/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/AuthorizationStatus/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/AuthorizationStrategy/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/AuthorizationStrategy/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/BackgroundGeolocation/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/BackgroundGeolocation/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/Battery/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/Battery/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/Config/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/Config/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/ConnectivityChangeEvent/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/ConnectivityChangeEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/Coords/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/Coords/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/CurrentPositionRequest/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/CurrentPositionRequest/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/DesiredAccuracy/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/DesiredAccuracy/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/DeviceInfo/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/DeviceInfo/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/DeviceSettings/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/DeviceSettings/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/DeviceSettingsRequest/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/DeviceSettingsRequest/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/Event/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/Event/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/GeoConfig/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/GeoConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/Geofence/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/Geofence/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/GeofenceAction/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/GeofenceAction/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/GeofenceEvent/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/GeofenceEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/GeofencesChangeEvent/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/GeofencesChangeEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/HeadlessEvent/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/HeadlessEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/HeartbeatEvent/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/HeartbeatEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/HttpConfig/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/HttpConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/HttpEvent/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/HttpEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/HttpMethod/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/HttpMethod/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/KalmanProfile/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/KalmanProfile/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/Location/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/Location/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/LocationError/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/LocationError/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/LocationFilter/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/LocationFilter/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/LocationFilterPolicy/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/LocationFilterPolicy/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/LocationRequest/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/LocationRequest/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/LogLevel/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/LogLevel/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/Logger/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/Logger/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/LoggerConfig/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/LoggerConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/MotionActivity/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/MotionActivity/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/MotionActivityEvent/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/MotionActivityEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/MotionActivityType/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/MotionActivityType/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/MotionChangeEvent/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/MotionChangeEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/NotificationConfig/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/NotificationConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/NotificationPriority/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/NotificationPriority/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/PermissionRationale/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/PermissionRationale/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/PersistMode/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/PersistMode/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/PersistenceConfig/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/PersistenceConfig/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/ProviderChangeEvent/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/ProviderChangeEvent/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/SQLQuery/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/SQLQuery/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/SQLQueryOrder/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/SQLQueryOrder/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/Sensors/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/Sensors/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/State/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/State/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/Subscription/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/Subscription/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/TrackingMode/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/TrackingMode/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/TransistorAuthorizationService/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/TransistorAuthorizationService/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/TransistorAuthorizationToken/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/TransistorAuthorizationToken/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/TriggerActivity/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/TriggerActivity/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/Vertices/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/Vertices/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/WatchPositionRequest/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/WatchPositionRequest/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://transistorsoft.github.io/native-background-geolocation/typescript/setup/</loc>
+         <loc>https://docs.transistorsoft.com/typescript/setup/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
 </urlset>
