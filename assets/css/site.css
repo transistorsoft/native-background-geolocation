@@ -346,6 +346,32 @@ h1 .platform-badge { font-size: 0.5rem; }
     cursor: pointer;
 }
 
+/* Active underline on main nav tabs — matches pymdownx.tabbed style */
+.md-tabs__link {
+    position: relative;
+    padding-bottom: 6px;
+}
+.md-tabs__item--active .md-tabs__link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--md-accent-fg-color);
+}
+
+/* Platform icons in top nav tabs */
+.bgeo-tab-icon {
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+    margin-right: 3px;
+    margin-bottom: 2px;
+    opacity: 0.5;
+}
+
 /* Right-align the About + Context tabs in the top navigation bar */
 .md-tabs__list > .md-tabs__item:nth-last-child(2) {
     margin-left: auto;
