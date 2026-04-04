@@ -1,26 +1,10 @@
 <p align="center">
-  <img src="assets/images/panel-all.svg" alt="Background Geolocation SDK" width="700">
+  <img src="https://raw.githubusercontent.com/transistorsoft/assets/master/images/logos/transistor/transistor-logo-panel-all.svg" alt="Background Geolocation SDK" width="635">
 </p>
 
 # Background Geolocation SDK — iOS & Android
 
 The most sophisticated background **location-tracking & geofencing** SDK with battery-conscious motion-detection intelligence for **iOS** and **Android**.
-
----
-
-## :books: Documentation
-
-### <img src="assets/images/platforms/kotlin.svg" width="20" height="20"> Kotlin
-- [Setup](https://docs.transistorsoft.com/kotlin/setup/)
-- [API Reference](https://docs.transistorsoft.com/kotlin/BGGeo/)
-
-### <img src="assets/images/platforms/swift.svg" width="20" height="20"> Swift
-- [Setup](https://docs.transistorsoft.com/swift/setup/)
-- [API Reference](https://docs.transistorsoft.com/swift/BGGeo/)
-
----
-
-## How it works
 
 The SDK uses **motion-detection** APIs (accelerometer, gyroscope, magnetometer) to detect when the device is *moving* or *stationary*:
 
@@ -29,7 +13,33 @@ The SDK uses **motion-detection** APIs (accelerometer, gyroscope, magnetometer) 
 
 ---
 
-## SDK availability
+## :books: Documentation
+
+### <img src="assets/images/platforms/swift.svg" width="20" height="20"> Swift
+- [Setup](https://docs.transistorsoft.com/swift/setup/)
+- [API Reference](https://docs.transistorsoft.com/swift/BGGeo/)
+- [Examples](https://docs.transistorsoft.com/swift/examples/)
+
+### <img src="assets/images/platforms/kotlin.svg" width="20" height="20"> Kotlin
+- [Setup](https://docs.transistorsoft.com/kotlin/setup/)
+- [API Reference](https://docs.transistorsoft.com/kotlin/BGGeo/)
+- [Examples](https://docs.transistorsoft.com/kotlin/examples/)
+
+---
+
+## :key: Licensing
+
+> [!TIP]
+> The SDK is **fully functional in `DEBUG` builds** — no license required. Try before you buy.
+
+A license is required only for **`RELEASE` builds** on Android.
+[Purchase a license](https://shop.transistorsoft.com/products/background-geolocation-for-native-apps)
+
+---
+
+## 📦 SDK availability
+
+<img src="https://raw.githubusercontent.com/transistorsoft/assets/master/images/logos/transistor/transistor-logo-panel-all.svg" width="300">
 
 | Platform | Package |
 |---|---|
@@ -40,13 +50,6 @@ The SDK uses **motion-detection** APIs (accelerometer, gyroscope, magnetometer) 
 | <img src="assets/images/platforms/flutter.svg" width="16" height="16"> [Flutter](https://github.com/transistorsoft/flutter_background_geolocation) | `flutter_background_geolocation` |
 | <img src="assets/images/platforms/capacitor.svg" width="16" height="16"> [Capacitor](https://github.com/transistorsoft/capacitor-background-geolocation) | `@transistorsoft/capacitor-background-geolocation` |
 | <img src="assets/images/platforms/cordova.svg" width="16" height="16"> [Cordova](https://github.com/transistorsoft/cordova-background-geolocation-lt) | `cordova-background-geolocation-lt` |
-
----
-
-## License
-
-The Android SDK requires a license for **release** builds.
-[Purchase a license](https://shop.transistorsoft.com/products/background-geolocation-for-native-apps) — debug builds work without one.
 
 ---
 
