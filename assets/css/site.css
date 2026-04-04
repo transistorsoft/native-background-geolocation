@@ -326,3 +326,22 @@ h1 .platform-badge { font-size: 0.5rem; }
 .md-nav--secondary li:not(.bgeo-group--collapsed) > a.md-nav__link:has(.bgeo-group-indicator) {
     cursor: pointer;
 }
+
+/* Search scope toggle banner */
+.bgeo-search-scope-toggle {
+    padding: 0.4em 0.75em;
+    font-size: 0.75em;
+    background: var(--md-code-bg-color);
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    color: var(--md-default-fg-color--light);
+}
+
+.bgeo-search-scope-toggle strong {
+    color: var(--md-accent-fg-color);
+}
+
+.bgeo-search-scope-toggle .bgeo-scope-link {
+    color: var(--md-accent-fg-color);
+    text-decoration: underline;
+    cursor: pointer;
+}
