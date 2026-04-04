@@ -27,7 +27,8 @@ The SDK uses **motion-detection** APIs (accelerometer, gyroscope, magnetometer) 
 
 | Platform | Package |
 |---|---|
-| iOS / Android (native) | **This repo** |
+| Swift / iOS (native) | **This repo** |
+| Kotlin / Android (native) | **This repo** |
 | [React Native](https://github.com/transistorsoft/react-native-background-geolocation) | `react-native-background-geolocation` |
 | [Flutter](https://github.com/transistorsoft/flutter_background_geolocation) | `flutter_background_geolocation` |
 | [Capacitor](https://github.com/transistorsoft/capacitor-background-geolocation) | `@transistorsoft/capacitor-background-geolocation` |
