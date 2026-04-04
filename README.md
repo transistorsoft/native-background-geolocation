@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://transistorsoft.github.io/native-background-geolocation/assets/images/panel-all.svg" alt="Background Geolocation SDK" width="700">
+  <img src="assets/images/panel-all.svg" alt="Background Geolocation SDK" width="700">
 </p>
 
 # Background Geolocation SDK — iOS & Android
@@ -10,11 +10,11 @@ The most sophisticated background **location-tracking & geofencing** SDK with ba
 
 ## :books: Documentation
 
-### <img src="https://transistorsoft.github.io/native-background-geolocation/assets/images/platforms/kotlin.svg" width="20" height="20"> Kotlin
+### <img src="assets/images/platforms/kotlin.svg" width="20" height="20"> Kotlin
 - [Setup](https://docs.transistorsoft.com/kotlin/setup/)
 - [API Reference](https://docs.transistorsoft.com/kotlin/BGGeo/)
 
-### <img src="https://transistorsoft.github.io/native-background-geolocation/assets/images/platforms/swift.svg" width="20" height="20"> Swift
+### <img src="assets/images/platforms/swift.svg" width="20" height="20"> Swift
 - [Setup](https://docs.transistorsoft.com/swift/setup/)
 - [API Reference](https://docs.transistorsoft.com/swift/BGGeo/)
 
@@ -33,13 +33,13 @@ The SDK uses **motion-detection** APIs (accelerometer, gyroscope, magnetometer) 
 
 | Platform | Package |
 |---|---|
-| <img src="https://transistorsoft.github.io/native-background-geolocation/assets/images/platforms/swift.svg" width="16" height="16"> Swift / iOS | **This repo** |
-| <img src="https://transistorsoft.github.io/native-background-geolocation/assets/images/platforms/kotlin.svg" width="16" height="16"> Kotlin / Android | **This repo** |
-| <img src="https://transistorsoft.github.io/native-background-geolocation/assets/images/platforms/react-native.svg" width="16" height="16"> [React Native](https://github.com/transistorsoft/react-native-background-geolocation) | `react-native-background-geolocation` |
-| <img src="https://transistorsoft.github.io/native-background-geolocation/assets/images/platforms/expo.svg" width="16" height="16"> [Expo](https://github.com/transistorsoft/react-native-background-geolocation) | `react-native-background-geolocation` |
-| <img src="https://transistorsoft.github.io/native-background-geolocation/assets/images/platforms/flutter.svg" width="16" height="16"> [Flutter](https://github.com/transistorsoft/flutter_background_geolocation) | `flutter_background_geolocation` |
-| <img src="https://transistorsoft.github.io/native-background-geolocation/assets/images/platforms/capacitor.svg" width="16" height="16"> [Capacitor](https://github.com/transistorsoft/capacitor-background-geolocation) | `@transistorsoft/capacitor-background-geolocation` |
-| <img src="https://transistorsoft.github.io/native-background-geolocation/assets/images/platforms/cordova.svg" width="16" height="16"> [Cordova](https://github.com/transistorsoft/cordova-background-geolocation-lt) | `cordova-background-geolocation-lt` |
+| <img src="assets/images/platforms/swift.svg" width="16" height="16"> Swift / iOS | **This repo** |
+| <img src="assets/images/platforms/kotlin.svg" width="16" height="16"> Kotlin / Android | **This repo** |
+| <img src="assets/images/platforms/react-native.svg" width="16" height="16"> [React Native](https://github.com/transistorsoft/react-native-background-geolocation) | `react-native-background-geolocation` |
+| <img src="assets/images/platforms/expo.svg" width="16" height="16"> [Expo](https://github.com/transistorsoft/react-native-background-geolocation) | `react-native-background-geolocation` |
+| <img src="assets/images/platforms/flutter.svg" width="16" height="16"> [Flutter](https://github.com/transistorsoft/flutter_background_geolocation) | `flutter_background_geolocation` |
+| <img src="assets/images/platforms/capacitor.svg" width="16" height="16"> [Capacitor](https://github.com/transistorsoft/capacitor-background-geolocation) | `@transistorsoft/capacitor-background-geolocation` |
+| <img src="assets/images/platforms/cordova.svg" width="16" height="16"> [Cordova](https://github.com/transistorsoft/cordova-background-geolocation-lt) | `cordova-background-geolocation-lt` |
 
 ---
 
