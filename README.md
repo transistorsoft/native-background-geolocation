@@ -10,11 +10,11 @@ The most sophisticated background **location-tracking & geofencing** SDK with ba
 
 ## :books: Documentation
 
-### Kotlin
+### <img src="https://transistorsoft.github.io/native-background-geolocation/assets/images/platforms/kotlin.svg" width="20" height="20"> Kotlin
 - [Setup](https://docs.transistorsoft.com/kotlin/setup/)
 - [API Reference](https://docs.transistorsoft.com/kotlin/BGGeo/)
 
-### Swift
+### <img src="https://transistorsoft.github.io/native-background-geolocation/assets/images/platforms/swift.svg" width="20" height="20"> Swift
 - [Setup](https://docs.transistorsoft.com/swift/setup/)
 - [API Reference](https://docs.transistorsoft.com/swift/BGGeo/)
 
