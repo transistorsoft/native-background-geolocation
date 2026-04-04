@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://transistorsoft.github.io/native-background-geolocation/assets/images/panel-all.svg" alt="Background Geolocation SDK" width="700">
+  <img src="https://docs.transistorsoft.com/assets/images/panel-all.svg" alt="Background Geolocation SDK" width="700">
 </p>
 
 # Background Geolocation SDK — iOS & Android
