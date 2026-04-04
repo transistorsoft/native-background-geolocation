@@ -1,0 +1,1 @@
+var BGEO_TOC_ICONS = {"Events": "radio", "Methods": "code-2", "Properties": "sliders-horizontal", "Constants": "hash", "Geofencing": "map-pin", "Data Management": "database", "Authorization": "lock", "Background Tasks": "timer", "Logging": "scroll-text", "Device": "cpu"};

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="-12.6 -12.6 25.2 25.2">
+  <defs><linearGradient id="capg" x1="-12" y1="0" x2="12" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%"   stop-color="#75CEFF"/><stop offset="100%" stop-color="#4BAEFF"/></linearGradient></defs>
+  <rect x="-12" y="-12" width="24" height="24" rx="3.9" fill="#1a1a1a" stroke="#3a3a3a" stroke-width="0.4"/>
+  <g transform="scale(0.66)"><polygon points="-12.0,-3.1 -5.9,3.0 -12.0,9.0 -9.1,12.0 -3.0,5.9 3.1,12.0 6.0,9.0 -9.0,-6.1" fill="url(#capg)"/><polygon points="12.0,-9.1 9.0,-12.0 3.0,-5.9 -3.1,-12.0 -6.1,-9.0 9.0,6.0 12.0,3.1 5.9,-3.0" fill="url(#capg)"/></g>
+</svg>
