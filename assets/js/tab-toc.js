@@ -102,6 +102,26 @@
 
     annotatePlatformTabs();
 
+    // ?tab=<slug> URL param — select the matching tab, overriding localStorage restore
+    var tabParam = new URLSearchParams(window.location.search).get("tab");
+    if (tabParam) {
+      // Run after Material's content.tabs.link localStorage restore (200 ms).
+      // Click the label (not just input.checked) to trigger Material's full
+      // tab-switching logic, including localStorage update and panel visibility.
+      setTimeout(function () {
+        var labels = Array.from(
+          tabbedSet.querySelectorAll(":scope > .tabbed-labels > label")
+        );
+        var target = labels.find(function (label) {
+          return PLATFORM_ICONS[getLabelText(label)] === tabParam;
+        });
+        if (target) {
+          target.click();
+        }
+        syncToc();
+      }, 300);
+    }
+
     // Initial sync — two passes:
     //   pass 1 (0 ms): catches the default checked radio immediately
     //   pass 2 (200 ms): catches Material's content.tabs.link localStorage restore
