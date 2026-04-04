@@ -8,9 +8,15 @@ The most sophisticated background **location-tracking & geofencing** SDK with ba
 
 ---
 
-## :books: API Documentation
+## :books: Documentation
 
-**[transistorsoft.github.io/native-background-geolocation](https://transistorsoft.github.io/native-background-geolocation/)**
+### Kotlin
+- [Setup](https://docs.transistorsoft.com/kotlin/setup/)
+- [API Reference](https://docs.transistorsoft.com/kotlin/BGGeo/)
+
+### Swift
+- [Setup](https://docs.transistorsoft.com/swift/setup/)
+- [API Reference](https://docs.transistorsoft.com/swift/BGGeo/)
 
 ---
 
