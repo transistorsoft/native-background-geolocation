@@ -249,6 +249,22 @@ h1 .platform-badge { font-size: 0.5rem; }
     margin-bottom: 0.15em;
 }
 
+/* ── Primary nav icons (Home / Setup / Examples) ────────────────────────── */
+.md-sidebar--primary .bgeo-nav-icon {
+    display: inline-block;
+    width: 0.85em;
+    height: 0.85em;
+    margin-right: 0.4em;
+    vertical-align: middle;
+    flex-shrink: 0;
+    opacity: 0.6;
+    stroke: var(--md-default-fg-color);
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
 /* ── TOC Lucide icons ────────────────────────────────────────────────────── */
 .md-nav--secondary .bgeo-toc-icon {
     display: inline-block;

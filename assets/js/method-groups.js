@@ -171,8 +171,32 @@
     });
   }
 
+  // ── Primary nav icons (Home / Setup / Examples) ─────────────────────────
+
+  var NAV_ICONS = {
+    'Home':     'house',
+    'Setup':    'wrench',
+    'Examples': 'code-2',
+  };
+
+  function initNavIcons() {
+    var sidebar = document.querySelector('.md-sidebar--primary');
+    if (!sidebar) { return; }
+    sidebar.querySelectorAll('.md-nav__link').forEach(function (link) {
+      var text = linkLabel(link);
+      var iconName = NAV_ICONS[text];
+      if (!iconName || link.querySelector('.bgeo-nav-icon')) { return; }
+      var svg = buildIcon(iconName);
+      if (!svg) { return; }
+      svg.classList.add('bgeo-nav-icon');
+      svg.setAttribute('aria-hidden', 'true');
+      link.insertBefore(svg, link.firstChild);
+    });
+  }
+
   window.addEventListener('load', function () {
     initMethodGroups();
     initSetupHeadings();
+    initNavIcons();
   });
 }());
