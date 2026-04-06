@@ -118,6 +118,7 @@
     // Common — all platforms
     'Installation':                                               'package',
     'Configure your license':                                     'key-round',
+    'License key':                                                'key-round',
     'Example':                                                    'code-2',
     // Platform section headers
     'iOS Setup':                                                  'platform:ios',
@@ -129,6 +130,12 @@
     'Expo':                                                       'platform:expo',
     'Capacitor':                                                  'platform:capacitor',
     // iOS sub-sections
+    'App initialisation':                                         'cpu',
+    'Signing & Capabilities':                                     'shield-check',
+    'Info tab':                                                   'file-code',
+    'Privacy usage strings':                                      'map-pin',
+    'Background task identifiers':                                'tag',
+    'Supplementary \`Info.plist\`':                              'file-cog',
     'CocoaPods':                                                  'layers',
     'Podfile':                                                    'layers',
     'Background Modes':                                           'radio',
