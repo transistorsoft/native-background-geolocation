@@ -1,0 +1,381 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "%lld" : {
+
+    },
+    "Add" : {
+
+    },
+    "Add Geofence" : {
+
+    },
+    "Adjust" : {
+
+    },
+    "Aggressive" : {
+
+    },
+    "ALL" : {
+
+    },
+    "Always" : {
+
+    },
+    "Any" : {
+
+    },
+    "Application" : {
+
+    },
+    "Apply to SDK now" : {
+
+    },
+    "Authorization" : {
+
+    },
+    "Auto-sync" : {
+
+    },
+    "Auto-sync threshold" : {
+
+    },
+    "Batch sync" : {
+
+    },
+    "BG Geo" : {
+
+    },
+    "Burst window: %lld s" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Circular" : {
+
+    },
+    "Click map to add polygon points" : {
+
+    },
+    "Confirm" : {
+
+    },
+    "Conservative" : {
+
+    },
+    "Debug" : {
+
+    },
+    "DEBUG" : {
+
+    },
+    "Default" : {
+
+    },
+    "Demo Server Registration" : {
+
+    },
+    "Desired accuracy" : {
+
+    },
+    "Destroy %lld location(s)?" : {
+
+    },
+    "Destroy Locations" : {
+
+    },
+    "Destroy Log" : {
+
+    },
+    "Disable elasticity (no DF auto-scale)" : {
+
+    },
+    "Disable motion-activity updates" : {
+
+    },
+    "Disable stop detection" : {
+
+    },
+    "DISABLED" : {
+
+    },
+    "Distance filter: %lld m" : {
+
+    },
+    "Email contents of the log database." : {
+
+    },
+    "Email Log" : {
+
+    },
+    "ERROR" : {
+
+    },
+    "Filter debug" : {
+
+    },
+    "Generate" : {
+
+    },
+    "Generate Schedule" : {
+
+    },
+    "Geofence proximity radius: %lld m" : {
+
+    },
+    "Geofence Transitions" : {
+
+    },
+    "GEOFENCES" : {
+
+    },
+    "Geofences only" : {
+
+    },
+    "Geolocation" : {
+
+    },
+    "Heartbeat interval" : {
+
+    },
+    "HIGH" : {
+
+    },
+    "HTTP & Persistence" : {
+
+    },
+    "identifier" : {
+
+    },
+    "INFO" : {
+
+    },
+    "Kalman debug" : {
+
+    },
+    "Kalman profile" : {
+
+    },
+    "Location + Geofences" : {
+
+    },
+    "Location Authorization" : {
+
+    },
+    "Location Filter" : {
+
+    },
+    "LOCATIONS" : {
+
+    },
+    "Log level" : {
+
+    },
+    "Log max days" : {
+
+    },
+    "loiteringDelay (milliseconds): %lld" : {
+
+    },
+    "LOW" : {
+
+    },
+    "Max batch size" : {
+
+    },
+    "Max burst distance: %lld m" : {
+
+    },
+    "Max days" : {
+
+    },
+    "Max implied speed: %lld m/s" : {
+
+    },
+    "Max records" : {
+
+    },
+    "MEDIUM" : {
+
+    },
+    "MINIMUM" : {
+
+    },
+    "Motion Detection" : {
+
+    },
+    "MOTION_FITNESS_PERMISSION_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Motion & Finess Permission"
+          }
+        }
+      }
+    },
+    "MOVING" : {
+
+    },
+    "NAVIGATION" : {
+
+    },
+    "Next" : {
+
+    },
+    "NONE" : {
+
+    },
+    "notifyOnDwell" : {
+
+    },
+    "notifyOnEntry" : {
+
+    },
+    "notifyOnExit" : {
+
+    },
+    "Odometer uses Kalman" : {
+
+    },
+    "OFF" : {
+
+    },
+    "Organization name" : {
+
+    },
+    "Pass-Through" : {
+
+    },
+    "Period ON (minutes): %lld" : {
+
+    },
+    "Persist mode" : {
+
+    },
+    "Policy" : {
+
+    },
+    "Polygon" : {
+
+    },
+    "Prevent suspend (iOS)" : {
+
+    },
+    "Preview (applies to days 1-7)" : {
+
+    },
+    "Radius" : {
+
+    },
+    "Radius: %lld m" : {
+
+    },
+    "Register" : {
+
+    },
+    "Register this device with the demo server." : {
+
+    },
+    "Remove existing schedule" : {
+
+    },
+    "Remove Geofences" : {
+
+    },
+    "Reset Odometer" : {
+
+    },
+    "Rolling window: %lld" : {
+
+    },
+    "Run Smoke Test" : {
+
+    },
+    "Save" : {
+
+    },
+    "Schedule Generator" : {
+
+    },
+    "Settings" : {
+
+    },
+    "Start on boot" : {
+
+    },
+    "STATIONARY" : {
+
+    },
+    "Status: %@ (%d)\nAccuracy: %@\nEnabled: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Status: %1$@ (%2$d)\nAccuracy: %3$@\nEnabled: %4$@"
+          }
+        }
+      }
+    },
+    "Stop detection delay: %lld ms" : {
+
+    },
+    "Stop on terminate" : {
+
+    },
+    "Stop timeout: %lld min" : {
+
+    },
+    "Submit" : {
+
+    },
+    "Sync" : {
+
+    },
+    "Time between periods (OFF, minutes): %lld" : {
+
+    },
+    "Tracker Auth" : {
+
+    },
+    "Tracking mode" : {
+
+    },
+    "Unable to fetch provider state." : {
+
+    },
+    "URL" : {
+
+    },
+    "Use Kalman (per-step)" : {
+
+    },
+    "Use significant-changes only" : {
+
+    },
+    "Username" : {
+
+    },
+    "VERBOSE" : {
+
+    },
+    "WARN" : {
+
+    },
+    "When in Use" : {
+
+    },
+    "WhenInUse" : {
+
+    },
+    "your@email.com" : {
+
+    }
+  },
+  "version" : "1.0"
+}
