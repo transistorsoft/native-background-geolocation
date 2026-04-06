@@ -1,62 +1,83 @@
-# BGGeoDemo — Example Apps
+# Example Apps
 
-Example apps demonstrating the Native Background Geolocation SDK for iOS (Swift) and Android (Kotlin).
-
-| Platform | Location | Language |
-|---|---|---|
-| iOS | `ios/` | Swift / SwiftUI |
-| Android | `android/` | Kotlin |
+This directory contains example applications demonstrating the
+[native-background-geolocation](https://github.com/transistorsoft/native-background-geolocation) SDK
+for iOS (Swift / SwiftUI) and Android (Kotlin).
 
 ---
 
-## iOS
+## BGGeoDemo
 
-### Requirements
+A full-featured demonstration app available for both platforms, showcasing:
+
+- Live map visualization (MapKit on iOS, Google Maps on Android)
+- Real-time configuration editing via a Settings panel
+- Circular geofence creation and management
+- Motion state management (start/stop tracking, change pace)
+- Demo server registration and live location tracking
+
+| Platform | Path | Language |
+|---|---|---|
+| iOS | `ios/BGGeoDemo/` | Swift / SwiftUI |
+| Android | `android/BGGeoDemo/` | Kotlin |
+
+---
+
+## Demo Server
+
+When the app launches for the first time it will ask you to register an **organization** and **username**. The example app posts your tracking data to Transistor Software's demo server at:
+
+**[https://tracker.transistorsoft.com](https://tracker.transistorsoft.com)**
+
+View your results live on a map by navigating to:
+
+```
+https://tracker.transistorsoft.com/<your-organization>
+```
+
+> [!NOTE]
+> The demo server is for testing purposes only. Use any organization name — it acts as a namespace to group your devices.
+
+![](https://raw.githubusercontent.com/transistorsoft/assets/master/images/tracker.transistorsoft.com.png)
+
+---
+
+## Setup
+
+### iOS
+
+#### Prerequisites
 
 - Xcode 15+
 - iOS 16+ device or simulator
-- A valid `TSLocationManagerLicense` key (the one in `Info.plist` is bound to `com.transistorsoft.tslocationmanager.demo` — replace it with your own for a different bundle ID)
 
-### Setup
+#### Run
 
-1. Open `ios/` as a **Swift Package** in Xcode — `File → Open` and select the `ios/` folder, or open via `Package.swift` if present. Alternatively open the parent workspace if one exists.
-2. **Rename the app to BGGeoDemo:** In Xcode, select the target → **General → Display Name**, set it to `BGGeoDemo`. Also rename the target and scheme via **Editor → Rename** to keep things consistent.
-3. Set your **Team** in **Signing & Capabilities**.
-4. Select a device or simulator and run.
+1. Open `ios/BGGeoDemo/BGGeoDemo.xcodeproj` in Xcode.
+2. Set your **Team** in **Signing & Capabilities**.
+3. Select a device or simulator and run.
 
-### Background Modes
-
-The following are already configured in `Info.plist`:
-
-- Location updates
-- Background fetch
-- Background processing
-- Audio (keeps the app alive during suspension)
+The bundleId is `com.transistorsoft.bggeo.swift.demo`. A matching license key is already configured in `Info.plist` via the `TRANSISTOR_LICENSE_KEY` build setting — replace it with your own if you change the bundle identifier.
 
 ---
 
-## Android
+### Android
 
-### Requirements
+#### Prerequisites
 
 - Android Studio Hedgehog or later
 - Android SDK 29+
-- A valid license key (the `TSLocationManagerLicense` metadata in `AndroidManifest.xml` is bound to `com.transistorsoft.tslocationmanager.demo`)
 
-### Setup
+#### Run
 
-1. Open the `android/` folder in Android Studio as an existing project.
-2. The app name is already set to **BGGeoDemo** in `res/values/strings.xml`.
-3. To use your own `applicationId`, update `build.gradle.kts`:
-   ```kotlin
-   applicationId = "com.your.package.name"
-   ```
-   and replace the license key in `AndroidManifest.xml` with one generated for that identifier.
-4. Run on a device or emulator.
+1. Open `android/BGGeoDemo/` in Android Studio as an existing project.
+2. Run on a device or emulator.
 
-### Gradle ext vars
+The `applicationId` is `com.transistorsoft.bggeo.kotlin.demo`. A matching license key is set in `AndroidManifest.xml` — replace it with your own if you change the application identifier.
 
-Pin SDK versions in the root `build.gradle` / `build.gradle.kts`:
+#### Gradle ext vars
+
+Pin SDK versions in the root `android/BGGeoDemo/build.gradle.kts`:
 
 ```kotlin
 ext["playServicesLocationVersion"] = "21.3.0"
@@ -65,9 +86,8 @@ ext["tslocationmanagerVersion"]    = "4.0.+"
 
 ---
 
-## Demo Server
+## Learn More
 
-Both apps are pre-configured to post locations to the [Transistor Software Demo Server](https://tracker.transistorsoft.com), a free hosted endpoint for development and testing.
-
-> [!NOTE]
-> The demo server is for development purposes only. Do not use it in production.
+- [Documentation](https://docs.transistorsoft.com/swift/setup/)
+- [API Reference](https://docs.transistorsoft.com/swift/BackgroundGeolocation/)
+- [GitHub repository](https://github.com/transistorsoft/native-background-geolocation)
