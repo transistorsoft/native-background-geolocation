@@ -32,6 +32,7 @@ import com.transistorsoft.locationmanager.kotlin.BGGeo
 import com.transistorsoft.locationmanager.kotlin.TransistorAuthorizationService
 import kotlinx.coroutines.launch
 import com.transistorsoft.bggeo.kotlin.demo.location.TRACKER_HOST
+import com.transistorsoft.bggeo.kotlin.demo.location.LocationManager
 import com.transistorsoft.bggeo.kotlin.demo.R
 import com.transistorsoft.bggeo.kotlin.demo.UiConfigState
 import com.transistorsoft.bggeo.kotlin.demo.databinding.SheetSettingsBinding
@@ -57,10 +58,10 @@ class SettingsBottomSheet : BottomSheetDialogFragment() {
         private val LOG_LEVEL_OPTIONS = arrayOf("OFF", "ERROR", "WARN", "INFO", "DEBUG", "VERBOSE")
         private val LOG_DAYS_OPTIONS = arrayOf("1", "2", "3", "4", "5", "6", "7")
 
-        // Transistor Authorization preference keys (match iOS Demo for consistency)
-        private const val PREFS_NAME = "transistor_auth"
-        private const val KEY_ORG = "tracker.transistorsoft.com:org"
-        private const val KEY_USERNAME = "tracker.transistorsoft.com:username"
+        // Transistor Authorization preference keys (defined in LocationManager.companion)
+        private val PREFS_NAME get() = LocationManager.PREFS_NAME
+        private val KEY_ORG get() = LocationManager.KEY_ORG
+        private val KEY_USERNAME get() = LocationManager.KEY_USERNAME
     }
 
     private var _binding: SheetSettingsBinding? = null

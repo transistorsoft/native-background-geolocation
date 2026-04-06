@@ -1,8 +1,12 @@
 package com.transistorsoft.bggeo.kotlin.demo
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.ViewGroup
+import android.widget.FrameLayout
+import android.widget.LinearLayout
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -11,6 +15,9 @@ import androidx.lifecycle.LifecycleOwner
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 import com.transistorsoft.locationmanager.kotlin.BGGeo
 import com.transistorsoft.bggeo.kotlin.demo.databinding.ActivityMainBinding
 import com.transistorsoft.bggeo.kotlin.demo.location.LocationManager
@@ -199,10 +206,65 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         }
 
+        // First-launch: show registration dialog if org/username not set
+        locationManager.needsRegistration.observe(this) { needed ->
+            if (needed) showRegistrationDialog()
+        }
+
         // Listen for settings sheet closing
         supportFragmentManager.setFragmentResultListener("settings_closed", this) { _, _ ->
             fabMenuManager.closeFabMenu()
         }
+    }
+
+    private fun showRegistrationDialog() {
+        val container = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(48, 32, 48, 8)
+            layoutParams = FrameLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+        }
+
+        val tilOrg = TextInputLayout(this).apply { hint = "Organization name"; isHintEnabled = true }
+        val etOrg = TextInputEditText(tilOrg.context)
+        tilOrg.addView(etOrg, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
+
+        val tilUser = TextInputLayout(this).apply { hint = "Username"; isHintEnabled = true }
+        val etUser = TextInputEditText(tilUser.context)
+        tilUser.addView(etUser, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
+
+        container.addView(tilOrg)
+        container.addView(tilUser)
+
+        val dlg = MaterialAlertDialogBuilder(this)
+            .setTitle("Demo Server Registration")
+            .setMessage("Register this device with tracker.transistorsoft.com to sync locations.")
+            .setView(container)
+            .setCancelable(false)
+            .setPositiveButton("Register", null)
+            .create()
+
+        dlg.setOnShowListener {
+            dlg.getButton(DialogInterface.BUTTON_POSITIVE).setOnClickListener {
+                val org = etOrg.text?.toString()?.trim().orEmpty()
+                val user = etUser.text?.toString()?.trim().orEmpty()
+
+                tilOrg.error = null
+                tilUser.error = null
+
+                var valid = true
+                if (org.isEmpty()) { tilOrg.error = "Required"; valid = false }
+                if (user.isEmpty()) { tilUser.error = "Required"; valid = false }
+                if (!valid) return@setOnClickListener
+
+                locationManager.completeInitialRegistration(org, user)
+                dlg.dismiss()
+            }
+        }
+
+        dlg.show()
     }
 
     override fun onMapReady(map: GoogleMap) {

@@ -108,6 +108,7 @@ final class LocationManagerModel: ObservableObject {
     @Published var breakoutSegments: [[CLLocationCoordinate2D]] = []
         
     @Published var toastMessage: String? = nil
+    @Published var needsRegistration: Bool = false
     @MainActor
     func toast(_ message: String) {
         print("ℹ️ \(message)")
@@ -219,9 +220,13 @@ final class LocationManagerModel: ObservableObject {
     }
     
     private func bootstrapConfig() {
+        let org = UserDefaults.standard.string(forKey: "tracker.transistorsoft.com:org") ?? ""
+        let username = UserDefaults.standard.string(forKey: "tracker.transistorsoft.com:username") ?? ""
 
-        let org = UserDefaults.standard.string(forKey: "tracker.transistorsoft.com:org") ?? "_transistor-native"
-        let username = UserDefaults.standard.string(forKey: "tracker.transistorsoft.com:username") ?? "iphone17"
+        guard !org.isEmpty, !username.isEmpty else {
+            needsRegistration = true
+            return
+        }
 
         Task {
             do {
@@ -230,39 +235,66 @@ final class LocationManagerModel: ObservableObject {
                     username: username,
                     url: trackerHost
                 )
-
-                // reset: false → config closure only runs on first install.
-                // Subsequent launches use persisted config from SettingsSheet.
-                // transistorAuthorizationToken always applies (even on subsequent launches).
-                bgGeoNew.ready(reset: false, transistorAuthorizationToken: token) { config in
-                    config.geolocation.distanceFilter = 50
-                    config.http.autoSync = false
-                    config.persistence.extras = ["config-extra": "CONFIG"]
-                    config.persistence.maxRecordsToPersist = -1
-                    config.persistence.maxDaysToPersist = 7
-                    config.persistence.persistMode = .all
-                    config.geolocation.filter.burstWindow = 0.5
-                    config.geolocation.filter.policy = .conservative
-                    config.geolocation.filter.maxBurstDistance = 1000
-                    config.geolocation.filter.maxImpliedSpeed = 100
-                    config.geolocation.locationAuthorizationRequest = .always
-                    config.geolocation.disableLocationAuthorizationAlert = false
-                    config.geolocation.desiredAccuracy = kCLLocationAccuracyBest
-                    config.logger.debug = true
-                    config.logger.logLevel = .verbose
-                    config.logger.logMaxDays = 7
-                    config.app.preventSuspend = true
-                    config.app.heartbeatInterval = 60
-                    config.app.stopOnTerminate = false
-                    config.app.startOnBoot = true
-                }
-
+                await callReady(token: token)
                 NSLog("[token] ✅ org=\(org) username=\(username) \(token.toDictionary())")
             } catch {
                 NSLog("[token] ❌ \(error.localizedDescription)")
             }
         }
 
+        isEnabled = bgGeoNew.state.enabled
+        isMoving = bgGeoNew.state.isMoving
+    }
+
+    /// Called after first-launch registration to finish SDK initialisation.
+    @MainActor
+    func completeInitialRegistration(organization: String, username: String) async {
+        BGGeo.TransistorAuthorizationService.destroyToken(url: trackerHost)
+        UserDefaults.standard.set(organization, forKey: "tracker.transistorsoft.com:org")
+        UserDefaults.standard.set(username,     forKey: "tracker.transistorsoft.com:username")
+        do {
+            let token = try await BGGeo.TransistorAuthorizationService.findOrCreateToken(
+                org: organization, username: username, url: trackerHost
+            )
+            await callReady(token: token)
+            needsRegistration = false
+            NSLog("[completeInitialRegistration] ✅ org=\(organization) username=\(username)")
+            Sound.play(.messageSent)
+            Sound.haptic(.medium)
+        } catch {
+            NSLog("[completeInitialRegistration] ❌ \(error.localizedDescription)")
+            Sound.play(.error)
+            Sound.haptic(.heavy)
+        }
+    }
+
+    @MainActor
+    private func callReady(token: BGGeo.TransistorToken) {
+        // reset: false → config closure only runs on first install.
+        // Subsequent launches use persisted config from SettingsSheet.
+        // transistorAuthorizationToken always applies (even on subsequent launches).
+        bgGeoNew.ready(reset: false, transistorAuthorizationToken: token) { config in
+            config.geolocation.distanceFilter = 50
+            config.http.autoSync = false
+            config.persistence.extras = ["config-extra": "CONFIG"]
+            config.persistence.maxRecordsToPersist = -1
+            config.persistence.maxDaysToPersist = 7
+            config.persistence.persistMode = .all
+            config.geolocation.filter.burstWindow = 0.5
+            config.geolocation.filter.policy = .conservative
+            config.geolocation.filter.maxBurstDistance = 1000
+            config.geolocation.filter.maxImpliedSpeed = 100
+            config.geolocation.locationAuthorizationRequest = .always
+            config.geolocation.disableLocationAuthorizationAlert = false
+            config.geolocation.desiredAccuracy = kCLLocationAccuracyBest
+            config.logger.debug = true
+            config.logger.logLevel = .verbose
+            config.logger.logMaxDays = 7
+            config.app.preventSuspend = true
+            config.app.heartbeatInterval = 60
+            config.app.stopOnTerminate = false
+            config.app.startOnBoot = true
+        }
         isEnabled = bgGeoNew.state.enabled
         isMoving = bgGeoNew.state.isMoving
     }

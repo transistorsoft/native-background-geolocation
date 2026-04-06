@@ -34,6 +34,11 @@ class LocationManager(
         private var sGeofenceCounter: Int = 0
         private const val TAG = "LocationManager"
 
+        // Transistor Authorization preference keys (shared with SettingsBottomSheet)
+        const val PREFS_NAME = "transistor_auth"
+        const val KEY_ORG = "tracker.transistorsoft.com:org"
+        const val KEY_USERNAME = "tracker.transistorsoft.com:username"
+
         @Synchronized
         private fun nextGeofenceIdentifier(): String {
             sGeofenceCounter += 1
@@ -57,6 +62,9 @@ class LocationManager(
     private val _odometerErrorMeters = MutableLiveData(0.0)
     val odometerErrorMeters: LiveData<Double> = _odometerErrorMeters
 
+    private val _needsRegistration = MutableLiveData(false)
+    val needsRegistration: LiveData<Boolean> = _needsRegistration
+
     private val subscriptions = mutableSetOf<EventSubscription>()
 
     init {
@@ -65,16 +73,25 @@ class LocationManager(
 
     /**
      * Initialize the location manager with authentication and default config.
+     * Posts needsRegistration=true and returns early if org/username are not set.
      */
     fun initialize() {
+        val prefs = activity.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val org = prefs.getString(KEY_ORG, "") ?: ""
+        val username = prefs.getString(KEY_USERNAME, "") ?: ""
+
+        if (org.isEmpty() || username.isEmpty()) {
+            _needsRegistration.value = true
+            return
+        }
+
         lifecycleScope.launch {
-            // Fetch auth token (falls through to ready even on failure).
             var token: com.transistorsoft.locationmanager.kotlin.TransistorToken? = null
             try {
                 token = TransistorAuthorizationService.findOrCreateToken(
                     context = activity.applicationContext,
-                    org = "_transistor-native",
-                    username = "crs",
+                    org = org,
+                    username = username,
                     url = TRACKER_HOST
                 )
                 Log.d(TAG, "Authentication token obtained: ${token.accessToken.take(6)}...")
@@ -82,35 +99,66 @@ class LocationManager(
                 Log.e(TAG, "Authentication failed: ${e.message}")
             }
 
+            callReady(token)
+        }
+    }
+
+    /**
+     * Called after first-launch registration to finish SDK initialisation.
+     */
+    fun completeInitialRegistration(org: String, username: String) {
+        val prefs = activity.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        prefs.edit().putString(KEY_ORG, org).putString(KEY_USERNAME, username).apply()
+
+        lifecycleScope.launch {
+            var token: com.transistorsoft.locationmanager.kotlin.TransistorToken? = null
             try {
-                // reset=false: config closure only runs on first install.
-                // Subsequent launches use persisted config (e.g., from Settings UI).
-                // token: auto-configures http.url + authorization for demo server.
-                bgGeo.ready(reset = false, transistorAuthorizationToken = token) {
-                    logger.debug = true
-                    logger.logLevel = LogLevel.VERBOSE
-                    logger.logMaxDays = 3
-                    app.stopOnTerminate = false
-                    app.startOnBoot = true
-                    app.serviceLaunchDelay = 1000
-                    app.heartbeatInterval = 60.0
-                    app.enableHeadless = true
-                    app.headlessJobService = HeadlessTask::class.java.name
-                    geolocation.desiredAccuracy = DesiredAccuracy.HIGH
-                    geolocation.distanceFilter = 50.0f
-                    geolocation.geofenceInitialTriggerEntry = true
-                    persistence.maxDaysToPersist = 7
-                    app.notification.smallIcon = "drawable/ic_service_icon"
-                    app.notification.largeIcon = "drawable/ic_service_icon"
-                    app.notification.title = "NOTI TITLE"
-                    app.notification.color = "FF0000"
-                    app.notification.text = "NOTI TEXT"
-                }
-                Log.d(TAG, "BackgroundGeolocation ready")
-                syncStateWithSDK()
+                TransistorAuthorizationService.destroyToken(activity.applicationContext, TRACKER_HOST)
+                token = TransistorAuthorizationService.findOrCreateToken(
+                    context = activity.applicationContext,
+                    org = org,
+                    username = username,
+                    url = TRACKER_HOST
+                )
+                Log.d(TAG, "Initial registration token: ${token.accessToken.take(6)}...")
             } catch (e: Exception) {
-                Log.e(TAG, "BackgroundGeolocation ready failed: ${e.message}")
+                Log.e(TAG, "Initial registration failed: ${e.message}")
             }
+
+            callReady(token)
+            _needsRegistration.postValue(false)
+        }
+    }
+
+    private suspend fun callReady(token: com.transistorsoft.locationmanager.kotlin.TransistorToken?) {
+        try {
+            // reset=false: config closure only runs on first install.
+            // Subsequent launches use persisted config (e.g., from Settings UI).
+            // token: auto-configures http.url + authorization for demo server.
+            bgGeo.ready(reset = false, transistorAuthorizationToken = token) {
+                logger.debug = true
+                logger.logLevel = LogLevel.VERBOSE
+                logger.logMaxDays = 3
+                app.stopOnTerminate = false
+                app.startOnBoot = true
+                app.serviceLaunchDelay = 1000
+                app.heartbeatInterval = 60.0
+                app.enableHeadless = true
+                app.headlessJobService = HeadlessTask::class.java.name
+                geolocation.desiredAccuracy = DesiredAccuracy.HIGH
+                geolocation.distanceFilter = 50.0f
+                geolocation.geofenceInitialTriggerEntry = true
+                persistence.maxDaysToPersist = 7
+                app.notification.smallIcon = "drawable/ic_service_icon"
+                app.notification.largeIcon = "drawable/ic_service_icon"
+                app.notification.title = "NOTI TITLE"
+                app.notification.color = "FF0000"
+                app.notification.text = "NOTI TEXT"
+            }
+            Log.d(TAG, "BackgroundGeolocation ready")
+            syncStateWithSDK()
+        } catch (e: Exception) {
+            Log.e(TAG, "BackgroundGeolocation ready failed: ${e.message}")
         }
     }
 

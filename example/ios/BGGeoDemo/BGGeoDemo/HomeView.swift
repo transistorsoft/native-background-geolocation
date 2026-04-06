@@ -38,6 +38,8 @@ struct HomeView: View {
     @State private var emailAddress = UserDefaults.standard.string(forKey: "EmailLogAddress") ?? ""
     @State private var showPermissionDialog = false
     @State private var providerState: BGGeo.ProviderChangeEvent? = nil
+    @State private var registrationOrg: String = ""
+    @State private var registrationUsername: String = ""
         
     private let chrome = Color(red: 0xFE/255, green: 0xDD/255, blue: 0x1E/255) // #FEDD1E
     
@@ -191,6 +193,24 @@ struct HomeView: View {
             }, message: {
                 Text("Email contents of the log database.")
             })
+            .alert("Demo Server Registration", isPresented: Binding(
+                get: { model.needsRegistration },
+                set: { _ in }           // dismissal only via Register / Cancel buttons
+            )) {
+                TextField("Organization name", text: $registrationOrg)
+                TextField("Username", text: $registrationUsername)
+                Button("Register") {
+                    Task { @MainActor in
+                        await model.completeInitialRegistration(
+                            organization: registrationOrg,
+                            username: registrationUsername
+                        )
+                    }
+                }
+                Button("Cancel", role: .cancel) {}
+            } message: {
+                Text("Register this device with tracker.transistorsoft.com to sync locations.")
+            }
             .alert("Location Authorization", isPresented: $showPermissionDialog, actions: {
                 Button("When in Use") {
                     model.requestPermission(with: .whenInUse)
