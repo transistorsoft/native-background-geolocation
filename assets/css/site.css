@@ -92,6 +92,12 @@
     margin: 1.5rem 0 2rem;
     flex-wrap: wrap;
 }
+.bgeo-repo-card-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
 .bgeo-repo-card {
     display: flex;
     flex-direction: column;
@@ -133,6 +139,187 @@
 }
 
 
+/* ── Platform page — Buy Now button ─────────────────────────────────────── */
+.bgeo-buy-now-btn {
+    display: inline-block;
+    padding: 0.4rem 1.1rem;
+    border-radius: 6px;
+    background: var(--md-accent-fg-color);
+    color: var(--md-accent-bg-color) !important;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-decoration: none !important;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+}
+.bgeo-buy-now-btn:hover { opacity: 0.85; }
+
+/* ── Pricing / Purchase page ─────────────────────────────────────────────── */
+.bgeo-pricing {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0.5rem 0 1.5rem;
+}
+.bgeo-pricing__header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.bgeo-pricing__kicker {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: var(--md-default-fg-color--light);
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+.bgeo-pricing__header h1 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    margin: 0.1rem 0 0.5rem;
+}
+.bgeo-pricing__sub {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.9rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.bgeo-pricing__cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+.bgeo-pricing__card {
+    flex: 1;
+    min-width: 190px;
+    max-width: 240px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 12px;
+    padding: 1rem 1.25rem 1rem;
+    background: var(--md-default-bg-color);
+}
+.bgeo-pricing__card--featured {
+    border-color: var(--md-accent-fg-color);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+}
+.bgeo-pricing__card h2 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+    border: none;
+    padding: 0;
+}
+.bgeo-pricing__apps {
+    font-size: 0.85rem;
+    color: var(--md-default-fg-color--light);
+    margin: 0 0 0.75rem;
+}
+.bgeo-pricing__price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.65rem;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    padding-bottom: 0.65rem;
+}
+.bgeo-pricing__price s {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--md-default-fg-color--light);
+    margin-right: 0.3rem;
+}
+.bgeo-pricing__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    flex: 1;
+    font-size: 0.88rem;
+}
+.bgeo-pricing__features li {
+    padding: 0.38rem 0;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+.bgeo-pricing__premium {
+    display: inline-block;
+    padding: 0.1em 0.5em;
+    border-radius: 4px;
+    background: #4caf50;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 700;
+    vertical-align: middle;
+    margin-right: 0.2em;
+}
+.bgeo-pricing__btn {
+    display: block;
+    text-align: center;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    background: var(--md-accent-fg-color);
+    color: var(--md-accent-bg-color) !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none !important;
+    transition: opacity 0.15s;
+    margin-top: auto;
+}
+.bgeo-pricing__btn:hover { opacity: 0.85; }
+.bgeo-pricing__footnote {
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--md-default-fg-color--light);
+    margin-top: 1rem;
+}
+.bgeo-pricing__platform-tabs {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+}
+.bgeo-pricing__ptab {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 1rem;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 6px;
+    background: var(--md-default-bg-color);
+    color: var(--md-default-fg-color--light);
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s;
+}
+.bgeo-pricing__ptab:hover {
+    border-color: var(--md-accent-fg-color);
+    color: var(--md-default-fg-color);
+}
+.bgeo-pricing__ptab--active {
+    border-color: var(--md-accent-fg-color);
+    color: var(--md-default-fg-color);
+    font-weight: 600;
+}
+.bgeo-pricing__ptab .bgeo-platform-heading-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+.bgeo-pricing__btn--unavailable {
+    display: block;
+    text-align: center;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    background: var(--md-default-fg-color--lightest);
+    color: var(--md-default-fg-color--light) !important;
+    font-size: 0.88rem;
+    margin-top: auto;
+    cursor: default;
+}
+
 /* ── Platform badge: [Android only] ─────────────────────────────────────── */
 .platform-badge {
     display: inline-block;
@@ -166,47 +353,6 @@
 }
 h1 .platform-badge { font-size: 0.5rem; }
 
-/* ── Tab labels — platform icons ────────────────────────────────────────── */
-.tabbed-labels label[data-platform] {
-    display: inline-flex;
-    align-items: center;
-}
-.tabbed-labels label[data-platform] > a {
-    padding-left: 0;
-    margin-left: 0;
-}
-.tabbed-labels label[data-platform]::before {
-    content: '';
-    display: block;
-    width: 1em;
-    height: 1em;
-    flex-shrink: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 0.3em;
-}
-.tabbed-labels label[data-platform="react-native"]::before {
-    background-image: url('../images/platforms/react-native.svg');
-}
-.tabbed-labels label[data-platform="expo"]::before {
-    background-image: url('../images/platforms/expo.svg');
-}
-.tabbed-labels label[data-platform="capacitor"]::before {
-    background-image: url('../images/platforms/capacitor.svg');
-}
-.tabbed-labels label[data-platform="flutter"]::before {
-    background-image: url('../images/platforms/flutter.svg');
-}
-.tabbed-labels label[data-platform="swift"]::before {
-    background-image: url('../images/platforms/swift.svg');
-}
-.tabbed-labels label[data-platform="kotlin"]::before {
-    background-image: url('../images/platforms/kotlin.svg');
-}
-.tabbed-labels label[data-platform="cordova"]::before {
-    background-image: url('../images/platforms/cordova.svg');
-}
 
 /* ── Setup page h2 — subtle section divider ─────────────────────────────── */
 .md-content article h2 {
@@ -249,8 +395,15 @@ h1 .platform-badge { font-size: 0.5rem; }
     margin-bottom: 0.15em;
 }
 
-/* ── Primary nav icons (Home / Setup / Examples) ────────────────────────── */
-.md-sidebar--primary .bgeo-nav-icon {
+/* ── Primary nav icons (Home / Setup / Examples) — pure CSS via ::before ──
+   Positional selectors within .md-nav[data-md-level="1"] work for both
+   active (href="./") and non-active states. Child order is fixed by
+   _static_nav_entries: 1=Home  2=Setup  3=Examples                         */
+
+.md-sidebar--primary .md-nav[data-md-level="1"] > ul > li:nth-child(1) > a.md-nav__link::before,
+.md-sidebar--primary .md-nav[data-md-level="1"] > ul > li:nth-child(2) > a.md-nav__link::before,
+.md-sidebar--primary .md-nav[data-md-level="1"] > ul > li:nth-child(3) > a.md-nav__link::before {
+    content: "";
     display: inline-block;
     width: 0.85em;
     height: 0.85em;
@@ -258,11 +411,31 @@ h1 .platform-badge { font-size: 0.5rem; }
     vertical-align: middle;
     flex-shrink: 0;
     opacity: 0.6;
-    stroke: var(--md-default-fg-color);
-    stroke-width: 2;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    background-color: var(--md-default-fg-color);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+/* Home — house icon */
+.md-sidebar--primary .md-nav[data-md-level="1"] > ul > li:nth-child(1) > a.md-nav__link::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8'/%3E%3Cpath d='M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/%3E%3C/svg%3E");
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8'/%3E%3Cpath d='M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/%3E%3C/svg%3E");
+}
+
+/* Setup — wrench icon */
+.md-sidebar--primary .md-nav[data-md-level="1"] > ul > li:nth-child(2) > a.md-nav__link::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z'/%3E%3C/svg%3E");
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z'/%3E%3C/svg%3E");
+}
+
+/* Examples — code-2 icon */
+.md-sidebar--primary .md-nav[data-md-level="1"] > ul > li:nth-child(3) > a.md-nav__link::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m18 16 4-4-4-4'/%3E%3Cpath d='m6 8-4 4 4 4'/%3E%3Cpath d='m14.5 4-5 16'/%3E%3C/svg%3E");
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m18 16 4-4-4-4'/%3E%3Cpath d='m6 8-4 4 4 4'/%3E%3Cpath d='m14.5 4-5 16'/%3E%3C/svg%3E");
 }
 
 /* ── TOC Lucide icons ────────────────────────────────────────────────────── */
@@ -362,17 +535,118 @@ h1 .platform-badge { font-size: 0.5rem; }
     background-color: var(--md-accent-fg-color);
 }
 
-/* Platform icons in top nav tabs */
-.bgeo-tab-icon {
+/* Platform icons in top nav tabs — pure CSS via ::before pseudo-elements.
+   Tab order is fixed by docs.yml platforms: 1=TypeScript  2=Flutter  3=Swift  4=Kotlin */
+
+/* Shared base for all four platform tabs */
+.md-tabs__list > .md-tabs__item:nth-child(1) > a.md-tabs__link::before,
+.md-tabs__list > .md-tabs__item:nth-child(2) > a.md-tabs__link::before,
+.md-tabs__list > .md-tabs__item:nth-child(3) > a.md-tabs__link::before,
+.md-tabs__list > .md-tabs__item:nth-child(4) > a.md-tabs__link::before {
+    content: "";
+    display: inline-block;
     height: 16px;
-    width: 16px;
     vertical-align: middle;
-    margin-right: 3px;
+    margin-right: 4px;
     margin-bottom: 2px;
     opacity: 0.5;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
 }
 
-/* Right-align the About + Context tabs in the top navigation bar */
-.md-tabs__list > .md-tabs__item:nth-last-child(2) {
+/* TypeScript — react-native + expo + capacitor (3 icons via multiple backgrounds) */
+.md-tabs__list > .md-tabs__item:nth-child(1) > a.md-tabs__link::before {
+    width: 54px; /* 3 × 16px + 2 × 3px gap */
+    background-image: url('../images/platforms/react-native.svg'),
+                      url('../images/platforms/expo.svg'),
+                      url('../images/platforms/capacitor.svg');
+    background-position: 0 center, 19px center, 38px center;
+}
+
+/* Flutter */
+.md-tabs__list > .md-tabs__item:nth-child(2) > a.md-tabs__link::before {
+    width: 16px;
+    background-image: url('../images/platforms/flutter.svg');
+    background-position: center;
+}
+
+/* Swift */
+.md-tabs__list > .md-tabs__item:nth-child(3) > a.md-tabs__link::before {
+    width: 16px;
+    background-image: url('../images/platforms/swift.svg');
+    background-position: center;
+}
+
+/* Kotlin */
+.md-tabs__list > .md-tabs__item:nth-child(4) > a.md-tabs__link::before {
+    width: 16px;
+    background-image: url('../images/platforms/kotlin.svg');
+    background-position: center;
+}
+
+/* Right-align the Help + About + Contact tabs; hide Purchase from tab bar */
+.md-tabs__list > .md-tabs__item:nth-last-child(4) {
     margin-left: auto;
+}
+.md-tabs__list > .md-tabs__item:nth-last-child(1) {
+    display: none;
+}
+
+/* Icons for Help / About / Contact tabs (Purchase is nth-last-child(1), hidden) */
+.md-tabs__list > .md-tabs__item:nth-last-child(4) > a.md-tabs__link::before,
+.md-tabs__list > .md-tabs__item:nth-last-child(3) > a.md-tabs__link::before,
+.md-tabs__list > .md-tabs__item:nth-last-child(2) > a.md-tabs__link::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Help — circle-help, amber */
+.md-tabs__list > .md-tabs__item:nth-last-child(4) > a.md-tabs__link::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3'/%3E%3Cpath d='M12 17h.01'/%3E%3C/svg%3E");
+}
+
+/* About — info circle, blue */
+.md-tabs__list > .md-tabs__item:nth-last-child(3) > a.md-tabs__link::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 16v-4'/%3E%3Cpath d='M12 8h.01'/%3E%3C/svg%3E");
+}
+
+/* Contact — mail, green */
+.md-tabs__list > .md-tabs__item:nth-last-child(2) > a.md-tabs__link::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='20' height='16' x='2' y='4' rx='2'/%3E%3Cpath d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/%3E%3C/svg%3E");
+}
+
+/* ── FAQ inline search ──────────────────────────────────────────────────── */
+
+.bgeo-faq-search {
+  margin: 1.2rem 0 1.8rem;
+}
+
+.bgeo-faq-search__input {
+  width: 100%;
+  padding: 0.55rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.25rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.bgeo-faq-search__input:focus {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--md-accent-fg-color) 25%, transparent);
+}
+
+.bgeo-faq-search__input::placeholder {
+  color: var(--md-default-fg-color--light);
 }

@@ -1,10 +1,9 @@
 /**
  * tab-toc.js
  *
- * 1. Annotates tab labels with data-platform for CSS icon injection.
- * 2. When the page has a top-level tabbed set whose labels match TOC top-level
- *    entries (e.g. "React Native / Expo / Capacitor" on the TypeScript setup
- *    page), shows only the active framework's TOC tree and hides the rest.
+ * When the page has a top-level tabbed set whose labels match TOC top-level
+ * entries (e.g. "React Native / Expo / Capacitor" on the TypeScript setup
+ * page), shows only the active framework's TOC tree and hides the rest.
  *
  * Safe on all other pages — if no labels match TOC entries, nothing changes.
  */
@@ -22,14 +21,6 @@
     "Kotlin":       "kotlin",
     "Cordova":      "cordova",
   };
-
-  function annotatePlatformTabs() {
-    document.querySelectorAll(".tabbed-labels label").forEach(function (label) {
-      var text = label.textContent.trim();
-      var slug = PLATFORM_ICONS[text];
-      if (slug) label.setAttribute("data-platform", slug);
-    });
-  }
 
   function getLabelText(el) {
     // Text may be wrapped in <span class="md-ellipsis"> with surrounding whitespace
@@ -100,8 +91,6 @@
       }
     });
 
-    annotatePlatformTabs();
-
     // ?tab=<slug> URL param — select the matching tab, overriding localStorage restore
     var tabParam = new URLSearchParams(window.location.search).get("tab");
     if (tabParam) {
@@ -122,11 +111,9 @@
       }, 300);
     }
 
-    // Initial sync — two passes:
-    //   pass 1 (0 ms): catches the default checked radio immediately
-    //   pass 2 (200 ms): catches Material's content.tabs.link localStorage restore
+    // DOMContentLoaded fires after Material's deferred JS (including content.tabs.link
+    // localStorage restore), so the radio state is already correct — one sync is enough.
     setTimeout(syncToc, 0);
-    setTimeout(syncToc, 200);
   }
 
   // DOMContentLoaded fires after all deferred scripts (including Material's)

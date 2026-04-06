@@ -16,7 +16,7 @@
 
   function injectTabIcons() {
     var base = assetsBase();
-    document.querySelectorAll('.md-tabs__link').forEach(function (link) {
+    document.querySelectorAll('[data-md-component="tabs"] .md-tabs__link').forEach(function (link) {
       var label = link.textContent.trim();
       var icons = TAB_ICONS[label];
       if (!icons || !icons.length) return;

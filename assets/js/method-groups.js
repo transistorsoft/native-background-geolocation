@@ -59,10 +59,15 @@
     var icons = (typeof BGEO_TOC_ICONS !== 'undefined') ? BGEO_TOC_ICONS : {};
 
     // ── Top-level group headers (Events, Methods, Properties, Constants) ───
-    toc.querySelectorAll(':scope > .md-nav__list > .md-nav__item > .md-nav__link')
-      .forEach(function (link) {
-        injectIcon(link, icons[linkLabel(link)]);
-      });
+    // Only inject on reference pages — pages that have bgeo-method-group headings.
+    // This prevents false matches on FAQ/help pages whose section names (e.g. "Geofencing")
+    // coincide with method sub-group labels in BGEO_TOC_ICONS.
+    if (document.querySelector('h3.bgeo-method-group')) {
+      toc.querySelectorAll(':scope > .md-nav__list > .md-nav__item > .md-nav__link')
+        .forEach(function (link) {
+          injectIcon(link, icons[linkLabel(link)]);
+        });
+    }
 
     // ── Method sub-group headers (Geofencing, Data Management, …) ──────────
     document.querySelectorAll('h3.bgeo-method-group').forEach(function (h) {
@@ -154,7 +159,8 @@
     var article = document.querySelector('.md-content article');
     if (!article) { return; }
 
-    article.querySelectorAll('h2').forEach(function (h) {
+    article.querySelectorAll('h2, h3, h4').forEach(function (h) {
+      if (h.classList.contains('bgeo-method-group')) { return; }
       if (h.querySelector('.bgeo-heading-icon, .bgeo-platform-heading-icon')) { return; }
       // Strip the MkDocs permalink anchor (¶) before matching
       var clone = h.cloneNode(true);
@@ -171,32 +177,11 @@
     });
   }
 
-  // ── Primary nav icons (Home / Setup / Examples) ─────────────────────────
-
-  var NAV_ICONS = {
-    'Home':     'house',
-    'Setup':    'wrench',
-    'Examples': 'code-2',
-  };
-
-  function initNavIcons() {
-    var sidebar = document.querySelector('.md-sidebar--primary');
-    if (!sidebar) { return; }
-    sidebar.querySelectorAll('.md-nav__link').forEach(function (link) {
-      var text = linkLabel(link);
-      var iconName = NAV_ICONS[text];
-      if (!iconName || link.querySelector('.bgeo-nav-icon')) { return; }
-      var svg = buildIcon(iconName);
-      if (!svg) { return; }
-      svg.classList.add('bgeo-nav-icon');
-      svg.setAttribute('aria-hidden', 'true');
-      link.insertBefore(svg, link.firstChild);
-    });
-  }
+  // Primary nav icons (Home / Setup / Examples) are now handled by pure CSS
+  // ::before pseudo-elements in site.css — no JS injection needed.
 
   window.addEventListener('load', function () {
     initMethodGroups();
     initSetupHeadings();
-    initNavIcons();
   });
 }());
