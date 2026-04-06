@@ -27,12 +27,18 @@ The SDK uses **motion-detection** APIs (accelerometer, gyroscope, magnetometer) 
 
 ---
 
+## :open_file_folder: Example Apps
+
+See [`/example`](example/README.md) — example apps are included in this repo.
+
+---
+
 ## :key: Licensing
 
 > [!TIP]
 > The SDK is **fully functional in `DEBUG` builds** — no license required. Try before you buy.
 
-A license is required only for **`RELEASE` builds** on Android.
+A license is required for **App Store** (iOS) and **Release** (Android) builds.
 [Purchase a license](https://shop.transistorsoft.com/products/background-geolocation-for-native-apps)
 
 ---
