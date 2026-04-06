@@ -282,6 +282,9 @@
     "Register this device with the demo server." : {
 
     },
+    "Register this device with tracker.transistorsoft.com to sync locations." : {
+
+    },
     "Remove existing schedule" : {
 
     },
