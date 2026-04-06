@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'TSLocationManager'
-  s.version      = '4.0.32'
+  s.version      = '4.0.33'
   s.summary      = 'Enterprise-grade background geolocation.'
   s.description  = 'Reliable background location with SQLite-first persistence and robust HTTP uploader.'
 
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.author       = { 'Transistor Software' => 'info@transistorsoft.com' }
 
   # Binary distribution
-  s.source       = { :http => 'https://github.com/transistorsoft/native-background-geolocation/releases/download/4.0.32/TSLocationManager.xcframework.zip' }
+  s.source       = { :http => 'https://github.com/transistorsoft/native-background-geolocation/releases/download/4.0.33/TSLocationManager.xcframework.zip' }
   s.vendored_frameworks   = 'TSLocationManager.xcframework'
   s.static_framework      = true
 
@@ -27,6 +27,9 @@ Pod::Spec.new do |s|
 
   # TSBackgroundFetch dependency (allow patch updates)
   s.dependency 'TSBackgroundFetch', '~> 4.0.6'
+
+  # CocoaLumberjack — logging dependency required by TSLocationManager binary
+  s.dependency 'CocoaLumberjack', '~> 3.7.2'
 
   s.pod_target_xcconfig   = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
 
