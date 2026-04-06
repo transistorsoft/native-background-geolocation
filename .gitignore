@@ -19,7 +19,9 @@ out/
 
 # Gradle files
 .gradle/
+**/.gradle/
 build/
+**/build/
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -58,5 +60,7 @@ freeline.py
 freeline/
 freeline_project_description.json
 xcuserdata
+**/*.xcuserstate
+.swiftpm/
 android/.idea
 **/.idea/
