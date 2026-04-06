@@ -2,7 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<!-- Scene lifecycle (required for SwiftUI @main apps) -->
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.transistorsoft.fetch</string>
+	</array>
+	<key>TSLocationManagerLicense</key>
+	<string>$(TRANSISTOR_LICENSE_KEY)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -10,13 +15,7 @@
 		<key>UISceneConfigurations</key>
 		<dict/>
 	</dict>
-
-	<!-- Launch screen (required for correct window sizing) -->
 	<key>UILaunchScreen</key>
 	<dict/>
-
-	<!-- Transistor SDK license key — set TRANSISTOR_LICENSE_KEY in Build Settings -->
-	<key>TSLocationManagerLicense</key>
-	<string>$(TRANSISTOR_LICENSE_KEY)</string>
 </dict>
 </plist>
