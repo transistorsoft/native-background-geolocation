@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83FB08002F84063000C2B8E6 /* BackgroundGeolocation in Frameworks */ = {isa = PBXBuildFile; productRef = 83FB08012F84063000C2B8E6 /* BackgroundGeolocation */; };
+		83FB08052F84063000C2B8E6 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 83FB08032F84063000C2B8E6 /* CocoaLumberjack */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83FB07E02F84063000C2B8E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83FB07CA2F84062E00C2B8E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83FB07D12F84062E00C2B8E6;
+			remoteInfo = BGGeoDemo;
+		};
+		83FB07EA2F84063000C2B8E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83FB07CA2F84062E00C2B8E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83FB07D12F84062E00C2B8E6;
+			remoteInfo = BGGeoDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		83FB07D22F84062E00C2B8E6 /* BGGeoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGGeoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83FB07DF2F84063000C2B8E6 /* BGGeoDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BGGeoDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83FB07E92F84063000C2B8E6 /* BGGeoDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BGGeoDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		83FB08072F84063000C2B8E6 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Info.plist",
+			);
+			target = 83FB07D12F84062E00C2B8E6 /* BGGeoDemo */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		83FB07D42F84062E00C2B8E6 /* BGGeoDemo */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				83FB08072F84063000C2B8E6 /* PBXFileSystemSynchronizedBuildFileExceptionSet */,
+			);
+			path = BGGeoDemo;
+			sourceTree = "<group>";
+		};
+		83FB07E22F84063000C2B8E6 /* BGGeoDemoTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BGGeoDemoTests;
+			sourceTree = "<group>";
+		};
+		83FB07EC2F84063000C2B8E6 /* BGGeoDemoUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BGGeoDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83FB07CF2F84062E00C2B8E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83FB08002F84063000C2B8E6 /* BackgroundGeolocation in Frameworks */,
+				83FB08052F84063000C2B8E6 /* CocoaLumberjack in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83FB07DC2F84063000C2B8E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83FB07E62F84063000C2B8E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83FB07C92F84062E00C2B8E6 = {
+			isa = PBXGroup;
+			children = (
+				83FB07D42F84062E00C2B8E6 /* BGGeoDemo */,
+				83FB07E22F84063000C2B8E6 /* BGGeoDemoTests */,
+				83FB07EC2F84063000C2B8E6 /* BGGeoDemoUITests */,
+				83FB07D32F84062E00C2B8E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83FB07D32F84062E00C2B8E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83FB07D22F84062E00C2B8E6 /* BGGeoDemo.app */,
+				83FB07DF2F84063000C2B8E6 /* BGGeoDemoTests.xctest */,
+				83FB07E92F84063000C2B8E6 /* BGGeoDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83FB07D12F84062E00C2B8E6 /* BGGeoDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83FB07F32F84063000C2B8E6 /* Build configuration list for PBXNativeTarget "BGGeoDemo" */;
+			buildPhases = (
+				83FB07CE2F84062E00C2B8E6 /* Sources */,
+				83FB07CF2F84062E00C2B8E6 /* Frameworks */,
+				83FB07D02F84062E00C2B8E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				83FB07D42F84062E00C2B8E6 /* BGGeoDemo */,
+			);
+			name = BGGeoDemo;
+			packageProductDependencies = (
+				83FB08012F84063000C2B8E6 /* BackgroundGeolocation */,
+				83FB08032F84063000C2B8E6 /* CocoaLumberjack */,
+			);
+			productName = BGGeoDemo;
+			productReference = 83FB07D22F84062E00C2B8E6 /* BGGeoDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83FB07DE2F84063000C2B8E6 /* BGGeoDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83FB07F62F84063000C2B8E6 /* Build configuration list for PBXNativeTarget "BGGeoDemoTests" */;
+			buildPhases = (
+				83FB07DB2F84063000C2B8E6 /* Sources */,
+				83FB07DC2F84063000C2B8E6 /* Frameworks */,
+				83FB07DD2F84063000C2B8E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83FB07E12F84063000C2B8E6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				83FB07E22F84063000C2B8E6 /* BGGeoDemoTests */,
+			);
+			name = BGGeoDemoTests;
+			packageProductDependencies = (
+			);
+			productName = BGGeoDemoTests;
+			productReference = 83FB07DF2F84063000C2B8E6 /* BGGeoDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		83FB07E82F84063000C2B8E6 /* BGGeoDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83FB07F92F84063000C2B8E6 /* Build configuration list for PBXNativeTarget "BGGeoDemoUITests" */;
+			buildPhases = (
+				83FB07E52F84063000C2B8E6 /* Sources */,
+				83FB07E62F84063000C2B8E6 /* Frameworks */,
+				83FB07E72F84063000C2B8E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83FB07EB2F84063000C2B8E6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				83FB07EC2F84063000C2B8E6 /* BGGeoDemoUITests */,
+			);
+			name = BGGeoDemoUITests;
+			packageProductDependencies = (
+			);
+			productName = BGGeoDemoUITests;
+			productReference = 83FB07E92F84063000C2B8E6 /* BGGeoDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83FB07CA2F84062E00C2B8E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2630;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					83FB07D12F84062E00C2B8E6 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					83FB07DE2F84063000C2B8E6 = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = 83FB07D12F84062E00C2B8E6;
+					};
+					83FB07E82F84063000C2B8E6 = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = 83FB07D12F84062E00C2B8E6;
+					};
+				};
+			};
+			buildConfigurationList = 83FB07CD2F84062E00C2B8E6 /* Build configuration list for PBXProject "BGGeoDemo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83FB07C92F84062E00C2B8E6;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				83FB0A082F8409D300C2B8E6 /* XCRemoteSwiftPackageReference "native-background-geolocation" */,
+				83FB08042F84063000C2B8E6 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 83FB07D32F84062E00C2B8E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83FB07D12F84062E00C2B8E6 /* BGGeoDemo */,
+				83FB07DE2F84063000C2B8E6 /* BGGeoDemoTests */,
+				83FB07E82F84063000C2B8E6 /* BGGeoDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83FB07D02F84062E00C2B8E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83FB07DD2F84063000C2B8E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83FB07E72F84063000C2B8E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83FB07CE2F84062E00C2B8E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83FB07DB2F84063000C2B8E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83FB07E52F84063000C2B8E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83FB07E12F84063000C2B8E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83FB07D12F84062E00C2B8E6 /* BGGeoDemo */;
+			targetProxy = 83FB07E02F84063000C2B8E6 /* PBXContainerItemProxy */;
+		};
+		83FB07EB2F84063000C2B8E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83FB07D12F84062E00C2B8E6 /* BGGeoDemo */;
+			targetProxy = 83FB07EA2F84063000C2B8E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		83FB07F12F84063000C2B8E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 32A636YFGZ;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		83FB07F22F84063000C2B8E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 32A636YFGZ;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83FB07F42F84063000C2B8E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32A636YFGZ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BGGeoDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.transistorsoft.bggeo.swift.demo.BGGeoDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "BGGeoDemo/BGGeoDemo-Bridging-Header.h";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83FB07F52F84063000C2B8E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32A636YFGZ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BGGeoDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.transistorsoft.bggeo.swift.demo.BGGeoDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "BGGeoDemo/BGGeoDemo-Bridging-Header.h";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		83FB07F72F84063000C2B8E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32A636YFGZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.transistorsoft.bggeo.swift.demo.BGGeoDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BGGeoDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BGGeoDemo";
+			};
+			name = Debug;
+		};
+		83FB07F82F84063000C2B8E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32A636YFGZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.transistorsoft.bggeo.swift.demo.BGGeoDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BGGeoDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BGGeoDemo";
+			};
+			name = Release;
+		};
+		83FB07FA2F84063000C2B8E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32A636YFGZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.transistorsoft.bggeo.swift.demo.BGGeoDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BGGeoDemo;
+			};
+			name = Debug;
+		};
+		83FB07FB2F84063000C2B8E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32A636YFGZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.transistorsoft.bggeo.swift.demo.BGGeoDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BGGeoDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83FB07CD2F84062E00C2B8E6 /* Build configuration list for PBXProject "BGGeoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83FB07F12F84063000C2B8E6 /* Debug */,
+				83FB07F22F84063000C2B8E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83FB07F32F84063000C2B8E6 /* Build configuration list for PBXNativeTarget "BGGeoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83FB07F42F84063000C2B8E6 /* Debug */,
+				83FB07F52F84063000C2B8E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83FB07F62F84063000C2B8E6 /* Build configuration list for PBXNativeTarget "BGGeoDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83FB07F72F84063000C2B8E6 /* Debug */,
+				83FB07F82F84063000C2B8E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83FB07F92F84063000C2B8E6 /* Build configuration list for PBXNativeTarget "BGGeoDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83FB07FA2F84063000C2B8E6 /* Debug */,
+				83FB07FB2F84063000C2B8E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		83FB08042F84063000C2B8E6 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 3.7.2;
+			};
+		};
+		83FB0A082F8409D300C2B8E6 /* XCRemoteSwiftPackageReference "native-background-geolocation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/transistorsoft/native-background-geolocation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.32;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		83FB08012F84063000C2B8E6 /* BackgroundGeolocation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83FB0A082F8409D300C2B8E6 /* XCRemoteSwiftPackageReference "native-background-geolocation" */;
+			productName = BackgroundGeolocation;
+		};
+		83FB08032F84063000C2B8E6 /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83FB08042F84063000C2B8E6 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 83FB07CA2F84062E00C2B8E6 /* Project object */;
+}

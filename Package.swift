@@ -20,6 +20,11 @@ let package = Package(
         .package(
             url: "https://github.com/transistorsoft/transistor-background-fetch.git",
             .upToNextMinor(from: "4.0.6")
+        ),
+        // CocoaLumberjack — logging dependency required by TSLocationManager binary
+        .package(
+            url: "https://github.com/CocoaLumberjack/CocoaLumberjack.git",
+            .upToNextMinor(from: "3.7.2")
         )
     ],
     targets: [
@@ -34,7 +39,8 @@ let package = Package(
             name: "BackgroundGeolocation",
             dependencies: [
                 "TSLocationManager",
-                .product(name: "TSBackgroundFetch", package: "transistor-background-fetch")
+                .product(name: "TSBackgroundFetch", package: "transistor-background-fetch"),
+                .product(name: "CocoaLumberjack", package: "CocoaLumberjack")
             ],
             path: "Sources/BackgroundGeolocation"
         )
