@@ -178,9 +178,9 @@
 }
 .bgeo-pricing__sub {
     color: var(--md-default-fg-color--light);
-    font-size: 0.9rem;
-    max-width: 500px;
-    margin: 0 auto;
+    font-size: 0.8rem;
+    max-width: 680px;
+    margin: 0 auto 1.75rem;
 }
 .bgeo-pricing__cards {
     display: flex;
@@ -214,7 +214,7 @@
     padding: 0;
 }
 .bgeo-pricing__apps {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: var(--md-default-fg-color--light);
     margin: 0 0 0.75rem;
 }
@@ -236,10 +236,10 @@
     padding: 0;
     margin: 0 0 1rem;
     flex: 1;
-    font-size: 0.88rem;
+    font-size: 0.78rem;
 }
 .bgeo-pricing__features li {
-    padding: 0.38rem 0;
+    padding: 0.2rem 0;
     border-bottom: 1px solid var(--md-default-fg-color--lightest);
 }
 .bgeo-pricing__premium {
@@ -278,7 +278,7 @@
     gap: 0.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 .bgeo-pricing__ptab {
     display: flex;
