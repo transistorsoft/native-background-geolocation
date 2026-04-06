@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="desired_accuracy_entries">
+        <item>High</item>
+        <item>Balanced</item>
+        <item>Low</item>
+        <item>Passive</item>
+    </string-array>
+
+    <string-array name="persist_max_records_entries">
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+        <item>10</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="persist_max_days_entries">
+        <item>-1</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+        <item>7</item>
+        <item>14</item>
+    </string-array>
+
+    <string-array name="persist_mode_entries">
+        <item>ALL</item>
+        <item>LOCATIONS</item>
+        <item>GEOFENCES</item>
+        <item>NONE</item>
+    </string-array>
+
+    <string-array name="interval_ms_entries">
+        <item>0</item>
+        <item>1000</item>
+        <item>5000</item>
+        <item>10000</item>
+        <item>30000</item>
+        <item>60000</item>
+    </string-array>
+
+    <string-array name="http_auto_sync_threshold_entries">
+        <item>0</item>
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>50</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="http_max_batch_size_entries">
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>50</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="heartbeat_interval_entries">
+        <item>-1</item>
+        <item>60</item>
+        <item>120</item>
+        <item>300</item>
+    </string-array>
+
+    <string-array name="log_level_entries">
+        <item>OFF</item>
+        <item>ERROR</item>
+        <item>WARN</item>
+        <item>INFO</item>
+        <item>DEBUG</item>
+        <item>VERBOSE</item>
+    </string-array>
+
+    <string-array name="log_max_days_entries">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?><gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:lockito="https://lockito-app.com/import-gpx-2.xsd" creator="Lockito 2.0" version="3000037">
+  <metadata>
+    <name>Laurier park walk</name>
+    <extensions>
+      <lockito:loop>false</lockito:loop>
+    </extensions>
+  </metadata>
+  <wpt lat="45.51891671571949" lon="-73.60070452094078">
+    <extensions>
+      <lockito:address>243 Av. Querbes, Outremont, QC H2V 3W1, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.520168586091266" lon="-73.60396172851324">
+    <extensions>
+      <lockito:address>1108 Av. Saint-Viateur, Montréal, QC H2V 1Y7, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.52229851056958" lon="-73.60202349722385">
+    <extensions>
+      <lockito:address>5451 Av. du Parc, Montréal, QC H2V 4G9, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.524521138324566" lon="-73.60008090734482">
+    <extensions>
+      <lockito:address>100 R. Saint Viateur Ouest, Montréal, QC H2T 2X2, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.52699265740562" lon="-73.5978177934885">
+    <extensions>
+      <lockito:address>St-Viateur / Casgrain, Montréal, QC H2T 1A5, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.527549568069375" lon="-73.59728839248419">
+    <extensions>
+      <lockito:address>Saint-Viateur / De Gaspé, Montréal, QC H2T 1A8, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.52844845863475" lon="-73.59618533402681">
+    <extensions>
+      <lockito:address>112 Av. Henri-Julien, Montréal, QC H2S 2T7, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.52715801652489" lon="-73.59334152191877">
+    <extensions>
+      <lockito:address>5313 Av. Henri-Julien, Montréal, QC H2T 2E7, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.52688766350796" lon="-73.59275076538324">
+    <extensions>
+      <lockito:address>301 Rue Boucher, Montréal, QC H2T 2H4, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.5280665434681" lon="-73.59163396060467">
+    <extensions>
+      <lockito:address>5261 R. Saint-Denis, Montréal, QC H2J 2L8, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.532566917758096" lon="-73.58769848942757">
+    <extensions>
+      <lockito:address>Sir-Wilfrid-Laurier Park, 5200 Rue de Brébeuf, Montréal, QC H2J 3L8, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.53233017618171" lon="-73.5860375314951">
+    <extensions>
+      <lockito:address>Sir-Wilfrid-Laurier Park, 5200 Rue de Brébeuf, Montréal, QC H2J 3L8, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.53240721124849" lon="-73.5848281905055">
+    <extensions>
+      <lockito:address>5121 Rue de Brébeuf, Montréal, QC H2J 3L8, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.53339574028632" lon="-73.58373988419771">
+    <extensions>
+      <lockito:address>1354 Avenue Laurier Est, Montréal, QC H2J 1H6, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.529447626638095" lon="-73.57835333794355">
+    <extensions>
+      <lockito:address>4507 Rue de Brébeuf, Montréal, QC H2J 1Y4, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.52752091231993" lon="-73.58043003827333">
+    <extensions>
+      <lockito:address>4514 Rue Boyer, Montréal, QC H2J 3E4, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.52780864356779" lon="-73.58200617134571">
+    <extensions>
+      <lockito:address>4650 Rue de Mentana, Montréal, QC H2J 3B9, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.525954688990964" lon="-73.58364902436733">
+    <extensions>
+      <lockito:address>Albert-Saint-Martin Park, Rue Pontiac et, Rue de Bienville, Montréal, QC H2J 2R3, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.524839890992055" lon="-73.5847245901823">
+    <extensions>
+      <lockito:address>4618 QC-335, Montréal, QC H2J 2L3, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.52515934653277" lon="-73.5857679694891">
+    <extensions>
+      <lockito:address>397 Rue Gilford, Montréal, QC H2T 1M7, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.52192266122112" lon="-73.58884681016207">
+    <extensions>
+      <lockito:address>4709 Rue Saint-Dominique, Montréal, QC H2T 1T7, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.517984783623824" lon="-73.59263341873884">
+    <extensions>
+      <lockito:address>4800 Av. du Parc, Montréal, QC H2V 4E6, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.518751802215036" lon="-73.59446838498116">
+    <extensions>
+      <lockito:address>356 Bd St Joseph O, Montréal, QC H2V 2N9, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.517914776505826" lon="-73.59541822224855">
+    <extensions>
+      <lockito:address>5030 Rue Hutchison, Outremont, QC H2V 2P5, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.518790094140215" lon="-73.59657190740108">
+    <extensions>
+      <lockito:address>403-400 Av. Laurier O, Montréal, QC H2V 2K7, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.51756967303041" lon="-73.59786339104176">
+    <extensions>
+      <lockito:address>1091 Av. Laurier O, Outremont, QC H2V 2K8, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <wpt lat="45.5186388056459" lon="-73.60043797641993">
+    <extensions>
+      <lockito:address>230 Av. Querbes, Outremont, QC H2V 3W2, Canada</lockito:address>
+    </extensions>
+  </wpt>
+  <trk>
+    <trkseg>
+      <trkpt lat="45.51891671571949" lon="-73.60070452094078"/>
+      <trkpt lat="45.520168586091266" lon="-73.60396172851324"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.520168586091266" lon="-73.60396172851324"/>
+      <trkpt lat="45.52229851056958" lon="-73.60202349722385"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.52229851056958" lon="-73.60202349722385"/>
+      <trkpt lat="45.524521138324566" lon="-73.60008090734482"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.524521138324566" lon="-73.60008090734482"/>
+      <trkpt lat="45.52699265740562" lon="-73.5978177934885"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.52699265740562" lon="-73.5978177934885"/>
+      <trkpt lat="45.527549568069375" lon="-73.59728839248419"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.527549568069375" lon="-73.59728839248419"/>
+      <trkpt lat="45.52844845863475" lon="-73.59618533402681"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.52844845863475" lon="-73.59618533402681"/>
+      <trkpt lat="45.52715801652489" lon="-73.59334152191877"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.52715801652489" lon="-73.59334152191877"/>
+      <trkpt lat="45.52688766350796" lon="-73.59275076538324"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.52688766350796" lon="-73.59275076538324"/>
+      <trkpt lat="45.5280665434681" lon="-73.59163396060467"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.5280665434681" lon="-73.59163396060467"/>
+      <trkpt lat="45.532566917758096" lon="-73.58769848942757"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.532566917758096" lon="-73.58769848942757"/>
+      <trkpt lat="45.53233017618171" lon="-73.5860375314951"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.53233017618171" lon="-73.5860375314951"/>
+      <trkpt lat="45.53240721124849" lon="-73.5848281905055"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.53240721124849" lon="-73.5848281905055"/>
+      <trkpt lat="45.53339574028632" lon="-73.58373988419771"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.53339574028632" lon="-73.58373988419771"/>
+      <trkpt lat="45.529447626638095" lon="-73.57835333794355"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.529447626638095" lon="-73.57835333794355"/>
+      <trkpt lat="45.52752091231993" lon="-73.58043003827333"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.52752091231993" lon="-73.58043003827333"/>
+      <trkpt lat="45.52780864356779" lon="-73.58200617134571"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.52780864356779" lon="-73.58200617134571"/>
+      <trkpt lat="45.525954688990964" lon="-73.58364902436733"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.525954688990964" lon="-73.58364902436733"/>
+      <trkpt lat="45.524839890992055" lon="-73.5847245901823"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.524839890992055" lon="-73.5847245901823"/>
+      <trkpt lat="45.52515934653277" lon="-73.5857679694891"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.52515934653277" lon="-73.5857679694891"/>
+      <trkpt lat="45.52192266122112" lon="-73.58884681016207"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.52192266122112" lon="-73.58884681016207"/>
+      <trkpt lat="45.517984783623824" lon="-73.59263341873884"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.517984783623824" lon="-73.59263341873884"/>
+      <trkpt lat="45.518751802215036" lon="-73.59446838498116"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.518751802215036" lon="-73.59446838498116"/>
+      <trkpt lat="45.517914776505826" lon="-73.59541822224855"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.517914776505826" lon="-73.59541822224855"/>
+      <trkpt lat="45.518790094140215" lon="-73.59657190740108"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.518790094140215" lon="-73.59657190740108"/>
+      <trkpt lat="45.51756967303041" lon="-73.59786339104176"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="45.51756967303041" lon="-73.59786339104176"/>
+      <trkpt lat="45.5186388056459" lon="-73.60043797641993"/>
+      <extensions>
+        <lockito:speed>fixed:50.0</lockito:speed>
+        <lockito:accuracy>random:2.0:4.0</lockito:accuracy>
+        <lockito:altitude>fixed:0.0</lockito:altitude>
+      </extensions>
+    </trkseg>
+  </trk>
+</gpx>

@@ -1,0 +1,10 @@
+<resources>
+    <declare-styleable name="StepperField">
+        <attr name="sr_label" format="string"/>
+        <attr name="sr_unit" format="string"/>
+        <attr name="sr_min" format="float"/>
+        <attr name="sr_max" format="float"/>
+        <attr name="sr_step" format="float"/>
+        <attr name="sr_value" format="float"/>
+    </declare-styleable>
+</resources>
