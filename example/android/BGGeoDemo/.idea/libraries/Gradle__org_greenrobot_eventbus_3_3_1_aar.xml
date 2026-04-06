@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.greenrobot:eventbus:3.3.1@aar" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/8.13/transforms/e181de0a6bb6a2c7ddce618c6c62ab56/transformed/eventbus-3.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.13/transforms/e181de0a6bb6a2c7ddce618c6c62ab56/transformed/eventbus-3.3.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

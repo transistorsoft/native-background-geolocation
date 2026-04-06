@@ -158,11 +158,11 @@
 .bgeo-pricing {
     max-width: 960px;
     margin: 0 auto;
-    padding: 0.5rem 0 1.5rem;
+    padding: 0 0 0.5rem;
 }
 .bgeo-pricing__header {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 .bgeo-pricing__kicker {
     font-size: 0.75rem;
@@ -278,7 +278,7 @@
     gap: 0.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 .bgeo-pricing__ptab {
     display: flex;
@@ -319,6 +319,10 @@
     margin-top: auto;
     cursor: default;
 }
+
+/* ── Purchase page — suppress Material wrapper whitespace ───────────────── */
+.md-main__inner:has(.bgeo-pricing)          { margin-top: 0; }
+.md-content__inner:has(.bgeo-pricing)       { padding-top: 0; margin-bottom: 0; }
 
 /* ── Platform badge: [Android only] ─────────────────────────────────────── */
 .platform-badge {

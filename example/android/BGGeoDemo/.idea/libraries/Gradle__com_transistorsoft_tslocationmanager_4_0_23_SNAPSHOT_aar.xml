@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT@aar" external-system-id="GRADLE">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/8.13/transforms/c3e1f9acef623083d0ed6823b2c064fe/transformed/tslocationmanager-4.0.23-SNAPSHOT/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/8.13/transforms/c3e1f9acef623083d0ed6823b2c064fe/transformed/tslocationmanager-4.0.23-SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.13/transforms/c3e1f9acef623083d0ed6823b2c064fe/transformed/tslocationmanager-4.0.23-SNAPSHOT/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.13/transforms/c3e1f9acef623083d0ed6823b2c064fe/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.transistorsoft/tslocationmanager/4.0.23-SNAPSHOT/5a127ba72b2af70c0e8c7ad53ada9ebba523b543/tslocationmanager-4.0.23-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

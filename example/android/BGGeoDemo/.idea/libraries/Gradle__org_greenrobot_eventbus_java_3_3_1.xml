@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.greenrobot:eventbus-java:3.3.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.greenrobot" artifactId="eventbus-java" version="3.3.1" baseVersion="3.3.1" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.greenrobot/eventbus-java/3.3.1/74487b0caceca6fcd1aff45d41a9cdc6910d7f5a/eventbus-java-3.3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
