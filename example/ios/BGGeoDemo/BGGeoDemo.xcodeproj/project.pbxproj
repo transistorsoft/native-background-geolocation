@@ -32,25 +32,12 @@
 		83FB07D22F84062E00C2B8E6 /* BGGeoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGGeoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FB07DF2F84063000C2B8E6 /* BGGeoDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BGGeoDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FB07E92F84063000C2B8E6 /* BGGeoDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BGGeoDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-
+		83FB09012F84063000C2B8E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		83FB08072F84063000C2B8E6 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"Info.plist",
-			);
-			target = 83FB07D12F84062E00C2B8E6 /* BGGeoDemo */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		83FB07D42F84062E00C2B8E6 /* BGGeoDemo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				83FB08072F84063000C2B8E6 /* PBXFileSystemSynchronizedBuildFileExceptionSet */,
-			);
 			path = BGGeoDemo;
 			sourceTree = "<group>";
 		};
@@ -96,6 +83,7 @@
 		83FB07C92F84062E00C2B8E6 = {
 			isa = PBXGroup;
 			children = (
+				83FB09012F84063000C2B8E6 /* Info.plist */,
 				83FB07D42F84062E00C2B8E6 /* BGGeoDemo */,
 				83FB07E22F84063000C2B8E6 /* BGGeoDemoTests */,
 				83FB07EC2F84063000C2B8E6 /* BGGeoDemoUITests */,
@@ -426,14 +414,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32A636YFGZ;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = BGGeoDemo/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "BGGeoDemo requires location access to demonstrate BackgroundGeolocation.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "BGGeoDemo requires location access to demonstrate BackgroundGeolocation.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "BGGeoDemo uses motion activity to determine when the device is moving.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.transistorsoft.bggeo.swift.demo.BGGeoDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.transistorsoft.bggeo.swift.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -443,6 +435,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TRANSISTOR_LICENSE_KEY = "eyJhbGciOiJFZERTQSIsImtpZCI6ImVkMjU1MTktbWFpbi12MSJ9.eyJvcyI6ImlvcyIsImFwcF9pZCI6ImNvbS50cmFuc2lzdG9yc29mdC5iZ2dlby5zd2lmdC5kZW1vIiwib3JkZXJfbnVtYmVyIjo3MDM0LCJyZW5ld2FsX3VybCI6Imh0dHBzOi8vc2hvcC50cmFuc2lzdG9yc29mdC5jb20vY2FydC8xNjUwNzg2MTUwNToxP25vdGU9NTM5MSIsImN1c3RvbWVyX2lkIjozMDksInByb2R1Y3QiOiJuYXRpdmUtYmFja2dyb3VuZC1nZW9sb2NhdGlvbiIsImtleV92ZXJzaW9uIjoxLCJhbGxvd2VkX3N1ZmZpeGVzIjpbIi5kZXYiLCIuZGV2ZWxvcG1lbnQiLCIuc3RhZ2luZyIsIi5zdGFnZSIsIi5xYSIsIi51YXQiLCIudGVzdCIsIi5kZWJ1ZyJdLCJtYXhfYnVpbGRfc3RhbXAiOjIwMzYxMTI5LCJncmFjZV9idWlsZHMiOjAsImVudGl0bGVtZW50cyI6WyJjb3JlIiwicG9seWdvbi1nZW9mZW5jaW5nIiwiZmlyZWJhc2UiXSwiaWF0IjoxNzc1NDk3Mzc1fQ.FxE_28r3-xl-oB3KOPT4ywBK1NthXIG45pd_zplFsEQ1XCuPEpCNZCVxjqYghLS6kv6IFIc_0a7OzOWkPPdXAw";
 			};
 			name = Debug;
 		};
@@ -455,14 +448,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32A636YFGZ;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = BGGeoDemo/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "BGGeoDemo requires location access to demonstrate BackgroundGeolocation.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "BGGeoDemo requires location access to demonstrate BackgroundGeolocation.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "BGGeoDemo uses motion activity to determine when the device is moving.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.transistorsoft.bggeo.swift.demo.BGGeoDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.transistorsoft.bggeo.swift.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -472,6 +469,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TRANSISTOR_LICENSE_KEY = "eyJhbGciOiJFZERTQSIsImtpZCI6ImVkMjU1MTktbWFpbi12MSJ9.eyJvcyI6ImlvcyIsImFwcF9pZCI6ImNvbS50cmFuc2lzdG9yc29mdC5iZ2dlby5zd2lmdC5kZW1vIiwib3JkZXJfbnVtYmVyIjo3MDM0LCJyZW5ld2FsX3VybCI6Imh0dHBzOi8vc2hvcC50cmFuc2lzdG9yc29mdC5jb20vY2FydC8xNjUwNzg2MTUwNToxP25vdGU9NTM5MSIsImN1c3RvbWVyX2lkIjozMDksInByb2R1Y3QiOiJuYXRpdmUtYmFja2dyb3VuZC1nZW9sb2NhdGlvbiIsImtleV92ZXJzaW9uIjoxLCJhbGxvd2VkX3N1ZmZpeGVzIjpbIi5kZXYiLCIuZGV2ZWxvcG1lbnQiLCIuc3RhZ2luZyIsIi5zdGFnZSIsIi5xYSIsIi51YXQiLCIudGVzdCIsIi5kZWJ1ZyJdLCJtYXhfYnVpbGRfc3RhbXAiOjIwMzYxMTI5LCJncmFjZV9idWlsZHMiOjAsImVudGl0bGVtZW50cyI6WyJjb3JlIiwicG9seWdvbi1nZW9mZW5jaW5nIiwiZmlyZWJhc2UiXSwiaWF0IjoxNzc1NDk3Mzc1fQ.FxE_28r3-xl-oB3KOPT4ywBK1NthXIG45pd_zplFsEQ1XCuPEpCNZCVxjqYghLS6kv6IFIc_0a7OzOWkPPdXAw";
 			};
 			name = Release;
 		};
@@ -483,6 +481,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32A636YFGZ;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.transistorsoft.bggeo.swift.demo.BGGeoDemoTests;
@@ -494,6 +493,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BGGeoDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BGGeoDemo";
+				TRANSISTOR_LICENSE_KEY = "";
 			};
 			name = Debug;
 		};
@@ -505,6 +505,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32A636YFGZ;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.transistorsoft.bggeo.swift.demo.BGGeoDemoTests;
@@ -516,6 +517,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BGGeoDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BGGeoDemo";
+				TRANSISTOR_LICENSE_KEY = "";
 			};
 			name = Release;
 		};
@@ -526,6 +528,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32A636YFGZ;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.transistorsoft.bggeo.swift.demo.BGGeoDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -536,6 +539,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BGGeoDemo;
+				TRANSISTOR_LICENSE_KEY = "";
 			};
 			name = Debug;
 		};
@@ -546,6 +550,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32A636YFGZ;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.transistorsoft.bggeo.swift.demo.BGGeoDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -556,6 +561,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BGGeoDemo;
+				TRANSISTOR_LICENSE_KEY = "";
 			};
 			name = Release;
 		};

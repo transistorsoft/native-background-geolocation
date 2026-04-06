@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Scene lifecycle (required for SwiftUI @main apps) -->
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UISceneConfigurations</key>
+		<dict/>
+	</dict>
+
+	<!-- Launch screen (required for correct window sizing) -->
+	<key>UILaunchScreen</key>
+	<dict/>
+
+	<!-- Transistor SDK license key — set TRANSISTOR_LICENSE_KEY in Build Settings -->
+	<key>TSLocationManagerLicense</key>
+	<string>$(TRANSISTOR_LICENSE_KEY)</string>
+</dict>
+</plist>
