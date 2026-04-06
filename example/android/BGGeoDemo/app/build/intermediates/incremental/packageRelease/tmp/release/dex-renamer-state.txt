@@ -1,0 +1,4 @@
+#Mon Apr 06 03:01:13 EDT 2026
+base.0=/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

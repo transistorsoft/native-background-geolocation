@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-mergeDebugResources-55:/layout/stepper_field.xml",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-58:/layout/stepper_field.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-mergeDebugResources-55:/layout/sheet_settings.xml",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-58:/layout/sheet_settings.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-mergeDebugResources-55:/layout/activity_main.xml",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-58:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-mergeDebugResources-55:/layout/content_main.xml",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-58:/layout/content_main.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-mergeDebugResources-55:/layout/sheet_geofence.xml",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-58:/layout/sheet_geofence.xml"
+    }
+]

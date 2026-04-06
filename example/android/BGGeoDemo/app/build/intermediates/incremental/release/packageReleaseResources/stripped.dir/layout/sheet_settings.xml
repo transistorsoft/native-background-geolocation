@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="4dp"
+    android:paddingBottom="16dp"
+    app:cardBackgroundColor="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Compact Title Row -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            app:title=""
+            app:titleCentered="true"
+            app:contentInsetStartWithNavigation="0dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_gravity="start"
+                android:insetLeft="0dp"
+                android:paddingStart="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_gravity="end"
+                android:insetRight="10dp"
+                android:paddingEnd="0dp" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <!-- Title Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Settings"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOverflow"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="More"
+                app:icon="@android:drawable/ic_menu_more"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/colorOutline" />
+
+        <!-- Content (scrollable) -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/settingsScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:overScrollMode="ifContentScrolls">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:focusableInTouchMode="true">
+
+            <!-- Section: Geolocation -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Geolocation"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:paddingBottom="8dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Tracking Mode (dropdown) -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutTrackingMode"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Tracking Mode"
+                        app:endIconMode="dropdown_menu">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/dropTrackingMode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:imeOptions="actionDone"
+                            android:cursorVisible="false"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Authorization (dropdown) -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutAuthorization"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Authorization"
+                        app:endIconMode="dropdown_menu">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/dropAuthorization"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:imeOptions="actionDone"
+                            android:cursorVisible="false"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- desiredAccuracy (dropdown) -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutDesiredAccuracy"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Desired Accuracy"
+                        app:endIconMode="dropdown_menu">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/dropDesiredAccuracy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:imeOptions="actionDone"
+                            android:cursorVisible="false"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- distanceFilter (meters) -->
+                    <com.transistorsoft.bggeo.kotlin.demo.fields.StepperField
+                        android:id="@+id/dfStepper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:sr_label="Distance Filter"
+                        app:sr_unit="m"
+                        app:sr_min="0"
+                        app:sr_max="5000"
+                        app:sr_step="5"
+                        app:sr_value="50"/>
+
+
+
+                    <!-- locationUpdateInterval (dropdown) -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutLocationUpdateInterval"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Location Update Interval (ms)">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/dropLocationUpdateInterval"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:imeOptions="actionDone"
+                            app:endIconMode="dropdown_menu"
+                            android:entries="@array/interval_ms_entries" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- fastestLocationUpdateInterval (dropdown) -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutFastestLocationUpdateInterval"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Fastest Update Interval (ms)">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/dropFastestLocationUpdateInterval"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:imeOptions="actionDone"
+                            app:endIconMode="dropdown_menu"
+                            android:entries="@array/interval_ms_entries" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- stationaryRadius (meters) -->
+                    <com.transistorsoft.bggeo.kotlin.demo.fields.StepperField
+                        android:id="@+id/srStepper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:sr_label="Stationary Radius"
+                        app:sr_unit="m"
+                        app:sr_min="150"
+                        app:sr_max="500"
+                        app:sr_step="50"
+                        app:sr_value="150" />
+
+                    <!-- stopTimeout (min) -->
+                    <com.transistorsoft.bggeo.kotlin.demo.fields.StepperField
+                        android:id="@+id/stopStepper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:sr_label="Stop Timeout"
+                        app:sr_unit="min"
+                        app:sr_min="0"
+                        app:sr_max="60"
+                        app:sr_step="1"
+                        app:sr_value="5" />
+
+                    <!-- geofenceProximityRadius (meters) -->
+                    <com.transistorsoft.bggeo.kotlin.demo.fields.StepperField
+                        android:id="@+id/gprStepper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:sr_label="Geofence Proximity Radius"
+                        app:sr_unit="m"
+                        app:sr_min="1000"
+                        app:sr_max="10000"
+                        app:sr_step="1000"
+                        app:sr_value="1000" />
+
+                    <!-- useSignificantChangesOnly -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Use Significant Changes Only"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchSignificantChanges"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <!-- geofenceModeHighAccuracy -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Geofence Mode High Accuracy"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchGeofenceHighAccuracy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <!-- disableElasticity -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Disable elasticity (no DF auto-scale)"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchDisableElasticity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section: Motion Detection -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Motion Detection"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- stopDetectionDelay (ms) -->
+                    <com.transistorsoft.bggeo.kotlin.demo.fields.StepperField
+                        android:id="@+id/mdDelayStepper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:sr_label="Stop detection delay"
+                        app:sr_unit="ms"
+                        app:sr_min="0"
+                        app:sr_max="600000"
+                        app:sr_step="1000"
+                        app:sr_value="0" />
+
+                    <!-- disableMotionActivityUpdates -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Disable motion-activity updates"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchDisableMotionActivityUpdates"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <!-- disableStopDetection -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Disable stop detection"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchDisableStopDetection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <!-- Prevent suspend (iOS-only; disabled on Android) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Prevent suspend (iOS)"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchPreventSuspend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- Section: HTTP -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HTTP"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- URL -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutHttpUrl"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="URL">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputHttpUrl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textUri"
+                            android:autofillHints="username"
+                            android:autoText="false"
+                            android:capitalize="none"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Auto-sync toggle -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Auto-sync"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchAutoSync"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <!-- Auto-sync threshold dropdown -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutAutoSyncThreshold"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Auto-sync threshold"
+                        app:endIconMode="dropdown_menu">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/dropAutoSyncThreshold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:imeOptions="actionDone"
+                            android:cursorVisible="false"
+                            android:entries="@array/http_auto_sync_threshold_entries"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Batch sync toggle -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Batch sync"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchBatchSync"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <!-- Max batch size dropdown -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutMaxBatchSize"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Max batch size"
+                        app:endIconMode="dropdown_menu">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/dropMaxBatchSize"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:imeOptions="actionDone"
+                            android:cursorVisible="false"
+                            android:entries="@array/http_max_batch_size_entries"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section: Persistence -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Persistence"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Max records dropdown -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutMaxRecordsToPersist"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Max records"
+                        app:endIconMode="dropdown_menu">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/dropMaxRecordsToPersist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:imeOptions="actionDone"
+                            android:cursorVisible="false"
+                            android:entries="@array/persist_max_records_entries"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Max days dropdown -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutMaxDaysToPersist"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Max days"
+                        app:endIconMode="dropdown_menu">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/dropMaxDaysToPersist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:imeOptions="actionDone"
+                            android:cursorVisible="false"
+                            android:entries="@array/persist_max_days_entries"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Persist mode dropdown -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutPersistMode"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Persist mode"
+                        app:endIconMode="dropdown_menu">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/dropPersistMode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:imeOptions="actionDone"
+                            android:cursorVisible="false"
+                            android:entries="@array/persist_mode_entries"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section: Application -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Application"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Stop on terminate -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Stop on terminate"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchStopOnTerminate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <!-- Start on boot -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Start on boot"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchStartOnBoot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <!-- Heartbeat interval dropdown -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutHeartbeatInterval"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Heartbeat interval (s)"
+                        app:endIconMode="dropdown_menu">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/dropHeartbeatInterval"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:imeOptions="actionDone"
+                            android:cursorVisible="false"
+                            android:entries="@array/heartbeat_interval_entries"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section: Debug -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Debug"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Debug toggle -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Debug"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchDebug"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <!-- Log level dropdown -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutLogLevel"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Log level"
+                        app:endIconMode="dropdown_menu">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/dropLogLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:imeOptions="actionDone"
+                            android:cursorVisible="false"
+                            android:entries="@array/log_level_entries"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Log max days dropdown -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutLogMaxDays"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Log max days"
+                        app:endIconMode="dropdown_menu">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/dropLogMaxDays"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:imeOptions="actionDone"
+                            android:cursorVisible="false"
+                            android:entries="@array/log_max_days_entries"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

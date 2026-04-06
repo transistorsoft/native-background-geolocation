@@ -1,0 +1,868 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:2:1-40:12
+MERGED from [androidx.databinding:viewbinding:8.13.2] /Users/chris/.gradle/caches/8.13/transforms/9c9f54624c235210b5abeced74f81f97/transformed/viewbinding-8.13.2/AndroidManifest.xml:2:1-7:12
+MERGED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:2:1-111:12
+MERGED from [com.google.android.gms:play-services-location:21.3.0] /Users/chris/.gradle/caches/8.13/transforms/87bb6013f9c94f664b2f93e0fcb4b845/transformed/play-services-location-21.3.0/AndroidManifest.xml:2:1-8:12
+MERGED from [androidx.navigation:navigation-runtime-android:2.9.5] /Users/chris/.gradle/caches/8.13/transforms/caac6b30e57b3dac271c458933e0d5f1/transformed/navigation-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-android:2.9.5] /Users/chris/.gradle/caches/8.13/transforms/1652d14234d8092dbcc8c7555e51bc34/transformed/navigation-common-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment:2.9.5] /Users/chris/.gradle/caches/8.13/transforms/8c23ae4544d301cd064ee15039c1661d/transformed/navigation-fragment-2.9.5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-ui:2.9.5] /Users/chris/.gradle/caches/8.13/transforms/335e34dcf295e64955a9d3a43c893378/transformed/navigation-ui-2.9.5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.material:material:1.13.0] /Users/chris/.gradle/caches/8.13/transforms/d45d433b55d434aadb3ffcb7ecc638f3/transformed/material-1.13.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/chris/.gradle/caches/8.13/transforms/0bd0ae5cb76047e580300c014f94cba4/transformed/constraintlayout-2.2.1/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.1] /Users/chris/.gradle/caches/8.13/transforms/f1686b6a00a76ac3eb1f1e51488ae5f1/transformed/appcompat-resources-1.7.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat:1.7.1] /Users/chris/.gradle/caches/8.13/transforms/682a395abf8eb3819d1f5b0137237d20/transformed/appcompat-1.7.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:17:1-145:12
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:16:1-35:12
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/chris/.gradle/caches/8.13/transforms/911dc6d0d70c2f99e7cf90618d0247a3/transformed/play-services-base-18.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/chris/.gradle/caches/8.13/transforms/2f5726a7756ee1235bb459e31aae9924/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/chris/.gradle/caches/8.13/transforms/446b22e0c4337a1469dba62042e4a682/transformed/play-services-basement-18.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/f7b30aa0e6a02523f3c783cc7e051544/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/d9a79fe0101782c92af2fff2f1c2bc48/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/28497015f3e5c8e93e4893cc06c59eb7/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment-ktx:1.8.9] /Users/chris/.gradle/caches/8.13/transforms/4a9e16d30ece8a68123a369a60705865/transformed/fragment-ktx-1.8.9/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment:1.8.9] /Users/chris/.gradle/caches/8.13/transforms/41c9e350d8a7c09d14c73245493c90eb/transformed/fragment-1.8.9/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.graphics:graphics-shapes-android:1.0.1] /Users/chris/.gradle/caches/8.13/transforms/b0df697829b6100201119e17ef6f0494/transformed/graphics-shapes-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.8.1] /Users/chris/.gradle/caches/8.13/transforms/4e400bc49109bb3ff1177642d5fe4a5c/transformed/activity-1.8.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.8.1] /Users/chris/.gradle/caches/8.13/transforms/24c6147fd9a2b3c3948b468a7bd9ba78/transformed/activity-ktx-1.8.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/1e393418d26973c5702e3cca23af6ae3/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/8cb259eb6fe92d249bdec5e0379803d2/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/733433ee2ffbfedbe99c1e0f86a0116c/transformed/lifecycle-viewmodel-2.10.0/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/b15eb6d550d19379b3e6389b7a4f2143/transformed/lifecycle-viewmodel/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/32322effd40df5b77566a7a4f4c25973/transformed/savedstate-ktx-1.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate-android:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/2033042b75bfba213017ab37ba91fd34/transformed/savedstate/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/f444ac1b0f40740cdf0db0b5ced15f1e/transformed/lifecycle-viewmodel-ktx-2.10.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/1be1214bace0667b15d9a6d25ae1a9ea/transformed/lifecycle-livedata-core-ktx-2.10.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/b4a00caac6afbe49c8ebfd4a208574c3/transformed/lifecycle-service-2.10.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/c1a0ba9993c4146f276c1a5b1685fe55/transformed/lifecycle-livedata-2.10.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/d13fc96908c7af0961d6f863cd4604ba/transformed/lifecycle-livedata-core-2.10.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/91b2c53e6df9f13c38afca530a25addf/transformed/lifecycle-runtime/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/479e4f676c314de2948093f24bd6e399/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/e8e8255fa33a563839c91f2ebc077bbc/transformed/lifecycle-viewmodel-savedstate/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/7ec39979a121fab9b6ccd6d94118f77c/transformed/core-ktx-1.17.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/chris/.gradle/caches/8.13/transforms/741375bf9bc25aca11840cbed3215ca9/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/chris/.gradle/caches/8.13/transforms/46a9add87e0ba3dab7e3c0e2ac13da59/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/chris/.gradle/caches/8.13/transforms/fed133a03f6d3828c73ea0fd2c1c28e8/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.5.0] /Users/chris/.gradle/caches/8.13/transforms/83484daa977e7f5349b336c6be6dcf19/transformed/transition-1.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.1.0] /Users/chris/.gradle/caches/8.13/transforms/8c87b76fdc66abde135b1901de02c779/transformed/dynamicanimation-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] /Users/chris/.gradle/caches/8.13/transforms/6da1f14ac917afc5fa54998f56ee0d73/transformed/recyclerview-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/chris/.gradle/caches/8.13/transforms/f6e374a9a9d388083a521bde43b4cd87/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/chris/.gradle/caches/8.13/transforms/eb666cd7ce04f1ba9ad1d7991fb84dec/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/36b8a9d8b8bf06b2ef7c2cad908298ea/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/chris/.gradle/caches/8.13/transforms/cc88a64a4d918ef8d11c9a425a55878f/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/5dad115ad147e147ddf891bfa018cc3e/transformed/room-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/20d82c59f69615d8debdac43af3d1c2c/transformed/room-runtime-2.6.1/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/chris/.gradle/caches/8.13/transforms/2f45b0440b6bee0ca12b6178eac9b030/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/a8ba2ac55f7e24d83759ab1925807e79/transformed/core-viewtree-1.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/3351f1487e3af807e2f9e7ab7b2b780f/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/chris/.gradle/caches/8.13/transforms/a0a023a2e0d6e8bc5428e001c0a8b024/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing-ktx:1.2.0] /Users/chris/.gradle/caches/8.13/transforms/708dc8915ed20731aa5ee399d58273c2/transformed/tracing-ktx-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/chris/.gradle/caches/8.13/transforms/ad0ee57e00d796f7e4f10e6370aed2df/transformed/tracing-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/chris/.gradle/caches/8.13/transforms/dfeaf4e889f97de1e455834eb93bb367/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/b17ef6ac947ebbb2d04aeb306ab20745/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/ac33362824166609c7992c7b98b613aa/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/chris/.gradle/caches/8.13/transforms/a1e063f5f5fd276bca14b655aad15c08/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/chris/.gradle/caches/8.13/transforms/909a8db32865a4cc3f2b35ea6e05d6b1/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/chris/.gradle/caches/8.13/transforms/2b3825c8fae231d9df0d119f241cb728/transformed/sqlite-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [org.greenrobot:eventbus:3.3.1] /Users/chris/.gradle/caches/8.13/transforms/e181de0a6bb6a2c7ddce618c6c62ab56/transformed/eventbus-3.3.1/AndroidManifest.xml:2:1-9:12
+	package
+		INJECTED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:2:11-57
+	android:versionCode
+		INJECTED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:3:5-63
+uses-permission#android.permission.INTERNET
+ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:15:5-67
+MERGED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:15:5-67
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:21:5-66
+	android:name
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:5:5-79
+MERGED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:14:5-79
+MERGED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:5:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:6:5-81
+MERGED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:12:5-81
+MERGED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:6:22-78
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:7:5-66
+	android:name
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:7:22-63
+application
+ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:9:5-38:19
+INJECTED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:9:5-38:19
+MERGED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:43:5-109:19
+MERGED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:43:5-109:19
+MERGED from [com.google.android.gms:play-services-location:21.3.0] /Users/chris/.gradle/caches/8.13/transforms/87bb6013f9c94f664b2f93e0fcb4b845/transformed/play-services-location-21.3.0/AndroidManifest.xml:6:5-20
+MERGED from [com.google.android.gms:play-services-location:21.3.0] /Users/chris/.gradle/caches/8.13/transforms/87bb6013f9c94f664b2f93e0fcb4b845/transformed/play-services-location-21.3.0/AndroidManifest.xml:6:5-20
+MERGED from [com.google.android.material:material:1.13.0] /Users/chris/.gradle/caches/8.13/transforms/d45d433b55d434aadb3ffcb7ecc638f3/transformed/material-1.13.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.13.0] /Users/chris/.gradle/caches/8.13/transforms/d45d433b55d434aadb3ffcb7ecc638f3/transformed/material-1.13.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/chris/.gradle/caches/8.13/transforms/0bd0ae5cb76047e580300c014f94cba4/transformed/constraintlayout-2.2.1/AndroidManifest.xml:7:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/chris/.gradle/caches/8.13/transforms/0bd0ae5cb76047e580300c014f94cba4/transformed/constraintlayout-2.2.1/AndroidManifest.xml:7:5-20
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:28:5-143:19
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:28:5-143:19
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:31:5-34:19
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:31:5-34:19
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/chris/.gradle/caches/8.13/transforms/911dc6d0d70c2f99e7cf90618d0247a3/transformed/play-services-base-18.5.0/AndroidManifest.xml:4:5-6:19
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/chris/.gradle/caches/8.13/transforms/911dc6d0d70c2f99e7cf90618d0247a3/transformed/play-services-base-18.5.0/AndroidManifest.xml:4:5-6:19
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/chris/.gradle/caches/8.13/transforms/2f5726a7756ee1235bb459e31aae9924/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/chris/.gradle/caches/8.13/transforms/2f5726a7756ee1235bb459e31aae9924/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/chris/.gradle/caches/8.13/transforms/446b22e0c4337a1469dba62042e4a682/transformed/play-services-basement-18.4.0/AndroidManifest.xml:5:5-7:19
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/chris/.gradle/caches/8.13/transforms/446b22e0c4337a1469dba62042e4a682/transformed/play-services-basement-18.4.0/AndroidManifest.xml:5:5-7:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/d9a79fe0101782c92af2fff2f1c2bc48/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/d9a79fe0101782c92af2fff2f1c2bc48/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/479e4f676c314de2948093f24bd6e399/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/479e4f676c314de2948093f24bd6e399/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/20d82c59f69615d8debdac43af3d1c2c/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/20d82c59f69615d8debdac43af3d1c2c/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/chris/.gradle/caches/8.13/transforms/a0a023a2e0d6e8bc5428e001c0a8b024/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/chris/.gradle/caches/8.13/transforms/a0a023a2e0d6e8bc5428e001c0a8b024/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/chris/.gradle/caches/8.13/transforms/dfeaf4e889f97de1e455834eb93bb367/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/chris/.gradle/caches/8.13/transforms/dfeaf4e889f97de1e455834eb93bb367/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+	android:extractNativeLibs
+		INJECTED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:16:9-35
+	android:label
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:13:9-41
+	android:roundIcon
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:15:9-54
+	android:icon
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:12:9-43
+	android:allowBackup
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:17:9-59
+	android:usesCleartextTraffic
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:14:9-44
+	android:name
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:10:9-36
+activity#com.transistorsoft.bggeo.kotlin.demo.MainActivity
+ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:18:9-29:20
+	android:screenOrientation
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:21:13-49
+	android:exported
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:20:13-36
+	tools:ignore
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:23:13-53
+	android:theme
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:22:13-63
+	android:name
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:19:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:24:13-28:29
+action#android.intent.action.MAIN
+ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:25:17-69
+	android:name
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:25:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:27:17-77
+	android:name
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:27:27-74
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:31:9-33:71
+	android:value
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:33:13-68
+	android:name
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:32:13-58
+meta-data#com.transistorsoft.locationmanager.license
+ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:35:9-37:760
+	android:value
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:37:13-757
+	android:name
+		ADDED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:36:13-70
+uses-sdk
+INJECTED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:8.13.2] /Users/chris/.gradle/caches/8.13/transforms/9c9f54624c235210b5abeced74f81f97/transformed/viewbinding-8.13.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.13.2] /Users/chris/.gradle/caches/8.13/transforms/9c9f54624c235210b5abeced74f81f97/transformed/viewbinding-8.13.2/AndroidManifest.xml:5:5-44
+MERGED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:6:5-44
+MERGED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:6:5-44
+MERGED from [com.google.android.gms:play-services-location:21.3.0] /Users/chris/.gradle/caches/8.13/transforms/87bb6013f9c94f664b2f93e0fcb4b845/transformed/play-services-location-21.3.0/AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.gms:play-services-location:21.3.0] /Users/chris/.gradle/caches/8.13/transforms/87bb6013f9c94f664b2f93e0fcb4b845/transformed/play-services-location-21.3.0/AndroidManifest.xml:4:5-44
+MERGED from [androidx.navigation:navigation-runtime-android:2.9.5] /Users/chris/.gradle/caches/8.13/transforms/caac6b30e57b3dac271c458933e0d5f1/transformed/navigation-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime-android:2.9.5] /Users/chris/.gradle/caches/8.13/transforms/caac6b30e57b3dac271c458933e0d5f1/transformed/navigation-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-android:2.9.5] /Users/chris/.gradle/caches/8.13/transforms/1652d14234d8092dbcc8c7555e51bc34/transformed/navigation-common-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-android:2.9.5] /Users/chris/.gradle/caches/8.13/transforms/1652d14234d8092dbcc8c7555e51bc34/transformed/navigation-common-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.9.5] /Users/chris/.gradle/caches/8.13/transforms/8c23ae4544d301cd064ee15039c1661d/transformed/navigation-fragment-2.9.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.9.5] /Users/chris/.gradle/caches/8.13/transforms/8c23ae4544d301cd064ee15039c1661d/transformed/navigation-fragment-2.9.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui:2.9.5] /Users/chris/.gradle/caches/8.13/transforms/335e34dcf295e64955a9d3a43c893378/transformed/navigation-ui-2.9.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui:2.9.5] /Users/chris/.gradle/caches/8.13/transforms/335e34dcf295e64955a9d3a43c893378/transformed/navigation-ui-2.9.5/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.13.0] /Users/chris/.gradle/caches/8.13/transforms/d45d433b55d434aadb3ffcb7ecc638f3/transformed/material-1.13.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.13.0] /Users/chris/.gradle/caches/8.13/transforms/d45d433b55d434aadb3ffcb7ecc638f3/transformed/material-1.13.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/chris/.gradle/caches/8.13/transforms/0bd0ae5cb76047e580300c014f94cba4/transformed/constraintlayout-2.2.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/chris/.gradle/caches/8.13/transforms/0bd0ae5cb76047e580300c014f94cba4/transformed/constraintlayout-2.2.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.1] /Users/chris/.gradle/caches/8.13/transforms/f1686b6a00a76ac3eb1f1e51488ae5f1/transformed/appcompat-resources-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.1] /Users/chris/.gradle/caches/8.13/transforms/f1686b6a00a76ac3eb1f1e51488ae5f1/transformed/appcompat-resources-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.1] /Users/chris/.gradle/caches/8.13/transforms/682a395abf8eb3819d1f5b0137237d20/transformed/appcompat-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.1] /Users/chris/.gradle/caches/8.13/transforms/682a395abf8eb3819d1f5b0137237d20/transformed/appcompat-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:26:5-43
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:26:5-43
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/chris/.gradle/caches/8.13/transforms/911dc6d0d70c2f99e7cf90618d0247a3/transformed/play-services-base-18.5.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/chris/.gradle/caches/8.13/transforms/911dc6d0d70c2f99e7cf90618d0247a3/transformed/play-services-base-18.5.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/chris/.gradle/caches/8.13/transforms/2f5726a7756ee1235bb459e31aae9924/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/chris/.gradle/caches/8.13/transforms/2f5726a7756ee1235bb459e31aae9924/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/chris/.gradle/caches/8.13/transforms/446b22e0c4337a1469dba62042e4a682/transformed/play-services-basement-18.4.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/chris/.gradle/caches/8.13/transforms/446b22e0c4337a1469dba62042e4a682/transformed/play-services-basement-18.4.0/AndroidManifest.xml:3:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/f7b30aa0e6a02523f3c783cc7e051544/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/f7b30aa0e6a02523f3c783cc7e051544/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/d9a79fe0101782c92af2fff2f1c2bc48/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/d9a79fe0101782c92af2fff2f1c2bc48/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/28497015f3e5c8e93e4893cc06c59eb7/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/28497015f3e5c8e93e4893cc06c59eb7/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.8.9] /Users/chris/.gradle/caches/8.13/transforms/4a9e16d30ece8a68123a369a60705865/transformed/fragment-ktx-1.8.9/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.8.9] /Users/chris/.gradle/caches/8.13/transforms/4a9e16d30ece8a68123a369a60705865/transformed/fragment-ktx-1.8.9/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.8.9] /Users/chris/.gradle/caches/8.13/transforms/41c9e350d8a7c09d14c73245493c90eb/transformed/fragment-1.8.9/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.8.9] /Users/chris/.gradle/caches/8.13/transforms/41c9e350d8a7c09d14c73245493c90eb/transformed/fragment-1.8.9/AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-shapes-android:1.0.1] /Users/chris/.gradle/caches/8.13/transforms/b0df697829b6100201119e17ef6f0494/transformed/graphics-shapes-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-shapes-android:1.0.1] /Users/chris/.gradle/caches/8.13/transforms/b0df697829b6100201119e17ef6f0494/transformed/graphics-shapes-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.8.1] /Users/chris/.gradle/caches/8.13/transforms/4e400bc49109bb3ff1177642d5fe4a5c/transformed/activity-1.8.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.1] /Users/chris/.gradle/caches/8.13/transforms/4e400bc49109bb3ff1177642d5fe4a5c/transformed/activity-1.8.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.1] /Users/chris/.gradle/caches/8.13/transforms/24c6147fd9a2b3c3948b468a7bd9ba78/transformed/activity-ktx-1.8.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.1] /Users/chris/.gradle/caches/8.13/transforms/24c6147fd9a2b3c3948b468a7bd9ba78/transformed/activity-ktx-1.8.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/1e393418d26973c5702e3cca23af6ae3/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/1e393418d26973c5702e3cca23af6ae3/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/8cb259eb6fe92d249bdec5e0379803d2/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/8cb259eb6fe92d249bdec5e0379803d2/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/733433ee2ffbfedbe99c1e0f86a0116c/transformed/lifecycle-viewmodel-2.10.0/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/733433ee2ffbfedbe99c1e0f86a0116c/transformed/lifecycle-viewmodel-2.10.0/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/b15eb6d550d19379b3e6389b7a4f2143/transformed/lifecycle-viewmodel/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/b15eb6d550d19379b3e6389b7a4f2143/transformed/lifecycle-viewmodel/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/32322effd40df5b77566a7a4f4c25973/transformed/savedstate-ktx-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/32322effd40df5b77566a7a4f4c25973/transformed/savedstate-ktx-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-android:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/2033042b75bfba213017ab37ba91fd34/transformed/savedstate/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-android:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/2033042b75bfba213017ab37ba91fd34/transformed/savedstate/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/f444ac1b0f40740cdf0db0b5ced15f1e/transformed/lifecycle-viewmodel-ktx-2.10.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/f444ac1b0f40740cdf0db0b5ced15f1e/transformed/lifecycle-viewmodel-ktx-2.10.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/1be1214bace0667b15d9a6d25ae1a9ea/transformed/lifecycle-livedata-core-ktx-2.10.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/1be1214bace0667b15d9a6d25ae1a9ea/transformed/lifecycle-livedata-core-ktx-2.10.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/b4a00caac6afbe49c8ebfd4a208574c3/transformed/lifecycle-service-2.10.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/b4a00caac6afbe49c8ebfd4a208574c3/transformed/lifecycle-service-2.10.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/c1a0ba9993c4146f276c1a5b1685fe55/transformed/lifecycle-livedata-2.10.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/c1a0ba9993c4146f276c1a5b1685fe55/transformed/lifecycle-livedata-2.10.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/d13fc96908c7af0961d6f863cd4604ba/transformed/lifecycle-livedata-core-2.10.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/d13fc96908c7af0961d6f863cd4604ba/transformed/lifecycle-livedata-core-2.10.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/91b2c53e6df9f13c38afca530a25addf/transformed/lifecycle-runtime/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/91b2c53e6df9f13c38afca530a25addf/transformed/lifecycle-runtime/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/479e4f676c314de2948093f24bd6e399/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/479e4f676c314de2948093f24bd6e399/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/e8e8255fa33a563839c91f2ebc077bbc/transformed/lifecycle-viewmodel-savedstate/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/e8e8255fa33a563839c91f2ebc077bbc/transformed/lifecycle-viewmodel-savedstate/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/7ec39979a121fab9b6ccd6d94118f77c/transformed/core-ktx-1.17.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/7ec39979a121fab9b6ccd6d94118f77c/transformed/core-ktx-1.17.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/chris/.gradle/caches/8.13/transforms/741375bf9bc25aca11840cbed3215ca9/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/chris/.gradle/caches/8.13/transforms/741375bf9bc25aca11840cbed3215ca9/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/chris/.gradle/caches/8.13/transforms/46a9add87e0ba3dab7e3c0e2ac13da59/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/chris/.gradle/caches/8.13/transforms/46a9add87e0ba3dab7e3c0e2ac13da59/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/chris/.gradle/caches/8.13/transforms/fed133a03f6d3828c73ea0fd2c1c28e8/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/chris/.gradle/caches/8.13/transforms/fed133a03f6d3828c73ea0fd2c1c28e8/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.5.0] /Users/chris/.gradle/caches/8.13/transforms/83484daa977e7f5349b336c6be6dcf19/transformed/transition-1.5.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.5.0] /Users/chris/.gradle/caches/8.13/transforms/83484daa977e7f5349b336c6be6dcf19/transformed/transition-1.5.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.1.0] /Users/chris/.gradle/caches/8.13/transforms/8c87b76fdc66abde135b1901de02c779/transformed/dynamicanimation-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.1.0] /Users/chris/.gradle/caches/8.13/transforms/8c87b76fdc66abde135b1901de02c779/transformed/dynamicanimation-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] /Users/chris/.gradle/caches/8.13/transforms/6da1f14ac917afc5fa54998f56ee0d73/transformed/recyclerview-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] /Users/chris/.gradle/caches/8.13/transforms/6da1f14ac917afc5fa54998f56ee0d73/transformed/recyclerview-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/chris/.gradle/caches/8.13/transforms/f6e374a9a9d388083a521bde43b4cd87/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/chris/.gradle/caches/8.13/transforms/f6e374a9a9d388083a521bde43b4cd87/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/chris/.gradle/caches/8.13/transforms/eb666cd7ce04f1ba9ad1d7991fb84dec/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/chris/.gradle/caches/8.13/transforms/eb666cd7ce04f1ba9ad1d7991fb84dec/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/36b8a9d8b8bf06b2ef7c2cad908298ea/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/36b8a9d8b8bf06b2ef7c2cad908298ea/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /Users/chris/.gradle/caches/8.13/transforms/cc88a64a4d918ef8d11c9a425a55878f/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/chris/.gradle/caches/8.13/transforms/cc88a64a4d918ef8d11c9a425a55878f/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/5dad115ad147e147ddf891bfa018cc3e/transformed/room-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/5dad115ad147e147ddf891bfa018cc3e/transformed/room-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/20d82c59f69615d8debdac43af3d1c2c/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/20d82c59f69615d8debdac43af3d1c2c/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/chris/.gradle/caches/8.13/transforms/2f45b0440b6bee0ca12b6178eac9b030/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/chris/.gradle/caches/8.13/transforms/2f45b0440b6bee0ca12b6178eac9b030/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/a8ba2ac55f7e24d83759ab1925807e79/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/a8ba2ac55f7e24d83759ab1925807e79/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/3351f1487e3af807e2f9e7ab7b2b780f/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/3351f1487e3af807e2f9e7ab7b2b780f/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/chris/.gradle/caches/8.13/transforms/a0a023a2e0d6e8bc5428e001c0a8b024/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/chris/.gradle/caches/8.13/transforms/a0a023a2e0d6e8bc5428e001c0a8b024/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing-ktx:1.2.0] /Users/chris/.gradle/caches/8.13/transforms/708dc8915ed20731aa5ee399d58273c2/transformed/tracing-ktx-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing-ktx:1.2.0] /Users/chris/.gradle/caches/8.13/transforms/708dc8915ed20731aa5ee399d58273c2/transformed/tracing-ktx-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/chris/.gradle/caches/8.13/transforms/ad0ee57e00d796f7e4f10e6370aed2df/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/chris/.gradle/caches/8.13/transforms/ad0ee57e00d796f7e4f10e6370aed2df/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/chris/.gradle/caches/8.13/transforms/dfeaf4e889f97de1e455834eb93bb367/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/chris/.gradle/caches/8.13/transforms/dfeaf4e889f97de1e455834eb93bb367/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/b17ef6ac947ebbb2d04aeb306ab20745/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/b17ef6ac947ebbb2d04aeb306ab20745/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/ac33362824166609c7992c7b98b613aa/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/ac33362824166609c7992c7b98b613aa/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/chris/.gradle/caches/8.13/transforms/a1e063f5f5fd276bca14b655aad15c08/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/chris/.gradle/caches/8.13/transforms/a1e063f5f5fd276bca14b655aad15c08/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/chris/.gradle/caches/8.13/transforms/909a8db32865a4cc3f2b35ea6e05d6b1/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/chris/.gradle/caches/8.13/transforms/909a8db32865a4cc3f2b35ea6e05d6b1/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/chris/.gradle/caches/8.13/transforms/2b3825c8fae231d9df0d119f241cb728/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/chris/.gradle/caches/8.13/transforms/2b3825c8fae231d9df0d119f241cb728/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [org.greenrobot:eventbus:3.3.1] /Users/chris/.gradle/caches/8.13/transforms/e181de0a6bb6a2c7ddce618c6c62ab56/transformed/eventbus-3.3.1/AndroidManifest.xml:5:5-7:41
+MERGED from [org.greenrobot:eventbus:3.3.1] /Users/chris/.gradle/caches/8.13/transforms/e181de0a6bb6a2c7ddce618c6c62ab56/transformed/eventbus-3.3.1/AndroidManifest.xml:5:5-7:41
+	android:targetSdkVersion
+		INJECTED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:8:5-68
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:23:5-68
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:23:5-68
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:8:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:9:5-79
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:24:5-79
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:20:5-78
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:9:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:10:5-76
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:10:22-73
+uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:11:5-85
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:11:22-82
+uses-permission#android.permission.ACTIVITY_RECOGNITION
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:13:22-76
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:16:5-77
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:26:5-77
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:26:5-77
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:16:22-74
+uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:17:5-94
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:17:22-91
+uses-permission#com.huawei.hms.permission.ACTIVITY_RECOGNITION
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:18:5-86
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:18:22-83
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:19:5-81
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:25:5-81
+MERGED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:25:5-81
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:19:22-78
+uses-permission#android.permission.SCHEDULE_EXACT_ALARM
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:20:5-79
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:20:22-76
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:21:5-77
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:21:22-74
+uses-permission#android.permission.FOREGROUND_SERVICE_LOCATION
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:22:5-86
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:22:22-83
+uses-permission#oppo.permission.OPPO_COMPONENT_SAFE
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:36:5-75
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:36:22-72
+uses-permission#com.huawei.permission.external_app_settings.USE_COMPONENT
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:37:5-97
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:37:22-94
+uses-feature#android.hardware.location.gps
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:39:5-41:36
+	android:required
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:41:9-33
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:40:9-53
+activity#com.transistorsoft.locationmanager.activity.TSLocationManagerActivity
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:46:9-51:64
+	android:excludeFromRecents
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:48:13-47
+	android:launchMode
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:50:13-48
+	android:exported
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:49:13-36
+	android:theme
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:51:13-61
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:47:13-97
+receiver#com.transistorsoft.locationmanager.service.FgsLaunchGate
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:56:9-59:40
+	android:enabled
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:58:13-35
+	android:exported
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:59:13-37
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:57:13-84
+service#com.transistorsoft.locationmanager.service.TrackingService
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:61:9-63:56
+	android:foregroundServiceType
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:63:13-53
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:62:13-86
+service#com.transistorsoft.locationmanager.service.LocationRequestService
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:64:9-66:56
+	android:foregroundServiceType
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:66:13-53
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:65:13-93
+service#com.transistorsoft.locationmanager.service.ActivityRecognitionService
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:67:9-69:56
+	android:foregroundServiceType
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:69:13-53
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:68:13-97
+service#com.transistorsoft.locationmanager.service.GeofencingService
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:70:9-72:56
+	android:foregroundServiceType
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:72:13-53
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:71:13-88
+service#com.transistorsoft.locationmanager.service.PolygonGeofencingService
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:73:9-75:56
+	android:foregroundServiceType
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:75:13-53
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:74:13-95
+service#com.transistorsoft.locationmanager.scheduler.ScheduleService
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:76:9-78:56
+	android:foregroundServiceType
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:78:13-53
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:77:13-88
+receiver#com.transistorsoft.locationmanager.scheduler.ScheduleAlarmReceiver
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:80:9-82:40
+	android:exported
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:82:13-37
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:81:13-94
+service#com.transistorsoft.locationmanager.scheduler.ScheduleJobService
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:84:9-87:36
+	android:permission
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:86:13-69
+	tools:targetApi
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:87:13-33
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:85:13-91
+receiver#com.transistorsoft.locationmanager.BootReceiver
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:89:9-98:20
+	android:enabled
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:91:13-35
+	android:exported
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:92:13-36
+	android:permission
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:93:13-75
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:90:13-75
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:94:13-97:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:95:17-79
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:95:25-76
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:96:17-84
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:96:25-81
+provider#com.transistorsoft.locationmanager.util.LogFileProvider
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:100:9-108:20
+	android:grantUriPermissions
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:104:13-47
+	android:authorities
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:102:13-82
+	android:exported
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:103:13-37
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:101:13-83
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:105:13-107:80
+	android:resource
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:107:17-77
+	android:name
+		ADDED from [com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:106:17-67
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:29:9-37:20
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/d9a79fe0101782c92af2fff2f1c2bc48/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/d9a79fe0101782c92af2fff2f1c2bc48/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/479e4f676c314de2948093f24bd6e399/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/479e4f676c314de2948093f24bd6e399/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/chris/.gradle/caches/8.13/transforms/a0a023a2e0d6e8bc5428e001c0a8b024/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/chris/.gradle/caches/8.13/transforms/a0a023a2e0d6e8bc5428e001c0a8b024/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:33:13-31
+	android:authorities
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:31:13-68
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:30:13-67
+meta-data#androidx.work.WorkManagerInitializer
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:34:13-36:52
+	android:value
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:36:17-49
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:35:17-68
+service#androidx.work.impl.background.systemalarm.SystemAlarmService
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:39:9-45:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:42:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:43:13-37
+	tools:ignore
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:44:13-60
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:45:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:41:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:40:13-88
+service#androidx.work.impl.background.systemjob.SystemJobService
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:46:9-52:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:49:13-70
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:50:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:51:13-69
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:52:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:48:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:47:13-84
+service#androidx.work.impl.foreground.SystemForegroundService
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:53:9-59:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:56:13-77
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:57:13-37
+	tools:ignore
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:58:13-60
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:59:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:55:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:54:13-81
+receiver#androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:61:9-66:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:64:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:65:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:66:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:63:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:62:13-88
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:67:9-77:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:70:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:71:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:72:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:69:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:68:13-106
+intent-filter#action:name:android.intent.action.ACTION_POWER_CONNECTED+action:name:android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:73:13-76:29
+action#android.intent.action.ACTION_POWER_CONNECTED
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:74:17-87
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:74:25-84
+action#android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:75:17-90
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:75:25-87
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:78:9-88:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:81:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:82:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:83:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:80:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:79:13-104
+intent-filter#action:name:android.intent.action.BATTERY_LOW+action:name:android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:84:13-87:29
+action#android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:85:17-77
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:85:25-74
+action#android.intent.action.BATTERY_LOW
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:86:17-76
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:86:25-73
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:89:9-99:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:92:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:93:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:94:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:91:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:90:13-104
+intent-filter#action:name:android.intent.action.DEVICE_STORAGE_LOW+action:name:android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:95:13-98:29
+action#android.intent.action.DEVICE_STORAGE_LOW
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:96:17-83
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:96:25-80
+action#android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:97:17-82
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:97:25-79
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:100:9-109:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:103:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:104:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:105:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:102:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:101:13-103
+intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:106:13-108:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:107:17-79
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:107:25-76
+receiver#androidx.work.impl.background.systemalarm.RescheduleReceiver
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:110:9-121:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:113:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:114:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:115:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:112:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:111:13-88
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.TIMEZONE_CHANGED+action:name:android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:116:13-120:29
+action#android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:118:17-73
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:118:25-70
+action#android.intent.action.TIMEZONE_CHANGED
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:119:17-81
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:119:25-78
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:122:9-131:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:125:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:126:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:127:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:124:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:123:13-99
+intent-filter#action:name:androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:128:13-130:29
+action#androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:129:17-98
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:129:25-95
+receiver#androidx.work.impl.diagnostics.DiagnosticsReceiver
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:132:9-142:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:135:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:136:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:137:13-57
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:138:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:134:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:133:13-78
+intent-filter#action:name:androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:139:13-141:29
+action#androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:140:17-88
+	android:name
+		ADDED from [androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:140:25-85
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:22:5-24:33
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:23:8-40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:24:8-31
+queries
+ADDED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:27:5-30:15
+package#com.google.android.apps.maps
+ADDED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:29:7-61
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:29:16-59
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:33:7-86
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:33:59-83
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:33:21-58
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/chris/.gradle/caches/8.13/transforms/911dc6d0d70c2f99e7cf90618d0247a3/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/chris/.gradle/caches/8.13/transforms/911dc6d0d70c2f99e7cf90618d0247a3/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/chris/.gradle/caches/8.13/transforms/911dc6d0d70c2f99e7cf90618d0247a3/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/chris/.gradle/caches/8.13/transforms/911dc6d0d70c2f99e7cf90618d0247a3/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.4.0] /Users/chris/.gradle/caches/8.13/transforms/446b22e0c4337a1469dba62042e4a682/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] /Users/chris/.gradle/caches/8.13/transforms/446b22e0c4337a1469dba62042e4a682/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] /Users/chris/.gradle/caches/8.13/transforms/446b22e0c4337a1469dba62042e4a682/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/d9a79fe0101782c92af2fff2f1c2bc48/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/d9a79fe0101782c92af2fff2f1c2bc48/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/d9a79fe0101782c92af2fff2f1c2bc48/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/479e4f676c314de2948093f24bd6e399/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/479e4f676c314de2948093f24bd6e399/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/479e4f676c314de2948093f24bd6e399/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:30:17-78
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:23:9-81
+permission#com.transistorsoft.bggeo.kotlin.demo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:26:22-94
+uses-permission#com.transistorsoft.bggeo.kotlin.demo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:26:22-94
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/20d82c59f69615d8debdac43af3d1c2c/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/20d82c59f69615d8debdac43af3d1c2c/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/20d82c59f69615d8debdac43af3d1c2c/transformed/room-runtime-2.6.1/AndroidManifest.xml:28:13-60
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/20d82c59f69615d8debdac43af3d1c2c/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/20d82c59f69615d8debdac43af3d1c2c/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92

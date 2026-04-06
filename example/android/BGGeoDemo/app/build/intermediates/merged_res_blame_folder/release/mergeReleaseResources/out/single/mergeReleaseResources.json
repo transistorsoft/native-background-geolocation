@@ -1,0 +1,182 @@
+[
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_outline_avg_pace_24.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_outline_avg_pace_24.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/xml_backup_rules.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/layout_activity_main.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_outline_undo_24.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_outline_undo_24.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/layout_sheet_geofence.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/layout/sheet_geofence.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/layout_sheet_settings.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/layout/sheet_settings.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable-xxhdpi_ic_service_icon.png.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable-xxhdpi/ic_service_icon.png"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/layout_stepper_field.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/layout/stepper_field.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_settings_24.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_settings_24.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable-xxhdpi_location_arrow_blue.png.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable-xxhdpi/location_arrow_blue.png"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable-hdpi_ic_service_icon.png.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable-hdpi/ic_service_icon.png"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_outline_cloud_upload_24.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_outline_cloud_upload_24.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_add_24.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_add_24.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_outline_lock_open_right_24.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_outline_lock_open_right_24.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_rounded_add_24.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_rounded_add_24.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/menu_menu_main.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/menu/menu_main.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable-mdpi_ic_service_icon.png.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable-mdpi/ic_service_icon.png"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/xml_data_extraction_rules.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_outline_outgoing_mail_24.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_outline_outgoing_mail_24.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/mipmap-anydpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_outline_my_location_24.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_outline_my_location_24.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_close_24.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_close_24.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_play_arrow.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_play_arrow.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_pause.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_pause.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_navigation.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_navigation.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable-mdpi_location_arrow_blue.png.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable-mdpi/location_arrow_blue.png"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_rounded_minus_24.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_rounded_minus_24.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_play_button.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_play_button.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable-xhdpi_ic_service_icon.png.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable-xhdpi/ic_service_icon.png"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/layout_content_main.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/layout/content_main.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/mipmap-anydpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable-anydpi_ic_service_icon.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable-anydpi/ic_service_icon.xml"
+    },
+    {
+        "merged": "com.transistorsoft.bggeo.kotlin.demo.app-release-56:/drawable_ic_outline_delete_24.xml.flat",
+        "source": "com.transistorsoft.bggeo.kotlin.demo.app-main-57:/drawable/ic_outline_delete_24.xml"
+    }
+]

@@ -1,0 +1,571 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.transistorsoft.bggeo.kotlin.demo"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="29"
+9        android:targetSdkVersion="36" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:4:5-67
+11-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:5:5-79
+12-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:5:22-76
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:6:5-81
+13-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:6:22-78
+14    <uses-permission android:name="android.permission.VIBRATE" />
+14-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:7:5-66
+14-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:7:22-63
+15    <uses-permission android:name="android.permission.WAKE_LOCK" />
+15-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:8:5-68
+15-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:8:22-65
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:9:5-79
+16-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:9:22-76
+17    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+17-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:10:5-76
+17-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:10:22-73
+18    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+18-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:11:5-85
+18-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:11:22-82
+19    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+19-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:13:5-79
+19-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:13:22-76
+20    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+20-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:16:5-77
+20-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:16:22-74
+21    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+21-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:17:5-94
+21-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:17:22-91
+22    <uses-permission android:name="com.huawei.hms.permission.ACTIVITY_RECOGNITION" />
+22-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:18:5-86
+22-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:18:22-83
+23    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+23-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:19:5-81
+23-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:19:22-78
+24    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+24-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:20:5-79
+24-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:20:22-76
+25    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+25-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:21:5-77
+25-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:21:22-74
+26    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" /> <!-- ENABLE FOR CrashDetector testing:  <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" /> -->
+26-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:22:5-86
+26-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:22:22-83
+27    <!--
+28    This permission overrids Android 12 restriction on starting foreground-serivces in background
+29    but the permission is available only to "priveliged" apps (EMERGENCY apps)
+30
+31    <uses-permission android:name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND" />
+32    -->
+33    <!-- device-specific permissions for DeviceSettings methods -->
+34    <uses-permission android:name="oppo.permission.OPPO_COMPONENT_SAFE" />
+34-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:36:5-75
+34-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:36:22-72
+35    <uses-permission android:name="com.huawei.permission.external_app_settings.USE_COMPONENT" />
+35-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:37:5-97
+35-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:37:22-94
+36
+37    <uses-feature
+37-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:39:5-41:36
+38        android:name="android.hardware.location.gps"
+38-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:40:9-53
+39        android:required="false" />
+39-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:41:9-33
+40    <uses-feature
+40-->[com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:22:5-24:33
+41        android:glEsVersion="0x00020000"
+41-->[com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:23:8-40
+42        android:required="true" />
+42-->[com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:24:8-31
+43
+44    <queries>
+44-->[com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:27:5-30:15
+45
+46        <!-- Needs to be explicitly declared on Android R+ -->
+47        <package android:name="com.google.android.apps.maps" />
+47-->[com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:29:7-61
+47-->[com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:29:16-59
+48    </queries>
+49
+50    <permission
+50-->[androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:22:5-24:47
+51        android:name="com.transistorsoft.bggeo.kotlin.demo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+51-->[androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:23:9-81
+52        android:protectionLevel="signature" />
+52-->[androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:24:9-44
+53
+54    <uses-permission android:name="com.transistorsoft.bggeo.kotlin.demo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+54-->[androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:26:5-97
+54-->[androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:26:22-94
+55
+56    <application
+56-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:9:5-38:19
+57        android:name="com.transistorsoft.bggeo.kotlin.demo.Application"
+57-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:10:9-36
+58        android:allowBackup="true"
+58-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:11:9-35
+59        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+59-->[androidx.core:core:1.17.0] /Users/chris/.gradle/caches/8.13/transforms/72269197d6205a98f43a4cadc0963483/transformed/core-1.17.0/AndroidManifest.xml:28:18-86
+60        android:extractNativeLibs="false"
+61        android:icon="@mipmap/ic_launcher"
+61-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:12:9-43
+62        android:label="@string/app_name"
+62-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:13:9-41
+63        android:roundIcon="@mipmap/ic_launcher_round"
+63-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:15:9-54
+64        android:supportsRtl="true"
+64-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:16:9-35
+65        android:theme="@style/Theme.BackgroundGeolocation"
+65-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:17:9-59
+66        android:usesCleartextTraffic="true" >
+66-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:14:9-44
+67        <activity
+67-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:18:9-29:20
+68            android:name="com.transistorsoft.bggeo.kotlin.demo.MainActivity"
+68-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:19:13-41
+69            android:exported="true"
+69-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:20:13-36
+70            android:screenOrientation="portrait"
+70-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:21:13-49
+71            android:theme="@style/Theme.BackgroundGeolocation" >
+71-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:22:13-63
+72            <intent-filter>
+72-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:24:13-28:29
+73                <action android:name="android.intent.action.MAIN" />
+73-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:25:17-69
+73-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:25:25-66
+74
+75                <category android:name="android.intent.category.LAUNCHER" />
+75-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:27:17-77
+75-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:27:27-74
+76            </intent-filter>
+77        </activity>
+78
+79        <meta-data
+79-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:31:9-33:71
+80            android:name="com.google.android.geo.API_KEY"
+80-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:32:13-58
+81            android:value="AIzaSyCsIGaM5rXyZz_MmX2Vi8P_0BDB9EjsdWg" />
+81-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:33:13-68
+82        <meta-data
+82-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:35:9-37:760
+83            android:name="com.transistorsoft.locationmanager.license"
+83-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:36:13-70
+84            android:value="eyJhbGciOiJFZERTQSIsImtpZCI6ImVkMjU1MTktbWFpbi12MSJ9.eyJvcyI6ImFuZHJvaWQiLCJhcHBfaWQiOiJjb20udHJhbnNpc3RvcnNvZnQudHNsb2NhdGlvbm1hbmFnZXIuZGVtbyIsIm9yZGVyX251bWJlciI6NzAzNCwicmVuZXdhbF91cmwiOiJodHRwczovL3Nob3AudHJhbnNpc3RvcnNvZnQuY29tL2NhcnQvMTY1MDc4NjE1MDU6MT9ub3RlPTUzOTEiLCJjdXN0b21lcl9pZCI6MzA5LCJwcm9kdWN0IjoibmF0aXZlLWJhY2tncm91bmQtZ2VvbG9jYXRpb24iLCJrZXlfdmVyc2lvbiI6MSwiYWxsb3dlZF9zdWZmaXhlcyI6WyIuZGV2IiwiLmRldmVsb3BtZW50IiwiLnN0YWdpbmciLCIuc3RhZ2UiLCIucWEiLCIudWF0IiwiLnRlc3QiLCIuZGVidWciXSwibWF4X2J1aWxkX3N0YW1wIjoyMDI2MTEyOSwiZ3JhY2VfYnVpbGRzIjowLCJlbnRpdGxlbWVudHMiOlsiY29yZSIsInBvbHlnb24tZ2VvZmVuY2luZyIsImZpcmViYXNlIiwiaG1zIl19.0riKqZJwQs7G2xPpW9oeg5cFQ0w5CHLnICRNRp0f4igKS8WPYtNvEGOUfuWh3UrjENbHCpPDY_S3HDAzrttRDw" />
+84-->/Users/chris/workspace/background-geolocation/bg-forge/native/background-geolocation/example/android/app/src/main/AndroidManifest.xml:37:13-757
+85        <!-- TODO For disabling SharedPreferences backup on Android 12+ android:dataExtractionRules="@xml/backup_rules" -->
+86        <activity
+86-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:46:9-51:64
+87            android:name="com.transistorsoft.locationmanager.activity.TSLocationManagerActivity"
+87-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:47:13-97
+88            android:excludeFromRecents="false"
+88-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:48:13-47
+89            android:exported="true"
+89-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:49:13-36
+90            android:launchMode="singleInstance"
+90-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:50:13-48
+91            android:theme="@style/TSLocationManagerActivity" /> <!-- Service Launch Receiver -->
+91-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:51:13-61
+92        <!-- Proxies geofence and activity transition events to foreground services -->
+93        <!-- Avoids cold-start ForegroundServiceDidNotStartInTimeException -->
+94        <receiver
+94-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:56:9-59:40
+95            android:name="com.transistorsoft.locationmanager.service.FgsLaunchGate"
+95-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:57:13-84
+96            android:enabled="true"
+96-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:58:13-35
+97            android:exported="false" />
+97-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:59:13-37
+98
+99        <service
+99-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:61:9-63:56
+100            android:name="com.transistorsoft.locationmanager.service.TrackingService"
+100-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:62:13-86
+101            android:foregroundServiceType="location" />
+101-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:63:13-53
+102        <service
+102-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:64:9-66:56
+103            android:name="com.transistorsoft.locationmanager.service.LocationRequestService"
+103-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:65:13-93
+104            android:foregroundServiceType="location" />
+104-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:66:13-53
+105        <service
+105-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:67:9-69:56
+106            android:name="com.transistorsoft.locationmanager.service.ActivityRecognitionService"
+106-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:68:13-97
+107            android:foregroundServiceType="location" />
+107-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:69:13-53
+108        <service
+108-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:70:9-72:56
+109            android:name="com.transistorsoft.locationmanager.service.GeofencingService"
+109-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:71:13-88
+110            android:foregroundServiceType="location" />
+110-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:72:13-53
+111        <service
+111-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:73:9-75:56
+112            android:name="com.transistorsoft.locationmanager.service.PolygonGeofencingService"
+112-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:74:13-95
+113            android:foregroundServiceType="location" />
+113-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:75:13-53
+114        <service
+114-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:76:9-78:56
+115            android:name="com.transistorsoft.locationmanager.scheduler.ScheduleService"
+115-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:77:13-88
+116            android:foregroundServiceType="location" />
+116-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:78:13-53
+117
+118        <receiver
+118-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:80:9-82:40
+119            android:name="com.transistorsoft.locationmanager.scheduler.ScheduleAlarmReceiver"
+119-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:81:13-94
+120            android:exported="false" />
+120-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:82:13-37
+121
+122        <service
+122-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:84:9-87:36
+123            android:name="com.transistorsoft.locationmanager.scheduler.ScheduleJobService"
+123-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:85:13-91
+124            android:permission="android.permission.BIND_JOB_SERVICE" />
+124-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:86:13-69
+125
+126        <receiver
+126-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:89:9-98:20
+127            android:name="com.transistorsoft.locationmanager.BootReceiver"
+127-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:90:13-75
+128            android:enabled="true"
+128-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:91:13-35
+129            android:exported="true"
+129-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:92:13-36
+130            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+130-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:93:13-75
+131            <intent-filter>
+131-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:94:13-97:29
+132                <action android:name="android.intent.action.BOOT_COMPLETED" />
+132-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:95:17-79
+132-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:95:25-76
+133                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+133-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:96:17-84
+133-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:96:25-81
+134            </intent-filter>
+135        </receiver>
+136
+137        <provider
+137-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:100:9-108:20
+138            android:name="com.transistorsoft.locationmanager.util.LogFileProvider"
+138-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:101:13-83
+139            android:authorities="com.transistorsoft.bggeo.kotlin.demo.tslocationmanager.fileprovider"
+139-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:102:13-82
+140            android:exported="false"
+140-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:103:13-37
+141            android:grantUriPermissions="true" >
+141-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:104:13-47
+142            <meta-data
+142-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:105:13-107:80
+143                android:name="android.support.FILE_PROVIDER_PATHS"
+143-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:106:17-67
+144                android:resource="@xml/tslocationmanager_file_provider_path" />
+144-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:107:17-77
+145        </provider>
+146        <provider
+146-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:29:9-37:20
+147            android:name="androidx.startup.InitializationProvider"
+147-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:30:13-67
+148            android:authorities="com.transistorsoft.bggeo.kotlin.demo.androidx-startup"
+148-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:31:13-68
+149            android:exported="false" >
+149-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:32:13-37
+150            <meta-data
+150-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:34:13-36:52
+151                android:name="androidx.work.WorkManagerInitializer"
+151-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:35:17-68
+152                android:value="androidx.startup" />
+152-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:36:17-49
+153            <meta-data
+153-->[androidx.emoji2:emoji2:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/d9a79fe0101782c92af2fff2f1c2bc48/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+154                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+154-->[androidx.emoji2:emoji2:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/d9a79fe0101782c92af2fff2f1c2bc48/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+155                android:value="androidx.startup" />
+155-->[androidx.emoji2:emoji2:1.3.0] /Users/chris/.gradle/caches/8.13/transforms/d9a79fe0101782c92af2fff2f1c2bc48/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+156            <meta-data
+156-->[androidx.lifecycle:lifecycle-process:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/479e4f676c314de2948093f24bd6e399/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:29:13-31:52
+157                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+157-->[androidx.lifecycle:lifecycle-process:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/479e4f676c314de2948093f24bd6e399/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:30:17-78
+158                android:value="androidx.startup" />
+158-->[androidx.lifecycle:lifecycle-process:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/479e4f676c314de2948093f24bd6e399/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:31:17-49
+159            <meta-data
+159-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+160                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+160-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+161                android:value="androidx.startup" />
+161-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+162        </provider>
+163
+164        <service
+164-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:39:9-45:35
+165            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+165-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:40:13-88
+166            android:directBootAware="false"
+166-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:41:13-44
+167            android:enabled="@bool/enable_system_alarm_service_default"
+167-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:42:13-72
+168            android:exported="false" />
+168-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:43:13-37
+169        <service
+169-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:46:9-52:35
+170            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+170-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:47:13-84
+171            android:directBootAware="false"
+171-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:48:13-44
+172            android:enabled="@bool/enable_system_job_service_default"
+172-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:49:13-70
+173            android:exported="true"
+173-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:50:13-36
+174            android:permission="android.permission.BIND_JOB_SERVICE" />
+174-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:51:13-69
+175        <service
+175-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:53:9-59:35
+176            android:name="androidx.work.impl.foreground.SystemForegroundService"
+176-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:54:13-81
+177            android:directBootAware="false"
+177-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:55:13-44
+178            android:enabled="@bool/enable_system_foreground_service_default"
+178-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:56:13-77
+179            android:exported="false" />
+179-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:57:13-37
+180
+181        <receiver
+181-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:61:9-66:35
+182            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+182-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:62:13-88
+183            android:directBootAware="false"
+183-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:63:13-44
+184            android:enabled="true"
+184-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:64:13-35
+185            android:exported="false" />
+185-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:65:13-37
+186        <receiver
+186-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:67:9-77:20
+187            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+187-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:68:13-106
+188            android:directBootAware="false"
+188-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:69:13-44
+189            android:enabled="false"
+189-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:70:13-36
+190            android:exported="false" >
+190-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:71:13-37
+191            <intent-filter>
+191-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:73:13-76:29
+192                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+192-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:74:17-87
+192-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:74:25-84
+193                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+193-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:75:17-90
+193-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:75:25-87
+194            </intent-filter>
+195        </receiver>
+196        <receiver
+196-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:78:9-88:20
+197            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+197-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:79:13-104
+198            android:directBootAware="false"
+198-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:80:13-44
+199            android:enabled="false"
+199-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:81:13-36
+200            android:exported="false" >
+200-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:82:13-37
+201            <intent-filter>
+201-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:84:13-87:29
+202                <action android:name="android.intent.action.BATTERY_OKAY" />
+202-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:85:17-77
+202-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:85:25-74
+203                <action android:name="android.intent.action.BATTERY_LOW" />
+203-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:86:17-76
+203-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:86:25-73
+204            </intent-filter>
+205        </receiver>
+206        <receiver
+206-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:89:9-99:20
+207            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+207-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:90:13-104
+208            android:directBootAware="false"
+208-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:91:13-44
+209            android:enabled="false"
+209-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:92:13-36
+210            android:exported="false" >
+210-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:93:13-37
+211            <intent-filter>
+211-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:95:13-98:29
+212                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+212-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:96:17-83
+212-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:96:25-80
+213                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+213-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:97:17-82
+213-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:97:25-79
+214            </intent-filter>
+215        </receiver>
+216        <receiver
+216-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:100:9-109:20
+217            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+217-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:101:13-103
+218            android:directBootAware="false"
+218-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:102:13-44
+219            android:enabled="false"
+219-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:103:13-36
+220            android:exported="false" >
+220-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:104:13-37
+221            <intent-filter>
+221-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:106:13-108:29
+222                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+222-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:107:17-79
+222-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:107:25-76
+223            </intent-filter>
+224        </receiver>
+225        <receiver
+225-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:110:9-121:20
+226            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+226-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:111:13-88
+227            android:directBootAware="false"
+227-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:112:13-44
+228            android:enabled="false"
+228-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:113:13-36
+229            android:exported="false" >
+229-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:114:13-37
+230            <intent-filter>
+230-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:116:13-120:29
+231                <action android:name="android.intent.action.BOOT_COMPLETED" />
+231-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:95:17-79
+231-->[com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT] /Users/chris/.gradle/caches/8.13/transforms/fc6ec390d00a12ef8170ad068ee2dced/transformed/tslocationmanager-4.0.23-SNAPSHOT/AndroidManifest.xml:95:25-76
+232                <action android:name="android.intent.action.TIME_SET" />
+232-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:118:17-73
+232-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:118:25-70
+233                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+233-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:119:17-81
+233-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:119:25-78
+234            </intent-filter>
+235        </receiver>
+236        <receiver
+236-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:122:9-131:20
+237            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+237-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:123:13-99
+238            android:directBootAware="false"
+238-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:124:13-44
+239            android:enabled="@bool/enable_system_alarm_service_default"
+239-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:125:13-72
+240            android:exported="false" >
+240-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:126:13-37
+241            <intent-filter>
+241-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:128:13-130:29
+242                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+242-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:129:17-98
+242-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:129:25-95
+243            </intent-filter>
+244        </receiver>
+245        <receiver
+245-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:132:9-142:20
+246            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+246-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:133:13-78
+247            android:directBootAware="false"
+247-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:134:13-44
+248            android:enabled="true"
+248-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:135:13-35
+249            android:exported="true"
+249-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:136:13-36
+250            android:permission="android.permission.DUMP" >
+250-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:137:13-57
+251            <intent-filter>
+251-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:139:13-141:29
+252                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+252-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:140:17-88
+252-->[androidx.work:work-runtime:2.10.0] /Users/chris/.gradle/caches/8.13/transforms/67bbc2422f2ebdf7166b977b6332c935/transformed/work-runtime-2.10.0/AndroidManifest.xml:140:25-85
+253            </intent-filter>
+254        </receiver> <!-- Needs to be explicitly declared on P+ -->
+255        <uses-library
+255-->[com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:33:7-86
+256            android:name="org.apache.http.legacy"
+256-->[com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:33:21-58
+257            android:required="false" />
+257-->[com.google.android.gms:play-services-maps:19.2.0] /Users/chris/.gradle/caches/8.13/transforms/f5b72b4ef536d2fafb44ddecc0d58e93/transformed/play-services-maps-19.2.0/AndroidManifest.xml:33:59-83
+258
+259        <activity
+259-->[com.google.android.gms:play-services-base:18.5.0] /Users/chris/.gradle/caches/8.13/transforms/911dc6d0d70c2f99e7cf90618d0247a3/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+260            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+260-->[com.google.android.gms:play-services-base:18.5.0] /Users/chris/.gradle/caches/8.13/transforms/911dc6d0d70c2f99e7cf90618d0247a3/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+261            android:exported="false"
+261-->[com.google.android.gms:play-services-base:18.5.0] /Users/chris/.gradle/caches/8.13/transforms/911dc6d0d70c2f99e7cf90618d0247a3/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+262            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+262-->[com.google.android.gms:play-services-base:18.5.0] /Users/chris/.gradle/caches/8.13/transforms/911dc6d0d70c2f99e7cf90618d0247a3/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+263
+264        <meta-data
+264-->[com.google.android.gms:play-services-basement:18.4.0] /Users/chris/.gradle/caches/8.13/transforms/446b22e0c4337a1469dba62042e4a682/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+265            android:name="com.google.android.gms.version"
+265-->[com.google.android.gms:play-services-basement:18.4.0] /Users/chris/.gradle/caches/8.13/transforms/446b22e0c4337a1469dba62042e4a682/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+266            android:value="@integer/google_play_services_version" />
+266-->[com.google.android.gms:play-services-basement:18.4.0] /Users/chris/.gradle/caches/8.13/transforms/446b22e0c4337a1469dba62042e4a682/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+267
+268        <uses-library
+268-->[androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+269            android:name="androidx.window.extensions"
+269-->[androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+270            android:required="false" />
+270-->[androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+271        <uses-library
+271-->[androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+272            android:name="androidx.window.sidecar"
+272-->[androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+273            android:required="false" />
+273-->[androidx.window:window:1.0.0] /Users/chris/.gradle/caches/8.13/transforms/981669a422a6122ab336cfeb51b2f119/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+274
+275        <service
+275-->[androidx.room:room-runtime:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/20d82c59f69615d8debdac43af3d1c2c/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+276            android:name="androidx.room.MultiInstanceInvalidationService"
+276-->[androidx.room:room-runtime:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/20d82c59f69615d8debdac43af3d1c2c/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+277            android:directBootAware="true"
+277-->[androidx.room:room-runtime:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/20d82c59f69615d8debdac43af3d1c2c/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+278            android:exported="false" />
+278-->[androidx.room:room-runtime:2.6.1] /Users/chris/.gradle/caches/8.13/transforms/20d82c59f69615d8debdac43af3d1c2c/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+279
+280        <receiver
+280-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+281            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+281-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+282            android:directBootAware="false"
+282-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+283            android:enabled="true"
+283-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+284            android:exported="true"
+284-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+285            android:permission="android.permission.DUMP" >
+285-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+286            <intent-filter>
+286-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+287                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+287-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+287-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+288            </intent-filter>
+289            <intent-filter>
+289-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+290                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+290-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+290-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+291            </intent-filter>
+292            <intent-filter>
+292-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+293                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+293-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+293-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+294            </intent-filter>
+295            <intent-filter>
+295-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+296                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+296-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+296-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/chris/.gradle/caches/8.13/transforms/dfc82a94a8854f86b657193834a3418a/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+297            </intent-filter>
+298        </receiver>
+299    </application>
+300
+301</manifest>

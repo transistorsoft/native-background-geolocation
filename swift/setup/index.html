@@ -4838,10 +4838,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-your-license" class="md-nav__link">
+  <a href="#app-initialisation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configure your license
+        App initialisation
       
     </span>
   </a>
@@ -4849,22 +4849,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#infoplist" class="md-nav__link">
+  <a href="#license-key" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Info.plist
+        License key
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Info.plist">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signing-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signing &amp; Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Info tab
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Info tab">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#background-modes" class="md-nav__link">
+  <a href="#privacy-usage-strings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Background Modes
+        Privacy usage strings
       
     </span>
   </a>
@@ -4875,18 +4897,7 @@
   <a href="#background-task-identifiers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Background Task Identifiers
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#location-usage-descriptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Location Usage Descriptions
+        Background task identifiers
       
     </span>
   </a>
@@ -4895,6 +4906,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supplementary-infoplist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supplementary Info.plist
+      
+    </span>
+  </a>
   
 </li>
       
@@ -8952,10 +8974,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-your-license" class="md-nav__link">
+  <a href="#app-initialisation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configure your license
+        App initialisation
       
     </span>
   </a>
@@ -8963,22 +8985,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#infoplist" class="md-nav__link">
+  <a href="#license-key" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Info.plist
+        License key
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Info.plist">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signing-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signing &amp; Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Info tab
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Info tab">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#background-modes" class="md-nav__link">
+  <a href="#privacy-usage-strings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Background Modes
+        Privacy usage strings
       
     </span>
   </a>
@@ -8989,18 +9033,7 @@
   <a href="#background-task-identifiers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Background Task Identifiers
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#location-usage-descriptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Location Usage Descriptions
+        Background task identifiers
       
     </span>
   </a>
@@ -9009,6 +9042,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supplementary-infoplist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supplementary Info.plist
+      
+    </span>
+  </a>
   
 </li>
       
@@ -9047,95 +9091,175 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://github.com/transistorsoft/native-background-geolocation
 </code></pre></div>
 <p>Select <strong>Up to Next Major Version</strong> from the latest release, then add the <strong>BackgroundGeolocation</strong> library to your target.</p>
-<h2 id="configure-your-license">Configure your license<a class="headerlink" href="#configure-your-license" title="Permanent link">&para;</a></h2>
+<h2 id="app-initialisation">App initialisation<a class="headerlink" href="#app-initialisation" title="Permanent link">&para;</a></h2>
+<p>Call <code>TSBackgroundFetch</code> from your <code>App</code> initialiser:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">import</span><span class="w"> </span><span class="nc">SwiftUI</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">import</span><span class="w"> </span><span class="nc">BackgroundGeolocation</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">@</span><span class="n">main</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kd">struct</span><span class="w"> </span><span class="nc">MyApp</span><span class="p">:</span><span class="w"> </span><span class="n">App</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kd">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="n">TSBackgroundFetch</span><span class="p">.</span><span class="n">sharedInstance</span><span class="p">()?.</span><span class="n">didFinishLaunching</span><span class="p">()</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">body</span><span class="p">:</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">Scene</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="n">WindowGroup</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">ContentView</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="license-key">License key<a class="headerlink" href="#license-key" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Purchase a license</p>
-<p>The SDK requires a license for <strong>release</strong> builds. Debug builds work without one.
+<p>The SDK requires a license for <strong>App Store</strong> builds. All other builds (debug, simulator, TestFlight, ad-hoc) are fully functional without one.
 Purchase at <a href="https://shop.transistorsoft.com/products/background-geolocation-for-native-apps">transistorsoft.com</a>.</p>
 </div>
-<p>Add your license key to <code>Info.plist</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;key&gt;</span>TSLocationManagerLicense<span class="nt">&lt;/key&gt;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">&lt;string&gt;</span>YOUR_LICENSE_KEY_JWT<span class="nt">&lt;/string&gt;</span>
+<p>Add a User-Defined build setting to your target:</p>
+<p><strong>Build Settings → + → User-Defined Setting</strong></p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TRANSISTOR_LICENSE_KEY</code></td>
+<td><code>your-license-key-jwt</code></td>
+</tr>
+</tbody>
+</table>
+<p>Then reference it from your <a href="#supplementary-infoplist">supplementary <code>Info.plist</code></a> via <code>$(TRANSISTOR_LICENSE_KEY)</code>.</p>
+<h2 id="signing-capabilities">Signing &amp; Capabilities<a class="headerlink" href="#signing-capabilities" title="Permanent link">&para;</a></h2>
+<p>Add the <strong>Background Modes</strong> capability to your target:</p>
+<p><strong>Signing &amp; Capabilities → + Capability → Background Modes</strong></p>
+<p>Enable:</p>
+<ul>
+<li>☑ Location updates</li>
+<li>☑ Background fetch</li>
+<li>☑ Background processing</li>
+<li>☑ Audio, AirPlay, and Picture in Picture</li>
+</ul>
+<h2 id="info-tab">Info tab<a class="headerlink" href="#info-tab" title="Permanent link">&para;</a></h2>
+<h3 id="privacy-usage-strings">Privacy usage strings<a class="headerlink" href="#privacy-usage-strings" title="Permanent link">&para;</a></h3>
+<p><strong>Target → Info → Custom iOS Target Properties</strong></p>
+<p>Add the following keys:</p>
+<table>
+<thead>
+<tr>
+<th>Key (Xcode display name)</th>
+<th>Raw key</th>
+<th>Example value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Privacy - Location Always and When In Use Usage Description</td>
+<td><code>NSLocationAlwaysAndWhenInUseUsageDescription</code></td>
+<td><code>App requires location access at all times for background tracking.</code></td>
+</tr>
+<tr>
+<td>Privacy - Location When In Use Usage Description</td>
+<td><code>NSLocationWhenInUseUsageDescription</code></td>
+<td><code>App requires location access while in use.</code></td>
+</tr>
+<tr>
+<td>Privacy - Motion Usage Description</td>
+<td><code>NSMotionUsageDescription</code></td>
+<td><code>Motion detection helps determine when the device is stationary.</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="background-task-identifiers">Background task identifiers<a class="headerlink" href="#background-task-identifiers" title="Permanent link">&para;</a></h3>
+<p>Still in <strong>Custom iOS Target Properties</strong>, add:</p>
+<table>
+<thead>
+<tr>
+<th>Key (Xcode display name)</th>
+<th>Raw key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Permitted background task scheduler identifiers</td>
+<td><code>BGTaskSchedulerPermittedIdentifiers</code></td>
+<td>Array → <code>com.transistorsoft.fetch</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="supplementary-infoplist">Supplementary <code>Info.plist</code><a class="headerlink" href="#supplementary-infoplist" title="Permanent link">&para;</a></h2>
+<p><code>TSLocationManagerLicense</code> is a custom key that cannot be expressed as a build setting. Create a supplementary property list file:</p>
+<ol>
+<li><strong>File → New → File from Template → Property List</strong> — name it <code>Info.plist</code></li>
+<li><strong>Remove it from all targets</strong> (leave every checkbox unchecked)</li>
+<li><strong>Click Create</strong> — place the file next to your <code>.xcodeproj</code></li>
+<li><strong>Build Settings → <code>INFOPLIST_FILE</code></strong> → set to <code>Info.plist</code></li>
+</ol>
+<p>Add the license key, substituted from the <code>TRANSISTOR_LICENSE_KEY</code> build setting:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">&lt;plist</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nt">&lt;dict&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">&lt;key&gt;</span>TSLocationManagerLicense<span class="nt">&lt;/key&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nt">&lt;string&gt;</span>$(TRANSISTOR_LICENSE_KEY)<span class="nt">&lt;/string&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nt">&lt;/dict&gt;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nt">&lt;/plist&gt;</span>
 </code></pre></div>
-<h2 id="infoplist">Info.plist<a class="headerlink" href="#infoplist" title="Permanent link">&para;</a></h2>
-<h3 id="background-modes">Background Modes<a class="headerlink" href="#background-modes" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;key&gt;</span>UIBackgroundModes<span class="nt">&lt;/key&gt;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">&lt;array&gt;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&lt;string&gt;</span>location<span class="nt">&lt;/string&gt;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">&lt;string&gt;</span>fetch<span class="nt">&lt;/string&gt;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">&lt;string&gt;</span>processing<span class="nt">&lt;/string&gt;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nt">&lt;string&gt;</span>audio<span class="nt">&lt;/string&gt;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nt">&lt;/array&gt;</span>
-</code></pre></div>
-<h3 id="background-task-identifiers">Background Task Identifiers<a class="headerlink" href="#background-task-identifiers" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&lt;key&gt;</span>BGTaskSchedulerPermittedIdentifiers<span class="nt">&lt;/key&gt;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">&lt;array&gt;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">&lt;string&gt;</span>com.transistorsoft.fetch<span class="nt">&lt;/string&gt;</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nt">&lt;/array&gt;</span>
-</code></pre></div>
-<h3 id="location-usage-descriptions">Location Usage Descriptions<a class="headerlink" href="#location-usage-descriptions" title="Permanent link">&para;</a></h3>
-<p>iOS requires a human-readable explanation for each level of location access your app requests.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cm">&lt;!-- Location usage descriptions --&gt;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">&lt;key&gt;</span>NSLocationAlwaysAndWhenInUseUsageDescription<span class="nt">&lt;/key&gt;</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nt">&lt;string&gt;</span>App<span class="w"> </span>requires<span class="w"> </span>location<span class="w"> </span>access<span class="w"> </span>at<span class="w"> </span>all<span class="w"> </span>times<span class="w"> </span>for<span class="w"> </span>background<span class="w"> </span>tracking.<span class="nt">&lt;/string&gt;</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nt">&lt;key&gt;</span>NSLocationWhenInUseUsageDescription<span class="nt">&lt;/key&gt;</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nt">&lt;string&gt;</span>App<span class="w"> </span>requires<span class="w"> </span>location<span class="w"> </span>access<span class="w"> </span>while<span class="w"> </span>in<span class="w"> </span>use.<span class="nt">&lt;/string&gt;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nt">&lt;key&gt;</span>NSMotionUsageDescription<span class="nt">&lt;/key&gt;</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nt">&lt;string&gt;</span>Motion<span class="w"> </span>detection<span class="w"> </span>helps<span class="w"> </span>determine<span class="w"> </span>when<span class="w"> </span>the<span class="w"> </span>device<span class="w"> </span>is<span class="w"> </span>stationary.<span class="nt">&lt;/string&gt;</span>
-</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Because <code>INFOPLIST_FILE</code> is set alongside <code>GENERATE_INFOPLIST_FILE = YES</code>, Xcode <strong>merges</strong> the two sources. The file is never copied into your bundle directly.</p>
+</div>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">import</span><span class="w"> </span><span class="nc">SwiftUI</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">import</span><span class="w"> </span><span class="nc">BackgroundGeolocation</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">@</span><span class="n">main</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="kd">struct</span><span class="w"> </span><span class="nc">MyApp</span><span class="p">:</span><span class="w"> </span><span class="n">App</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">subscriptions</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Set</span><span class="p">&lt;</span><span class="n">BGGeo</span><span class="p">.</span><span class="n">EventSubscription</span><span class="p">&gt;()</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="kd">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">        </span><span class="c1">// Register event listeners *before* calling ready()</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">onLocation</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="k">in</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">            </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;[onLocation] </span><span class="si">\(</span><span class="n">event</span><span class="p">.</span><span class="n">coords</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">        </span><span class="p">}.</span><span class="n">store</span><span class="p">(</span><span class="k">in</span><span class="p">:</span><span class="w"> </span><span class="p">&amp;</span><span class="n">subscriptions</span><span class="p">)</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">        </span><span class="c1">// ready() configures the SDK and restores persisted state.</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">        </span><span class="c1">// It does NOT start tracking — call start()/stop() separately.</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">        </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">ready</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="k">in</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">geolocation</span><span class="p">.</span><span class="n">desiredAccuracy</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">kCLLocationAccuracyBest</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">geolocation</span><span class="p">.</span><span class="n">distanceFilter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">app</span><span class="p">.</span><span class="n">stopOnTerminate</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">false</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">app</span><span class="p">.</span><span class="n">startOnBoot</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">logLevel</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">.</span><span class="n">verbose</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>
-<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">body</span><span class="p">:</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">Scene</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">        </span><span class="n">WindowGroup</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">ContentView</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="p">}</span>
-<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>
-<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="c1">// Elsewhere — e.g. a toggle-button action in your UI</span>
-<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="kd">struct</span><span class="w"> </span><span class="nc">TrackingButton</span><span class="p">:</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a><span class="w">    </span><span class="p">@</span><span class="n">State</span><span class="w"> </span><span class="kd">private</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">isTracking</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">enabled</span>
-<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>
-<a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">body</span><span class="p">:</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="w">        </span><span class="n">Button</span><span class="p">(</span><span class="n">isTracking</span><span class="w"> </span><span class="p">?</span><span class="w"> </span><span class="s">&quot;Stop&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Start&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a><span class="w">            </span><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a><span class="w">                </span><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
-<a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">isTracking</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a><span class="w">                    </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">stop</span><span class="p">()</span>
-<a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a><span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a><span class="w">                    </span><span class="k">try</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">start</span><span class="p">()</span>
-<a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a><span class="w">                </span><span class="p">}</span>
-<a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a><span class="w">                </span><span class="n">isTracking</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">enabled</span>
-<a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-5-49" name="__codelineno-5-49" href="#__codelineno-5-49"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-50" name="__codelineno-5-50" href="#__codelineno-5-50"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">import</span><span class="w"> </span><span class="nc">SwiftUI</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">import</span><span class="w"> </span><span class="nc">BackgroundGeolocation</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">@</span><span class="n">main</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kd">struct</span><span class="w"> </span><span class="nc">MyApp</span><span class="p">:</span><span class="w"> </span><span class="n">App</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">subscriptions</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Set</span><span class="p">&lt;</span><span class="n">BGGeo</span><span class="p">.</span><span class="n">EventSubscription</span><span class="p">&gt;()</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="kd">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="c1">// Register event listeners *before* calling ready()</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">onLocation</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="k">in</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">            </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;[onLocation] </span><span class="si">\(</span><span class="n">event</span><span class="p">.</span><span class="n">coords</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="p">}.</span><span class="n">store</span><span class="p">(</span><span class="k">in</span><span class="p">:</span><span class="w"> </span><span class="p">&amp;</span><span class="n">subscriptions</span><span class="p">)</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="c1">// ready() configures the SDK and restores persisted state.</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span><span class="c1">// It does NOT start tracking — call start()/stop() separately.</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">ready</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="k">in</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">geolocation</span><span class="p">.</span><span class="n">desiredAccuracy</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">kCLLocationAccuracyBest</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">geolocation</span><span class="p">.</span><span class="n">distanceFilter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">app</span><span class="p">.</span><span class="n">stopOnTerminate</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">app</span><span class="p">.</span><span class="n">startOnBoot</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">logLevel</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">.</span><span class="n">verbose</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">body</span><span class="p">:</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">Scene</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">        </span><span class="n">WindowGroup</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">ContentView</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="p">}</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="c1">// Elsewhere — e.g. a toggle-button action in your UI</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="kd">struct</span><span class="w"> </span><span class="nc">TrackingButton</span><span class="p">:</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">    </span><span class="p">@</span><span class="n">State</span><span class="w"> </span><span class="kd">private</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">isTracking</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">enabled</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">body</span><span class="p">:</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">View</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">        </span><span class="n">Button</span><span class="p">(</span><span class="n">isTracking</span><span class="w"> </span><span class="p">?</span><span class="w"> </span><span class="s">&quot;Stop&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Start&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">            </span><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">                </span><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">isTracking</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="w">                    </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">stop</span><span class="p">()</span>
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="w">                    </span><span class="k">try</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">start</span><span class="p">()</span>
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">                </span><span class="n">isTracking</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">enabled</span>
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="p">}</span>
 </code></pre></div>
 
 

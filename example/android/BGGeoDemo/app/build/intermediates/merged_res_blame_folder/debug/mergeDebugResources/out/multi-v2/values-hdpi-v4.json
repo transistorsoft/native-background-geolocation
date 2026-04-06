@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.transistorsoft.bggeo.kotlin.demo.app-mergeDebugResources-54:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/chris/.gradle/caches/8.13/transforms/682a395abf8eb3819d1f5b0137237d20/transformed/appcompat-1.7.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

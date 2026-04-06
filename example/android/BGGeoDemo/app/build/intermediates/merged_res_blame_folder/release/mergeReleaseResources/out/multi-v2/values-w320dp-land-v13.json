@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.transistorsoft.bggeo.kotlin.demo.app-mergeReleaseResources-54:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/chris/.gradle/caches/8.13/transforms/d45d433b55d434aadb3ffcb7ecc638f3/transformed/material-1.13.0/res/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,110",
+                        "endColumns": "54,61",
+                        "endOffsets": "105,167"
+                    }
+                }
+            ]
+        }
+    ]
+}
