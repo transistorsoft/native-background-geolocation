@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.0.32 &mdash; 2026-04-05
+- Clean docs, prepare for Dave's deep dive reports
+
 ## 4.0.31 &mdash; 2026-04-02
 - Update panel images
 - docs: rewrite README with setup, build, test, publish sections
