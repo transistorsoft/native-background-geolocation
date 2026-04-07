@@ -16,14 +16,35 @@
     border-radius: 20px;
 }
 
-/* ── Landing page — platform selector cards ─────────────────────────────── */
-.bgeo-landing-hero img {
+/* ── Landing page — constrained content column (ticker is full-bleed) ───────── */
+.bgeo-landing-wrap {
+    padding-inline: 10%;
+}
+
+/* ── Landing page — intro block (image + headline + tagline + CTA) ───────── */
+.bgeo-landing-intro {
+    text-align: center;
+}
+.bgeo-landing-intro .bgeo-hero-img {
     max-width: 100%;
     height: auto;
     display: block;
     border-radius: 16px;
-    margin: 1.5rem 0 2rem;
+    margin: 1.5rem auto 2rem;
 }
+.bgeo-landing-intro h1 {
+    text-align: center;
+}
+.bgeo-landing-intro p {
+    text-align: center;
+}
+.bgeo-landing-intro .bgeo-buy-now-btn {
+    display: block;
+    width: fit-content;
+    margin: 1rem auto 0;
+}
+
+/* ── Landing page — platform selector cards ─────────────────────────────── */
 .bgeo-platform-cards {
     display: flex;
     gap: 1.25rem;
@@ -649,10 +670,9 @@ h1 .platform-badge { font-size: 0.5rem; }
     vertical-align: middle;
     margin-right: 4px;
     margin-bottom: 2px;
-    opacity: 0.5;
+    opacity: 0.75;
     background-size: 16px 16px;
     background-repeat: no-repeat;
-    filter: grayscale(1);
 }
 
 /* TypeScript — react-native + expo + capacitor (3 icons via multiple backgrounds) */
