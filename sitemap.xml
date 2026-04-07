@@ -2,826 +2,826 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.transistorsoft.com/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/about/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/contact/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/purchase/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/ActivityConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/ActivityType/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/AppConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/AuthorizationConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/AuthorizationEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/BackgroundGeolocation/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/Battery/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/Config/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/ConnectivityChangeEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/Coords/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/DesiredAccuracy/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/DeviceInfo/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/DeviceSettings/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/DeviceSettingsRequest/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/Event/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/GeoConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/Geofence/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/GeofenceEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/GeofencesChangeEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/HeadlessEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/HeartbeatEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/HttpConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/HttpEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/KalmanProfile/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/Location/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/LocationFilter/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/LocationFilterPolicy/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/LogLevel/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/Logger/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/LoggerConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/MotionActivity/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/NotificationConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/NotificationPriority/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/PermissionRationale/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/PersistMode/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/PersistenceConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/ProviderChangeEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/SQLQuery/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/Sensors/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/State/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/TransistorAuthorizationToken/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/examples/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/flutter/setup/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/help/debugging/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/help/faq/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/help/philosophy/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/AccuracyAuthorization/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/ActivityChangeEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/ActivityConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/App/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/AppConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/Authorization/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/AuthorizationConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/AuthorizationEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/AuthorizationStrategy/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/BGGeo/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/Config/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/ConnectivityChangeEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/DataStore/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/DesiredAccuracy/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/DeviceSettings/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/DeviceSettingsRequest/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/Geofence/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/GeofenceEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/GeofenceManager/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/GeofencesChangeEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/GeolocationConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/HeartbeatEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/HttpConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/HttpEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/HttpMethod/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/KalmanProfile/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/LocationAuthorizationRequest/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/LocationEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/LocationFilterConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/LocationFilterPolicy/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/LocationsOrderDirection/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/LogLevel/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/Logger/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/LoggerConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/NotificationConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/NotificationPriority/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/PermissionStatus/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/PersistMode/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/PersistenceConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/ProviderChangeEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/Sensors/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/State/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/TrackingMode/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/TransistorAuthorizationService/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/TransistorToken/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/examples/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/kotlin/setup/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/Activity/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/ActivityChangeEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/ActivityConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/App/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/AppConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/Authorization/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/AuthorizationConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/AuthorizationEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/AuthorizationStrategy/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/BGGeo/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/Battery/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/Config/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/ConnectivityChangeEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/Coords/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/DataStore/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/DeviceSettings/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/Geofence/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/GeofenceEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/GeofenceManager/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/GeofencesChangeEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/GeolocationConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/HeartbeatEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/HttpConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/HttpEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/HttpMethod/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/KalmanProfile/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/LocationAuthorizationRequest/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/LocationEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/LocationFilterConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/LocationFilterPolicy/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/LocationsOrderDirection/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/LogLevel/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/Logger/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/LoggerConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/PersistMode/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/PersistenceConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/ProviderChangeEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/Sensors/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/State/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/TrackingMode/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/TransistorAuthorizationService/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/examples/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/swift/setup/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/AccuracyAuthorization/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/ActivityConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/ActivityType/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/AppConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/AuthorizationConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/AuthorizationEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/AuthorizationStatus/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/AuthorizationStrategy/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/BackgroundGeolocation/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/Battery/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/Config/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/ConnectivityChangeEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/Coords/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/CurrentPositionRequest/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/DesiredAccuracy/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/DeviceInfo/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/DeviceSettings/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/DeviceSettingsRequest/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/Event/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/GeoConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/Geofence/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/GeofenceAction/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/GeofenceEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/GeofencesChangeEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/HeadlessEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/HeartbeatEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/HttpConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/HttpEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/HttpMethod/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/KalmanProfile/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/Location/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/LocationError/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/LocationFilter/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/LocationFilterPolicy/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/LocationRequest/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/LogLevel/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/Logger/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/LoggerConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/MotionActivity/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/MotionActivityEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/MotionActivityType/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/MotionChangeEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/NotificationConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/NotificationPriority/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/PermissionRationale/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/PersistMode/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/PersistenceConfig/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/ProviderChangeEvent/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/SQLQuery/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/SQLQueryOrder/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/Sensors/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/State/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/Subscription/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/TrackingMode/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/TransistorAuthorizationService/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/TransistorAuthorizationToken/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/TriggerActivity/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/Vertices/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/WatchPositionRequest/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/example/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/examples/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.transistorsoft.com/typescript/setup/</loc>
-         <lastmod>2026-04-06</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
 </urlset>
