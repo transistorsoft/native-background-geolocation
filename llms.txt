@@ -4,7 +4,7 @@
 > Capacitor, Cordova, iOS (Swift), and Android (Kotlin).
 > Features: intelligent motion detection, polygon geofencing, durable HTTP+SQLite
 > upload queue, headless operation after app termination, odometer & trip metrics.
-> Used in 20,678+ production apps across 140+ countries.
+> Used in 20,680+ production apps across 140+ countries.
 
 ## SDKs
 
