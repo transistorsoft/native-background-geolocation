@@ -383,6 +383,7 @@ h1 .platform-badge { font-size: 0.5rem; }
 .bgeo-platform-heading-icon[data-platform="expo"]         { background-image: url('../images/platforms/expo.svg'); }
 .bgeo-platform-heading-icon[data-platform="capacitor"]    { background-image: url('../images/platforms/capacitor.svg'); }
 .bgeo-platform-heading-icon[data-platform="flutter"]      { background-image: url('../images/platforms/flutter.svg'); }
+.bgeo-platform-heading-icon[data-platform="cordova"]      { background-image: url('../images/platforms/cordova.svg'); }
 .bgeo-platform-heading-icon[data-platform="swift"]        { background-image: url('../images/platforms/swift.svg'); }
 .bgeo-platform-heading-icon[data-platform="kotlin"]       { background-image: url('../images/platforms/kotlin.svg'); }
 
