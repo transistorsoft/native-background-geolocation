@@ -8,10 +8,10 @@
 
 ## SDKs
 
-- [TypeScript](https://docs.transistorsoft.com/typescript/): TypeScript
-- [Flutter](https://docs.transistorsoft.com/flutter/): Flutter
-- [Swift](https://docs.transistorsoft.com/swift/): Swift
-- [Kotlin](https://docs.transistorsoft.com/kotlin/): Kotlin
+- [TypeScript](https://docs.transistorsoft.com/typescript/): react-native-background-geolocation, capacitor-background-geolocation, cordova-background-geolocation-lt
+- [Flutter](https://docs.transistorsoft.com/flutter/): flutter_background_geolocation
+- [Swift](https://docs.transistorsoft.com/swift/): native-background-geolocation
+- [Kotlin](https://docs.transistorsoft.com/kotlin/): native-background-geolocation
 
 ## API Reference
 
