@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.1.0 &mdash; 2026-04-06
+- feat: replace CocoaLumberjack with custom SQLite-backed logger (TSNativeLogger)
+
 ## 4.0.32 &mdash; 2026-04-05
 - Clean docs, prepare for Dave's deep dive reports
 
