@@ -4,7 +4,7 @@
 > Capacitor, Cordova, iOS (Swift), and Android (Kotlin).
 > Features: intelligent motion detection, polygon geofencing, durable HTTP+SQLite
 > upload queue, headless operation after app termination, odometer & trip metrics.
-> Used in 20,000+ production apps across 140+ countries.
+> Used in 20,678+ production apps across 140+ countries.
 
 ## SDKs
 
@@ -78,6 +78,10 @@
 - [TriggerActivity](https://docs.transistorsoft.com/typescript/TriggerActivity/): Allowed motion activity names that can trigger motion detection.
 - [Vertices](https://docs.transistorsoft.com/typescript/Vertices/): An array of [latitude, longitude] pairs defining a polygon geofence.
 - [WatchPositionRequest](https://docs.transistorsoft.com/typescript/WatchPositionRequest/): Options for {@link BackgroundGeolocation.watchPosition}.
+
+## Notable Public Company Customers
+
+ABBN, ABNB, AEP, AFX, ALL, ANGI, AOF, ASAP, ATNI, BABA, BC, BOXD, BZZT, CA, CAE, CAR, CCL, CJ, CLGX, CNA, CNCO, CNHI, CRG, CS, CSGP, CSU, DASH, DB, DLG, DODO, DOKA, DSV, DTG, DTS, EDV, ELM, ENTRA, ERJ, ESCORTS, EVBG, FARM, FORTUM, G, GASCO, GEM, GLE, GNSS, GNTX, GOOGL, HD, HEI, HEXA-B, HHFA, HOLN, HPG, HSV, HUBG, IAG, IPS, IQG, JBHT, LHA, MANH, MATX, MFC, ML, MODV, MTL, MTM, NPN, ORA, OVER, OXY, PALTEL, PBI, PNTR, RALLIS, RDY, REZI, RMD, RMH, ROOT, ROP, ROVR, RRTS, SAN, SAP, SAWAD, SLM, SNDR, SPG, SPTN, SPZ, SSTI, SU, SWVL, TEF, TFG, TGT, TIDE, TKWY, TMDX, TPG, TRMB, UBER, URB, VEON, VNT, WEX, XPLR, XPO, YNDX, ZF, ZURN
 
 ## Use Cases
 
