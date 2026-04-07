@@ -67,6 +67,101 @@
     line-height: 1.4;
 }
 
+/* ── Landing page — ticker marquee ──────────────────────────────────────── */
+/* Stats strip */
+.bgeo-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+    margin: 2rem 0 1rem;
+    text-align: center;
+}
+.bgeo-stats__number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--md-default-fg-color);
+}
+.bgeo-stats__label {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--md-default-fg-color--light);
+    margin-top: 0.3rem;
+    opacity: 0.7;
+}
+
+/* Use case pills */
+.bgeo-use-cases {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+    margin: 0 0 1.75rem;
+}
+.bgeo-use-case__pill {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    background: var(--md-default-fg-color--lightest);
+    color: var(--md-default-fg-color--light);
+}
+
+.bgeo-ticker__title {
+    text-align: center;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--md-default-fg-color--light);
+    margin: 1.5rem 0 0.4rem;
+    opacity: 0.6;
+}
+.bgeo-ticker {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 1.25rem 0;
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    padding: 0.5rem 0;
+}
+.bgeo-ticker__track {
+    display: inline-block;
+    animation: bgeo-ticker-scroll 60s linear infinite;
+}
+.bgeo-ticker:hover .bgeo-ticker__track {
+    animation-play-state: paused;
+}
+.bgeo-ticker__item {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--md-default-fg-color--light) !important;
+    text-decoration: none !important;
+    margin: 0 1.25rem;
+    transition: color 0.15s;
+}
+.bgeo-ticker__item:hover {
+    color: var(--md-accent-fg-color) !important;
+}
+.bgeo-ticker__item::before {
+    content: "●";
+    font-size: 0.4em;
+    vertical-align: middle;
+    margin-right: 1.25rem;
+    opacity: 0.4;
+}
+@keyframes bgeo-ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
 /* ── Landing page — feature grid ────────────────────────────────────────── */
 .bgeo-features {
     display: grid;
