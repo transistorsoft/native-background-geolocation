@@ -79,6 +79,10 @@
 - [Vertices](https://docs.transistorsoft.com/typescript/Vertices/): An array of [latitude, longitude] pairs defining a polygon geofence.
 - [WatchPositionRequest](https://docs.transistorsoft.com/typescript/WatchPositionRequest/): Options for {@link BackgroundGeolocation.watchPosition}.
 
+## Use Cases
+
+Software Agencies, Fleet Tracking, Field Service, Delivery & Logistics, Workforce Tracking, Rideshare & Mobility, Health & Fitness, Travel & Hospitality, Marketplace & On-Demand, Asset Tracking, Security & Patrol, Retail & Commerce, Family Safety, Telematics, Construction, Route Optimization
+
 ## Key Features
 
 - **Intelligent Motion Detection** - A sophisticated motion-state machine automatically transitions between tracking and stationary modes, slashing battery usage when the device is still.
