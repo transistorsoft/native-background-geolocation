@@ -42,7 +42,7 @@ android {
 
 dependencies {
     // ── Background Geolocation SDK ────────────────────────────────────────────
-    implementation("com.transistorsoft:tslocationmanager:4.0.23-SNAPSHOT")
+    implementation("com.transistorsoft:tslocationmanager:4.1.+")
     implementation("com.google.android.gms:play-services-location:21.3.0")
 
     // ── Demo app dependencies (not required by the SDK) ───────────────────────
