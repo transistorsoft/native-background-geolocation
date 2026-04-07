@@ -1,4 +1,4 @@
-# Background Geolocation SDK — Transistor Software
+# Background Geolocation SDK - Transistor Software
 
 > Cross-platform background location tracking SDK for React Native, Flutter,
 > Capacitor, Cordova, iOS (Swift), and Android (Kotlin).
@@ -81,14 +81,14 @@
 
 ## Key Features
 
-- **Intelligent Motion Detection** — A sophisticated motion-state machine automatically transitions between tracking and stationary modes, slashing battery usage when the device is still.
-- **Geofencing** — Monitor unlimited circular regions with sub-metre accuracy — triggers reliably even when the app is terminated by the OS.
-- **Polygon Geofencing** — Define geofences as arbitrary polygon shapes — parks, building footprints, delivery zones. Available as a paid add-on.
-- **Durable HTTP + SQLite Queue** — Every location is persisted to SQLite before upload. Automatic retry, JWT auth, and batch upload keep your server in sync.
-- **Survives Termination &amp; Reboot** — With stopOnTerminate: false and startOnBoot: true, the SDK continues tracking after the app is killed and resumes automatically when the device restarts, without user interaction.
-- **Android Headless Tasks** — Continues executing JavaScript and Dart location callbacks even when the Android app is fully terminated — no foreground process required.
-- **Location Filter** — Fine-tune location accuracy with a configurable filter pipeline — smooth GPS noise and set minimum accuracy thresholds.
-- **Odometer &amp; Trip Metrics** — Built-in distance tracking, speed, and heading — no extra code required. Reset the odometer at trip start and read it at any time.
+- **Intelligent Motion Detection** - A sophisticated motion-state machine automatically transitions between tracking and stationary modes, slashing battery usage when the device is still.
+- **Geofencing** - Monitor unlimited circular regions with sub-metre accuracy — triggers reliably even when the app is terminated by the OS.
+- **Polygon Geofencing** - Define geofences as arbitrary polygon shapes — parks, building footprints, delivery zones. Available as a paid add-on.
+- **Durable HTTP + SQLite Queue** - Every location is persisted to SQLite before upload. Automatic retry, JWT auth, and batch upload keep your server in sync.
+- **Survives Termination &amp; Reboot** - With stopOnTerminate: false and startOnBoot: true, the SDK continues tracking after the app is killed and resumes automatically when the device restarts, without user interaction.
+- **Android Headless Tasks** - Continues executing JavaScript and Dart location callbacks even when the Android app is fully terminated — no foreground process required.
+- **Location Filter** - Fine-tune location accuracy with a configurable filter pipeline — smooth GPS noise and set minimum accuracy thresholds.
+- **Odometer &amp; Trip Metrics** - Built-in distance tracking, speed, and heading — no extra code required. Reset the odometer at trip start and read it at any time.
 
 ## Licensing
 
