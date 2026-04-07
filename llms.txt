@@ -1,0 +1,96 @@
+# Background Geolocation SDK — Transistor Software
+
+> Cross-platform background location tracking SDK for React Native, Flutter,
+> Capacitor, Cordova, iOS (Swift), and Android (Kotlin).
+> Features: intelligent motion detection, polygon geofencing, durable HTTP+SQLite
+> upload queue, headless operation after app termination, odometer & trip metrics.
+> Used in 20,000+ production apps across 140+ countries.
+
+## SDKs
+
+- [TypeScript](https://docs.transistorsoft.com/typescript/): TypeScript
+- [Flutter](https://docs.transistorsoft.com/flutter/): Flutter
+- [Swift](https://docs.transistorsoft.com/swift/): Swift
+- [Kotlin](https://docs.transistorsoft.com/kotlin/): Kotlin
+
+## API Reference
+
+- [AccuracyAuthorization](https://docs.transistorsoft.com/typescript/AccuracyAuthorization/): Accuracy authorization granted by the user.
+- [ActivityConfig](https://docs.transistorsoft.com/typescript/ActivityConfig/): Activity recognition configuration for the background geolocation SDK.
+- [ActivityType](https://docs.transistorsoft.com/typescript/ActivityType/): iOS Activity Type used with {@link GeoConfig.activityType}.
+- [App](https://docs.transistorsoft.com/typescript/App/): Background-task and power-save utilities.
+- [AppConfig](https://docs.transistorsoft.com/typescript/AppConfig/): Application and lifecycle configuration for the background geolocation SDK.
+- [Authorization](https://docs.transistorsoft.com/typescript/Authorization/): Location permission management — request and monitor authorisation status.
+- [AuthorizationConfig](https://docs.transistorsoft.com/typescript/AuthorizationConfig/): Token-based authorization configuration for the background geolocation SDK.
+- [AuthorizationEvent](https://docs.transistorsoft.com/typescript/AuthorizationEvent/): Authorization token refresh result delivered to {@link BackgroundGeolocation.onAuthorization}.
+- [AuthorizationStatus](https://docs.transistorsoft.com/typescript/AuthorizationStatus/): iOS/Android location authorization status.
+- [AuthorizationStrategy](https://docs.transistorsoft.com/typescript/AuthorizationStrategy/): Supported authorization strategies.
+- [BackgroundGeolocation](https://docs.transistorsoft.com/typescript/BackgroundGeolocation/): Primary SDK API — the single entry point for all geolocation, geofencing, HTTP sync, and configuration operations.
+- [Battery](https://docs.transistorsoft.com/typescript/Battery/): Device battery state at the time a {@link Location} was recorded.
+- [Config](https://docs.transistorsoft.com/typescript/Config/): Root configuration object passed to {@link BackgroundGeolocation.ready} and {@link BackgroundGeolocation.setConfig}.
+- [ConnectivityChangeEvent](https://docs.transistorsoft.com/typescript/ConnectivityChangeEvent/): Network connectivity change delivered to {@link BackgroundGeolocation.onConnectivityChange}.
+- [Coords](https://docs.transistorsoft.com/typescript/Coords/): Geographic coordinates attached to a {@link Location}.
+- [CurrentPositionRequest](https://docs.transistorsoft.com/typescript/CurrentPositionRequest/): Options for {@link BackgroundGeolocation.getCurrentPosition}.
+- [DataStore](https://docs.transistorsoft.com/typescript/DataStore/): Persisted location record management — query, upload, and destroy stored locations.
+- [DesiredAccuracy](https://docs.transistorsoft.com/typescript/DesiredAccuracy/): Desired accuracy presets (meters / platform-tuned).
+- [DeviceInfo](https://docs.transistorsoft.com/typescript/DeviceInfo/): Basic device hardware and OS information returned by {@link BackgroundGeolocation.getDeviceInfo}.
+- [DeviceSettings](https://docs.transistorsoft.com/typescript/DeviceSettings/): [Android only] API for directing users to Android device settings screens that can affect background geolocation performance.
+- [DeviceSettingsRequest](https://docs.transistorsoft.com/typescript/DeviceSettingsRequest/): [Android only] Returned by a {@link DeviceSettings} request — describes which settings screen to show and whether the user has already been prompted.
+- [Event](https://docs.transistorsoft.com/typescript/Event/): Supported event names emitted by the SDK.
+- [GeoConfig](https://docs.transistorsoft.com/typescript/GeoConfig/): Geolocation configuration for the background geolocation SDK.
+- [Geofence](https://docs.transistorsoft.com/typescript/Geofence/): A geofence definition for monitoring circular or polygon regions.
+- [GeofenceAction](https://docs.transistorsoft.com/typescript/GeofenceAction/): Geofence transition actions emitted by the SDK  Used with {@link GeofenceEvent} from {@link BackgroundGeolocation.onGeofence}.
+- [GeofenceEvent](https://docs.transistorsoft.com/typescript/GeofenceEvent/): Geofence transition delivered to {@link BackgroundGeolocation.onGeofence}.
+- [GeofenceManager](https://docs.transistorsoft.com/typescript/GeofenceManager/): Manages the geofence database — add, remove, query, and check geofences.
+- [GeofencesChangeEvent](https://docs.transistorsoft.com/typescript/GeofencesChangeEvent/): Geofence monitoring change delivered to {@link BackgroundGeolocation.onGeofencesChange}.
+- [HeadlessEvent](https://docs.transistorsoft.com/typescript/HeadlessEvent/): [Android only] Event delivered to a headless task registered via {@link BackgroundGeolocation.registerHeadlessTask}.
+- [HeartbeatEvent](https://docs.transistorsoft.com/typescript/HeartbeatEvent/): Periodic heartbeat delivered to {@link BackgroundGeolocation.onHeartbeat}.
+- [HttpConfig](https://docs.transistorsoft.com/typescript/HttpConfig/): HTTP and networking configuration for the background geolocation SDK.
+- [HttpEvent](https://docs.transistorsoft.com/typescript/HttpEvent/): HTTP response payload delivered to {@link BackgroundGeolocation.onHttp}.
+- [HttpMethod](https://docs.transistorsoft.com/typescript/HttpMethod/): Allowed HTTP methods for uploading data.
+- [KalmanProfile](https://docs.transistorsoft.com/typescript/KalmanProfile/): Specifies the preset tuning profile for the Kalman filter used in location denoising.
+- [Location](https://docs.transistorsoft.com/typescript/Location/): A location record captured by the device's native location API and delivered by the SDK.
+- [LocationError](https://docs.transistorsoft.com/typescript/LocationError/): Error codes returned when the native location API fails to fetch a location.
+- [LocationFilter](https://docs.transistorsoft.com/typescript/LocationFilter/): Filters, denoises, and smooths raw GPS samples before they are recorded or used for odometer calculations.
+- [LocationFilterPolicy](https://docs.transistorsoft.com/typescript/LocationFilterPolicy/): Defines the filtering policy applied to incoming raw GPS samples before they are accepted, averaged, or rejected by the {@link LocationFilter}.
+- [LocationRequest](https://docs.transistorsoft.com/typescript/LocationRequest/): Indicates what level of location authorization the SDK should request.
+- [LogLevel](https://docs.transistorsoft.com/typescript/LogLevel/): Controls the verbosity of plugin logging.
+- [Logger](https://docs.transistorsoft.com/typescript/Logger/): SDK logging API — access via {@link BackgroundGeolocation.logger}.
+- [LoggerConfig](https://docs.transistorsoft.com/typescript/LoggerConfig/): Logging and diagnostics configuration for the background geolocation SDK.
+- [MotionActivity](https://docs.transistorsoft.com/typescript/MotionActivity/): The motion activity reported by the device at the time a {@link Location} was recorded.
+- [MotionActivityEvent](https://docs.transistorsoft.com/typescript/MotionActivityEvent/): Activity recognition result delivered to {@link BackgroundGeolocation.onActivityChange}.
+- [MotionActivityType](https://docs.transistorsoft.com/typescript/MotionActivityType/): Reported device motion activity names (legacy RN + native).
+- [MotionChangeEvent](https://docs.transistorsoft.com/typescript/MotionChangeEvent/): Motion-state change delivered to {@link BackgroundGeolocation.onMotionChange}.
+- [NotificationConfig](https://docs.transistorsoft.com/typescript/NotificationConfig/): [Android only] Foreground service notification configuration for the background geolocation SDK.
+- [NotificationPriority](https://docs.transistorsoft.com/typescript/NotificationPriority/): Defines the priority / visibility of the Android foreground-service notification.
+- [PermissionRationale](https://docs.transistorsoft.com/typescript/PermissionRationale/): [Android only] Configures the background location permission rationale dialog on Android 11 and later.
+- [PersistMode](https://docs.transistorsoft.com/typescript/PersistMode/): Persistence modes for BackgroundGeolocation SDK.
+- [PersistenceConfig](https://docs.transistorsoft.com/typescript/PersistenceConfig/): Persistence and storage configuration for the background geolocation SDK.
+- [ProviderChangeEvent](https://docs.transistorsoft.com/typescript/ProviderChangeEvent/): Location-services provider state delivered to {@link BackgroundGeolocation.onProviderChange}.
+- [SQLQuery](https://docs.transistorsoft.com/typescript/SQLQuery/): Constrains a log query by date range, sort order, and record count.
+- [SQLQueryOrder](https://docs.transistorsoft.com/typescript/SQLQueryOrder/): Sort order for {@link SQLQuery.order}.
+- [Sensors](https://docs.transistorsoft.com/typescript/Sensors/): Availability of motion sensors on the device, as returned by {@link BackgroundGeolocation.getSensors}.
+- [State](https://docs.transistorsoft.com/typescript/State/): Read-only snapshot of the SDK's current runtime state.
+- [Subscription](https://docs.transistorsoft.com/typescript/Subscription/): Handle returned by every BackgroundGeolocation.on event-listener method.
+- [TrackingMode](https://docs.transistorsoft.com/typescript/TrackingMode/): SDK tracking mode (legacy RN values preserved).
+- [TransistorAuthorizationService](https://docs.transistorsoft.com/typescript/TransistorAuthorizationService/): Client for the Transistor Software demo tracking server.
+- [TransistorAuthorizationToken](https://docs.transistorsoft.com/typescript/TransistorAuthorizationToken/): Authorization token issued by a Transistor Software tracking server.
+- [TriggerActivity](https://docs.transistorsoft.com/typescript/TriggerActivity/): Allowed motion activity names that can trigger motion detection.
+- [Vertices](https://docs.transistorsoft.com/typescript/Vertices/): An array of [latitude, longitude] pairs defining a polygon geofence.
+- [WatchPositionRequest](https://docs.transistorsoft.com/typescript/WatchPositionRequest/): Options for {@link BackgroundGeolocation.watchPosition}.
+
+## Key Features
+
+- **Intelligent Motion Detection** — A sophisticated motion-state machine automatically transitions between tracking and stationary modes, slashing battery usage when the device is still.
+- **Geofencing** — Monitor unlimited circular regions with sub-metre accuracy — triggers reliably even when the app is terminated by the OS.
+- **Polygon Geofencing** — Define geofences as arbitrary polygon shapes — parks, building footprints, delivery zones. Available as a paid add-on.
+- **Durable HTTP + SQLite Queue** — Every location is persisted to SQLite before upload. Automatic retry, JWT auth, and batch upload keep your server in sync.
+- **Survives Termination &amp; Reboot** — With stopOnTerminate: false and startOnBoot: true, the SDK continues tracking after the app is killed and resumes automatically when the device restarts, without user interaction.
+- **Android Headless Tasks** — Continues executing JavaScript and Dart location callbacks even when the Android app is fully terminated — no foreground process required.
+- **Location Filter** — Fine-tune location accuracy with a configurable filter pipeline — smooth GPS noise and set minimum accuracy thresholds.
+- **Odometer &amp; Trip Metrics** — Built-in distance tracking, speed, and heading — no extra code required. Reset the odometer at trip start and read it at any time.
+
+## Licensing
+
+- [Purchase](https://docs.transistorsoft.com/purchase/) — commercial license required for production. Per-platform, perpetual, 1-year updates included.
+- [Pricing](https://docs.transistorsoft.com/purchase/) — visit the purchase page for current per-platform prices across Starter, Venture, Pro, and Studio tiers.
