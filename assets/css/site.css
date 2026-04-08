@@ -661,13 +661,14 @@ h1 .platform-badge { font-size: 0.5rem; }
 }
 
 /* Platform icons in top nav tabs — pure CSS via ::before pseudo-elements.
-   Tab order is fixed by docs.yml platforms: 1=TypeScript  2=Flutter  3=Swift  4=Kotlin */
+   Tab order is fixed by docs.yml platforms: 1=React Native  2=Capacitor  3=Flutter  4=Swift  5=Kotlin */
 
-/* Shared base for all four platform tabs */
+/* Shared base for all five platform tabs */
 .md-tabs__list > .md-tabs__item:nth-child(1) > a.md-tabs__link::before,
 .md-tabs__list > .md-tabs__item:nth-child(2) > a.md-tabs__link::before,
 .md-tabs__list > .md-tabs__item:nth-child(3) > a.md-tabs__link::before,
-.md-tabs__list > .md-tabs__item:nth-child(4) > a.md-tabs__link::before {
+.md-tabs__list > .md-tabs__item:nth-child(4) > a.md-tabs__link::before,
+.md-tabs__list > .md-tabs__item:nth-child(5) > a.md-tabs__link::before {
     content: "";
     display: inline-block;
     height: 16px;
@@ -679,31 +680,37 @@ h1 .platform-badge { font-size: 0.5rem; }
     background-repeat: no-repeat;
 }
 
-/* TypeScript — react-native + expo + capacitor (3 icons via multiple backgrounds) */
+/* React Native — react-native + expo */
 .md-tabs__list > .md-tabs__item:nth-child(1) > a.md-tabs__link::before {
-    width: 54px; /* 3 × 16px + 2 × 3px gap */
+    width: 35px; /* 2 × 16px + 1 × 3px gap */
     background-image: url('../images/platforms/react-native.svg'),
-                      url('../images/platforms/expo.svg'),
-                      url('../images/platforms/capacitor.svg');
-    background-position: 0 center, 19px center, 38px center;
+                      url('../images/platforms/expo.svg');
+    background-position: 0 center, 19px center;
+}
+
+/* Capacitor */
+.md-tabs__list > .md-tabs__item:nth-child(2) > a.md-tabs__link::before {
+    width: 16px;
+    background-image: url('../images/platforms/capacitor.svg');
+    background-position: center;
 }
 
 /* Flutter */
-.md-tabs__list > .md-tabs__item:nth-child(2) > a.md-tabs__link::before {
+.md-tabs__list > .md-tabs__item:nth-child(3) > a.md-tabs__link::before {
     width: 16px;
     background-image: url('../images/platforms/flutter.svg');
     background-position: center;
 }
 
 /* Swift */
-.md-tabs__list > .md-tabs__item:nth-child(3) > a.md-tabs__link::before {
+.md-tabs__list > .md-tabs__item:nth-child(4) > a.md-tabs__link::before {
     width: 16px;
     background-image: url('../images/platforms/swift.svg');
     background-position: center;
 }
 
 /* Kotlin */
-.md-tabs__list > .md-tabs__item:nth-child(4) > a.md-tabs__link::before {
+.md-tabs__list > .md-tabs__item:nth-child(5) > a.md-tabs__link::before {
     width: 16px;
     background-image: url('../images/platforms/kotlin.svg');
     background-position: center;
