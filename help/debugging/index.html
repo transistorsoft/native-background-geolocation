@@ -12238,7 +12238,31 @@
 </div>
 </div>
 </div>
-<p>See the API reference for <a href="../typescript/Logger/#emaillog"><code>Logger.emailLog</code></a> and <a href="../typescript/Logger/#getlog"><code>Logger.getLog</code></a> for full options, including filtering by log level and date range.</p>
+<div class="bgeo-logger-api-ref">
+<span data-tab="TypeScript">See the API reference for <a href="../../typescript/Logger/#emaillog"><code>Logger.emailLog</code></a> and <a href="../../typescript/Logger/#getlog"><code>Logger.getLog</code></a> for full options, including filtering by log level and date range.</span><span data-tab="Dart" style="display:none">See the API reference for <a href="../../flutter/Logger/#emaillog"><code>Logger.emailLog</code></a> and <a href="../../flutter/Logger/#getlog"><code>Logger.getLog</code></a> for full options, including filtering by log level and date range.</span><span data-tab="Swift" style="display:none">See the API reference for <a href="../../swift/Logger/#emaillog"><code>Logger.emailLog</code></a> and <a href="../../swift/Logger/#getlog"><code>Logger.getLog</code></a> for full options, including filtering by log level and date range.</span><span data-tab="Kotlin" style="display:none">See the API reference for <a href="../../kotlin/Logger/#emaillog"><code>Logger.emailLog</code></a> and <a href="../../kotlin/Logger/#getlog"><code>Logger.getLog</code></a> for full options, including filtering by log level and date range.</span>
+</div>
+
+<script>
+(function () {
+  function sync() {
+    var checked = document.querySelector('.md-typeset .tabbed-set input:checked');
+    if (!checked) return;
+    var label = document.querySelector('.md-typeset label[for="' + checked.id + '"]');
+    if (!label) return;
+    var active = label.textContent.trim();
+    document.querySelectorAll('.bgeo-logger-api-ref [data-tab]').forEach(function (el) {
+      el.style.display = el.dataset.tab === active ? '' : 'none';
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.md-typeset .tabbed-set input').forEach(function (inp) {
+      inp.addEventListener('change', sync);
+    });
+    setTimeout(sync, 0);
+  });
+}());
+</script>
+
 <hr />
 <h2 id="debug-sounds">Debug Sounds<a class="headerlink" href="#debug-sounds" title="Permanent link">&para;</a></h2>
 <p>The fastest way to understand what the SDK is doing in the field is to enable debug mode:</p>
