@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 4.1.1 &mdash; 2026-04-08
+- make getCurrentPosition gates more stricts in demo app
+- Dave's deep dive docs
+- feat(licensing): semver-aware validation + polygon-geofencing entitlement enforcement
+
 ## 4.1.0 &mdash; 2026-04-06
 - feat: replace CocoaLumberjack with custom SQLite-backed logger (TSNativeLogger)
 
@@ -167,7 +172,7 @@
 ## 4.0.18 &mdash; 2026-02-21
 * messed up build
 
-## 4.0.17 &mdash; 2016-02-21
+## 4.0.17 &mdash; 2026-02-21
 * loosen TSMotionChangeRequest props (desiredAccuracy 10 -> 20)
 * Support sparse config updates on LocationFilter
 
