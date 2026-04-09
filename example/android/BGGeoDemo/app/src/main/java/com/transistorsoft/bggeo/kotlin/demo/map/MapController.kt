@@ -232,6 +232,10 @@ class MapController(private val context: Context) {
     private fun handleLocationUpdate(event: LocationEvent) {
         val latLng = LatLng(event.location.latitude, event.location.longitude)
 
+        // Always update lastFocus so restoreCamera() can use it when the map becomes available.
+        // (Buffered events may arrive before onMapReady on some devices.)
+        lastFocus = latLng
+
         locationVisualizationManager?.addLocationPoint(event.location)
 
         val extras = event.extras
@@ -244,8 +248,6 @@ class MapController(private val context: Context) {
             val zoom = map.cameraPosition.zoom
             map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom))
         }
-
-        lastFocus = latLng
     }
 
     private fun handleMotionChange(event: LocationEvent) {
