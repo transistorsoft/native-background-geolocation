@@ -278,46 +278,48 @@
 .bgeo-pricing {
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 0 0.5rem;
+    padding: 0 0 0.5em;
+    align-self: flex-start;
+    font-size: 20px;        /* pin to 20px — prevents Material's viewport font scaling */
 }
 .bgeo-pricing__header {
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
 }
 .bgeo-pricing__kicker {
-    font-size: 0.75rem;
+    font-size: 0.75em;
     letter-spacing: 0.12em;
     color: var(--md-default-fg-color--light);
     text-transform: uppercase;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.25em;
 }
 .bgeo-pricing__header h1 {
-    font-size: 1.65rem;
+    font-size: 1.65em;
     font-weight: 700;
-    margin: 0.1rem 0 0.5rem;
+    margin: 0.1em 0 0.5em;
 }
 .bgeo-pricing__sub {
     color: var(--md-default-fg-color--light);
-    font-size: 0.8rem;
+    font-size: 0.8em;
     max-width: 680px;
-    margin: 0 auto 1.75rem;
+    margin: 0 auto 1.75em;
 }
 .bgeo-pricing__cards {
     display: flex;
-    gap: 1rem;
+    gap: 1em;
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
 }
 .bgeo-pricing__card {
     flex: 1;
-    min-width: 190px;
-    max-width: 240px;
+    min-width: 210px;
+    max-width: 260px;
     display: flex;
     flex-direction: column;
     border: 1px solid var(--md-default-fg-color--lightest);
     border-radius: 12px;
-    padding: 1rem 1.25rem 1rem;
+    padding: 1em 1.25em 1em;
     background: var(--md-default-bg-color);
 }
 .bgeo-pricing__card--featured {
@@ -325,41 +327,41 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.18);
 }
 .bgeo-pricing__card h2 {
-    font-size: 0.85rem;
+    font-size: 0.85em;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.5em;
     border: none;
     padding: 0;
 }
 .bgeo-pricing__apps {
-    font-size: 0.75rem;
+    font-size: 0.75em;
     color: var(--md-default-fg-color--light);
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.75em;
 }
 .bgeo-pricing__price {
-    font-size: 1.6rem;
+    font-size: 1.6em;
     font-weight: 700;
-    margin-bottom: 0.65rem;
+    margin-bottom: 0.65em;
     border-bottom: 1px solid var(--md-default-fg-color--lightest);
-    padding-bottom: 0.65rem;
+    padding-bottom: 0.65em;
 }
 .bgeo-pricing__price s {
-    font-size: 1rem;
+    font-size: 0.625em;  /* 1/1.6 — restores original 1rem relative to root, not parent */
     font-weight: 400;
     color: var(--md-default-fg-color--light);
-    margin-right: 0.3rem;
+    margin-right: 0.3em;
 }
 .bgeo-pricing__features {
     list-style: none;
     padding: 0;
-    margin: 0 0 1rem;
+    margin: 0 0 1em;
     flex: 1;
-    font-size: 0.78rem;
+    font-size: 0.78em;
 }
 .bgeo-pricing__features li {
-    padding: 0.2rem 0;
+    padding: 0.2em 0;
     border-bottom: 1px solid var(--md-default-fg-color--lightest);
 }
 .bgeo-pricing__premium {
@@ -376,12 +378,12 @@
 .bgeo-pricing__btn {
     display: block;
     text-align: center;
-    padding: 0.65rem 1rem;
+    padding: 0.65em 1em;
     border-radius: 8px;
     background: var(--md-accent-fg-color);
     color: var(--md-accent-bg-color) !important;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.95em;
     text-decoration: none !important;
     transition: opacity 0.15s;
     margin-top: auto;
@@ -389,27 +391,27 @@
 .bgeo-pricing__btn:hover { opacity: 0.85; }
 .bgeo-pricing__footnote {
     text-align: center;
-    font-size: 0.82rem;
+    font-size: 0.82em;
     color: var(--md-default-fg-color--light);
-    margin-top: 1rem;
+    margin-top: 1em;
 }
 .bgeo-pricing__platform-tabs {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.5em;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
 }
 .bgeo-pricing__ptab {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    padding: 0.45rem 1rem;
+    gap: 0.4em;
+    padding: 0.45em 1em;
     border: 1px solid var(--md-default-fg-color--lightest);
     border-radius: 6px;
     background: var(--md-default-bg-color);
     color: var(--md-default-fg-color--light);
-    font-size: 0.88rem;
+    font-size: 0.88em;
     font-weight: 500;
     cursor: pointer;
     transition: border-color 0.15s, color 0.15s;
@@ -431,11 +433,11 @@
 .bgeo-pricing__btn--unavailable {
     display: block;
     text-align: center;
-    padding: 0.65rem 1rem;
+    padding: 0.65em 1em;
     border-radius: 8px;
     background: var(--md-default-fg-color--lightest);
     color: var(--md-default-fg-color--light) !important;
-    font-size: 0.88rem;
+    font-size: 0.88em;
     margin-top: auto;
     cursor: default;
 }
