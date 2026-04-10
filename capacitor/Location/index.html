@@ -4356,6 +4356,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#recorded_at" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        recorded_at
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sample" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12199,6 +12210,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#recorded_at" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        recorded_at
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sample" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12492,8 +12514,16 @@ extended indoor tracking.</p>
 <p><code>provider?:</code><a href="../ProviderChangeEvent/"><code>ProviderChangeEvent</code></a><code>;</code></p>
 <p>Location-services provider state at the time this location was recorded.</p>
 <p>Present only when <code>event</code> is <code>"providerchange"</code>.</p>
+<h3 id="recorded_at">recorded_at<a class="headerlink" href="#recorded_at" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nx">recorded_at</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+</code></pre></div>
+<p>Timestamp when the SDK received the location from the native API.</p>
+<ul>
+<li>When <a href="../PersistenceConfig/#timestampformat">PersistenceConfig.timestampFormat</a> is <code>"iso"</code> (default): ISO-8601 UTC <code>string</code>.</li>
+<li>When <a href="../PersistenceConfig/#timestampformat">PersistenceConfig.timestampFormat</a> is <code>"epoch"</code>: epoch milliseconds <code>number</code>.</li>
+</ul>
 <h3 id="sample">sample<a class="headerlink" href="#sample" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nx">sample?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nx">sample?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 </code></pre></div>
 <p><code>true</code> for intermediate sample locations collected during accuracy
 convergence.</p>
@@ -12503,11 +12533,15 @@ most accurate fix. These samples are delivered to
 <a href="../BackgroundGeolocation/#onlocation">BackgroundGeolocation.onLocation</a> but are <strong>not</strong> persisted to
 SQLite. Filter them out before manually posting locations to your server.</p>
 <h3 id="timestamp">timestamp<a class="headerlink" href="#timestamp" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nx">timestamp</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nx">timestamp</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
 </code></pre></div>
-<p>ISO-8601 UTC timestamp provided by the native location API.</p>
+<p>Timestamp provided by the native location API.</p>
+<ul>
+<li>When <a href="../PersistenceConfig/#timestampformat">PersistenceConfig.timestampFormat</a> is <code>"iso"</code> (default): ISO-8601 UTC <code>string</code> (eg <code>"2025-04-10T12:00:01.123Z"</code>).</li>
+<li>When <a href="../PersistenceConfig/#timestampformat">PersistenceConfig.timestampFormat</a> is <code>"epoch"</code>: epoch milliseconds <code>number</code>.</li>
+</ul>
 <h3 id="uuid">uuid<a class="headerlink" href="#uuid" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nx">uuid</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nx">uuid</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 </code></pre></div>
 <p>Universally unique identifier for this location record.</p>
 <p>Use this to correlate locations in your server database with those in the

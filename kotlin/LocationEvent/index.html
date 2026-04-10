@@ -11085,6 +11085,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#recordedat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        recordedAt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#speed" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12441,6 +12452,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#recordedat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        recordedAt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#speed" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12805,8 +12827,16 @@ extended indoor tracking.</p>
 <a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="c1">// Use location.toJson() to inspect the full JSON payload if needed.</span>
 <a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="p">}</span>
 </code></pre></div>
+<h3 id="recordedat">recordedAt<a class="headerlink" href="#recordedat" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">recordedAt</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span>
+</code></pre></div>
+<p>Timestamp when the SDK received the location from the native API.</p>
+<ul>
+<li>When <a href="../PersistenceConfig/#timestampformat">PersistenceConfig.timestampFormat</a> is <code>"iso"</code> (default): ISO-8601 UTC <code>string</code>.</li>
+<li>When <a href="../PersistenceConfig/#timestampformat">PersistenceConfig.timestampFormat</a> is <code>"epoch"</code>: epoch milliseconds <code>number</code>.</li>
+</ul>
 <h3 id="speed">speed<a class="headerlink" href="#speed" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">speed</span><span class="p">:</span><span class="w"> </span><span class="kt">Float?</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">speed</span><span class="p">:</span><span class="w"> </span><span class="kt">Float?</span>
 </code></pre></div>
 <p>Ground speed in meters per second.</p>
 <div class="admonition note">
@@ -12814,7 +12844,7 @@ extended indoor tracking.</p>
 <p>Only present when the location came from GPS. Returns <code>-1</code> otherwise.</p>
 </div>
 <h3 id="speedaccuracy">speedAccuracy<a class="headerlink" href="#speedaccuracy" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">speedAccuracy</span><span class="p">:</span><span class="w"> </span><span class="kt">Float?</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">speedAccuracy</span><span class="p">:</span><span class="w"> </span><span class="kt">Float?</span>
 </code></pre></div>
 <p>Speed accuracy in meters per second.</p>
 <div class="admonition note">
@@ -12822,15 +12852,19 @@ extended indoor tracking.</p>
 <p>Only present when the location came from GPS. Returns <code>-1</code> otherwise.</p>
 </div>
 <h3 id="timestamp">timestamp<a class="headerlink" href="#timestamp" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">timestamp</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">timestamp</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span>
 </code></pre></div>
-<p>ISO-8601 UTC timestamp provided by the native location API.</p>
+<p>Timestamp provided by the native location API.</p>
+<ul>
+<li>When <a href="../PersistenceConfig/#timestampformat">PersistenceConfig.timestampFormat</a> is <code>"iso"</code> (default): ISO-8601 UTC <code>string</code> (eg <code>"2025-04-10T12:00:01.123Z"</code>).</li>
+<li>When <a href="../PersistenceConfig/#timestampformat">PersistenceConfig.timestampFormat</a> is <code>"epoch"</code>: epoch milliseconds <code>number</code>.</li>
+</ul>
 <h3 id="type">type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">type</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">type</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span>
 </code></pre></div>
 <p>Detected motion activity type (e.g. <code>still</code>, <code>on_foot</code>, <code>in_vehicle</code>).</p>
 <h3 id="uuid">uuid<a class="headerlink" href="#uuid" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">uuid</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">uuid</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span>
 </code></pre></div>
 <p>Universally unique identifier for this location record.</p>
 <p>Use this to correlate locations in your server database with those in the

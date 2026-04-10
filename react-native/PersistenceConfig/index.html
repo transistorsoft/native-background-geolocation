@@ -1204,6 +1204,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#timestampformat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        timestampFormat
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -12077,6 +12088,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#timestampformat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        timestampFormat
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -12144,6 +12166,11 @@ only while awaiting upload or retrieval.</p>
 <td><strong>Templates</strong></td>
 <td><code>locationTemplate</code>, <code>geofenceTemplate</code></td>
 <td>Custom JSON structure for uploads.</td>
+</tr>
+<tr>
+<td><strong>Timestamp format</strong></td>
+<td><code>timestampFormat</code></td>
+<td>ISO-8601 string or Unix ms integer in stored/uploaded JSON.</td>
 </tr>
 <tr>
 <td><strong>Extras</strong></td>
@@ -12808,6 +12835,53 @@ also not eligible for HTTP uploads via <a href="../HttpConfig/#url">HttpConfig.u
 continuous location tracking via <a href="../BackgroundGeolocation/#start">BackgroundGeolocation.start</a> but only
 want to store geofence events, configure <code>persistMode: PersistMode.Geofence</code>.</p>
 </div>
+<h3 id="timestampformat">timestampFormat<a class="headerlink" href="#timestampformat" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="nx">timestampFormat</span><span class="o">?:</span><span class="w"> </span><span class="s1">&#39;iso&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;epoch&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p>Controls the format of the <code>timestamp</code> field in the persisted and uploaded location JSON.</p>
+<p>Because <a href="../HttpConfig/">HttpConfig</a> uploads the stored JSON blob as-is, this setting
+affects both the on-device SQLite record and the HTTP payload simultaneously.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Format</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"iso"</code> (default)</td>
+<td>ISO-8601 string</td>
+<td><code>"2025-05-05T04:31:54.123Z"</code></td>
+</tr>
+<tr>
+<td><code>"epoch"</code></td>
+<td>Integer — milliseconds since Unix epoch</td>
+<td><code>1746417114123</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This option affects only the <strong>persisted blob</strong> — the data written to SQLite
+and subsequently uploaded by <a href="../HttpConfig/">HttpConfig</a>. Live callbacks
+(<a href="../BackgroundGeolocation/#onlocation">BackgroundGeolocation.onLocation</a>, <a href="../BackgroundGeolocation/#getlocations">BackgroundGeolocation.getLocations</a>)
+always return an ISO-8601 string regardless of this setting.</p>
+<p>When using <code>locationTemplate</code> or <code>geofenceTemplate</code>, the <code>&lt;%= timestamp %&gt;</code>
+tag always expands to an ISO-8601 string. <code>timestampFormat</code> does not affect template
+substitution.</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">  </span><span class="nx">persistence</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="w">    </span><span class="nx">timestampFormat</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;epoch&#39;</span><span class="p">,</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="p">});</span>
+</code></pre></div>
+<p><strong>See also</strong>
+- <code>locationTemplate</code>
+- <code>geofenceTemplate</code>
+- <a href="../HttpConfig/#url">HttpConfig.url</a></p>
 
 
 
