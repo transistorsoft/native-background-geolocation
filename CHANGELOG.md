@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 4.1.2 &mdash; 2026-04-10
+- feat: recorded_at respects timestampFormat, expose recordedAt on event wrappers
+- feat: add PersistenceConfig.timestampFormat option
+- Increase wait time when verifying checksum
+
 ## 4.1.1 &mdash; 2026-04-08
 - make getCurrentPosition gates more stricts in demo app
 - Dave's deep dive docs

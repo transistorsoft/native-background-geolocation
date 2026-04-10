@@ -45,6 +45,8 @@ extension BGGeo {
 
         public let timestamp: Date?
         public let timestampString: String
+        public let recordedAt: Date?
+        public let recordedAtString: String
 
         public let data: [String: Any]
         public let location: CLLocation
@@ -66,6 +68,8 @@ extension BGGeo {
         public init(_ obj: TSLocationEvent) {
             self.timestampString = obj.timestamp
             self.timestamp = ISO8601DateFormatter.fullParsing.date(from: obj.timestamp)
+            self.recordedAtString = obj.recordedAt
+            self.recordedAt = ISO8601DateFormatter.fullParsing.date(from: obj.recordedAt)
             self.data = obj.toDictionary() as? [String: Any] ?? [:]
             self.location = obj.location
             self.uuid = data["uuid"] as? String

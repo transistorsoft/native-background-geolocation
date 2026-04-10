@@ -35,6 +35,10 @@ extension BGGeo {
             get { module.geofenceTemplate }
             set { module.geofenceTemplate = newValue }
         }
+        public var timestampFormat: String {
+            get { module.timestampFormat }
+            set { module.timestampFormat = newValue }
+        }
         public var maxDaysToPersist: Int {
             get { Int(module.maxDaysToPersist) }
             set { module.maxDaysToPersist = newValue }
