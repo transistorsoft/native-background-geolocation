@@ -480,7 +480,21 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--md-default-fg-color--light);
-    margin: 0 0 0.4rem;
+    margin: 0 0 0.75rem;
+}
+.bgeo-confirm__icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+}
+.bgeo-confirm__icons .bgeo-platform-heading-icon {
+    width: 52px;
+    height: 52px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
 }
 .bgeo-confirm__title {
     font-size: 1.3rem;
@@ -533,6 +547,7 @@
     font-weight: 700;
     text-align: center;
     text-decoration: none !important;
+    white-space: nowrap;
     transition: opacity 0.15s;
 }
 .bgeo-confirm__ok:hover { opacity: 0.85; }

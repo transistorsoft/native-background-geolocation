@@ -12163,6 +12163,7 @@
   <div class="bgeo-confirm__backdrop" id="bgeo-confirm-backdrop"></div>
   <div class="bgeo-confirm__dialog">
     <p class="bgeo-confirm__eyebrow">You are about to purchase</p>
+    <div class="bgeo-confirm__icons" id="bgeo-confirm-icons"></div>
     <h2 class="bgeo-confirm__title" id="bgeo-confirm-title">
       <span id="bgeo-confirm-platform"></span> — <span id="bgeo-confirm-plan"></span>
     </h2>
@@ -12170,7 +12171,7 @@
     <p class="bgeo-confirm__note">You will be taken to the Transistor Software shop to complete your order.</p>
     <div class="bgeo-confirm__actions">
       <button class="bgeo-confirm__cancel" id="bgeo-confirm-cancel">Cancel</button>
-      <a class="bgeo-confirm__ok" id="bgeo-confirm-ok" target="_blank">Confirm Purchase</a>
+      <a class="bgeo-confirm__ok" id="bgeo-confirm-ok" target="_blank">Proceed to Checkout</a>
     </div>
   </div>
 </div>
@@ -12210,10 +12211,22 @@
   var cancelBtn= document.getElementById('bgeo-confirm-cancel');
   var backdrop = document.getElementById('bgeo-confirm-backdrop');
 
+  var platformIcons = {
+    'react-native': ['react-native'],
+    'capacitor':    ['capacitor'],
+    'flutter':      ['flutter'],
+    'cordova':      ['cordova'],
+    'swift':        ['swift', 'kotlin'],
+  };
+
   function openModal(href, planLabel, platformKey, price) {
     document.getElementById('bgeo-confirm-platform').textContent = platformLabels[platformKey] || platformKey;
     document.getElementById('bgeo-confirm-plan').textContent     = planLabel;
     document.getElementById('bgeo-confirm-price').textContent    = price;
+    var iconsEl = document.getElementById('bgeo-confirm-icons');
+    iconsEl.innerHTML = (platformIcons[platformKey] || [platformKey]).map(function (ic) {
+      return '<span class="bgeo-platform-heading-icon bgeo-confirm__icon" data-platform="' + ic + '" aria-hidden="true"></span>';
+    }).join('');
     okBtn.href = href;
     modal.classList.add('bgeo-confirm--open');
     cancelBtn.focus();
