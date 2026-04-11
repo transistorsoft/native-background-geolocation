@@ -446,6 +446,97 @@
 .md-main__inner:has(.bgeo-pricing)          { margin-top: 0; }
 .md-content__inner:has(.bgeo-pricing)       { padding-top: 0; margin-bottom: 0; }
 
+/* ── Purchase confirm modal ──────────────────────────────────────────────── */
+#bgeo-confirm-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+#bgeo-confirm-modal.bgeo-confirm--open {
+    display: flex;
+}
+.bgeo-confirm__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(2px);
+}
+.bgeo-confirm__dialog {
+    position: relative;
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 14px;
+    padding: 2rem 2.25rem;
+    max-width: 420px;
+    width: calc(100% - 2rem);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+    text-align: center;
+}
+.bgeo-confirm__eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--md-default-fg-color--light);
+    margin: 0 0 0.4rem;
+}
+.bgeo-confirm__title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    border: none;
+    padding: 0;
+    color: var(--md-default-fg-color);
+}
+.bgeo-confirm__price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--md-accent-fg-color);
+    margin: 0 0 0.75rem;
+}
+.bgeo-confirm__note {
+    font-size: 0.8rem;
+    color: var(--md-default-fg-color--light);
+    margin: 0 0 1.5rem;
+}
+.bgeo-confirm__actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+}
+.bgeo-confirm__cancel {
+    flex: 1;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    background: transparent;
+    color: var(--md-default-fg-color--light);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s;
+}
+.bgeo-confirm__cancel:hover {
+    border-color: var(--md-default-fg-color--light);
+    color: var(--md-default-fg-color);
+}
+.bgeo-confirm__ok {
+    flex: 1;
+    display: block;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    background: var(--md-accent-fg-color);
+    color: var(--md-accent-bg-color) !important;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none !important;
+    transition: opacity 0.15s;
+}
+.bgeo-confirm__ok:hover { opacity: 0.85; }
+
 /* ── Platform badge: [Android only] ─────────────────────────────────────── */
 .platform-badge {
     display: inline-block;

@@ -12158,10 +12158,35 @@
 
 </div>
 
+<!-- Confirm purchase modal -->
+<div id="bgeo-confirm-modal" role="dialog" aria-modal="true" aria-labelledby="bgeo-confirm-title">
+  <div class="bgeo-confirm__backdrop" id="bgeo-confirm-backdrop"></div>
+  <div class="bgeo-confirm__dialog">
+    <p class="bgeo-confirm__eyebrow">You are about to purchase</p>
+    <h2 class="bgeo-confirm__title" id="bgeo-confirm-title">
+      <span id="bgeo-confirm-platform"></span> — <span id="bgeo-confirm-plan"></span>
+    </h2>
+    <p class="bgeo-confirm__price" id="bgeo-confirm-price"></p>
+    <p class="bgeo-confirm__note">You will be taken to the Transistor Software shop to complete your order.</p>
+    <div class="bgeo-confirm__actions">
+      <button class="bgeo-confirm__cancel" id="bgeo-confirm-cancel">Cancel</button>
+      <a class="bgeo-confirm__ok" id="bgeo-confirm-ok" target="_blank">Confirm Purchase</a>
+    </div>
+  </div>
+</div>
+
 <script>
 (function () {
   var panels = document.querySelectorAll('.bgeo-pricing__platform-panel');
   var tabs   = document.querySelectorAll('.bgeo-pricing__ptab');
+
+  var platformLabels = {
+    'react-native': 'React Native',
+    'capacitor':    'Capacitor',
+    'flutter':      'Flutter',
+    'cordova':      'Cordova',
+    'swift':        'Swift / Kotlin',
+  };
 
   function activate(platform) {
     tabs.forEach(function (t) {
@@ -12179,16 +12204,45 @@
   var param = (new URLSearchParams(window.location.search)).get('platform') || 'react-native';
   activate(param);
 
-  // Track Buy Now clicks
+  // Confirm modal
+  var modal    = document.getElementById('bgeo-confirm-modal');
+  var okBtn    = document.getElementById('bgeo-confirm-ok');
+  var cancelBtn= document.getElementById('bgeo-confirm-cancel');
+  var backdrop = document.getElementById('bgeo-confirm-backdrop');
+
+  function openModal(href, planLabel, platformKey, price) {
+    document.getElementById('bgeo-confirm-platform').textContent = platformLabels[platformKey] || platformKey;
+    document.getElementById('bgeo-confirm-plan').textContent     = planLabel;
+    document.getElementById('bgeo-confirm-price').textContent    = price;
+    okBtn.href = href;
+    modal.classList.add('bgeo-confirm--open');
+    cancelBtn.focus();
+  }
+
+  function closeModal() {
+    modal.classList.remove('bgeo-confirm--open');
+  }
+
+  cancelBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  // Intercept Buy Now clicks
   document.querySelectorAll('.bgeo-pricing__btn[href]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
       var card     = btn.closest('.bgeo-pricing__card');
       var panel    = btn.closest('.bgeo-pricing__platform-panel');
-      var plan     = card  ? (card.querySelector('h2')  || {}).textContent : '';
+      var plan     = card  ? (card.querySelector('h2')  || {}).textContent.trim() : '';
       var platform = panel ? panel.dataset.platform : '';
+      var priceEl  = card  ? card.querySelector('.bgeo-pricing__price strong') : null;
+      var price    = priceEl ? priceEl.textContent.trim() : '';
+      openModal(btn.href, plan, platform, price);
       if (typeof gtag === 'function') {
         gtag('event', 'begin_checkout', {
-          item_name:     plan.trim().toLowerCase(),
+          item_name:     plan.toLowerCase(),
           item_category: platform,
         });
       }
