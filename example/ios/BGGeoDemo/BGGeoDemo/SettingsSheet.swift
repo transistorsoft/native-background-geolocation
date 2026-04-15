@@ -322,6 +322,7 @@ struct SettingsSheet: View {
         let cfg = BGGeo.shared.config
 
         trackingModeIsFull = BGGeo.shared.state.trackingMode == .location
+        initialTrackingModeIsFull = trackingModeIsFull
         locationAuthorizationRequest = cfg.geolocation.locationAuthorizationRequest
         desiredAccuracy = cfg.geolocation.desiredAccuracy
         distanceFilter = Int(cfg.geolocation.distanceFilter)
