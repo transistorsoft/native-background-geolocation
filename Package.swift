@@ -19,14 +19,14 @@ let package = Package(
         // SPM dependency on TSBackgroundFetch (allow patch updates)
         .package(
             url: "https://github.com/transistorsoft/transistor-background-fetch.git",
-            .upToNextMinor(from: "4.0.6")
+            .upToNextMinor(from: "4.1.0")
         )
     ],
     targets: [
         .binaryTarget(
             name: "TSLocationManager",
-            url: "https://github.com/transistorsoft/native-background-geolocation/releases/download/4.1.3/TSLocationManager.xcframework.zip",
-            checksum: "46fcc241aa3ff33c859f0010b2d8b38319375be3ff46d4185c29b0f2b13a409a"
+            url: "https://github.com/transistorsoft/native-background-geolocation/releases/download/4.1.4/TSLocationManager.xcframework.zip",
+            checksum: "36f17dd28e061efcd078d5c007db6c0160601125fa1adb1782b6c11c46de53f3"
         ),
 
         // Swift overlay that reexports the binary + TSBackgroundFetch
