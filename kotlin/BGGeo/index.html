@@ -12985,7 +12985,7 @@ an upload to <a href="../HttpConfig/#url">HttpConfig.url</a>.</p>
 <p>Subscribe to geofence transition events.</p>
 <p>Fires when any monitored geofence crossing occurs.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">subscription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="na">onGeofence</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="o">-&gt;</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[onGeofence] </span><span class="si">$</span><span class="n">event</span><span class="s">&quot;</span><span class="p">)</span>
@@ -13004,7 +13004,7 @@ activates only the geofences nearest to the device's current location (see
 query runs periodically and the active set may change — that change triggers
 this event.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">subscription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="na">onGeofencesChange</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="o">-&gt;</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="p">.</span><span class="na">on</span><span class="w">     </span><span class="c1">// new geofences activated</span>
@@ -13336,7 +13336,7 @@ in geofences-only mode (or vice versa) switches modes; there is no need to call
 <code>stop</code> first.</p>
 <p><strong>See also</strong>
 - <code>stop</code>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="c1">// Within a coroutine scope</span>
 <a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
 <a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>

@@ -12132,7 +12132,7 @@ All methods are suspending coroutines (Kotlin) or async/await (Swift).</p>
 it is deleted before the new one is inserted. When adding multiple
 geofences, <code>addGeofences</code> is approximately 10× faster.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 </div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">let</span><span class="w"> </span><span class="nv">geofence</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Geofence</span><span class="p">(</span>
@@ -12164,7 +12164,7 @@ geofences, <code>addGeofences</code> is approximately 10× faster.</p>
 <p>If any geofence already exists with a matching <a href="../Geofence/#identifier">Geofence.identifier</a>,
 it is deleted before the new one is inserted.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code>
+- 📘 <a href="../Geofence/">Geofencing Guide</a>
 - <code>addGeofence</code></p>
 </div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
@@ -12198,7 +12198,7 @@ it is deleted before the new one is inserted.</p>
 </code></pre></div>
 <p>Determine whether a geofence with the given identifier exists in the SDK's database.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nv">exists</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">geofences</span><span class="p">.</span><span class="n">exists</span><span class="p">(</span><span class="s">&quot;HOME&quot;</span><span class="p">)</span>
@@ -12209,7 +12209,7 @@ it is deleted before the new one is inserted.</p>
 <p><code>public func get(_ identifier: String) async throws -&gt;</code><a href="../BGGeo/"><code>BGGeo</code></a><code>.</code><a href="../Geofence/"><code>Geofence</code></a></p>
 <p>Fetch a single <a href="../Geofence/">Geofence</a> by identifier from the SDK's database.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
@@ -12225,7 +12225,7 @@ it is deleted before the new one is inserted.</p>
 <p>Fetch all <a href="../Geofence/">Geofence</a> records from the SDK's database.</p>
 <p>Returns an empty array if no geofences are stored.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">let</span><span class="w"> </span><span class="nv">geofences</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">geofences</span><span class="p">.</span><span class="n">getAll</span><span class="p">()</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="bp">print</span><span class="p">(</span><span class="s">&quot;[getGeofences]&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">geofences</span><span class="p">)</span>
@@ -12235,7 +12235,7 @@ it is deleted before the new one is inserted.</p>
 </code></pre></div>
 <p>Remove the <a href="../Geofence/">Geofence</a> with the given <a href="../Geofence/#identifier">Geofence.identifier</a>.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
@@ -12252,7 +12252,7 @@ it is deleted before the new one is inserted.</p>
 <p>Remove all monitored <a href="../Geofence/">Geofence</a> records, or a specific subset by
 identifier.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">geofences</span><span class="p">.</span><span class="bp">removeAll</span><span class="p">()</span>

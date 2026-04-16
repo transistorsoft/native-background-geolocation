@@ -13490,7 +13490,7 @@ an upload to <a href="../HttpConfig/#url">HttpConfig.url</a>.</p>
 <p>Subscribe to geofence transition events.</p>
 <p>Fires when any monitored geofence crossing occurs.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onGeofence</span><span class="p">((</span><span class="n">GeofenceEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onGeofence]  </span><span class="si">${</span><span class="n">event</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">});</span>
@@ -13508,7 +13508,7 @@ activates only the geofences nearest to the device's current location (see
 query runs periodically and the active set may change — that change triggers
 this event.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onGeofencesChange</span><span class="p">((</span><span class="n">GeofencesChangeEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">on</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="p">.</span><span class="kd">on</span><span class="p">;</span><span class="w">     </span><span class="c1">//&lt;-- new geofences activated.</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Geofence</span><span class="o">&gt;</span><span class="w"> </span><span class="n">off</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="p">.</span><span class="n">off</span><span class="p">;</span><span class="w"> </span><span class="c1">//&lt;-- geofences that were just de-activated.</span>
@@ -13972,7 +13972,7 @@ in geofences-only mode (or vice versa) switches modes; there is no need to call
 <code>stop</code> first.</p>
 <p><strong>See also</strong>
 - <code>stop</code>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="c1">// Add a geofence.</span>
 <a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">addGeofence</span><span class="p">(</span><span class="n">Geofence</span><span class="p">(</span>
 <a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="w">  </span><span class="nl">notifyOnExit:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
@@ -14101,7 +14101,7 @@ to avoid draining the battery.</p>
 it is deleted before the new one is inserted. When adding multiple
 geofences, <code>addGeofences</code> is approximately 10× faster.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 </div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">addGeofence</span><span class="p">(</span><span class="n">Geofence</span><span class="p">(</span>
 <a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="w">  </span><span class="nl">identifier:</span><span class="w"> </span><span class="s2">&quot;Home&quot;</span><span class="p">,</span>
@@ -14129,7 +14129,7 @@ geofences, <code>addGeofences</code> is approximately 10× faster.</p>
 <p>If any geofence already exists with a matching <a href="../Geofence/#identifier">Geofence.identifier</a>,
 it is deleted before the new one is inserted.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code>
+- 📘 <a href="../Geofence/">Geofencing Guide</a>
 - <code>addGeofence</code></p>
 </div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">Geofence</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geofences</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
@@ -14156,7 +14156,7 @@ it is deleted before the new one is inserted.</p>
 </code></pre></div>
 <p>Determine whether a geofence with the given identifier exists in the SDK's database.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">exists</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">geofenceExists</span><span class="p">(</span><span class="s2">&quot;HOME&quot;</span><span class="p">);</span>
 <a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[geofenceExists]  </span><span class="si">${</span><span class="n">exists</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
 </code></pre></div>
@@ -14164,7 +14164,7 @@ it is deleted before the new one is inserted.</p>
 <p><code>static Future&lt;</code><a href="../Geofence/"><code>Geofence</code></a><code>?&gt; get</code><a href="../Geofence/"><code>Geofence</code></a><code>(String identifier)</code></p>
 <p>Fetch a single <a href="../Geofence/">Geofence</a> by identifier from the SDK's database.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="n">Geofence</span><span class="w"> </span><span class="n">geofence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">getGeofence</span><span class="p">(</span><span class="s2">&quot;HOME&quot;</span><span class="p">);</span>
 <a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[getGeofence HOME: </span><span class="si">${</span><span class="n">geofence</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
 </code></pre></div>
@@ -14173,7 +14173,7 @@ it is deleted before the new one is inserted.</p>
 <p>Fetch all <a href="../Geofence/">Geofence</a> records from the SDK's database.</p>
 <p>Returns an empty array if no geofences are stored.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">geofences</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">geofences</span><span class="p">;</span>
 <a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[getGeofences]:  </span><span class="si">${</span><span class="n">geofences</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
 </code></pre></div>
@@ -14181,7 +14181,7 @@ it is deleted before the new one is inserted.</p>
 <p><code>static Future&lt;bool&gt; remove</code><a href="../Geofence/"><code>Geofence</code></a><code>(String identifier)</code></p>
 <p>Remove the <a href="../Geofence/">Geofence</a> with the given <a href="../Geofence/#identifier">Geofence.identifier</a>.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">removeGeofence</span><span class="p">(</span><span class="s2">&quot;Home&quot;</span><span class="p">).</span><span class="n">then</span><span class="p">((</span><span class="n">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[removeGeofence] success&#39;</span><span class="p">);</span>
 <a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="p">}).</span><span class="n">catchError</span><span class="p">((</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -14194,7 +14194,7 @@ it is deleted before the new one is inserted.</p>
 <p>Remove all monitored <a href="../Geofence/">Geofence</a> records, or a specific subset by
 identifier.</p>
 <p><strong>See also</strong>
-- 📘 <code>Geofencing Guide</code></p>
+- 📘 <a href="../Geofence/">Geofencing Guide</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">removeGeofences</span><span class="p">();</span>
 </code></pre></div>
 <h3 class="bgeo-method-group" id="data-management">Data Management<a class="headerlink" href="#data-management" title="Permanent link">&para;</a></h3>
