@@ -12296,11 +12296,51 @@ geofences.</p>
 10× faster than inserting individually).</p>
 <p>If a geofence with the same <code>identifier</code> already exists in the
 database, it is replaced.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">addGeofence</span><span class="p">(</span><span class="n">Geofence</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nl">identifier:</span><span class="w"> </span><span class="s2">&quot;Home&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nl">radius:</span><span class="w"> </span><span class="m">200</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nl">latitude:</span><span class="w"> </span><span class="m">45.51921926</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nl">longitude:</span><span class="w"> </span><span class="o">-</span><span class="m">73.61678581</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nl">notifyOnEntry:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nl">notifyOnExit:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nl">extras:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">route_id:</span><span class="w"> </span><span class="m">1234</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">));</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">addGeofences</span><span class="p">([</span><span class="n">Geofence</span><span class="p">(</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nl">identifier:</span><span class="w"> </span><span class="s2">&quot;Home&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nl">radius:</span><span class="w"> </span><span class="m">200</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nl">latitude:</span><span class="w"> </span><span class="m">45.51921926</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nl">longitude:</span><span class="w"> </span><span class="o">-</span><span class="m">73.61678581</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nl">notifyOnEntry:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">),</span><span class="w"> </span><span class="n">Geofence</span><span class="p">(</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nl">identifier:</span><span class="w"> </span><span class="s2">&quot;Work&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nl">radius:</span><span class="w"> </span><span class="m">200</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="nl">latitude:</span><span class="w"> </span><span class="m">45.61921927</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="nl">longitude:</span><span class="w"> </span><span class="o">-</span><span class="m">73.71678582</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="nl">notifyOnEntry:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">)]);</span>
+</code></pre></div>
 <hr />
 <h5 id="listening-for-events">Listening for events<a class="headerlink" href="#listening-for-events" title="Permanent link">&para;</a></h5>
 <p>Subscribe to geofence transitions with <a href="../BackgroundGeolocation/#ongeofence">BackgroundGeolocation.onGeofence</a>.
 Subscribe to changes in the actively monitored set with
 <a href="../BackgroundGeolocation/#ongeofenceschange">BackgroundGeolocation.onGeofencesChange</a>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onGeofence</span><span class="p">((</span><span class="n">GeofenceEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onGeofence] </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">identifier</span><span class="si">}</span><span class="s1"> </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">action</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">});</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onGeofencesChange</span><span class="p">((</span><span class="n">GeofencesChangeEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="kd">on</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="p">.</span><span class="kd">on</span><span class="p">;</span><span class="w">   </span><span class="c1">// newly activated geofences</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">off</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="p">.</span><span class="n">off</span><span class="p">;</span><span class="w"> </span><span class="c1">// deactivated geofence identifiers</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">final</span><span class="w"> </span><span class="n">geofence</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kd">on</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[geofencesChange] activated: </span><span class="si">${</span><span class="n">geofence</span><span class="p">.</span><span class="n">identifier</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">final</span><span class="w"> </span><span class="n">identifier</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">off</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[geofencesChange] deactivated: </span><span class="si">${</span><span class="n">identifier</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">});</span>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When all geofences are removed, <a href="../BackgroundGeolocation/#ongeofenceschange">BackgroundGeolocation.onGeofencesChange</a>
@@ -12317,6 +12357,18 @@ and <code>radius</code> — the SDK calculates the minimum enclosing circle
 automatically from the polygon geometry.</p>
 <p><img alt="" src="https://dl.dropbox.com/scl/fi/sboshfvar0h41azmb4tyv/polygon-geofencing-parc-outremont-400.png?rlkey=d2s0n3zbzu72e7s2gch9kxd4a&amp;dl=1" />
 <img alt="" src="https://dl.dropbox.com/scl/fi/xz48myvjnpp8ko0l2tufg/polygon-geofencing-parc-lafontaine-400.png?rlkey=sf20ns959uj0a0fq0atmj55bz&amp;dl=1" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">addGeofence</span><span class="p">(</span><span class="n">Geofence</span><span class="p">(</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nl">identifier:</span><span class="w"> </span><span class="s2">&quot;Park&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nl">notifyOnEntry:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nl">notifyOnExit:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nl">vertices:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="p">[</span><span class="m">45.518947279987714</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m">73.6049889209514</span><span class="p">],</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">[</span><span class="m">45.5182711292279</span><span class="p">,</span><span class="w">   </span><span class="o">-</span><span class="m">73.60338649600598</span><span class="p">],</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p">[</span><span class="m">45.517082240237634</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m">73.60432670908212</span><span class="p">],</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">[</span><span class="m">45.51774871402813</span><span class="p">,</span><span class="w">  </span><span class="o">-</span><span class="m">73.60604928622278</span><span class="p">]</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">));</span>
+</code></pre></div>
 <hr />
 <h5 id="infinite-geofencing">Infinite geofencing<a class="headerlink" href="#infinite-geofencing" title="Permanent link">&para;</a></h5>
 <p>The SDK stores all geofences in its database and uses a
@@ -12336,6 +12388,13 @@ limit. As the device moves, the active set is periodically refreshed.</p>
 <a href="../AppConfig/#stoponterminate">AppConfig.stopOnTerminate</a> is <code>false</code> and
 <a href="../AppConfig/#startonboot">AppConfig.startOnBoot</a> is <code>true</code>, geofences continue to be
 monitored across app termination and device reboots.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">removeGeofence</span><span class="p">(</span><span class="s2">&quot;Home&quot;</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">removeGeofences</span><span class="p">();</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">geofences</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">geofences</span><span class="p">;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[getGeofences] </span><span class="si">${</span><span class="n">geofences</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+</code></pre></div>
 <hr />
 <h5 id="geofences-only-mode">Geofences-only mode<a class="headerlink" href="#geofences-only-mode" title="Permanent link">&para;</a></h5>
 <p>Call <a href="../BackgroundGeolocation/#startgeofences">BackgroundGeolocation.startGeofences</a> instead of
@@ -12344,11 +12403,143 @@ location tracking. Use <a href="../GeoConfig/#geofencemodehighaccuracy">GeoConfi
 improve event responsiveness at the cost of higher power usage.</p>
 <p>The SDK can switch between full tracking and geofences-only mode at any
 time by calling the corresponding start method.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onGeofence</span><span class="p">((</span><span class="n">GeofenceEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onGeofence] </span><span class="si">${</span><span class="n">event</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">});</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="nl">http:</span><span class="w"> </span><span class="n">HttpConfig</span><span class="p">(</span><span class="w"> </span><span class="nl">url:</span><span class="w"> </span><span class="s2">&quot;https://your.server.com/geofences&quot;</span><span class="p">,</span><span class="w"> </span><span class="nl">autoSync:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">),</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span><span class="w"> </span><span class="nl">geofenceModeHighAccuracy:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">));</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">startGeofences</span><span class="p">();</span>
+</code></pre></div>
 <hr />
 <h5 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onGeofence</span><span class="p">((</span><span class="n">GeofenceEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">identifier</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;DANGER_ZONE&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">action</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;ENTER&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">      </span><span class="c1">// Entering the zone — switch to full location tracking.</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">      </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">action</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;EXIT&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">      </span><span class="c1">// Exiting the zone — return to geofences-only mode.</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">      </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">startGeofences</span><span class="p">();</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="p">});</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">addGeofence</span><span class="p">(</span><span class="n">Geofence</span><span class="p">(</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">  </span><span class="nl">identifier:</span><span class="w"> </span><span class="s2">&quot;DANGER_ZONE&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">  </span><span class="nl">radius:</span><span class="w"> </span><span class="m">1000</span><span class="p">,</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">  </span><span class="nl">latitude:</span><span class="w"> </span><span class="m">45.51921926</span><span class="p">,</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">  </span><span class="nl">longitude:</span><span class="w"> </span><span class="o">-</span><span class="m">73.61678581</span><span class="p">,</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">  </span><span class="nl">notifyOnEntry:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">  </span><span class="nl">notifyOnExit:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="p">));</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="w">    </span><span class="nl">desiredAccuracy:</span><span class="w"> </span><span class="n">DesiredAccuracy</span><span class="p">.</span><span class="n">high</span><span class="p">,</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">    </span><span class="nl">distanceFilter:</span><span class="w"> </span><span class="m">10.0</span><span class="p">,</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">  </span><span class="p">),</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">  </span><span class="nl">http:</span><span class="w"> </span><span class="n">HttpConfig</span><span class="p">(</span><span class="w"> </span><span class="nl">url:</span><span class="w"> </span><span class="s2">&quot;https://your.server.com/locations&quot;</span><span class="p">,</span><span class="w"> </span><span class="nl">autoSync:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="p">));</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">startGeofences</span><span class="p">();</span>
+</code></pre></div>
+<h5 id="single-geofence">Single geofence<a class="headerlink" href="#single-geofence" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">addGeofence</span><span class="p">(</span><span class="n">Geofence</span><span class="p">(</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nl">identifier:</span><span class="w"> </span><span class="s2">&quot;Home&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nl">radius:</span><span class="w"> </span><span class="m">200</span><span class="p">,</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="nl">latitude:</span><span class="w"> </span><span class="m">45.51921926</span><span class="p">,</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span><span class="nl">longitude:</span><span class="w"> </span><span class="o">-</span><span class="m">73.61678581</span><span class="p">,</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span><span class="nl">notifyOnEntry:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">  </span><span class="nl">notifyOnExit:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">  </span><span class="nl">extras:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">route_id:</span><span class="w"> </span><span class="m">1234</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="p">));</span>
+</code></pre></div>
+<h5 id="multiple-geofences">Multiple geofences<a class="headerlink" href="#multiple-geofences" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">addGeofences</span><span class="p">([</span><span class="n">Geofence</span><span class="p">(</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nl">identifier:</span><span class="w"> </span><span class="s2">&quot;Home&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nl">radius:</span><span class="w"> </span><span class="m">200</span><span class="p">,</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="nl">latitude:</span><span class="w"> </span><span class="m">45.51921926</span><span class="p">,</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">  </span><span class="nl">longitude:</span><span class="w"> </span><span class="o">-</span><span class="m">73.61678581</span><span class="p">,</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">  </span><span class="nl">notifyOnEntry:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">),</span><span class="w"> </span><span class="n">Geofence</span><span class="p">(</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">  </span><span class="nl">identifier:</span><span class="w"> </span><span class="s2">&quot;Work&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">  </span><span class="nl">radius:</span><span class="w"> </span><span class="m">200</span><span class="p">,</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">  </span><span class="nl">latitude:</span><span class="w"> </span><span class="m">45.61921927</span><span class="p">,</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">  </span><span class="nl">longitude:</span><span class="w"> </span><span class="o">-</span><span class="m">73.71678582</span><span class="p">,</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">  </span><span class="nl">notifyOnEntry:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">)]);</span>
+</code></pre></div>
+<h5 id="polygon-geofence">Polygon geofence<a class="headerlink" href="#polygon-geofence" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">addGeofence</span><span class="p">(</span><span class="n">Geofence</span><span class="p">(</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nl">identifier:</span><span class="w"> </span><span class="s2">&quot;Park&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nl">notifyOnEntry:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="nl">notifyOnExit:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span><span class="nl">vertices:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="p">[</span><span class="m">45.518947279987714</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m">73.6049889209514</span><span class="p">],</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="p">[</span><span class="m">45.5182711292279</span><span class="p">,</span><span class="w">   </span><span class="o">-</span><span class="m">73.60338649600598</span><span class="p">],</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="p">[</span><span class="m">45.517082240237634</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m">73.60432670908212</span><span class="p">],</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span><span class="p">[</span><span class="m">45.51774871402813</span><span class="p">,</span><span class="w">  </span><span class="o">-</span><span class="m">73.60604928622278</span><span class="p">]</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="p">));</span>
+</code></pre></div>
+<h5 id="remove-a-single-geofence">Remove a single geofence<a class="headerlink" href="#remove-a-single-geofence" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">removeGeofence</span><span class="p">(</span><span class="s2">&quot;Home&quot;</span><span class="p">);</span>
+</code></pre></div>
+<h5 id="remove-all-geofences">Remove all geofences<a class="headerlink" href="#remove-all-geofences" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">removeGeofences</span><span class="p">();</span>
+</code></pre></div>
+<h5 id="fetch-all-stored-geofences">Fetch all stored geofences<a class="headerlink" href="#fetch-all-stored-geofences" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">geofences</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">geofences</span><span class="p">;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[getGeofences] </span><span class="si">${</span><span class="n">geofences</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h5 id="geofences-only-mode_1">Geofences-only mode<a class="headerlink" href="#geofences-only-mode_1" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onGeofence</span><span class="p">((</span><span class="n">GeofenceEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onGeofence] </span><span class="si">${</span><span class="n">event</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">});</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">  </span><span class="nl">http:</span><span class="w"> </span><span class="n">HttpConfig</span><span class="p">(</span><span class="w"> </span><span class="nl">url:</span><span class="w"> </span><span class="s2">&quot;https://your.server.com/geofences&quot;</span><span class="p">,</span><span class="w"> </span><span class="nl">autoSync:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">),</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span><span class="w"> </span><span class="nl">geofenceModeHighAccuracy:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="p">));</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">startGeofences</span><span class="p">();</span>
+</code></pre></div>
+<h5 id="toggle-between-location-tracking-and-geofences-only-mode">Toggle between location tracking and geofences-only mode<a class="headerlink" href="#toggle-between-location-tracking-and-geofences-only-mode" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onGeofence</span><span class="p">((</span><span class="n">GeofenceEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">identifier</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;DANGER_ZONE&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">action</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;ENTER&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">      </span><span class="c1">// Entering the zone — switch to full location tracking.</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">      </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">action</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;EXIT&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">      </span><span class="c1">// Exiting the zone — return to geofences-only mode.</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">      </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">startGeofences</span><span class="p">();</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="p">});</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">addGeofence</span><span class="p">(</span><span class="n">Geofence</span><span class="p">(</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">  </span><span class="nl">identifier:</span><span class="w"> </span><span class="s2">&quot;DANGER_ZONE&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">  </span><span class="nl">radius:</span><span class="w"> </span><span class="m">1000</span><span class="p">,</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">  </span><span class="nl">latitude:</span><span class="w"> </span><span class="m">45.51921926</span><span class="p">,</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">  </span><span class="nl">longitude:</span><span class="w"> </span><span class="o">-</span><span class="m">73.61678581</span><span class="p">,</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="w">  </span><span class="nl">notifyOnEntry:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">  </span><span class="nl">notifyOnExit:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="p">));</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a>
+<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a><span class="w">    </span><span class="nl">desiredAccuracy:</span><span class="w"> </span><span class="n">DesiredAccuracy</span><span class="p">.</span><span class="n">high</span><span class="p">,</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a><span class="w">    </span><span class="nl">distanceFilter:</span><span class="w"> </span><span class="m">10.0</span><span class="p">,</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a><span class="w">  </span><span class="p">),</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="w">  </span><span class="nl">http:</span><span class="w"> </span><span class="n">HttpConfig</span><span class="p">(</span><span class="w"> </span><span class="nl">url:</span><span class="w"> </span><span class="s2">&quot;https://your.server.com/locations&quot;</span><span class="p">,</span><span class="w"> </span><span class="nl">autoSync:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a><span class="p">));</span>
+<a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">startGeofences</span><span class="p">();</span>
+</code></pre></div>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="entrystate">entryState<a class="headerlink" href="#entrystate" title="Permanent link">&para;</a></h3>
+<p><code>int? entry</code><a href="../State/"><code>State</code></a></p>
 <p>Current entry state of the geofence.</p>
 <table>
 <thead>
@@ -12369,35 +12560,55 @@ time by calling the corresponding start method.</p>
 </tbody>
 </table>
 <h3 id="extras">extras<a class="headerlink" href="#extras" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">Map</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">dynamic</span><span class="o">&gt;?</span><span class="w"> </span><span class="n">extras</span>
+</code></pre></div>
 <p>Arbitrary key-value metadata attached to each geofence event and included
 in the payload posted to <a href="../HttpConfig/#url">HttpConfig.url</a>.</p>
 <h3 id="hits">hits<a class="headerlink" href="#hits" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">hits</span>
+</code></pre></div>
 <p>Number of times this geofence has been triggered since it was added.</p>
 <h3 id="identifier">identifier<a class="headerlink" href="#identifier" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">identifier</span>
+</code></pre></div>
 <p>Unique identifier for this geofence.</p>
 <p>Used to reference the geofence in events and removal calls. Adding a
 geofence with an identifier that already exists replaces the existing one.</p>
 <h3 id="latitude">latitude<a class="headerlink" href="#latitude" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">double</span><span class="o">?</span><span class="w"> </span><span class="n">latitude</span>
+</code></pre></div>
 <p>Latitude of the circular geofence center.</p>
 <p>Omit when defining a polygon geofence via <code>vertices</code> — the SDK
 calculates the center automatically.</p>
 <h3 id="loiteringdelay">loiteringDelay<a class="headerlink" href="#loiteringdelay" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">loiteringDelay</span>
+</code></pre></div>
 <p>Minimum time in milliseconds the device must remain inside the geofence
 before a <code>notifyOnDwell</code> event fires. Default <code>0</code>.</p>
 <h3 id="longitude">longitude<a class="headerlink" href="#longitude" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">double</span><span class="o">?</span><span class="w"> </span><span class="n">longitude</span>
+</code></pre></div>
 <p>Longitude of the circular geofence center.</p>
 <p>Omit when defining a polygon geofence via <code>vertices</code> — the SDK
 calculates the center automatically.</p>
 <h3 id="notifyondwell">notifyOnDwell<a class="headerlink" href="#notifyondwell" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">notifyOnDwell</span>
+</code></pre></div>
 <p>Fire a <a href="../GeofenceEvent/">GeofenceEvent</a> when the device has remained inside this
 geofence for <code>loiteringDelay</code> milliseconds.</p>
 <h3 id="notifyonentry">notifyOnEntry<a class="headerlink" href="#notifyonentry" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">notifyOnEntry</span>
+</code></pre></div>
 <p>Fire a <a href="../GeofenceEvent/">GeofenceEvent</a> when the device enters this geofence.</p>
 <p><strong>See also</strong>
 - <a href="../GeoConfig/#geofenceinitialtriggerentry">GeoConfig.geofenceInitialTriggerEntry</a></p>
 <h3 id="notifyonexit">notifyOnExit<a class="headerlink" href="#notifyonexit" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">notifyOnExit</span>
+</code></pre></div>
 <p>Fire a <a href="../GeofenceEvent/">GeofenceEvent</a> when the device exits this geofence.</p>
 <h3 id="radius">radius<a class="headerlink" href="#radius" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">double</span><span class="o">?</span><span class="w"> </span><span class="n">radius</span>
+</code></pre></div>
 <p>Radius of the circular geofence in meters.</p>
 <p>Omit when defining a polygon geofence via <code>vertices</code> — the SDK
 calculates the enclosing radius automatically.</p>
@@ -12412,8 +12623,12 @@ approximately 200 meters."</em></p>
 </blockquote>
 </div>
 <h3 id="stateupdatedat">stateUpdatedAt<a class="headerlink" href="#stateupdatedat" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">double</span><span class="o">?</span><span class="w"> </span><span class="n">stateUpdatedAt</span>
+</code></pre></div>
 <p>Epoch timestamp in seconds of the last geofence transition.</p>
 <h3 id="vertices">vertices<a class="headerlink" href="#vertices" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;?</span><span class="w"> </span><span class="n">vertices</span>
+</code></pre></div>
 <p>Polygon geofence vertices as <code>[[lat, lng], ...]</code> pairs.</p>
 <p>When provided, the geofence is treated as a polygon rather than a circle.
 Omit <code>latitude</code>, <code>longitude</code>, and <code>radius</code> — the SDK
@@ -12428,6 +12643,18 @@ monitoring ceases.</p>
 but is fully functional in DEBUG builds.</p>
 <p><img alt="" src="https://dl.dropbox.com/scl/fi/xzf6yau5wcg1az8fy0lbm/geofencing-polygons-on-map.PNG?rlkey=e82h494msbgt8ngu4s2pjwemb&amp;dl=1" /></p>
 </div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">addGeofence</span><span class="p">(</span><span class="n">Geofence</span><span class="p">(</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">  </span><span class="nl">identifier:</span><span class="w"> </span><span class="s1">&#39;Home&#39;</span><span class="p">,</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">  </span><span class="nl">notifyOnEntry:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="w">  </span><span class="nl">notifyOnExit:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="w">  </span><span class="nl">vertices:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="w">    </span><span class="p">[</span><span class="m">45.518947279987714</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m">73.6049889209514</span><span class="p">],</span><span class="w">  </span><span class="c1">// &lt;-- [lat, lng]</span>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="w">    </span><span class="p">[</span><span class="m">45.5182711292279</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m">73.60338649600598</span><span class="p">],</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="w">    </span><span class="p">[</span><span class="m">45.517082240237634</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m">73.60432670908212</span><span class="p">],</span>
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="w">    </span><span class="p">[</span><span class="m">45.51774871402813</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m">73.60604928622278</span><span class="p">]</span>
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a><span class="p">));</span>
+</code></pre></div>
 <p><img alt="" src="https://dl.dropbox.com/scl/fi/iorrnrm0zno91jtg0ctse/polygon-geofencing-cross.PNG?rlkey=p4kufqhxgw9jrmuz4vkqisprw&amp;dl=1" />
 <img alt="" src="https://dl.dropbox.com/scl/fi/qvg9n3s5iacje5szgcqfv/polygon-geofencing-parc-outremont.PNG?rlkey=c6iax7a19db2v6xdxf18k2a7k&amp;dl=1" />
 <img alt="" src="https://dl.dropbox.com/scl/fi/29m3xwb7tm0532mthgjfy/polygon-geofencing-diamond.PNG?rlkey=9ucc5hs7460ig7226iutas4cw&amp;dl=1" /></p>

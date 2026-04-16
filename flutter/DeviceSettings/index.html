@@ -12019,18 +12019,40 @@ kill background services, including the geolocation SDK. This API surfaces
 the relevant settings screens so users can whitelist your app.</p>
 <p>For a comprehensive list of affected devices and manufacturers, see
 <a href="https://dontkillmyapp.com/">dontkillmyapp.com</a>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">isIgnoring</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">deviceSettings</span><span class="p">.</span><span class="n">isIgnoringBatteryOptimizations</span><span class="p">();</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isIgnoring</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">req</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">deviceSettings</span><span class="p">.</span><span class="n">showIgnoreBatteryOptimizations</span><span class="p">();</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">req</span><span class="p">.</span><span class="n">seen</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">confirmed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">showMyConfirmDialog</span><span class="p">();</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">confirmed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">deviceSettings</span><span class="p">.</span><span class="n">show</span><span class="p">(</span><span class="n">req</span><span class="p">);</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
+</code></pre></div>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="isignoringbatteryoptimizations">isIgnoringBatteryOptimizations<a class="headerlink" href="#isignoringbatteryoptimizations" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">static</span><span class="w"> </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">get</span><span class="w"> </span><span class="n">isIgnoringBatteryOptimizations</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--android">Android only</span> Returns <code>true</code> if the OS is ignoring battery optimizations for your app.</p>
 <p>In most cases the SDK performs acceptably even when battery optimizations
 are active, but aggressive manufacturer-specific restrictions may interfere
 with background operation.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">isIgnoring</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">DeviceSettings</span><span class="p">.</span><span class="n">isIgnoringBatteryOptimizations</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="show">show<a class="headerlink" href="#show" title="Permanent link">&para;</a></h3>
+<p><code>static Future&lt;bool&gt; show(</code><a href="../DeviceSettingsRequest/"><code>DeviceSettingsRequest</code></a><code>request)</code></p>
 <p><span class="platform-badge platform-badge--android">Android only</span> Execute a previously prepared <a href="../DeviceSettingsRequest/">DeviceSettingsRequest</a> to open the
 target settings screen.</p>
 <p>Resolves <code>true</code> if the redirect was attempted.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">req</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">deviceSettings</span><span class="p">.</span><span class="n">showPowerManager</span><span class="p">();</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">req</span><span class="p">.</span><span class="n">seen</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">deviceSettings</span><span class="p">.</span><span class="n">show</span><span class="p">(</span><span class="n">req</span><span class="p">);</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span>
+</code></pre></div>
 <h3 id="showignorebatteryoptimizations">showIgnoreBatteryOptimizations<a class="headerlink" href="#showignorebatteryoptimizations" title="Permanent link">&para;</a></h3>
+<p><code>static Future&lt;</code><a href="../DeviceSettingsRequest/"><code>DeviceSettingsRequest</code></a><code>&gt; showIgnoreBatteryOptimizations()</code></p>
 <p><span class="platform-badge platform-badge--android">Android only</span> Prepare a request to show the Android <em>Ignore Battery Optimizations</em>
 settings screen.</p>
 <p>Returns a <a href="../DeviceSettingsRequest/">DeviceSettingsRequest</a> rather than immediately redirecting,
@@ -12044,7 +12066,38 @@ wrap calls to <a href="./#show">DeviceSettings.show</a> in a <code>try/catch</co
 - <code>isIgnoringBatteryOptimizations</code>
 - <code>show</code></p>
 </div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// Is Android device ignoring battery optimizations?</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kt">bool</span><span class="w"> </span><span class="n">isIgnoring</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">DeviceSettings</span><span class="p">.</span><span class="n">isIgnoringBatteryOptimizations</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isIgnoring</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="n">DeviceSettings</span><span class="p">.</span><span class="n">showIgnoreBatteryOptimizations</span><span class="p">().</span><span class="n">then</span><span class="p">((</span><span class="n">DeviceSettingsRequest</span><span class="w"> </span><span class="n">request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;- Screen seen? </span><span class="si">${</span><span class="n">request</span><span class="p">.</span><span class="n">seen</span><span class="si">}</span><span class="s2"> </span><span class="si">${</span><span class="n">request</span><span class="p">.</span><span class="n">lastSeenAt</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;- Device: </span><span class="si">${</span><span class="n">request</span><span class="p">.</span><span class="n">manufacturer</span><span class="si">}</span><span class="s2"> </span><span class="si">${</span><span class="n">request</span><span class="p">.</span><span class="n">model</span><span class="si">}</span><span class="s2"> </span><span class="si">${</span><span class="n">request</span><span class="p">.</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="c1">// If we&#39;ve already shown this screen to the user, we don&#39;t want to annoy them.</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">seen</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="c1">// It&#39;s your responsibility to instruct the user what exactly</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="c1">// to do here, perhaps with a Confirm Dialog:</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="n">showMyConfirmDialog</span><span class="p">(</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">      </span><span class="nl">title:</span><span class="w"> </span><span class="s2">&quot;Settings request&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">      </span><span class="nl">text:</span><span class="w"> </span><span class="s2">&quot;Please disable battery optimizations for your device&quot;</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="p">).</span><span class="n">then</span><span class="p">((</span><span class="kt">bool</span><span class="w"> </span><span class="n">confirmed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">confirmed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">        </span><span class="c1">// User clicked [Confirm] button.  Execute the redirect to settings screen:</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">        </span><span class="n">DeviceSettings</span><span class="p">.</span><span class="n">show</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">  </span><span class="p">}).</span><span class="n">catchError</span><span class="p">((</span><span class="kt">dynamic</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="c1">// Depending on Manufacturer/Model/OS Version, a Device may not implement</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">    </span><span class="c1">// a particular Settings screen.</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="n">error</span><span class="p">);</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">  </span><span class="p">});</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="p">}</span>
+</code></pre></div>
 <h3 id="showpowermanager">showPowerManager<a class="headerlink" href="#showpowermanager" title="Permanent link">&para;</a></h3>
+<p><code>static Future&lt;</code><a href="../DeviceSettingsRequest/"><code>DeviceSettingsRequest</code></a><code>&gt; showPowerManager()</code></p>
 <p><span class="platform-badge platform-badge--android">Android only</span> Prepare a request to show a vendor-specific Power Manager settings screen
 (Huawei, Xiaomi, Vivo, Oppo, etc.).</p>
 <p>Returns a <a href="../DeviceSettingsRequest/">DeviceSettingsRequest</a> rather than immediately redirecting.</p>
@@ -12055,6 +12108,31 @@ calls to <a href="./#show">DeviceSettings.show</a> in a <code>try/catch</code>.<
 <p><strong>See also</strong>
 - <code>show</code></p>
 </div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">DeviceSettings</span><span class="p">.</span><span class="n">showPowerManager</span><span class="p">().</span><span class="n">then</span><span class="p">((</span><span class="n">DeviceSettingsRequest</span><span class="w"> </span><span class="n">request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;- Screen seen? </span><span class="si">${</span><span class="n">request</span><span class="p">.</span><span class="n">seen</span><span class="si">}</span><span class="s2"> </span><span class="si">${</span><span class="n">request</span><span class="p">.</span><span class="n">lastSeenAt</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;- Device: </span><span class="si">${</span><span class="n">request</span><span class="p">.</span><span class="n">manufacturer</span><span class="si">}</span><span class="s2"> </span><span class="si">${</span><span class="n">request</span><span class="p">.</span><span class="n">model</span><span class="si">}</span><span class="s2"> </span><span class="si">${</span><span class="n">request</span><span class="p">.</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="c1">// If we&#39;ve already shown this screen to the user, we don&#39;t want to annoy them.</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">seen</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">  </span><span class="c1">// It&#39;s your responsibility to instruct the user what exactly</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">  </span><span class="c1">// to do here, perhaps with a Confirm Dialog:</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">  </span><span class="n">showMyConfirmDialog</span><span class="p">(</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="nl">title:</span><span class="w"> </span><span class="s2">&quot;Device Power Management&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="nl">text:</span><span class="w"> </span><span class="s2">&quot;Please white-list the app in your Device&#39;s Power Management settings by clicking this then selecting that.&quot;</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">  </span><span class="p">).</span><span class="n">then</span><span class="p">((</span><span class="kt">bool</span><span class="w"> </span><span class="n">confirmed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">confirmed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">      </span><span class="c1">// User clicked [Confirm] button.  Execute the redirect to settings screen:</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">      </span><span class="n">DeviceSettings</span><span class="p">.</span><span class="n">show</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">  </span><span class="p">});</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="p">}).</span><span class="n">catchError</span><span class="p">((</span><span class="kt">dynamic</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">  </span><span class="c1">// Depending on Manufacturer/Model/OS Version, a Device may not implement</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">  </span><span class="c1">// a particular Settings screen.</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="n">error</span><span class="p">);</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="p">});</span>
+</code></pre></div>
 
 
 

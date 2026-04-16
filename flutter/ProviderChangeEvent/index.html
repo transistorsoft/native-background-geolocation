@@ -12038,22 +12038,51 @@
 <p>The SDK fires this event when the user changes location permissions, toggles
 device location settings, or — on iOS 14 and later — when the precision
 authorization level changes between full and reduced accuracy.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onProviderChange</span><span class="p">((</span><span class="n">ProviderChangeEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onProviderChange] enabled: </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">enabled</span><span class="si">}</span><span class="s1"> status: </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">status</span><span class="si">}</span><span class="s1"> gps: </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">gps</span><span class="si">}</span><span class="s1"> network: </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">network</span><span class="si">}</span><span class="s1"> accuracyAuthorization: </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">accuracyAuthorization</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">event</span><span class="p">.</span><span class="n">enabled</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="c1">// Prompt the user to re-enable location services.</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">});</span>
+</code></pre></div>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="accuracyauthorization">accuracyAuthorization<a class="headerlink" href="#accuracyauthorization" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">accuracyAuthorization</span>
+</code></pre></div>
 <p>Precision location authorization level. Use the
 <a href="../AccuracyAuthorization/">AccuracyAuthorization</a> constants to
 interpret this value.</p>
 <p>On iOS 14 and later this reflects whether the user has granted full or
 reduced accuracy. On Android this value is always
 <code>AccuracyAuthorization.Full</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onProviderChange</span><span class="p">((</span><span class="n">ProviderChangeEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">authorizationStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="p">.</span><span class="n">authorizationStatus</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">authorizationStatus</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ProviderChangeEvent</span><span class="p">.</span><span class="n">ACCURACY_AUTHORIZATION_REDUCED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">BackgroundGeolocaiton</span><span class="p">.</span><span class="n">requestTemporaryFullAccuracy</span><span class="p">(</span><span class="s2">&quot;MyPurposeString&quot;</span><span class="p">).</span><span class="n">then</span><span class="p">((</span><span class="kt">int</span><span class="w"> </span><span class="n">accuracyAuthorization</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;RESULT:  </span><span class="si">$</span><span class="n">accuracyAuthorization</span><span class="s2">&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p">}).</span><span class="n">catchError</span><span class="p">((</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;ERROR:  Failed to show dialog: </span><span class="si">$</span><span class="n">error</span><span class="s2">&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">});</span>
+</code></pre></div>
 <h3 id="enabled">enabled<a class="headerlink" href="#enabled" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">enabled</span>
+</code></pre></div>
 <p><code>true</code> when the device has at least one location provider enabled.</p>
 <h3 id="gps">gps<a class="headerlink" href="#gps" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">gps</span>
+</code></pre></div>
 <p><code>true</code> when the GPS-based location provider is available.</p>
 <h3 id="network">network<a class="headerlink" href="#network" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">network</span>
+</code></pre></div>
 <p><code>true</code> when the network-based location provider is available.</p>
 <h3 id="status">status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">status</span>
+</code></pre></div>
 <p>Platform authorization status code. Use the
 <a href="../AuthorizationStatus/">AuthorizationStatus</a> constants to
 interpret this value.</p>

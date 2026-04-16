@@ -6620,24 +6620,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    MotionActivityEvent
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -6654,64 +6636,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#members" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Members
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Members">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#activity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        activity
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#confidence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        confidence
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -11905,53 +11829,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#members" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Members
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Members">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#activity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        activity
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#confidence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        confidence
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -11973,12 +11850,10 @@
 detects a change in the current activity type (e.g. from <code>still</code> to
 <code>on_foot</code>). The event includes both the detected activity and the
 classifier's confidence level.</p>
-<hr />
-<h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
-<h3 id="activity">activity<a class="headerlink" href="#activity" title="Permanent link">&para;</a></h3>
-<p>Detected motion activity type (e.g. <code>still</code>, <code>on_foot</code>, <code>in_vehicle</code>).</p>
-<h3 id="confidence">confidence<a class="headerlink" href="#confidence" title="Permanent link">&para;</a></h3>
-<p>Confidence of the detected activity as a percentage (<code>0</code>–<code>100</code>).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onActivityChange</span><span class="p">((</span><span class="n">MotionActivityEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onActivityChange] </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">activity</span><span class="si">}</span><span class="s1"> </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">confidence</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">});</span>
+</code></pre></div>
 
 
 

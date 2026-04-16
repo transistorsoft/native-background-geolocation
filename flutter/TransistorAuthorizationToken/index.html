@@ -12018,14 +12018,22 @@ to configure the SDK's HTTP and authorization settings for the demo tracker.</p>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="accesstoken">accessToken<a class="headerlink" href="#accesstoken" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">accessToken</span>
+</code></pre></div>
 <p>JWT access token sent as <code>Authorization: Bearer &lt;token&gt;</code> on each upload.</p>
 <h3 id="expires">expires<a class="headerlink" href="#expires" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">expires</span>
+</code></pre></div>
 <p>Expiry time of the access token (epoch milliseconds). Typically used to
 populate <a href="../AuthorizationConfig/#expires">AuthorizationConfig.expires</a>.</p>
 <h3 id="refreshtoken">refreshToken<a class="headerlink" href="#refreshtoken" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">refreshToken</span>
+</code></pre></div>
 <p>JWT refresh token presented to the <a href="../AuthorizationConfig/#refreshurl">AuthorizationConfig.refreshUrl</a>
 endpoint when the access token expires.</p>
 <h3 id="url">url<a class="headerlink" href="#url" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">url</span>
+</code></pre></div>
 <p>Base URL of the tracker server that issued this token.</p>
 
 

@@ -5877,17 +5877,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#disablestopdetection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        disableStopDetection
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#distancefilter" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6046,17 +6035,6 @@
     <span class="md-ellipsis">
       
         stopAfterElapsedMinutes
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stoponstationary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        stopOnStationary
       
     </span>
   </a>
@@ -12243,17 +12221,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#disablestopdetection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        disableStopDetection
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#distancefilter" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12419,17 +12386,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#stoponstationary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        stopOnStationary
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#stoptimeout" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12527,6 +12483,15 @@ permissions, geofence proximity, and GPS noise filtering.</p>
 </tr>
 </tbody>
 </table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nl">desiredAccuracy:</span><span class="w"> </span><span class="n">DesiredAccuracy</span><span class="p">.</span><span class="n">high</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nl">distanceFilter:</span><span class="w"> </span><span class="m">10.0</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nl">stopTimeout:</span><span class="w"> </span><span class="m">5</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nl">locationAuthorizationRequest:</span><span class="w"> </span><span class="s2">&quot;Always&quot;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">));</span>
+</code></pre></div>
 <hr />
 <h5 id="accuracy-and-sampling">Accuracy and sampling<a class="headerlink" href="#accuracy-and-sampling" title="Permanent link">&para;</a></h5>
 <p><code>desiredAccuracy</code> selects the location-provider tier. Only
@@ -12546,7 +12511,7 @@ periodic updates (~500–1000 m) with dramatically lower power consumption.</p>
 <p>By default, the SDK scales <code>distanceFilter</code> automatically as the device's speed
 changes — recording fewer locations at highway speed and more at walking speed.</p>
 <p>The formula rounds speed to the nearest 5 m/s then multiplies:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>adjusted_distanceFilter = (round(speed, 5) / 5) × distanceFilter × elasticityMultiplier
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>adjusted_distanceFilter = (round(speed, 5) / 5) × distanceFilter × elasticityMultiplier
 </code></pre></div>
 <p>Set <code>disableElasticity</code> to <code>true</code> to use a fixed <code>distanceFilter</code>. Increase
 <code>elasticityMultiplier</code> to space locations further apart at speed.</p>
@@ -12594,9 +12559,80 @@ jitter and improves odometer accuracy. See <a href="../LocationFilter/">Location
 documentation.</p>
 <hr />
 <h5 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nl">desiredAccuracy:</span><span class="w"> </span><span class="n">DesiredAccuracy</span><span class="p">.</span><span class="n">high</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nl">distanceFilter:</span><span class="w"> </span><span class="m">10.0</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nl">stopTimeout:</span><span class="w"> </span><span class="m">5</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nl">showsBackgroundLocationIndicator:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">));</span>
+</code></pre></div>
+<h5 id="these-options-now-belong-to-this-link-geoconfig-group">These options now belong to this {@link GeoConfig} group<a class="headerlink" href="#these-options-now-belong-to-this-link-geoconfig-group" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nl">useSignificantChangesOnly:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">));</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nl">geofenceProximityRadius:</span><span class="w"> </span><span class="m">1000</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nl">geofenceInitialTriggerEntry:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nl">geofenceModeHighAccuracy:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nl">desiredAccuracy:</span><span class="w"> </span><span class="n">DesiredAccuracy</span><span class="p">.</span><span class="n">medium</span><span class="p">,</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nl">locationUpdateInterval:</span><span class="w"> </span><span class="m">5000</span><span class="p">,</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nl">distanceFilter:</span><span class="w"> </span><span class="m">0.0</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="p">));</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">startGeofences</span><span class="p">();</span>
+</code></pre></div>
+<h5 id="high-accuracy-tracking">High-accuracy tracking<a class="headerlink" href="#high-accuracy-tracking" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nl">desiredAccuracy:</span><span class="w"> </span><span class="n">DesiredAccuracy</span><span class="p">.</span><span class="n">high</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nl">distanceFilter:</span><span class="w"> </span><span class="m">10.0</span><span class="p">,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="nl">stopTimeout:</span><span class="w"> </span><span class="m">5</span><span class="p">,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="nl">showsBackgroundLocationIndicator:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">));</span>
+</code></pre></div>
+<h5 id="low-power-significant-changes-mode">Low-power significant-changes mode<a class="headerlink" href="#low-power-significant-changes-mode" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nl">useSignificantChangesOnly:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">));</span>
+</code></pre></div>
+<h5 id="geofencing-with-high-accuracy">Geofencing with high accuracy<a class="headerlink" href="#geofencing-with-high-accuracy" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nl">geofenceProximityRadius:</span><span class="w"> </span><span class="m">1000</span><span class="p">,</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nl">geofenceInitialTriggerEntry:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nl">geofenceModeHighAccuracy:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="nl">desiredAccuracy:</span><span class="w"> </span><span class="n">DesiredAccuracy</span><span class="p">.</span><span class="n">medium</span><span class="p">,</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nl">locationUpdateInterval:</span><span class="w"> </span><span class="m">5000</span><span class="p">,</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="nl">distanceFilter:</span><span class="w"> </span><span class="m">0.0</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="p">));</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">startGeofences</span><span class="p">();</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nl">geofenceProximityRadius:</span><span class="w"> </span><span class="m">1000</span><span class="p">,</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nl">geofenceInitialTriggerEntry:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="nl">geofenceModeHighAccuracy:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="nl">desiredAccuracy:</span><span class="w"> </span><span class="n">DesiredAccuracy</span><span class="p">.</span><span class="n">medium</span><span class="p">,</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="nl">locationUpdateInterval:</span><span class="w"> </span><span class="m">5000</span><span class="p">,</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="nl">distanceFilter:</span><span class="w"> </span><span class="m">0.0</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="p">));</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">startGeofences</span><span class="p">();</span>
+</code></pre></div>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="activitytype">activityType<a class="headerlink" href="#activitytype" title="Permanent link">&para;</a></h3>
+<p><a href="../ActivityType/"><code>ActivityType</code></a><code>? activityType</code></p>
 <p><span class="platform-badge platform-badge--ios">iOS only</span> Specifies the Core Motion activity type used by iOS to optimize its internal
 stop-detection algorithm. Apple is intentionally vague about how this affects motion interpretation,
 but each activity type provides platform hints about the expected movement
@@ -12631,12 +12667,20 @@ pattern (e.g., automotive navigation, fitness, airborne).</p>
 <p>For more details, see Apple's documentation:
 https://developer.apple.com/reference/corelocation/cllocationmanager/1620567-activitytype</p>
 </div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="nl">activityType:</span><span class="w"> </span><span class="n">ActivityType</span><span class="p">.</span><span class="n">other</span><span class="p">,</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="p">),</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">));</span>
+</code></pre></div>
 <h3 id="allowidenticallocations">allowIdenticalLocations<a class="headerlink" href="#allowidenticallocations" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">allowIdenticalLocations</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--android">Android only</span> Allows duplicate locations to be recorded when consecutive fixes are identical.</p>
 <p>Defaults to <code>false</code>. By default, the SDK ignores a location that is identical to the
 previous one. Set <code>true</code> to record every location regardless of duplication.</p>
 <p>When a location is ignored, the log shows:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>TSLocationManager:   ℹ️  IGNORED: same as last location
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>TSLocationManager:   ℹ️  IGNORED: same as last location
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -12645,6 +12689,8 @@ previous one. Set <code>true</code> to record every location regardless of dupli
 geolocation config parameters change (e.g., <code>distanceFilter</code>).</p>
 </div>
 <h3 id="defertime">deferTime<a class="headerlink" href="#defertime" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">deferTime</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--android">Android only</span> Sets the maximum wait time in milliseconds before batched location updates are
 delivered.</p>
 <p>Defaults to <code>0</code> (no deferral). When set to a value at least 2× the
@@ -12654,6 +12700,7 @@ capable hardware.</p>
 <p>Set this as large as your use-case allows if immediate location delivery is not
 required.</p>
 <h3 id="desiredaccuracy">desiredAccuracy<a class="headerlink" href="#desiredaccuracy" title="Permanent link">&para;</a></h3>
+<p><a href="../DesiredAccuracy/"><code>DesiredAccuracy</code></a><code>? desiredAccuracy</code></p>
 <p>Specifies the desired accuracy of the geolocation system.</p>
 <p>Defaults to <a href="../DesiredAccuracy/#high">DesiredAccuracy.High</a>.</p>
 <table>
@@ -12705,7 +12752,15 @@ available only when GPS is active.</p>
 - <a href="https://developer.android.com/reference/com/google/android/gms/location/LocationRequest.html#PRIORITY_BALANCED_POWER_ACCURACY">Android location accuracy</a>
 - <a href="https://developer.apple.com/reference/corelocation/cllocationmanager/1423836-desiredaccuracy?language=objc">iOS desiredAccuracy</a></p>
 </div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="nl">desiredAccuracy:</span><span class="w"> </span><span class="n">DesiredAccuracy</span><span class="p">.</span><span class="n">high</span><span class="p">,</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">));</span>
+</code></pre></div>
 <h3 id="disableelasticity">disableElasticity<a class="headerlink" href="#disableelasticity" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">disableElasticity</span>
+</code></pre></div>
 <p>Disables automatic speed-based <code>distanceFilter</code> scaling.</p>
 <p>Defaults to <code>false</code>. When <code>false</code>, the SDK automatically increases
 <code>distanceFilter</code> as speed increases (and decreases it as speed decreases)
@@ -12718,6 +12773,8 @@ driver slows into traffic.</p>
 - <code>elasticityMultiplier</code>
 - <code>distanceFilter</code></p>
 <h3 id="disablelocationauthorizationalert">disableLocationAuthorizationAlert<a class="headerlink" href="#disablelocationauthorizationalert" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">disableLocationAuthorizationAlert</span>
+</code></pre></div>
 <p>Disables the SDK's automatic alert when location authorization is insufficient.</p>
 <p>Defaults to <code>false</code>. By default, the SDK shows a native alert directing the user to
 the Settings screen when location services are disabled or the authorization level
@@ -12737,30 +12794,23 @@ asking the user to confirm the required change.</p>
 - <a href="../BackgroundGeolocation/#onproviderchange">BackgroundGeolocation.onProviderChange</a>
 - <a href="../BackgroundGeolocation/#start">BackgroundGeolocation.start</a>
 - <a href="../BackgroundGeolocation/#requestpermission">BackgroundGeolocation.requestPermission</a></p>
-<h3 id="disablestopdetection">disableStopDetection<a class="headerlink" href="#disablestopdetection" title="Permanent link">&para;</a></h3>
-<p>Disables the motion-activity–based stop-detection system.</p>
-<p>When <code>true</code>, the SDK ignores platform motion-activity signals when determining
-whether the device is stationary. This affects how and when location services are
-automatically turned off on both platforms.</p>
-<h5 id="ios_1">iOS<a class="headerlink" href="#ios_1" title="Permanent link">&para;</a></h5>
-<p>Disables the accelerometer-based stop-detection system. iOS location services then
-turn off automatically after <strong>exactly 15 minutes</strong> of no motion — you lose control
-over <code>stopTimeout</code>.</p>
-<p>To prevent iOS from ever automatically disabling location services, also set</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>With <code>disableStopDetection: true</code> and <code>pausesLocationUpdatesAutomatically: false</code>,
-iOS location services <strong>never</strong> turn off. This can severely drain the battery.
-Only use this configuration if you fully control tracking manually (for example, a
-workout app toggling tracking via <a href="../BackgroundGeolocation/#changepace">BackgroundGeolocation.changePace</a>).</p>
-<p>iOS stop-detection timing:</p>
-<p><img alt="" src="https://dl.dropbox.com/scl/fi/fhkz97f9jl4omnv7y30by/ios-stop-detection-timing.png?rlkey=cvs9h2nnngmmz9bwh1vg3796g&amp;dl=1" /></p>
-</div>
-<h5 id="android_1">Android<a class="headerlink" href="#android_1" title="Permanent link">&para;</a></h5>
-<p>When <code>true</code>, Android location services never turn off automatically. You must
-disable tracking manually by calling <a href="../BackgroundGeolocation/#changepace">BackgroundGeolocation.changePace</a> with
-<code>false</code>, or <a href="../BackgroundGeolocation/#stop">BackgroundGeolocation.stop</a>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onProviderChange</span><span class="p">((</span><span class="n">ProviderChangeEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onProviderChange]  </span><span class="si">${</span><span class="n">event</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">provider</span><span class="p">.</span><span class="n">enabled</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;Please enable location services&quot;</span><span class="p">);</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="p">});</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">    </span><span class="nl">disableLocationAuthorizationAlert:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="p">));</span>
+</code></pre></div>
 <h3 id="distancefilter">distanceFilter<a class="headerlink" href="#distancefilter" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">double</span><span class="o">?</span><span class="w"> </span><span class="n">distanceFilter</span>
+</code></pre></div>
 <p>The minimum distance (meters) a device must move horizontally before a new location
 is recorded.</p>
 <p>Defaults to <code>10</code> meters.</p>
@@ -12777,16 +12827,16 @@ increases, <code>distanceFilter</code> increases; when speed decreases, so too d
 multiplying <code>distanceFilter</code> by the result:</p>
 </div>
 <h5 id="at-biking-speed-77-ms-distancefilter-30">At biking speed (7.7 m/s, distanceFilter: 30)<a class="headerlink" href="#at-biking-speed-77-ms-distancefilter-30" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>rounded_speed = round(7.7, 5)  =&gt; 10
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>multiplier = rounded_speed / 5  =&gt; 10 / 5 = 2
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>adjusted_distanceFilter = multiplier * distanceFilter
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  =&gt; 2 * 30 = 60 meters
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>rounded_speed = round(7.7, 5)  =&gt; 10
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>multiplier = rounded_speed / 5  =&gt; 10 / 5 = 2
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>adjusted_distanceFilter = multiplier * distanceFilter
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>  =&gt; 2 * 30 = 60 meters
 </code></pre></div>
 <h5 id="at-highway-speed-27-ms-distancefilter-50">At highway speed (27 m/s, distanceFilter: 50)<a class="headerlink" href="#at-highway-speed-27-ms-distancefilter-50" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>rounded_speed = round(27, 5)    =&gt; 30
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>multiplier = rounded_speed / 5  =&gt; 30 / 5 = 6
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>adjusted_distanceFilter = multiplier * distanceFilter * elasticityMultiplier
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  =&gt; 6 * 50 = 300 meters
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>rounded_speed = round(27, 5)    =&gt; 30
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>multiplier = rounded_speed / 5  =&gt; 30 / 5 = 6
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>adjusted_distanceFilter = multiplier * distanceFilter * elasticityMultiplier
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>  =&gt; 6 * 50 = 300 meters
 </code></pre></div>
 <p>The following example shows elasticity on highway 101 towards San Francisco as the
 driver slows into traffic — locations compress as <code>distanceFilter</code> decreases.</p>
@@ -12795,37 +12845,43 @@ driver slows into traffic — locations compress as <code>distanceFilter</code> 
 cab-ride; the right-hand track is walking speed.</p>
 <p><img alt="distanceFilter at city scale" src="https://dl.dropboxusercontent.com/s/yx8uv2zsimlogsp/distance-filter-city.png?dl=1" /></p>
 <h3 id="elasticitymultiplier">elasticityMultiplier<a class="headerlink" href="#elasticitymultiplier" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">double</span><span class="o">?</span><span class="w"> </span><span class="n">elasticityMultiplier</span>
+</code></pre></div>
 <p>Controls the scale of automatic speed-based <code>distanceFilter</code> elasticity.</p>
 <p>Defaults to <code>1.0</code>. Increasing <code>elasticityMultiplier</code> results in fewer location
 samples as speed increases. A value of <code>0</code> has the same effect as setting
 <code>disableElasticity</code> to <code>true</code>.</p>
 <h3 id="enabletimestampmeta">enableTimestampMeta<a class="headerlink" href="#enabletimestampmeta" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">enableTimestampMeta</span>
+</code></pre></div>
 <p>Appends extra timestamp metadata to each recorded location, including system time.</p>
 <p>Defaults to <code>false</code>. Some devices report GPS <a href="../Location/#timestamp">Location.timestamp</a> values that
 differ from the device's system clock. Enabling this option appends additional
 timing fields to each location for debugging and cross-referencing.</p>
-<h5 id="android_2">Android<a class="headerlink" href="#android_2" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">JSONObject</span><span class="w"> </span><span class="n">timestampMeta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">();</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">timestampMeta</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;time&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mLocation</span><span class="p">.</span><span class="na">getTime</span><span class="p">());</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Build</span><span class="p">.</span><span class="na">VERSION</span><span class="p">.</span><span class="na">SDK_INT</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">Build</span><span class="p">.</span><span class="na">VERSION_CODES</span><span class="p">.</span><span class="na">JELLY_BEAN_MR1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">timestampMeta</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;systemClockElaspsedRealtime&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SystemClock</span><span class="p">.</span><span class="na">elapsedRealtimeNanos</span><span class="p">()</span><span class="o">/</span><span class="mi">1000000</span><span class="p">);</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">timestampMeta</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;elapsedRealtime&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mLocation</span><span class="p">.</span><span class="na">getElapsedRealtimeNanos</span><span class="p">()</span><span class="o">/</span><span class="mi">1000000</span><span class="p">);</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="n">timestampMeta</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;systemTime&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">());</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">}</span>
+<h5 id="android_1">Android<a class="headerlink" href="#android_1" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">JSONObject</span><span class="w"> </span><span class="n">timestampMeta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">();</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="n">timestampMeta</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;time&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mLocation</span><span class="p">.</span><span class="na">getTime</span><span class="p">());</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Build</span><span class="p">.</span><span class="na">VERSION</span><span class="p">.</span><span class="na">SDK_INT</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">Build</span><span class="p">.</span><span class="na">VERSION_CODES</span><span class="p">.</span><span class="na">JELLY_BEAN_MR1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">    </span><span class="n">timestampMeta</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;systemClockElaspsedRealtime&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SystemClock</span><span class="p">.</span><span class="na">elapsedRealtimeNanos</span><span class="p">()</span><span class="o">/</span><span class="mi">1000000</span><span class="p">);</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="w">    </span><span class="n">timestampMeta</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;elapsedRealtime&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mLocation</span><span class="p">.</span><span class="na">getElapsedRealtimeNanos</span><span class="p">()</span><span class="o">/</span><span class="mi">1000000</span><span class="p">);</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">    </span><span class="n">timestampMeta</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;systemTime&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">());</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="p">}</span>
 </code></pre></div>
-<h5 id="ios_2">iOS<a class="headerlink" href="#ios_2" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">systemTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="p">)([[</span><span class="bp">NSDate</span><span class="w"> </span><span class="n">date</span><span class="p">]</span><span class="w"> </span><span class="n">timeIntervalSince1970</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">);</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">locationTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="p">)([</span><span class="n">_location</span><span class="p">.</span><span class="n">timestamp</span><span class="w"> </span><span class="n">timeIntervalSince1970</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">);</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">uptime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="k">class</span><span class="w"> </span><span class="n">uptime</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">return</span><span class="w"> </span><span class="l">@{</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="s">@&quot;time&quot;</span><span class="o">:</span><span class="w"> </span><span class="l">@(</span><span class="n">locationTime</span><span class="l">)</span><span class="p">,</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="s">@&quot;systemTime&quot;</span><span class="o">:</span><span class="w"> </span><span class="l">@(</span><span class="n">systemTime</span><span class="l">)</span><span class="p">,</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="s">@&quot;systemClockElapsedRealtime&quot;</span><span class="o">:</span><span class="w"> </span><span class="l">@(</span><span class="n">uptime</span><span class="l">)</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="l">}</span><span class="p">;</span>
+<h5 id="ios_1">iOS<a class="headerlink" href="#ios_1" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">systemTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="p">)([[</span><span class="bp">NSDate</span><span class="w"> </span><span class="n">date</span><span class="p">]</span><span class="w"> </span><span class="n">timeIntervalSince1970</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">);</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">locationTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="p">)([</span><span class="n">_location</span><span class="p">.</span><span class="n">timestamp</span><span class="w"> </span><span class="n">timeIntervalSince1970</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">);</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">uptime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="k">class</span><span class="w"> </span><span class="n">uptime</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="k">return</span><span class="w"> </span><span class="l">@{</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">    </span><span class="s">@&quot;time&quot;</span><span class="o">:</span><span class="w"> </span><span class="l">@(</span><span class="n">locationTime</span><span class="l">)</span><span class="p">,</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">    </span><span class="s">@&quot;systemTime&quot;</span><span class="o">:</span><span class="w"> </span><span class="l">@(</span><span class="n">systemTime</span><span class="l">)</span><span class="p">,</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">    </span><span class="s">@&quot;systemClockElapsedRealtime&quot;</span><span class="o">:</span><span class="w"> </span><span class="l">@(</span><span class="n">uptime</span><span class="l">)</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="l">}</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="fastestlocationupdateinterval">fastestLocationUpdateInterval<a class="headerlink" href="#fastestlocationupdateinterval" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">fastestLocationUpdateInterval</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--android">Android only</span> Sets the fastest interval for location updates, in milliseconds.</p>
 <p>Defaults to <code>-1</code> (not set). When other apps or system components trigger location
 updates at a faster rate, the SDK receives those updates passively at up to this rate
@@ -12841,9 +12897,16 @@ receives updates faster than this interval.</p>
   the effective fastest interval becomes <code>locationUpdateInterval</code>.</li>
 </ul>
 </div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span><span class="nl">fastestLocationUpdateInterval:</span><span class="w"> </span><span class="m">5000</span><span class="w"> </span><span class="c1">// Receive passive updates at most every 5 s</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="p">));</span>
+</code></pre></div>
 <p><strong>See also</strong>
 - <a href="https://developers.google.com/android/reference/com/google/android/gms/location/LocationRequest.html#setFastestInterval(long)">Android LocationRequest.setFastestInterval</a></p>
 <h3 id="filter">filter<a class="headerlink" href="#filter" title="Permanent link">&para;</a></h3>
+<p><a href="../LocationFilter/"><code>LocationFilter</code></a><code>? filter</code></p>
 <p>Defines how raw GPS samples are filtered, denoised, and smoothed before being
 recorded or used for odometer calculations.</p>
 <p><code>LocationFilter</code> is supplied via <a href="./#filter">GeoConfig.filter</a> and provides
@@ -12921,7 +12984,30 @@ jitter, and improve odometer stability.</p>
 <li>Filtering affects <strong>recorded</strong> locations only — it does not influence real-time motion detection.</li>
 </ul>
 </div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="nl">filter:</span><span class="w"> </span><span class="n">LocationFilter</span><span class="p">(</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="w">      </span><span class="nl">policy:</span><span class="w"> </span><span class="n">LocationFilterPolicy</span><span class="p">.</span><span class="n">adjust</span><span class="p">,</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="w">      </span><span class="nl">useKalman:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="w">      </span><span class="nl">kalmanProfile:</span><span class="w"> </span><span class="n">KalmanProfile</span><span class="p">.</span><span class="n">defaultProfile</span><span class="p">,</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="w">      </span><span class="nl">trackingAccuracyThreshold:</span><span class="w"> </span><span class="m">100.0</span><span class="p">,</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="w">      </span><span class="nl">odometerAccuracyThreshold:</span><span class="w"> </span><span class="m">20.0</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a><span class="p">));</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">    </span><span class="nl">filter:</span><span class="w"> </span><span class="n">LocationFilter</span><span class="p">(</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w">      </span><span class="nl">policy:</span><span class="w"> </span><span class="n">LocationFilterPolicy</span><span class="p">.</span><span class="n">passThrough</span><span class="p">,</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="w">      </span><span class="nl">useKalman:</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="p">));</span>
+</code></pre></div>
 <h3 id="geofenceinitialtriggerentry">geofenceInitialTriggerEntry<a class="headerlink" href="#geofenceinitialtriggerentry" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">geofenceInitialTriggerEntry</span>
+</code></pre></div>
 <p>Controls whether a geofence fires an entry event immediately if the device is already
 inside it when the geofence is registered.</p>
 <p>Defaults to <code>true</code>. Set <code>false</code> to suppress the immediate entry trigger and wait
@@ -12929,6 +13015,8 @@ until the device exits and re-enters the geofence.</p>
 <p><strong>See also</strong>
 - 📘 <code>Geofencing Guide</code>.</p>
 <h3 id="geofencemodehighaccuracy">geofenceModeHighAccuracy<a class="headerlink" href="#geofencemodehighaccuracy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">geofenceModeHighAccuracy</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--android">Android only</span> Enables high-accuracy mode for geofence-only tracking.</p>
 <p>Defaults to <code>true</code>. Runs <a href="../BackgroundGeolocation/#startgeofences">BackgroundGeolocation.startGeofences</a> with a
 foreground service (and its corresponding persistent <a href="../AppConfig/#notification">AppConfig.notification</a>),
@@ -12948,7 +13036,20 @@ the higher the power cost.</p>
 <p><code>geofenceModeHighAccuracy: true</code> — Transition events are nearly instantaneous:
 <img alt="" src="https://dl.dropbox.com/s/w53hqn7f7n1ug1o/geofenceModeHighAccuracy-true.png?dl=1" /></p>
 </div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">    </span><span class="nl">geofenceModeHighAccuracy:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="w">    </span><span class="nl">desiredAccuracy:</span><span class="w"> </span><span class="n">DesiredAccuracy</span><span class="p">.</span><span class="n">medium</span><span class="p">,</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="w">    </span><span class="nl">locationUpdateInterval:</span><span class="w"> </span><span class="m">5000</span><span class="p">,</span>
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="w">    </span><span class="nl">distanceFilter:</span><span class="w"> </span><span class="m">50.0</span><span class="p">,</span>
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="p">)).</span><span class="n">then</span><span class="p">((</span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a><span class="w">  </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">startGeofences</span><span class="p">();</span>
+<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a><span class="p">});</span>
+</code></pre></div>
 <h3 id="geofenceproximityradius">geofenceProximityRadius<a class="headerlink" href="#geofenceproximityradius" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">geofenceProximityRadius</span>
+</code></pre></div>
 <p>Defines the radius (meters) around the device used to query for geofences that
 should be actively monitored.</p>
 <p>Mobile platforms allow only a limited number of concurrently monitored geofences
@@ -12956,15 +13057,17 @@ should be actively monitored.</p>
 registered geofences in an internal database and activating only those within this
 radius. As the device moves, the active set updates automatically, firing
 <a href="../BackgroundGeolocation/#ongeofenceschange">BackgroundGeolocation.onGeofencesChange</a>.</p>
-<h5 id="ios_3">iOS<a class="headerlink" href="#ios_3" title="Permanent link">&para;</a></h5>
+<h5 id="ios_2">iOS<a class="headerlink" href="#ios_2" title="Permanent link">&para;</a></h5>
 <p>Defaults to <code>2000</code> meters (minimum <code>100</code> meters for reliable detection).</p>
-<h5 id="android_3">Android<a class="headerlink" href="#android_3" title="Permanent link">&para;</a></h5>
+<h5 id="android_2">Android<a class="headerlink" href="#android_2" title="Permanent link">&para;</a></h5>
 <p>Defaults to <code>1000</code> meters.</p>
 <p><strong>See also</strong>
 - 📘 <code>Geofencing Guide</code>
 - <a href="https://www.transistorsoft.com/shop/products/assets/images/background-geolocation-infinite-geofencing.gif">Animation of this behavior</a></p>
 <p><img alt="" src="https://dl.dropboxusercontent.com/s/7sggka4vcbrokwt/geofenceProximityRadius_iphone6_spacegrey_portrait.png?dl=1" /></p>
 <h3 id="locationauthorizationalert">locationAuthorizationAlert<a class="headerlink" href="#locationauthorizationalert" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">Map</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">dynamic</span><span class="o">&gt;?</span><span class="w"> </span><span class="n">locationAuthorizationAlert</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--ios">iOS only</span> Customizes the text displayed in the SDK's location-authorization alert dialog. When <code>locationAuthorizationRequest</code> is <code>"Always"</code> or <code>"WhenInUse"</code> and the
 user subsequently downgrades or disables location permission in iOS Settings, the SDK
 presents an alert directing the user back to the Settings screen.</p>
@@ -12975,7 +13078,22 @@ presents an alert directing the user back to the Settings screen.</p>
 <p>You must supply <strong>all</strong> fields — not just a subset. Omitting any field will cause the
 alert to display an empty or unexpected string.</p>
 </div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">    </span><span class="nl">locationAuthorizationAlert:</span><span class="w"> </span><span class="n">LocationAuthorizationAlert</span><span class="p">(</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="w">      </span><span class="nl">titleWhenNotEnabled:</span><span class="w"> </span><span class="s2">&quot;Location services are not enabled&quot;</span><span class="p">,</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="w">      </span><span class="nl">titleWhenOff:</span><span class="w"> </span><span class="s2">&quot;Location services are OFF&quot;</span><span class="p">,</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="w">      </span><span class="nl">instructions:</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="w">        </span><span class="s2">&quot;Please enable &#39;Always&#39; in Location Services to allow background tracking.&quot;</span><span class="p">,</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a><span class="w">      </span><span class="nl">cancelButton:</span><span class="w"> </span><span class="s2">&quot;Cancel&quot;</span><span class="p">,</span>
+<a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a><span class="w">      </span><span class="nl">settingsButton:</span><span class="w"> </span><span class="s2">&quot;Open Settings&quot;</span>
+<a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a><span class="p">));</span>
+</code></pre></div>
 <h3 id="locationauthorizationrequest">locationAuthorizationRequest<a class="headerlink" href="#locationauthorizationrequest" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kt">String</span><span class="o">?</span><span class="w"> </span><span class="n">locationAuthorizationRequest</span>
+</code></pre></div>
 <p>Declares the location authorization level the app requires from the user.</p>
 <p>Defaults to <code>"Always"</code>. Valid values are:
 - <code>"Always"</code> — background and foreground location access
@@ -12984,7 +13102,7 @@ alert to display an empty or unexpected string.</p>
 <p>If you request <code>"Always"</code> but the user grants only When-In-Use, the SDK displays
 <code>locationAuthorizationAlert</code> unless suppressed via
 <code>disableLocationAuthorizationAlert</code>.</p>
-<h5 id="ios_4">iOS<a class="headerlink" href="#ios_4" title="Permanent link">&para;</a></h5>
+<h5 id="ios_3">iOS<a class="headerlink" href="#ios_3" title="Permanent link">&para;</a></h5>
 <p>iOS 13+ no longer grants <strong>Always Allow</strong> on the initial dialog. After granting
 <strong>While Using the App</strong>, iOS may later prompt the user to upgrade.</p>
 <p><strong>1. When <code>locationAuthorizationRequest: "Always"</code></strong></p>
@@ -13002,7 +13120,21 @@ alert to display an empty or unexpected string.</p>
 <p>The SDK requests <strong>Always</strong> internally but accepts either result. iOS may show the
 upgrade prompt spontaneously later:</p>
 <p><img alt="" src="https://dl.dropbox.com/s/5syokc8rtrc9q35/ios13-location-authorization-upgrade-always.png?dl=1" /></p>
-<h5 id="android_4">Android<a class="headerlink" href="#android_4" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="c1">// Start with When-In-Use</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span><span class="w"> </span><span class="nl">locationAuthorizationRequest:</span><span class="w"> </span><span class="s2">&quot;WhenInUse&quot;</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="p">));</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onClickStartTracking</span><span class="p">()</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a><span class="w">  </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>
+<a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a><span class="w">  </span><span class="c1">// Upgrade to Always at any time.</span>
+<a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a><span class="w">  </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">setConfig</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a><span class="w">    </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span><span class="w"> </span><span class="nl">locationAuthorizationRequest:</span><span class="w"> </span><span class="s2">&quot;Always&quot;</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a><span class="w">  </span><span class="p">));</span>
+<a id="__codelineno-35-13" name="__codelineno-35-13" href="#__codelineno-35-13"></a><span class="p">}</span>
+</code></pre></div>
+<h5 id="android_3">Android<a class="headerlink" href="#android_3" title="Permanent link">&para;</a></h5>
 <p><strong>Android 11+ (targetSdkVersion ≥ 30)</strong></p>
 <p>Android 11 removes <strong>Allow all the time</strong> from the initial dialog. Apps must present
 a custom rationale UI before navigating the user to the system Location Permissions
@@ -13010,6 +13142,18 @@ screen. The SDK automatically shows <a href="../AppConfig/#backgroundpermissionr
 when configured.</p>
 <p>The rationale dialog is shown <strong>only once</strong> unless the user resets permissions.</p>
 <p><img alt="" src="https://dl.dropbox.com/s/343nbrzpaavfser/android11-location-authorization-rn.gif?dl=1" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span><span class="w"> </span><span class="nl">locationAuthorizationRequest:</span><span class="w"> </span><span class="s2">&quot;Always&quot;</span><span class="w"> </span><span class="p">),</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="w">    </span><span class="nl">backgroundPermissionRationale:</span><span class="w"> </span><span class="n">PermissionRationale</span><span class="p">(</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="w">      </span><span class="nl">title:</span><span class="w"> </span><span class="s2">&quot;Allow access to this device&#39;s location in the background?&quot;</span><span class="p">,</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a><span class="w">      </span><span class="nl">message:</span><span class="w"> </span><span class="s2">&quot;To track your trips, please enable &#39;Allow all the time&#39; location permission.&quot;</span><span class="p">,</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a><span class="w">      </span><span class="nl">positiveAction:</span><span class="w"> </span><span class="s2">&quot;Change to Allow all the time&quot;</span><span class="p">,</span>
+<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a><span class="w">      </span><span class="nl">negativeAction:</span><span class="w"> </span><span class="s2">&quot;Cancel&quot;</span>
+<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a><span class="p">));</span>
+</code></pre></div>
 <p><strong>1. When <code>locationAuthorizationRequest: "Always"</code></strong></p>
 <p>After granting While Using, Android immediately displays the rationale dialog:</p>
 <p><img alt="" src="https://dl.dropbox.com/s/343nbrzpaavfser/android11-location-authorization-rn.gif?dl=1" /></p>
@@ -13021,6 +13165,8 @@ when configured.</p>
 <p><strong>3. When <code>locationAuthorizationRequest: "Any"</code></strong></p>
 <p>Treated the same as <code>"Always"</code>.</p>
 <h3 id="locationupdateinterval">locationUpdateInterval<a class="headerlink" href="#locationupdateinterval" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">locationUpdateInterval</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--android">Android only</span> Sets the desired interval for active location updates, in milliseconds.</p>
 <p>Defaults to <code>1000</code> ms. The system honors this interval on a best-effort basis — updates
 may arrive slower (no providers available), faster (another app requests faster
@@ -13031,9 +13177,18 @@ updates), or not at all (permission or system constraints).</p>
 <p><code>locationUpdateInterval</code> is ignored when <code>distanceFilter</code> is greater than <code>0</code>.
 Set <code>distanceFilter</code> to <code>0</code> to activate time-based sampling.</p>
 </div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="w">    </span><span class="nl">distanceFilter:</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w">           </span><span class="c1">// Required — otherwise this field is ignored.</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="w">    </span><span class="nl">locationUpdateInterval:</span><span class="w"> </span><span class="m">5000</span><span class="w"> </span><span class="c1">// Request a fix every ~5 seconds</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a><span class="p">));</span>
+</code></pre></div>
 <p><strong>See also</strong>
 - <a href="https://developers.google.com/android/reference/com/google/android/gms/location/LocationRequest.html#setInterval(long)">Android LocationRequest.setInterval</a></p>
 <h3 id="pauseslocationupdatesautomatically">pausesLocationUpdatesAutomatically<a class="headerlink" href="#pauseslocationupdatesautomatically" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">pausesLocationUpdatesAutomatically</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--ios">iOS only</span> Prevents the iOS location API from automatically pausing location updates. When set to <code>false</code>, iOS location services never turn off automatically. By default
 (<code>true</code>), the SDK manages this automatically — turning location services off after
 <code>stopTimeout</code> minutes of inactivity.</p>
@@ -13048,6 +13203,8 @@ example, a workout app that calls <a href="../BackgroundGeolocation/#changepace"
 <a href="../AppConfig/#preventsuspend">AppConfig.preventSuspend</a> will no longer function in this mode.</p>
 </div>
 <h3 id="showsbackgroundlocationindicator">showsBackgroundLocationIndicator<a class="headerlink" href="#showsbackgroundlocationindicator" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">showsBackgroundLocationIndicator</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--ios">iOS only</span> Controls whether the status bar indicator appears when location services are active
 in the background with <code>Always</code> authorization. Defaults to <code>true</code>. When <code>true</code>, iOS displays a blue bar or pill in the status bar
 while the app uses location in the background. Users can tap the indicator to return
@@ -13056,13 +13213,15 @@ to your app.</p>
 When-In-Use authorization, iOS always changes the status bar appearance when
 location services are active in the background.</p>
 <h3 id="stationaryradius">stationaryRadius<a class="headerlink" href="#stationaryradius" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">stationaryRadius</span>
+</code></pre></div>
 <p>The minimum distance the device must move beyond the stationary location before
 aggressive background-tracking re-engages.</p>
-<h5 id="ios_5">iOS<a class="headerlink" href="#ios_5" title="Permanent link">&para;</a></h5>
+<h5 id="ios_4">iOS<a class="headerlink" href="#ios_4" title="Permanent link">&para;</a></h5>
 <p>Defaults to <code>25</code> meters. In practice, iOS requires approximately <strong>200 meters</strong>
 of movement before triggering exit from the stationary state — the platform does not
 detect departure at the exact radius boundary.</p>
-<h5 id="android_5">Android<a class="headerlink" href="#android_5" title="Permanent link">&para;</a></h5>
+<h5 id="android_4">Android<a class="headerlink" href="#android_4" title="Permanent link">&para;</a></h5>
 <p>Defaults to <code>150</code> meters (minimum <code>25</code>, maximum <code>1000</code>).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -13078,22 +13237,23 @@ stationary radius:
 - 📘 <a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Philosophy-of-Operation">Philosophy of Operation</a></p>
 </div>
 <h3 id="stopafterelapsedminutes">stopAfterElapsedMinutes<a class="headerlink" href="#stopafterelapsedminutes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">stopAfterElapsedMinutes</span>
+</code></pre></div>
 <p>Automatically stops tracking after the specified number of minutes.</p>
 <p>Disabled by default. When set, the SDK automatically calls
 <a href="../BackgroundGeolocation/#stop">BackgroundGeolocation.stop</a> after this many minutes have elapsed since
 <a href="../BackgroundGeolocation/#start">BackgroundGeolocation.start</a> was called.</p>
-<h3 id="stoponstationary">stopOnStationary<a class="headerlink" href="#stoponstationary" title="Permanent link">&para;</a></h3>
-<p>Automatically calls <a href="../BackgroundGeolocation/#stop">BackgroundGeolocation.stop</a> when the <code>stopTimeout</code>
-elapses.</p>
-<p>When <code>true</code>, the SDK stops itself the next time <a href="../BackgroundGeolocation/#onmotionchange">BackgroundGeolocation.onMotionChange</a>
-fires into the <em>stationary</em> state after the <code>stopTimeout</code> timer elapses.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><code>stopOnStationary</code> fires only when the SDK transitions to the stationary state due
-to <code>stopTimeout</code> expiry. It does <strong>not</strong> fire when you manually call
-<a href="../BackgroundGeolocation/#changepace">BackgroundGeolocation.changePace</a> with <code>false</code>.</p>
-</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w">    </span><span class="nl">stopAfterElapsedMinutes:</span><span class="w"> </span><span class="m">30</span>
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a><span class="p">)).</span><span class="n">then</span><span class="p">((</span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a><span class="w">  </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">start</span><span class="p">();</span><span class="w">  </span><span class="c1">// SDK will automatically stop in 30 minutes</span>
+<a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a><span class="p">});</span>
+</code></pre></div>
 <h3 id="stoptimeout">stopTimeout<a class="headerlink" href="#stoptimeout" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">stopTimeout</span>
+</code></pre></div>
 <p>Minutes to wait in the <em>moving</em> state with no detected movement before transitioning
 to the <em>stationary</em> state.</p>
 <p>Defaults to <code>5</code> minutes.</p>
@@ -13110,6 +13270,8 @@ life.</p>
 - 📘 <a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Philosophy-of-Operation">Philosophy of Operation</a></p>
 </div>
 <h3 id="usesignificantchangesonly">useSignificantChangesOnly<a class="headerlink" href="#usesignificantchangesonly" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">useSignificantChangesOnly</span>
+</code></pre></div>
 <p>Disables continuous background tracking in favour of periodic, coarse location
 updates.</p>
 <p>Defaults to <code>false</code>. When <code>true</code>, a location is recorded only every 500–1000 meters
@@ -13118,7 +13280,7 @@ configuration parameters have no effect in this mode, including <code>distanceFi
 <code>stationaryRadius</code>, and <code>activityType</code>.</p>
 <p>Using <code>useSignificantChangesOnly: true</code> provides significant power savings at the
 expense of fewer recorded locations.</p>
-<h5 id="ios_6">iOS<a class="headerlink" href="#ios_6" title="Permanent link">&para;</a></h5>
+<h5 id="ios_5">iOS<a class="headerlink" href="#ios_5" title="Permanent link">&para;</a></h5>
 <p>Engages the iOS <a href="https://developer.apple.com/reference/corelocation/cllocationmanager/1423531-startmonitoringsignificantlocati?language=objc">Significant Location Changes API</a>,
 delivering updates every 500–1000 meters.</p>
 <div class="admonition note">
@@ -13126,7 +13288,7 @@ delivering updates every 500–1000 meters.</p>
 <p>If Apple has rejected your app for using <code>UIBackgroundMode: "location"</code>, this mode
 can be a viable alternative.</p>
 </div>
-<h5 id="android_6">Android<a class="headerlink" href="#android_6" title="Permanent link">&para;</a></h5>
+<h5 id="android_5">Android<a class="headerlink" href="#android_5" title="Permanent link">&para;</a></h5>
 <p>A location is recorded several times per hour while the device is in the <em>moving</em>
 state. No foreground service is run (and no persistent <a href="../NotificationConfig/">NotificationConfig</a>
 notification is shown).</p>

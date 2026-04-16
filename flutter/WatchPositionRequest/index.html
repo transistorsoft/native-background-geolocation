@@ -5578,24 +5578,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    WatchPositionRequest
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -5612,97 +5594,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#members" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Members
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Members">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#desiredaccuracy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        desiredAccuracy
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#extras" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        extras
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#interval" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        interval
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#persist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        persist
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#timeout" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        timeout
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -11938,86 +11829,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#members" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Members
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Members">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#desiredaccuracy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        desiredAccuracy
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#extras" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        extras
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#interval" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        interval
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#persist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        persist
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#timeout" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        timeout
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -12043,24 +11854,19 @@ continuous location stream. All fields are optional.</p>
 from being suspended, which drains the battery. Remove the subscription when
 your app moves to the background.</p>
 </div>
-<hr />
-<h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
-<h3 id="desiredaccuracy">desiredAccuracy<a class="headerlink" href="#desiredaccuracy" title="Permanent link">&para;</a></h3>
-<p>Target accuracy for location updates from the native API.
-Defaults to <a href="../DesiredAccuracy/#high">DesiredAccuracy.High</a>.</p>
-<h3 id="extras">extras<a class="headerlink" href="#extras" title="Permanent link">&para;</a></h3>
-<p>Optional key-value metadata to attach to each location. Merged with any
-configured <a href="../PersistenceConfig/#extras">PersistenceConfig.extras</a> before persisting or uploading
-to <a href="../HttpConfig/#url">HttpConfig.url</a>.</p>
-<h3 id="interval">interval<a class="headerlink" href="#interval" title="Permanent link">&para;</a></h3>
-<p>Interval in <strong>milliseconds</strong> between location updates.</p>
-<h3 id="persist">persist<a class="headerlink" href="#persist" title="Permanent link">&para;</a></h3>
-<p>Whether to persist each location to the SDK's SQLite database and upload
-it to <a href="../HttpConfig/#url">HttpConfig.url</a>. Defaults to <code>true</code> when the SDK is enabled;
-<code>false</code> when stopped.</p>
-<h3 id="timeout">timeout<a class="headerlink" href="#timeout" title="Permanent link">&para;</a></h3>
-<p>Maximum time in <strong>milliseconds</strong> to wait for each location fix before
-firing an error. Default <code>60000</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">subscription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">watchPosition</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p">{</span><span class="s1">&#39;interval&#39;</span><span class="o">:</span><span class="w"> </span><span class="m">1000</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;desiredAccuracy&#39;</span><span class="o">:</span><span class="w"> </span><span class="n">DesiredAccuracy</span><span class="p">.</span><span class="n">high</span><span class="p">},</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p">(</span><span class="n">Location</span><span class="w"> </span><span class="n">location</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[watchPosition] </span><span class="si">${</span><span class="n">location</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">errorCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[watchPosition] error: </span><span class="si">${</span><span class="n">errorCode</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">// Later, stop watching.</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">subscription</span><span class="p">.</span><span class="n">remove</span><span class="p">();</span>
+</code></pre></div>
 
 
 

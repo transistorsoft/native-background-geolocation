@@ -12039,13 +12039,65 @@ responsiveness:</p>
   <a href="../LocationFilter/#maximpliedspeed">LocationFilter.maxImpliedSpeed</a>, and other <a href="../LocationFilter/">LocationFilter</a> fields.</li>
 </ul>
 <p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nl">filter:</span><span class="w"> </span><span class="n">LocationFilter</span><span class="p">(</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="nl">policy:</span><span class="w"> </span><span class="n">LocationFilterPolicy</span><span class="p">.</span><span class="n">adjust</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">));</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nl">filter:</span><span class="w"> </span><span class="n">LocationFilter</span><span class="p">(</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nl">policy:</span><span class="w"> </span><span class="n">LocationFilterPolicy</span><span class="p">.</span><span class="n">passThrough</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">));</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nl">filter:</span><span class="w"> </span><span class="n">LocationFilter</span><span class="p">(</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span><span class="nl">policy:</span><span class="w"> </span><span class="n">LocationFilterPolicy</span><span class="p">.</span><span class="n">conservative</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">));</span>
+</code></pre></div>
 <p><strong>See also</strong>
 - <a href="../GeoConfig/#filter">GeoConfig.filter</a>
 - <a href="../LocationFilter/">LocationFilter</a>
 - <a href="../KalmanProfile/">KalmanProfile</a></p>
+<h5 id="balanced-default-filtering">Balanced default filtering<a class="headerlink" href="#balanced-default-filtering" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nl">filter:</span><span class="w"> </span><span class="n">LocationFilter</span><span class="p">(</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">      </span><span class="nl">policy:</span><span class="w"> </span><span class="n">LocationFilterPolicy</span><span class="p">.</span><span class="n">adjust</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">));</span>
+</code></pre></div>
+<h5 id="no-filtering-capture-all-raw-locations">No filtering — capture all raw locations<a class="headerlink" href="#no-filtering-capture-all-raw-locations" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nl">filter:</span><span class="w"> </span><span class="n">LocationFilter</span><span class="p">(</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">      </span><span class="nl">policy:</span><span class="w"> </span><span class="n">LocationFilterPolicy</span><span class="p">.</span><span class="n">passThrough</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">));</span>
+</code></pre></div>
+<h5 id="maximum-smoothing-for-analytics">Maximum smoothing for analytics<a class="headerlink" href="#maximum-smoothing-for-analytics" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nl">filter:</span><span class="w"> </span><span class="n">LocationFilter</span><span class="p">(</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">      </span><span class="nl">policy:</span><span class="w"> </span><span class="n">LocationFilterPolicy</span><span class="p">.</span><span class="n">conservative</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">));</span>
+</code></pre></div>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="adjust">Adjust<a class="headerlink" href="#adjust" title="Permanent link">&para;</a></h3>
+<p><a href="./"><code>LocationFilterPolicy</code></a><code>.adjust</code></p>
 <p>Balanced (default) — applies moderate filtering to reject noisy samples.</p>
 <p>Dynamically adjusts acceptance thresholds for incoming samples, but <strong>never</strong>
 alters the raw latitude/longitude coordinates.</p>
@@ -12068,8 +12120,10 @@ included, not <em>how</em> they are positioned.</p>
 <p>If <a href="../LocationFilter/#usekalman">LocationFilter.useKalman</a> is enabled, additional smoothing may occur,
 but the physical coordinates of each accepted sample remain untouched.</p>
 <h3 id="conservative">Conservative<a class="headerlink" href="#conservative" title="Permanent link">&para;</a></h3>
+<p><a href="./"><code>LocationFilterPolicy</code></a><code>.conservative</code></p>
 <p>Aggressive — filters heavily, preferring stability over responsiveness.</p>
 <h3 id="passthrough">PassThrough<a class="headerlink" href="#passthrough" title="Permanent link">&para;</a></h3>
+<p><a href="./"><code>LocationFilterPolicy</code></a><code>.passThrough</code></p>
 <p>No filtering — accept all samples. Useful for debugging.</p>
 
 

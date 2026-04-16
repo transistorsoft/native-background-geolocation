@@ -12179,6 +12179,13 @@ background-permission rationale dialog.</p>
 </tr>
 </tbody>
 </table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nl">stopOnTerminate:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nl">startOnBoot:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">));</span>
+</code></pre></div>
 <hr />
 <h5 id="lifecycle">Lifecycle<a class="headerlink" href="#lifecycle" title="Permanent link">&para;</a></h5>
 <p><a href="./#stoponterminate">AppConfig.stopOnTerminate</a> (default <code>true</code>) controls whether tracking
@@ -12228,9 +12235,68 @@ screen to grant background access. The SDK shows this dialog automatically when
 <p>See <a href="../PermissionRationale/">PermissionRationale</a> for the full dialog configuration reference.</p>
 <hr />
 <h5 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nl">stopOnTerminate:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nl">startOnBoot:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nl">enableHeadless:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nl">heartbeatInterval:</span><span class="w"> </span><span class="m">60.0</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nl">backgroundPermissionRationale:</span><span class="w"> </span><span class="n">PermissionRationale</span><span class="p">(</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="nl">title:</span><span class="w"> </span><span class="s2">&quot;Allow MyApp to access this device&#39;s location even when closed.&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="nl">message:</span><span class="w"> </span><span class="s2">&quot;This app collects location data to record your trips and mileage.&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="nl">positiveAction:</span><span class="w"> </span><span class="s1">&#39;Change to &quot;{backgroundPermissionOptionLabel}&quot;&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="nl">negativeAction:</span><span class="w"> </span><span class="s1">&#39;Cancel&#39;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="p">),</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="nl">notification:</span><span class="w"> </span><span class="n">Notification</span><span class="p">(</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="nl">title:</span><span class="w"> </span><span class="s1">&#39;Background Geolocation&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">      </span><span class="nl">text:</span><span class="w"> </span><span class="s1">&#39;Tracking location&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">      </span><span class="nl">smallIcon:</span><span class="w"> </span><span class="s1">&#39;mipmap/ic_launcher&#39;</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="p">),</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="nl">schedule:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;1-5 09:00-17:00&#39;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Weekdays 9–5</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="nl">scheduleUseAlarmManager:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p">));</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">setConfig</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nl">heartbeatInterval:</span><span class="w"> </span><span class="m">120.0</span><span class="w"> </span><span class="c1">// slow down heartbeats</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">));</span>
+</code></pre></div>
+<h5 id="configure-once-at-startup">Configure once at startup:<a class="headerlink" href="#configure-once-at-startup" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nl">stopOnTerminate:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nl">startOnBoot:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nl">enableHeadless:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nl">heartbeatInterval:</span><span class="w"> </span><span class="m">60.0</span><span class="p">,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nl">backgroundPermissionRationale:</span><span class="w"> </span><span class="n">PermissionRationale</span><span class="p">(</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">      </span><span class="nl">title:</span><span class="w"> </span><span class="s2">&quot;Allow MyApp to access this device&#39;s location even when closed.&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">      </span><span class="nl">message:</span><span class="w"> </span><span class="s2">&quot;This app collects location data to record your trips and mileage.&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">      </span><span class="nl">positiveAction:</span><span class="w"> </span><span class="s1">&#39;Change to &quot;{backgroundPermissionOptionLabel}&quot;&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">      </span><span class="nl">negativeAction:</span><span class="w"> </span><span class="s1">&#39;Cancel&#39;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="p">),</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="nl">notification:</span><span class="w"> </span><span class="n">Notification</span><span class="p">(</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">      </span><span class="nl">title:</span><span class="w"> </span><span class="s1">&#39;Background Geolocation&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">      </span><span class="nl">text:</span><span class="w"> </span><span class="s1">&#39;Tracking location&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">      </span><span class="nl">smallIcon:</span><span class="w"> </span><span class="s1">&#39;mipmap/ic_launcher&#39;</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="p">),</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="nl">schedule:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;1-5 09:00-17:00&#39;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Weekdays 9–5</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="nl">scheduleUseAlarmManager:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="p">));</span>
+</code></pre></div>
+<h5 id="update-later-at-runtime">Update later at runtime:<a class="headerlink" href="#update-later-at-runtime" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">setConfig</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nl">heartbeatInterval:</span><span class="w"> </span><span class="m">120.0</span><span class="w"> </span><span class="c1">// slow down heartbeats</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">));</span>
+</code></pre></div>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="backgroundpermissionrationale">backgroundPermissionRationale<a class="headerlink" href="#backgroundpermissionrationale" title="Permanent link">&para;</a></h3>
+<p><a href="../PermissionRationale/"><code>PermissionRationale</code></a><code>? background</code><a href="../PermissionRationale/"><code>PermissionRationale</code></a></p>
 <p><span class="platform-badge platform-badge--android">Android only</span> Configures the dialog shown when requesting <em>Always</em> background location
 permission on Android 11 and later.</p>
 <p>Android 11 removed the <strong>Allow all the time</strong> button from the system
@@ -12251,6 +12317,20 @@ Permissions</strong> screen, where they must enable <strong>Allow all the time</
 <p><img alt="" src="https://dl.dropbox.com/s/343nbrzpaavfser/android11-location-authorization-rn.gif?dl=1" />
 <img alt="" src="https://dl.dropbox.com/s/4fq4erz2lpqz00m/android11-location-permission-rationale-dialog.png?dl=1" />
 <img alt="" src="https://dl.dropbox.com/s/dy65k8b0sgj5cgy/android11-location-authorization-upgrade-settings.png?dl=1" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nl">locationAuthorizationRequest:</span><span class="w"> </span><span class="s1">&#39;Always&#39;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="p">),</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="nl">backgroundPermissionRationale:</span><span class="w"> </span><span class="n">PermissionRationale</span><span class="p">(</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">      </span><span class="nl">title:</span><span class="w"> </span><span class="s2">&quot;Allow {applicationName} to access this device&#39;s location in the background?&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">      </span><span class="nl">message:</span><span class="w"> </span><span class="s2">&quot;To track your activity in the background, please enable {backgroundPermissionOptionLabel} location permission.&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">      </span><span class="nl">positiveAction:</span><span class="w"> </span><span class="s2">&quot;Change to {backgroundPermissionOptionLabel}&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">      </span><span class="nl">negativeAction:</span><span class="w"> </span><span class="s2">&quot;Cancel&quot;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p">));</span>
+</code></pre></div>
 <h5 id="template-tags">Template tags<a class="headerlink" href="#template-tags" title="Permanent link">&para;</a></h5>
 <p>Embed the following variables inside <a href="../PermissionRationale/">PermissionRationale</a>
 fields using <code>{tagName}</code> syntax:</p>
@@ -12280,6 +12360,8 @@ fields using <code>{tagName}</code> syntax:</p>
 - <a href="../BackgroundGeolocation/#requestpermission">BackgroundGeolocation.requestPermission</a>
 - <a href="https://developer.android.com/about/versions/11/privacy/location">Location updates in Android 11</a></p>
 <h3 id="enableheadless">enableHeadless<a class="headerlink" href="#enableheadless" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">enableHeadless</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--android">Android only</span> Enables headless operation so the SDK can respond to events after the app
 has been terminated with <a href="./#stoponterminate">AppConfig.stopOnTerminate</a> <code>false</code>. Defaults
 to <code>false</code>.</p>
@@ -12301,6 +12383,8 @@ state.</p>
 - <a href="../BackgroundGeolocation/#registerheadlesstask">BackgroundGeolocation.registerHeadlessTask</a></p>
 </div>
 <h3 id="heartbeatinterval">heartbeatInterval<a class="headerlink" href="#heartbeatinterval" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">heartbeatInterval</span>
+</code></pre></div>
 <p>Rate in seconds at which <a href="../BackgroundGeolocation/#onheartbeat">BackgroundGeolocation.onHeartbeat</a> events
 fire while the app is in the background.</p>
 <h5 id="ios">iOS<a class="headerlink" href="#ios" title="Permanent link">&para;</a></h5>
@@ -12319,12 +12403,44 @@ least <code>60</code> to enable it. Values below <code>60</code> are not support
 <p><strong>See also</strong>
 - <a href="../BackgroundGeolocation/#onheartbeat">BackgroundGeolocation.onHeartbeat</a></p>
 </div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nl">preventSuspend:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nl">heartbeatInterval:</span><span class="w"> </span><span class="m">60.0</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">));</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onHeartbeat</span><span class="p">((</span><span class="n">HeartbeatEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onHeartbeat] </span><span class="si">${</span><span class="n">event</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">  </span><span class="c1">// Optionally request a new location during heartbeat.</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">  </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">getCurrentPosition</span><span class="p">({</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span><span class="nl">samples:</span><span class="w"> </span><span class="m">1</span><span class="p">,</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="nl">persist:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">  </span><span class="p">}).</span><span class="n">then</span><span class="p">((</span><span class="n">location</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[getCurrentPosition] </span><span class="si">${</span><span class="n">location</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">  </span><span class="p">});</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="p">});</span>
+</code></pre></div>
 <h3 id="notification">notification<a class="headerlink" href="#notification" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">Notification</span><span class="o">?</span><span class="w"> </span><span class="n">notification</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--android">Android only</span> Configures the persistent foreground-service notification required by
 Android.</p>
 <p><img alt="" src="https://dl.dropbox.com/s/acuhy5cu4p7uofr/android-foreground-service-default.png?dl=1" /></p>
 <p>See <a href="../NotificationConfig/">NotificationConfig</a> for detailed usage.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="nl">notification:</span><span class="w"> </span><span class="n">Notification</span><span class="p">(</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">      </span><span class="nl">title:</span><span class="w"> </span><span class="s2">&quot;Background tracking engaged&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">      </span><span class="nl">text:</span><span class="w"> </span><span class="s2">&quot;My notification text&quot;</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="p">));</span>
+</code></pre></div>
 <h3 id="preventsuspend">preventSuspend<a class="headerlink" href="#preventsuspend" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">preventSuspend</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--ios">iOS only</span> Prevents iOS from suspending the application after location services have
 been disabled while running in the background. Defaults to <code>false</code>. Set to <code>true</code> to keep the app alive in the background even after iOS
 disables location services. This is required for
@@ -12342,25 +12458,104 @@ is detected.</p>
 - <a href="./#heartbeatinterval">AppConfig.heartbeatInterval</a>
 - <a href="../BackgroundGeolocation/#onheartbeat">BackgroundGeolocation.onHeartbeat</a></p>
 </div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">// Subscribe to heartbeat events</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onHeartbeat</span><span class="p">((</span><span class="n">HeartbeatEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onHeartbeat] </span><span class="si">${</span><span class="n">event</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">});</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="c1">// Enable preventSuspend via AppConfig</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="nl">preventSuspend:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="nl">heartbeatInterval:</span><span class="w"> </span><span class="m">60.0</span><span class="p">,</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="p">));</span>
+</code></pre></div>
 <h3 id="schedule">schedule<a class="headerlink" href="#schedule" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;?</span><span class="w"> </span><span class="n">schedule</span>
+</code></pre></div>
 <p>Configures a cron-like automated schedule that tells the SDK when to
 <code>start</code> and
 <code>stop</code> tracking.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="s2">&quot;{DAY(s)} {START_TIME}-{END_TIME}&quot;</span>
+</code></pre></div>
 <ul>
 <li>Times are in <strong>24h format</strong>.</li>
 <li><code>DAY</code> uses <strong>Locale.US</strong> day numbers: <strong>Sunday = 1</strong>, <strong>Saturday = 7</strong>.</li>
 <li>Day values may be a single day (<code>"1"</code>), a comma-separated list (<code>"2,4,6"</code>),
   or a range (<code>"2-6"</code>).</li>
 </ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="nl">schedule:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">      </span><span class="s2">&quot;1 17:30-21:00&quot;</span><span class="p">,</span><span class="w">     </span><span class="c1">// Sunday: 5:30pm–9pm</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">      </span><span class="s2">&quot;2-6 09:00-17:00&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1">// Mon–Fri: 9am–5pm</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">      </span><span class="s2">&quot;2,4,6 20:00-00:00&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Mon, Wed, Fri: 8pm–midnight</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">      </span><span class="s2">&quot;7 10:00-19:00&quot;</span><span class="w">      </span><span class="c1">// Saturday: 10am–7pm</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="p">)).</span><span class="n">then</span><span class="p">((</span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">  </span><span class="c1">// Start the Scheduler</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w">  </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">startSchedule</span><span class="p">();</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="p">});</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="c1">// Listen for schedule state changes</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onSchedule</span><span class="p">((</span><span class="n">State</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onSchedule] enabled? </span><span class="si">${</span><span class="n">state</span><span class="p">.</span><span class="n">enabled</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="p">});</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="c1">// Later (e.g., user logout)</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">stopSchedule</span><span class="p">();</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">stop</span><span class="p">();</span><span class="w"> </span><span class="c1">// if tracking is currently active</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="c1">// Modify schedule using setConfig</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">setConfig</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a><span class="w">    </span><span class="nl">schedule:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a><span class="w">      </span><span class="s2">&quot;1-7 09:00-10:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a><span class="w">      </span><span class="s2">&quot;1-7 11:00-12:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a><span class="w">      </span><span class="s2">&quot;1-7 13:00-14:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a><span class="w">      </span><span class="s2">&quot;1-7 15:00-16:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a><span class="w">      </span><span class="s2">&quot;1-7 17:00-18:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-15-33" name="__codelineno-15-33" href="#__codelineno-15-33"></a><span class="w">      </span><span class="s2">&quot;2,4,6 19:00-22:00&quot;</span>
+<a id="__codelineno-15-34" name="__codelineno-15-34" href="#__codelineno-15-34"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-15-35" name="__codelineno-15-35" href="#__codelineno-15-35"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a><span class="p">));</span>
+</code></pre></div>
 <h5 id="literal-dates">Literal dates<a class="headerlink" href="#literal-dates" title="Permanent link">&para;</a></h5>
 <p>A schedule entry may use a literal date range:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;yyyy-mm-dd HH:mm-HH:mm&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>&quot;yyyy-mm-dd HH:mm-HH:mm&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="nl">schedule:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">      </span><span class="s2">&quot;2018-01-01 09:00-17:00&quot;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="p">));</span>
 </code></pre></div>
 <p>Or specify distinct start <strong>and</strong> stop dates:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&quot;yyyy-mm-dd-HH:mm yyyy-mm-dd-HH:mm&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>&quot;yyyy-mm-dd-HH:mm yyyy-mm-dd-HH:mm&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="nl">schedule:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">      </span><span class="s2">&quot;2018-01-01-09:00 2019-01-01-17:00&quot;</span><span class="w"> </span><span class="c1">// track for 1 year</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="p">));</span>
 </code></pre></div>
 <h5 id="scheduling-modes">Scheduling modes<a class="headerlink" href="#scheduling-modes" title="Permanent link">&para;</a></h5>
 <p>Append <code>geofence</code> or <code>location</code> to explicitly choose a tracking mode.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="nl">schedule:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">      </span><span class="s2">&quot;1-7 09:00-17:00 location&quot;</span><span class="p">,</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">      </span><span class="s2">&quot;1-7 18:00-00:00 geofence&quot;</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="p">));</span>
+</code></pre></div>
 <h5 id="ios_1">iOS<a class="headerlink" href="#ios_1" title="Permanent link">&para;</a></h5>
 <ul>
 <li>iOS cannot evaluate the schedule exactly at the configured time.
@@ -12378,10 +12573,31 @@ on-the-minute.</p>
 <p><strong>See also</strong>
 - <a href="../BackgroundGeolocation/#startschedule">BackgroundGeolocation.startSchedule</a>
 - <a href="../BackgroundGeolocation/#stopschedule">BackgroundGeolocation.stopSchedule</a></p>
+<h5 id="since-location-is-the-default-mode-it-may-be-omitted">Since <code>location</code> is the default mode, it may be omitted<a class="headerlink" href="#since-location-is-the-default-mode-it-may-be-omitted" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="nl">schedule:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">      </span><span class="s2">&quot;1-7 09:00-17:00 location&quot;</span><span class="p">,</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">      </span><span class="s2">&quot;1-7 18:00-12:00 geofence&quot;</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="p">));</span>
+</code></pre></div>
 <h3 id="scheduleusealarmmanager">scheduleUseAlarmManager<a class="headerlink" href="#scheduleusealarmmanager" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">scheduleUseAlarmManager</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--android">Android only</span> Forces the Android scheduler to use <code>AlarmManager</code> (exact, on-the-minute)
 instead of <code>JobScheduler</code> (inexact). Defaults to <code>false</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="nl">schedule:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;1-7 09:00-17:00&quot;</span><span class="p">],</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">    </span><span class="nl">scheduleUseAlarmManager:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="p">));</span>
+</code></pre></div>
 <h3 id="startonboot">startOnBoot<a class="headerlink" href="#startonboot" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">startOnBoot</span>
+</code></pre></div>
 <p>Controls whether tracking resumes automatically after the device reboots.
 Defaults to <code>false</code>.</p>
 <h5 id="ios_2">iOS<a class="headerlink" href="#ios_2" title="Permanent link">&para;</a></h5>
@@ -12399,6 +12615,8 @@ tracking resumes even before the JS/UI layer starts.</p>
 - <a href="./#enableheadless">AppConfig.enableHeadless</a>
 - <a href="./#stoponterminate">AppConfig.stopOnTerminate</a></p>
 <h3 id="stoponterminate">stopOnTerminate<a class="headerlink" href="#stoponterminate" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">stopOnTerminate</span>
+</code></pre></div>
 <p>Controls whether tracking stops when the application is terminated by the
 user. Defaults to <code>true</code>.</p>
 <p>When <code>true</code>, the SDK calls <code>stop()</code> as the app terminates. Set to <code>false</code>

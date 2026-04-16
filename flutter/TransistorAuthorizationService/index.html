@@ -7705,17 +7705,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#applyif" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        applyIf
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#destroy" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -11935,17 +11924,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#applyif" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        applyIf
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#destroy" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12002,21 +11980,48 @@ results with Transistor Support when debugging.</p>
 <h5 id="viewing-results">Viewing results<a class="headerlink" href="#viewing-results" title="Permanent link">&para;</a></h5>
 <p>To view tracking results in a browser, visit:</p>
 <p><code>http://tracker.transistorsoft.com/&lt;your-organization-name&gt;</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;http://tracker.transistorsoft.com&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">final</span><span class="w"> </span><span class="n">orgname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my-company-name&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">final</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my-username&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// Fetch a token from the server (the SDK caches it automatically).</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kd">final</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">findOrCreateTransistorAuthorizationToken</span><span class="p">(</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="n">orgname</span><span class="p">,</span><span class="w"> </span><span class="n">username</span><span class="p">,</span><span class="w"> </span><span class="n">url</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">);</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nl">transistorAuthorizationToken:</span><span class="w"> </span><span class="n">token</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">));</span>
+</code></pre></div>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
-<h3 id="applyif">applyIf<a class="headerlink" href="#applyif" title="Permanent link">&para;</a></h3>
-<p>Mutate a <a href="../Config/">Config</a> to apply a <code>transistorAuthorizationToken</code> if present.</p>
-<p>The implementation reads <code>config.transistorAuthorizationToken</code>, removes that
-property, sets <code>config.http.url</code> to <code>"&lt;token.url&gt;/api/locations"</code>, and
-injects <code>config.authorization</code> with a JWT strategy derived from the token.
-If no <code>transistorAuthorizationToken</code> is found, the config is returned unchanged.</p>
 <h3 id="destroy">destroy<a class="headerlink" href="#destroy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">static</span><span class="w"> </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">?&gt;</span><span class="w"> </span><span class="n">destroy</span><span class="p">(</span><span class="kt">String</span><span class="w"> </span><span class="n">url</span><span class="p">)</span>
+</code></pre></div>
 <p>Remove the cached token associated with the given tracker URL.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// defaults to http://tracker.transistorsoft.com</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">await</span><span class="w"> </span><span class="n">TransistorAuthorizationToken</span><span class="p">.</span><span class="n">destroy</span><span class="p">();</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">// If using a custom instance of Demo Server:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">/// await TransistorAuthorizationToken.destroy(&quot;http://192.168.0.100:9000&quot;);</span>
+</code></pre></div>
 <h3 id="findorcreate">findOrCreate<a class="headerlink" href="#findorcreate" title="Permanent link">&para;</a></h3>
+<p><code>static Future&lt;</code><a href="../TransistorAuthorizationToken/"><code>TransistorAuthorizationToken</code></a><code>&gt; findOrCreate( String orgname, String username, [String url = _DEFAULT_TRANSISTOR_URL])</code></p>
 <p>Find or create an authorization token for the given organization and username.</p>
 <p>If a token already exists in the local cache for this <code>orgName</code> + <code>url</code>
 combination, the cached token is returned. Otherwise a new token is
 requested from the server and cached for future calls.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">orgname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my-company-name&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kt">String</span><span class="w"> </span><span class="n">usernmae</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my-username&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">// Fetch an authoriztion token from server.  The SDK will cache the received token.</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">TransistorAuthorizationToken</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="n">TransistorAuthorizationToken</span><span class="p">.</span><span class="n">findOrCreate</span><span class="p">(</span><span class="n">orgname</span><span class="p">,</span><span class="w"> </span><span class="n">username</span><span class="p">);</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="nl">transistorAuthorizationToken:</span><span class="w"> </span><span class="n">token</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">))</span>
+</code></pre></div>
 
 
 

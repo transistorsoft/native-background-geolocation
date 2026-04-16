@@ -11,15 +11,19 @@
  * A "Show all results" toggle lets the user opt out per session.
  */
 (function () {
-  var PLATFORMS = ['typescript', 'flutter', 'swift', 'kotlin'];
+  var PLATFORMS = ['react-native', 'capacitor', 'flutter', 'swift', 'kotlin', 'cordova', 'typescript'];
+  var PLATFORM_LABELS = { faq: 'FAQ' };
 
   function activePlatform() {
-    var first = window.location.pathname.replace(/^\//, '').split('/')[0];
+    var path = window.location.pathname;
+    if (path.indexOf('/help/faq') !== -1) { return 'faq'; }
+    var first = path.replace(/^\//, '').split('/')[0];
     return PLATFORMS.indexOf(first) !== -1 ? first : null;
   }
 
   function resultPlatform(anchor) {
-    var m = anchor.href.match(/\/(typescript|flutter|swift|kotlin)\//);
+    if (anchor.href.indexOf('/help/faq') !== -1) { return 'faq'; }
+    var m = anchor.href.match(/\/(react-native|capacitor|flutter|swift|kotlin|cordova|typescript)\//);
     return m ? m[1] : null;
   }
 
@@ -59,9 +63,10 @@
       });
       container.insertBefore(el, container.firstChild);
     }
+    var label = PLATFORM_LABELS[platform] || platform;
     el.innerHTML =
-      'Showing <strong>' + platform + '</strong> results only. ' +
-      '<a href="#" class="bgeo-scope-link">Show all platforms</a>';
+      'Showing <strong>' + label + '</strong> results only. ' +
+      '<a href="#" class="bgeo-scope-link">Show all</a>';
   }
 
   function init() {

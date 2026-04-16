@@ -12036,20 +12036,33 @@
 <h1 id="deviceinfo">DeviceInfo<a class="headerlink" href="#deviceinfo" title="Permanent link">&para;</a></h1>
 <p>Basic device hardware and OS information returned by
 <a href="../BackgroundGeolocation/#getdeviceinfo">BackgroundGeolocation.getDeviceInfo</a>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">deviceInfo</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[DeviceInfo] </span><span class="si">${</span><span class="n">info</span><span class="p">.</span><span class="n">manufacturer</span><span class="si">}</span><span class="s1"> </span><span class="si">${</span><span class="n">info</span><span class="p">.</span><span class="n">model</span><span class="si">}</span><span class="s1"> (</span><span class="si">${</span><span class="n">info</span><span class="p">.</span><span class="n">platform</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">);</span>
+</code></pre></div>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="framework">framework<a class="headerlink" href="#framework" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">framework</span>
+</code></pre></div>
 <p>Development framework hosting the SDK.</p>
 <p>Examples: <code>"react-native"</code>, <code>"capacitor"</code>, <code>"cordova"</code>, <code>"flutter"</code></p>
 <h3 id="manufacturer">manufacturer<a class="headerlink" href="#manufacturer" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">manufacturer</span>
+</code></pre></div>
 <p>Device manufacturer.</p>
 <p>Examples: <code>"Apple"</code>, <code>"Google"</code>, <code>"Samsung"</code>, <code>"Huawei"</code></p>
 <h3 id="model">model<a class="headerlink" href="#model" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">model</span>
+</code></pre></div>
 <p>Device model identifier.</p>
 <p>Examples: <code>"iPhone15,2"</code>, <code>"Pixel 8 Pro"</code>, <code>"SM-G991B"</code></p>
 <h3 id="platform">platform<a class="headerlink" href="#platform" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">platform</span>
+</code></pre></div>
 <p>OS platform name: <code>"iOS"</code> or <code>"Android"</code>.</p>
 <h3 id="version">version<a class="headerlink" href="#version" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">version</span>
+</code></pre></div>
 <p>OS version string.</p>
 <p>Examples: <code>"18.1"</code>, <code>"14"</code>, <code>"14.1.1"</code></p>
 

@@ -12061,20 +12061,34 @@
 boundary. Each event carries the transition type (<code>ENTER</code>, <code>EXIT</code>, or
 <code>DWELL</code>), the location recorded at the moment of the crossing, and the full
 <a href="../Geofence/">Geofence</a> record that triggered it.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onGeofence</span><span class="p">((</span><span class="n">GeofenceEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onGeofence] </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">identifier</span><span class="si">}</span><span class="s1"> </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">action</span><span class="si">}</span><span class="s1"> </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">location</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">});</span>
+</code></pre></div>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="action">action<a class="headerlink" href="#action" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">action</span>
+</code></pre></div>
 <p>Transition type that fired: <code>ENTER</code>, <code>EXIT</code>, or <code>DWELL</code>.</p>
 <h3 id="extras">extras<a class="headerlink" href="#extras" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Map</span><span class="o">?</span><span class="w"> </span><span class="n">extras</span>
+</code></pre></div>
 <p>Optional metadata originally configured on the <a href="../Geofence/">Geofence</a>. Present
 only when the geofence was created with an <code>extras</code> map.</p>
 <h3 id="geofence">geofence<a class="headerlink" href="#geofence" title="Permanent link">&para;</a></h3>
+<p><a href="../Geofence/"><code>Geofence</code></a><code>geofence</code></p>
 <p>The complete <a href="../Geofence/">Geofence</a> record that triggered this event.</p>
 <h3 id="identifier">identifier<a class="headerlink" href="#identifier" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">identifier</span>
+</code></pre></div>
 <p>The <a href="../Geofence/#identifier">Geofence.identifier</a> of the geofence that triggered this event.</p>
 <h3 id="location">location<a class="headerlink" href="#location" title="Permanent link">&para;</a></h3>
+<p><a href="../Location/"><code>Location</code></a><code>location</code></p>
 <p>Location recorded at the moment the geofence boundary was crossed.</p>
 <h3 id="timestamp">timestamp<a class="headerlink" href="#timestamp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">timestamp</span>
+</code></pre></div>
 <p>ISO-8601 UTC timestamp from the device system clock at the moment the OS
 delivered the geofence event.</p>
 

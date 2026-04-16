@@ -7243,17 +7243,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#offset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        offset
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#order" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -11979,17 +11968,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#offset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        offset
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#order" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12037,18 +12015,36 @@
 <p>Constrains a log query by date range, sort order, and record count.</p>
 <p>Pass to <a href="../Logger/#getlog">Logger.getLog</a>, <a href="../Logger/#emaillog">Logger.emailLog</a>, or
 <a href="../Logger/#uploadlog">Logger.uploadLog</a> to filter which log entries are included.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Date range</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">final</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="n">getLog</span><span class="p">();</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// First 100 records ascending</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kd">await</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="n">emailLog</span><span class="p">(</span><span class="s2">&quot;foo@bar.com&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">// Upload a specific time window</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kd">await</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="n">uploadLog</span><span class="p">(</span><span class="s2">&quot;https://my.server.com/users/123/logs&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nl">start:</span><span class="w"> </span><span class="n">Date</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;2019-10-20 09:00&quot;</span><span class="p">),</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nl">end:</span><span class="w">   </span><span class="n">Date</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;2019-10-20 11:59&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">});</span>
+</code></pre></div>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="end">end<a class="headerlink" href="#end" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">DateTime</span><span class="o">?</span><span class="w"> </span><span class="n">end</span>
+</code></pre></div>
 <p>End of the query window (unix timestamp in <strong>milliseconds</strong>).</p>
 <h3 id="limit">limit<a class="headerlink" href="#limit" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">limit</span>
+</code></pre></div>
 <p>Maximum number of records to return.</p>
-<h3 id="offset">offset<a class="headerlink" href="#offset" title="Permanent link">&para;</a></h3>
-<p>Number of matching records to skip before returning results (for paging).</p>
 <h3 id="order">order<a class="headerlink" href="#order" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">order</span>
+</code></pre></div>
 <p>Sort order for results: <code>SQLQueryOrder.Asc</code> (oldest first) or
 <code>SQLQueryOrder.Desc</code> (newest first).</p>
 <h3 id="start">start<a class="headerlink" href="#start" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">DateTime</span><span class="o">?</span><span class="w"> </span><span class="n">start</span>
+</code></pre></div>
 <p>Start of the query window (unix timestamp in <strong>milliseconds</strong>).</p>
 
 

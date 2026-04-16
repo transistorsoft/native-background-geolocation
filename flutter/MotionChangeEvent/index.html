@@ -6648,24 +6648,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    MotionChangeEvent
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -6682,64 +6664,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#members" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Members
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Members">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ismoving" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        isMoving
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#location" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        location
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -11905,53 +11829,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#members" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Members
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Members">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ismoving" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        isMoving
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#location" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        location
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -11971,13 +11848,14 @@
 <p>Motion-state change delivered to <a href="../BackgroundGeolocation/#onmotionchange">BackgroundGeolocation.onMotionChange</a>.</p>
 <p>The SDK fires this event each time it transitions between the <strong>moving</strong> and
 <strong>stationary</strong> states. A location is always recorded at the moment of transition.</p>
-<hr />
-<h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
-<h3 id="ismoving">isMoving<a class="headerlink" href="#ismoving" title="Permanent link">&para;</a></h3>
-<p><code>true</code> when the SDK has transitioned to the <strong>moving</strong> state; <code>false</code> when
-it has transitioned to the <strong>stationary</strong> state.</p>
-<h3 id="location">location<a class="headerlink" href="#location" title="Permanent link">&para;</a></h3>
-<p>Location recorded at the moment the motion-state transition was detected.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onMotionChange</span><span class="p">((</span><span class="n">MotionChangeEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">isMoving</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onMotionChange] Device is moving: </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">location</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onMotionChange] Device is stationary: </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">location</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">});</span>
+</code></pre></div>
 
 
 

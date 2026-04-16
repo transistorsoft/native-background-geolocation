@@ -12040,6 +12040,20 @@ themselves.</p>
 <p><img alt="" src="https://dl.dropbox.com/s/343nbrzpaavfser/android11-location-authorization-rn.gif?dl=1" />
 <img alt="" src="https://dl.dropbox.com/s/4fq4erz2lpqz00m/android11-location-permission-rationale-dialog.png?dl=1" />
 <img alt="" src="https://dl.dropbox.com/s/dy65k8b0sgj5cgy/android11-location-authorization-upgrade-settings.png?dl=1" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nl">locationAuthorizationRequest:</span><span class="w"> </span><span class="s1">&#39;Always&#39;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p">),</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nl">backgroundPermissionRationale:</span><span class="w"> </span><span class="n">PermissionRationale</span><span class="p">(</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nl">title:</span><span class="w"> </span><span class="s2">&quot;Allow {applicationName} to access this device&#39;s location in the background?&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nl">message:</span><span class="w"> </span><span class="s2">&quot;To track your activity in the background, please enable {backgroundPermissionOptionLabel} location access.&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nl">positiveAction:</span><span class="w"> </span><span class="s2">&quot;Change to {backgroundPermissionOptionLabel}&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="nl">negativeAction:</span><span class="w"> </span><span class="s2">&quot;Cancel&quot;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">));</span>
+</code></pre></div>
 <hr />
 <h5 id="template-tags">Template tags<a class="headerlink" href="#template-tags" title="Permanent link">&para;</a></h5>
 <p>Embed the following variables inside any rationale field using <code>{tagName}</code> syntax:</p>
@@ -12071,13 +12085,21 @@ themselves.</p>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="message">message<a class="headerlink" href="#message" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">String</span><span class="o">?</span><span class="w"> </span><span class="n">message</span>
+</code></pre></div>
 <p>Body text of the dialog. Explain why your app needs background location
 access, similar in purpose to the iOS <code>NSLocationAlwaysAndWhenInUseUsageDescription</code>.</p>
 <h3 id="negativeaction">negativeAction<a class="headerlink" href="#negativeaction" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">String</span><span class="o">?</span><span class="w"> </span><span class="n">negativeAction</span>
+</code></pre></div>
 <p>Text to display on the negative action button (e.g. "Cancel").</p>
 <h3 id="positiveaction">positiveAction<a class="headerlink" href="#positiveaction" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">String</span><span class="o">?</span><span class="w"> </span><span class="n">positiveAction</span>
+</code></pre></div>
 <p>Text to display on the positive action button.</p>
 <h3 id="title">title<a class="headerlink" href="#title" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">String</span><span class="o">?</span><span class="w"> </span><span class="n">title</span>
+</code></pre></div>
 <p>Title for the Android background location permission dialog.</p>
 
 

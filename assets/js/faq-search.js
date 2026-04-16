@@ -109,7 +109,8 @@
       entries.forEach(function (entry) {
         var match = !q ||
           entry.question.indexOf(q) !== -1 ||
-          entry.bodyText.indexOf(q) !== -1;
+          entry.bodyText.indexOf(q) !== -1 ||
+          entry.section.toLowerCase().indexOf(q) !== -1;
 
         var display = match ? '' : 'none';
         entry.elements.forEach(function (el) {

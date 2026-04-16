@@ -12016,17 +12016,35 @@
 <p>The SDK fires this event after each token refresh attempt triggered by
 <a href="../AuthorizationConfig/#refreshurl">AuthorizationConfig.refreshUrl</a>. Use it to update your app's local
 credential store, handle refresh failures, or react to expired sessions.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onAuthorization</span><span class="p">((</span><span class="n">AuthorizationEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onAuthorization] Token refreshed: </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">response</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="c1">// Update your app&#39;s stored token.</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="p">.</span><span class="n">response</span><span class="p">.</span><span class="n">access_token</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onAuthorization] Refresh failed: </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">error</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">});</span>
+</code></pre></div>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="error">error<a class="headerlink" href="#error" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">String</span><span class="o">?</span><span class="w"> </span><span class="n">error</span>
+</code></pre></div>
 <p>Error message when <code>success</code> is <code>false</code>; <code>null</code> otherwise.</p>
 <h3 id="response">response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Map</span><span class="o">?</span><span class="w"> </span><span class="n">response</span>
+</code></pre></div>
 <p>Decoded JSON body returned by the refresh server when <code>success</code> is <code>true</code>;
 <code>null</code> otherwise.</p>
 <h3 id="status">status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">status</span>
+</code></pre></div>
 <p>HTTP status code returned by <a href="../AuthorizationConfig/#refreshurl">AuthorizationConfig.refreshUrl</a>, or
 <code>0</code> if the request failed before reaching the server.</p>
 <h3 id="success">success<a class="headerlink" href="#success" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">success</span>
+</code></pre></div>
 <p><code>true</code> when the token refresh request returned a 2xx status code.</p>
 
 

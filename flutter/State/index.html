@@ -5635,17 +5635,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#authorization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        authorization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#diddevicereboot" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5745,32 +5734,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#odometererror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        odometerError
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#persistence" class="md-nav__link">
     <span class="md-ellipsis">
       
         persistence
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        reset
       
     </span>
   </a>
@@ -5793,17 +5760,6 @@
     <span class="md-ellipsis">
       
         trackingMode
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transistorauthorizationtoken" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        transistorAuthorizationToken
       
     </span>
   </a>
@@ -12122,17 +12078,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#authorization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        authorization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#diddevicereboot" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12232,32 +12177,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#odometererror" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        odometerError
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#persistence" class="md-nav__link">
     <span class="md-ellipsis">
       
         persistence
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        reset
       
     </span>
   </a>
@@ -12280,17 +12203,6 @@
     <span class="md-ellipsis">
       
         trackingMode
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transistorauthorizationtoken" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        transistorAuthorizationToken
       
     </span>
   </a>
@@ -12321,6 +12233,9 @@
 
 <h1 id="state">State<a class="headerlink" href="#state" title="Permanent link">&para;</a></h1>
 <p>Read-only snapshot of the SDK's current runtime state.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">state</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[state] enabled: </span><span class="si">${</span><span class="n">state</span><span class="p">.</span><span class="n">enabled</span><span class="si">}</span><span class="s1">, trackingMode: </span><span class="si">${</span><span class="n">state</span><span class="p">.</span><span class="n">trackingMode</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+</code></pre></div>
 <h5 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h5>
 <table>
 <thead>
@@ -12366,68 +12281,77 @@
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="activity">activity<a class="headerlink" href="#activity" title="Permanent link">&para;</a></h3>
+<p><a href="../ActivityConfig/"><code>ActivityConfig</code></a><code>get activity</code></p>
 <p>Motion recognition, stop-detection triggers, and motion-trigger delay.
 See <a href="../ActivityConfig/">ActivityConfig</a>.</p>
 <h3 id="app">app<a class="headerlink" href="#app" title="Permanent link">&para;</a></h3>
+<p><a href="../AppConfig/"><code>AppConfig</code></a><code>get app</code></p>
 <p>App lifecycle — background operation, boot behaviour, headless mode, and
 foreground notification. See <a href="../AppConfig/">AppConfig</a>.</p>
-<h3 id="authorization">authorization<a class="headerlink" href="#authorization" title="Permanent link">&para;</a></h3>
-<p>JWT and SAS token management with automatic refresh. See <a href="../AuthorizationConfig/">AuthorizationConfig</a>.</p>
 <h3 id="diddevicereboot">didDeviceReboot<a class="headerlink" href="#diddevicereboot" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">didDeviceReboot</span>
+</code></pre></div>
 <p><code>true</code> when the app was launched after a device reboot.</p>
 <h3 id="didlaunchinbackground">didLaunchInBackground<a class="headerlink" href="#didlaunchinbackground" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">didLaunchInBackground</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--ios">iOS only</span> <code>true</code> when the app was relaunched in the background by the OS — for
 example, due to a background fetch, geofence exit, or stationary geofence
 transition. On Android, background launch is handled by the Headless Task mechanism —
 this property does not apply.</p>
 <h3 id="enabled">enabled<a class="headerlink" href="#enabled" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">enabled</span>
+</code></pre></div>
 <p><code>true</code> when the SDK is actively tracking — i.e. <a href="../BackgroundGeolocation/#start">BackgroundGeolocation.start</a>
 or <a href="../BackgroundGeolocation/#startgeofences">BackgroundGeolocation.startGeofences</a> has been called and not yet stopped.</p>
 <h3 id="geolocation">geolocation<a class="headerlink" href="#geolocation" title="Permanent link">&para;</a></h3>
+<p><a href="../GeoConfig/"><code>GeoConfig</code></a><code>get geolocation</code></p>
 <p>Accuracy, sampling, elasticity, stop-detection, permissions, and geofencing.
 See <a href="../GeoConfig/">GeoConfig</a>.</p>
 <h3 id="http">http<a class="headerlink" href="#http" title="Permanent link">&para;</a></h3>
+<p><a href="../HttpConfig/"><code>HttpConfig</code></a><code>get http</code></p>
 <p>Upload URL, HTTP method, sync cadence, batching, headers, and params.
 See <a href="../HttpConfig/">HttpConfig</a>.</p>
 <h3 id="isfirstboot">isFirstBoot<a class="headerlink" href="#isfirstboot" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">isFirstBoot</span>
+</code></pre></div>
 <p><code>true</code> on the very first launch after the app is installed.</p>
 <h3 id="ismoving">isMoving<a class="headerlink" href="#ismoving" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">isMoving</span>
+</code></pre></div>
 <p><code>true</code> when the SDK is in the <strong>moving</strong> state (location services active);
 <code>false</code> when stationary.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// Toggle the SDK&#39;s motion state from stationary to moving.</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onMotionChange</span><span class="p">((</span><span class="n">MotionChangeEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onMotionChange] isMoving? </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">isMoving</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">});</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">changePace</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1">// State.isMoving is now true.</span>
+</code></pre></div>
 <h3 id="logger">logger<a class="headerlink" href="#logger" title="Permanent link">&para;</a></h3>
+<p><a href="../LoggerConfig/"><code>LoggerConfig</code></a><code>get logger</code></p>
 <p>Debug logging, log level, and log retention. See <a href="../LoggerConfig/">LoggerConfig</a>.</p>
 <h3 id="odometer">odometer<a class="headerlink" href="#odometer" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">odometer</span>
+</code></pre></div>
 <p>Accumulated distance traveled since the last odometer reset, in meters.</p>
 <p><strong>See also</strong>
 - <code>odometerError</code>
 - <a href="../BackgroundGeolocation/#setodometer">BackgroundGeolocation.setOdometer</a>
 - <a href="../BackgroundGeolocation/#getodometer">BackgroundGeolocation.getOdometer</a></p>
-<h3 id="odometererror">odometerError<a class="headerlink" href="#odometererror" title="Permanent link">&para;</a></h3>
-<p>Accumulated positional error in the odometer measurement, in meters.</p>
-<p>Reflects noise introduced by low-accuracy location samples. Use
-<a href="../LocationFilter/#odometeraccuracythreshold">LocationFilter.odometerAccuracyThreshold</a> to filter out
-low-accuracy samples from odometer calculations.</p>
 <h3 id="persistence">persistence<a class="headerlink" href="#persistence" title="Permanent link">&para;</a></h3>
+<p><a href="../PersistenceConfig/"><code>PersistenceConfig</code></a><code>get persistence</code></p>
 <p>SQLite storage, TTL, record limits, and custom extras. See <a href="../PersistenceConfig/">PersistenceConfig</a>.</p>
-<h3 id="reset">reset<a class="headerlink" href="#reset" title="Permanent link">&para;</a></h3>
-<p>Controls whether the SDK resets to factory defaults before applying this
-configuration. Defaults to <code>true</code>.</p>
-<p>When <code>true</code> (the default), every call to <a href="../BackgroundGeolocation/#ready">BackgroundGeolocation.ready</a>
-applies the supplied <code>Config</code> on top of fresh defaults. When <code>false</code>, the SDK
-applies the supplied <code>Config</code> only on the first install. On subsequent launches
-it ignores the <code>Config</code> argument entirely — the only way to change settings is
-via <a href="../BackgroundGeolocation/#setconfig">BackgroundGeolocation.setConfig</a>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>During development, always leave <code>reset: true</code> (or omit it). Setting <code>reset:
-false</code> causes the SDK to ignore your <code>Config</code> after the first launch, so
-configuration changes made between development builds will not take effect.</p>
-</div>
 <h3 id="schedulerenabled">schedulerEnabled<a class="headerlink" href="#schedulerenabled" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">schedulerEnabled</span>
+</code></pre></div>
 <p><code>true</code> when a <a href="../AppConfig/#schedule">AppConfig.schedule</a> is configured and
 <a href="../BackgroundGeolocation/#startschedule">BackgroundGeolocation.startSchedule</a> has been called.
 <a href="../BackgroundGeolocation/#stopschedule">BackgroundGeolocation.stopSchedule</a> sets this to <code>false</code>.</p>
 <h3 id="trackingmode">trackingMode<a class="headerlink" href="#trackingmode" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">trackingMode</span>
+</code></pre></div>
 <p>Current tracking mode.</p>
 <table>
 <thead>
@@ -12450,13 +12374,16 @@ configuration changes made between development builds will not take effect.</p>
 </tr>
 </tbody>
 </table>
-<h3 id="transistorauthorizationtoken">transistorAuthorizationToken<a class="headerlink" href="#transistorauthorizationtoken" title="Permanent link">&para;</a></h3>
-<p>Convenience option that automatically configures the SDK to upload locations
-to the Transistor Software demo server at tracker.transistorsoft.com, or a
-local instance of <a href="https://github.com/transistorsoft/background-geolocation-console">background-geolocation-console</a>.</p>
-<p>Setting this option automatically sets <a href="../HttpConfig/#url">HttpConfig.url</a> and the required
-<a href="../AuthorizationConfig/">AuthorizationConfig</a> values. See <a href="../TransistorAuthorizationService/">TransistorAuthorizationService</a>
-for how to obtain a token.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kd">final</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">state</span><span class="p">;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">print</span><span class="p">(</span><span class="s1">&#39;Tracking mode: </span><span class="si">${</span><span class="n">state</span><span class="p">.</span><span class="n">trackingMode</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1">// &gt; &#39;Tracking mode: 1&#39;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">startGeofences</span><span class="p">();</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">state</span><span class="p">;</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="n">print</span><span class="p">(</span><span class="s1">&#39;Tracking mode: </span><span class="si">${</span><span class="n">state</span><span class="p">.</span><span class="n">trackingMode</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c1">// &gt; &#39;Tracking mode: 0&#39;</span>
+</code></pre></div>
 
 
 

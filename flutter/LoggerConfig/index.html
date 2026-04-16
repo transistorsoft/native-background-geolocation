@@ -12045,6 +12045,14 @@ Logging serves two purposes:</p>
 </tr>
 </tbody>
 </table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nl">logger:</span><span class="w"> </span><span class="n">LoggerConfig</span><span class="p">(</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nl">debug:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nl">logLevel:</span><span class="w"> </span><span class="n">LogLevel</span><span class="p">.</span><span class="n">verbose</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nl">logMaxDays:</span><span class="w"> </span><span class="m">7</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">));</span>
+</code></pre></div>
 <hr />
 <h5 id="log-levels">Log levels<a class="headerlink" href="#log-levels" title="Permanent link">&para;</a></h5>
 <p>Choose the level appropriate for your environment:</p>
@@ -12117,17 +12125,17 @@ detailed trace of every lifecycle event — location recording, motion transitio
 HTTP uploads, geofence activity — to an internal SQLite database. When behaviour
 is unclear, set <code>logLevel</code> to <a href="../LogLevel/#verbose">LogLevel.Verbose</a> and fetch the log before
 doing anything else:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">setConfig</span><span class="p">({</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nx">logger</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">logLevel</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.LogLevel.Verbose</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">setConfig</span><span class="p">({</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nx">logger</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">logLevel</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.LogLevel.Verbose</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">});</span>
 </code></pre></div>
 <p>Use <a href="../Logger/#emaillog">Logger.emailLog</a> to send <code>logMaxDays</code> worth of logs as an email
 attachment directly from the device:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">emailLog</span><span class="p">(</span><span class="s2">&quot;you@example.com&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">emailLog</span><span class="p">(</span><span class="s2">&quot;you@example.com&quot;</span><span class="p">);</span>
 </code></pre></div>
 <h5 id="android">Android<a class="headerlink" href="#android" title="Permanent link">&para;</a></h5>
 <p>Stream live SDK output directly to your terminal with <code>adb</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>adb<span class="w"> </span>logcat<span class="w"> </span><span class="s2">&quot;*:S&quot;</span><span class="w"> </span>TSLocationManager:V
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>adb<span class="w"> </span>logcat<span class="w"> </span><span class="s2">&quot;*:S&quot;</span><span class="w"> </span>TSLocationManager:V
 </code></pre></div>
 <h5 id="ios">iOS<a class="headerlink" href="#ios" title="Permanent link">&para;</a></h5>
 <p>Run the app from Xcode to stream SDK output to the console in real time. For
@@ -12135,9 +12143,91 @@ issues that only reproduce in the background, attach the device and monitor
 the Xcode console while the app runs in the background.</p>
 <hr />
 <h5 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nl">logger:</span><span class="w"> </span><span class="n">LoggerConfig</span><span class="p">(</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nl">debug:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nl">logLevel:</span><span class="w"> </span><span class="n">LogLevel</span><span class="p">.</span><span class="n">verbose</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nl">logMaxDays:</span><span class="w"> </span><span class="m">7</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">));</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nl">logger:</span><span class="w"> </span><span class="n">LoggerConfig</span><span class="p">(</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nl">debug:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nl">logLevel:</span><span class="w"> </span><span class="n">LogLevel</span><span class="p">.</span><span class="n">info</span><span class="p">,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="nl">logMaxDays:</span><span class="w"> </span><span class="m">3</span><span class="p">,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">));</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">setConfig</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nl">logger:</span><span class="w"> </span><span class="n">LoggerConfig</span><span class="p">(</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nl">logLevel:</span><span class="w"> </span><span class="n">LogLevel</span><span class="p">.</span><span class="n">off</span><span class="p">,</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">));</span>
+</code></pre></div>
+<h5 id="development-profile">Development profile<a class="headerlink" href="#development-profile" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nl">logger:</span><span class="w"> </span><span class="n">LoggerConfig</span><span class="p">(</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nl">debug:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nl">logLevel:</span><span class="w"> </span><span class="n">LogLevel</span><span class="p">.</span><span class="n">verbose</span><span class="p">,</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nl">logMaxDays:</span><span class="w"> </span><span class="m">7</span><span class="p">,</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">));</span>
+</code></pre></div>
+<h5 id="production-profile">Production profile<a class="headerlink" href="#production-profile" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nl">logger:</span><span class="w"> </span><span class="n">LoggerConfig</span><span class="p">(</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nl">debug:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nl">logLevel:</span><span class="w"> </span><span class="n">LogLevel</span><span class="p">.</span><span class="n">info</span><span class="p">,</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="nl">logMaxDays:</span><span class="w"> </span><span class="m">3</span><span class="p">,</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">));</span>
+</code></pre></div>
+<h5 id="disable-all-logging">Disable all logging<a class="headerlink" href="#disable-all-logging" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">setConfig</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nl">logger:</span><span class="w"> </span><span class="n">LoggerConfig</span><span class="p">(</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="nl">logLevel:</span><span class="w"> </span><span class="n">LogLevel</span><span class="p">.</span><span class="n">off</span><span class="p">,</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">));</span>
+</code></pre></div>
+<h5 id="development-profile-maximum-visibility">Development profile (maximum visibility)<a class="headerlink" href="#development-profile-maximum-visibility" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nl">logger:</span><span class="w"> </span><span class="n">LoggerConfig</span><span class="p">(</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="nl">debug:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="nl">logLevel:</span><span class="w"> </span><span class="n">LogLevel</span><span class="p">.</span><span class="n">verbose</span><span class="p">,</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="nl">logMaxDays:</span><span class="w"> </span><span class="m">7</span><span class="p">,</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">));</span>
+</code></pre></div>
+<h5 id="production-profile-quiet-conservative">Production profile (quiet &amp; conservative)<a class="headerlink" href="#production-profile-quiet-conservative" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nl">logger:</span><span class="w"> </span><span class="n">LoggerConfig</span><span class="p">(</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="nl">debug:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="nl">logLevel:</span><span class="w"> </span><span class="n">LogLevel</span><span class="p">.</span><span class="n">info</span><span class="p">,</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="nl">logMaxDays:</span><span class="w"> </span><span class="m">3</span><span class="p">,</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="p">));</span>
+</code></pre></div>
+<h5 id="new-compound-config">New compound Config<a class="headerlink" href="#new-compound-config" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">Config</span><span class="p">({</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nl">logger:</span><span class="w"> </span><span class="n">LoggerConfig</span><span class="p">(</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="nl">debug:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="nl">logLevel:</span><span class="w"> </span><span class="n">LogLevel</span><span class="p">.</span><span class="n">verbose</span><span class="p">,</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="nl">logMaxDays:</span><span class="w"> </span><span class="m">3</span><span class="p">,</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="p">});</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">setConfig</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nl">logger:</span><span class="w"> </span><span class="n">LoggerConfig</span><span class="p">(</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="nl">logLevel:</span><span class="w"> </span><span class="n">LogLevel</span><span class="p">.</span><span class="n">off</span><span class="p">,</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">));</span>
+</code></pre></div>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="debug">debug<a class="headerlink" href="#debug" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">debug</span>
+</code></pre></div>
 <p>Enables audible soundFX and debug notifications during development.</p>
 <p>When <code>true</code>, the SDK plays a distinct sound for each key lifecycle event so
 you can follow SDK activity without watching the console. It may also display
@@ -12274,6 +12364,7 @@ Background Modes</em>.</p>
 <p>Never enable <code>debug</code> in a production build.</p>
 </div>
 <h3 id="loglevel">logLevel<a class="headerlink" href="#loglevel" title="Permanent link">&para;</a></h3>
+<p><a href="../LogLevel/"><code>LogLevel</code></a><code>? logLevel</code></p>
 <p>Controls the verbosity of the SDK's internal log.</p>
 <p>Defaults to <a href="../LogLevel/#off">LogLevel.Off</a>. The log is stored in an internal SQLite
 database and retained for <code>logMaxDays</code> days (default: <code>3</code>).</p>
@@ -12319,17 +12410,17 @@ database and retained for <code>logMaxDays</code> days (default: <code>3</code>)
 </tbody>
 </table>
 <p>Example log output:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>09-19 11:12:18.716 ╔═════════════════════════════════════════════
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>09-19 11:12:18.716 ║ BackgroundGeolocation Service started
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>09-19 11:12:18.716 ╠═════════════════════════════════════════════
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>09-19 11:12:18.723   ✅  Started in foreground
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>09-19 11:12:18.737   🎾  Start activity updates: 10000
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>09-19 11:12:18.778   🔵  setPace: null → false
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>09-19 11:12:21.405   ✅  INSERT: bca5acc8-e358-4d8f-827f-b8c0d556b7bb
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>09-19 11:12:21.446   ✅  Locked 1 records
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>09-19 11:12:21.454   🔵  HTTP POST: bca5acc8-e358-4d8f-827f-b8c0d556b7bb
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>09-19 11:12:22.083   🔵  Response: 200
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>09-19 11:12:22.100   ✅  DESTROY: bca5acc8-e358-4d8f-827f-b8c0d556b7bb
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>09-19 11:12:18.716 ╔═════════════════════════════════════════════
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>09-19 11:12:18.716 ║ BackgroundGeolocation Service started
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>09-19 11:12:18.716 ╠═════════════════════════════════════════════
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>09-19 11:12:18.723   ✅  Started in foreground
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>09-19 11:12:18.737   🎾  Start activity updates: 10000
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>09-19 11:12:18.778   🔵  setPace: null → false
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>09-19 11:12:21.405   ✅  INSERT: bca5acc8-e358-4d8f-827f-b8c0d556b7bb
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>09-19 11:12:21.446   ✅  Locked 1 records
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>09-19 11:12:21.454   🔵  HTTP POST: bca5acc8-e358-4d8f-827f-b8c0d556b7bb
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>09-19 11:12:22.083   🔵  Response: 200
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>09-19 11:12:22.100   ✅  DESTROY: bca5acc8-e358-4d8f-827f-b8c0d556b7bb
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -12342,13 +12433,27 @@ production. At <code>Verbose</code>, logs can grow to several megabytes over
 - <a href="../Logger/#emaillog">Logger.emailLog</a>
 - <a href="../Logger/#destroylog">Logger.destroyLog</a></p>
 </div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="nl">logger:</span><span class="w"> </span><span class="n">LoggerConfig</span><span class="p">(</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="nl">logLevel:</span><span class="w"> </span><span class="n">LogLevel</span><span class="p">.</span><span class="n">verbose</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="p">),</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="p">));</span>
+</code></pre></div>
 <h3 id="logmaxdays">logMaxDays<a class="headerlink" href="#logmaxdays" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">logMaxDays</span>
+</code></pre></div>
 <p>Number of days to retain log entries in the internal SQLite database.</p>
 <p>Defaults to <code>3</code> days. Entries older than this limit are purged automatically
 on a rolling basis.</p>
 <p><strong>See also</strong>
 - <code>logLevel</code>
 - <a href="../Logger/#emaillog">Logger.emailLog</a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span><span class="nl">logger:</span><span class="w"> </span><span class="n">LoggerConfig</span><span class="p">(</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="nl">logMaxDays:</span><span class="w"> </span><span class="m">3</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">  </span><span class="p">)</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="p">));</span>
+</code></pre></div>
 
 
 

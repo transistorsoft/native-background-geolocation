@@ -12062,21 +12062,36 @@
 sensor is absent — particularly on low-end Android devices — motion
 recognition performance degrades and the SDK may rely more heavily on
 location-based heuristics.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">sensors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">sensors</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[Sensors] </span><span class="si">${</span><span class="n">sensors</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+</code></pre></div>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="accelerometer">accelerometer<a class="headerlink" href="#accelerometer" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">accelerometer</span>
+</code></pre></div>
 <p><code>true</code> when the device has an accelerometer.</p>
 <h3 id="gyroscope">gyroscope<a class="headerlink" href="#gyroscope" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">gyroscope</span>
+</code></pre></div>
 <p><code>true</code> when the device has a gyroscope.</p>
 <h3 id="magnetometer">magnetometer<a class="headerlink" href="#magnetometer" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">magentometer</span>
+</code></pre></div>
 <p><code>true</code> when the device has a magnetometer (compass).</p>
 <h3 id="motion_hardware">motion_hardware<a class="headerlink" href="#motion_hardware" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">motionHardware</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--ios">iOS only</span> <code>true</code> when the device has a dedicated M-series motion co-processor
 (iPhone 5S and later). The M-series co-processor offloads motion activity recognition from the
 main CPU, enabling low-power step counting and activity detection.</p>
 <h3 id="platform">platform<a class="headerlink" href="#platform" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">platform</span>
+</code></pre></div>
 <p>OS platform name: <code>"ios"</code> or <code>"android"</code>.</p>
 <h3 id="significant_motion">significant_motion<a class="headerlink" href="#significant_motion" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">significantMotion</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--android">Android only</span> <code>true</code> when the device supports the Significant Motion hardware trigger.</p>
 <p>When present, this sensor allows the SDK to wake from a deep idle state
 only when the device actually moves, saving significant battery.</p>

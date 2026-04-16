@@ -11950,9 +11950,15 @@
 <p>The SDK fires this event whenever the device transitions between an online
 and offline state. When connectivity is restored, the SDK automatically
 resumes uploading any locations queued in the SQLite database.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onConnectivityChange</span><span class="p">((</span><span class="n">ConnectivityChangeEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onConnectivityChange] connected: </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="n">connected</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">});</span>
+</code></pre></div>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="connected">connected<a class="headerlink" href="#connected" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">connected</span>
+</code></pre></div>
 <p><code>true</code> when the device has network connectivity; <code>false</code> when it is offline.</p>
 
 

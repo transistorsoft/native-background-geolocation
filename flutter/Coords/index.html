@@ -12170,8 +12170,12 @@
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="accuracy">accuracy<a class="headerlink" href="#accuracy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">accuracy</span>
+</code></pre></div>
 <p>Horizontal accuracy radius in meters.</p>
 <h3 id="altitude">altitude<a class="headerlink" href="#altitude" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">altitude</span>
+</code></pre></div>
 <p>Altitude above a reference plane in meters.</p>
 <h5 id="ios">iOS<a class="headerlink" href="#ios" title="Permanent link">&para;</a></h5>
 <p>Altitude above mean sea level.</p>
@@ -12179,6 +12183,8 @@
 <p>Altitude above the WGS84 reference ellipsoid. See also
 <code>ellipsoidal_altitude</code>.</p>
 <h3 id="altitude_accuracy">altitude_accuracy<a class="headerlink" href="#altitude_accuracy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">altitudeAccuracy</span>
+</code></pre></div>
 <p>Vertical accuracy in meters. Returns <code>-1</code> if unavailable.</p>
 <h5 id="ios_1">iOS<a class="headerlink" href="#ios_1" title="Permanent link">&para;</a></h5>
 <p>When positive, the <code>altitude</code> value is within ±<code>altitude_accuracy</code> meters.
@@ -12190,33 +12196,49 @@ negative.</p>
 half-width of the range above and below <code>altitude</code> within which the true
 altitude has a 68% probability of falling.</p>
 <h3 id="ellipsoidal_altitude">ellipsoidal_altitude<a class="headerlink" href="#ellipsoidal_altitude" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">ellipsoidalAltitude</span>
+</code></pre></div>
 <p>Altitude above the WGS84 reference ellipsoid in meters.</p>
 <h3 id="floor">floor<a class="headerlink" href="#floor" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">floor</span>
+</code></pre></div>
 <p><span class="platform-badge platform-badge--ios">iOS only</span> Floor within a building, when indoor-positioning hardware (e.g. Bluetooth
 beacons) is available.</p>
 <h3 id="heading">heading<a class="headerlink" href="#heading" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">heading</span>
+</code></pre></div>
 <p>Direction of travel in degrees (0–360, clockwise from true north).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Only present when the location came from GPS. Returns <code>-1</code> otherwise.</p>
 </div>
 <h3 id="heading_accuracy">heading_accuracy<a class="headerlink" href="#heading_accuracy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">headingAccuracy</span>
+</code></pre></div>
 <p>Heading accuracy in degrees.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Only present when the location came from GPS. Returns <code>-1</code> otherwise.</p>
 </div>
 <h3 id="latitude">latitude<a class="headerlink" href="#latitude" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">latitude</span>
+</code></pre></div>
 <p>Latitude in decimal degrees.</p>
 <h3 id="longitude">longitude<a class="headerlink" href="#longitude" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">longitude</span>
+</code></pre></div>
 <p>Longitude in decimal degrees.</p>
 <h3 id="speed">speed<a class="headerlink" href="#speed" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">speed</span>
+</code></pre></div>
 <p>Ground speed in meters per second.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Only present when the location came from GPS. Returns <code>-1</code> otherwise.</p>
 </div>
 <h3 id="speed_accuracy">speed_accuracy<a class="headerlink" href="#speed_accuracy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">speedAccuracy</span>
+</code></pre></div>
 <p>Speed accuracy in meters per second.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

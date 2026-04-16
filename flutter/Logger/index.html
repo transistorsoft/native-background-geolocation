@@ -7181,15 +7181,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+  <a href="#members" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Methods
+        Members
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Methods">
+    <nav class="md-nav" aria-label="Members">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7285,45 +7285,6 @@
     <span class="md-ellipsis">
       
         warn
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Properties
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Properties">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#order_asc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ORDER_ASC
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#order_desc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ORDER_DESC
       
     </span>
   </a>
@@ -12028,15 +11989,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+  <a href="#members" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Methods
+        Members
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Methods">
+    <nav class="md-nav" aria-label="Members">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -12143,45 +12104,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Properties
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Properties">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#order_asc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ORDER_ASC
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#order_desc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ORDER_DESC
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -12244,21 +12166,25 @@ can be fetched as a string, emailed from the device, or uploaded to a URL.</p>
 </tr>
 </tbody>
 </table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="n">getLog</span><span class="p">();</span>
+</code></pre></div>
 <hr />
 <h5 id="retrieving-logs">Retrieving logs<a class="headerlink" href="#retrieving-logs" title="Permanent link">&para;</a></h5>
 <p>All three retrieval methods accept an optional <a href="../SQLQuery/">SQLQuery</a> to constrain
 results by date range, sort order, and record count. Without a query, all
 records up to <a href="../LoggerConfig/#logmaxdays">LoggerConfig.logMaxDays</a> days old are returned.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="n">getLog</span><span class="p">();</span>
+</code></pre></div>
 <p>Sample log output:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>09-19 11:12:18.716 ╔═════════════════════════════════════════════
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>09-19 11:12:18.716 ║ BackgroundGeolocation Service started
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>09-19 11:12:18.716 ╠═════════════════════════════════════════════
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>09-19 11:12:18.723   ✅  Started in foreground
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>09-19 11:12:18.737   🎾  Start activity updates: 10000
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>09-19 11:12:21.405   ✅  INSERT: bca5acc8-e358-4d8f-827f-b8c0d556b7bb
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>09-19 11:12:21.454   🔵  HTTP POST: bca5acc8-e358-4d8f-827f-b8c0d556b7bb
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>09-19 11:12:22.083   🔵  Response: 200
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>09-19 11:12:22.100   ✅  DESTROY: bca5acc8-e358-4d8f-827f-b8c0d556b7bb
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>09-19 11:12:18.716 ╔═════════════════════════════════════════════
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>09-19 11:12:18.716 ║ BackgroundGeolocation Service started
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>09-19 11:12:18.716 ╠═════════════════════════════════════════════
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>09-19 11:12:18.723   ✅  Started in foreground
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>09-19 11:12:18.737   🎾  Start activity updates: 10000
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>09-19 11:12:21.405   ✅  INSERT: bca5acc8-e358-4d8f-827f-b8c0d556b7bb
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>09-19 11:12:21.454   🔵  HTTP POST: bca5acc8-e358-4d8f-827f-b8c0d556b7bb
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>09-19 11:12:22.083   🔵  Response: 200
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>09-19 11:12:22.100   ✅  DESTROY: bca5acc8-e358-4d8f-827f-b8c0d556b7bb
 </code></pre></div>
 <hr />
 <h5 id="writing-log-entries">Writing log entries<a class="headerlink" href="#writing-log-entries" title="Permanent link">&para;</a></h5>
@@ -12301,15 +12227,46 @@ your app's actions with location events.</p>
 </tr>
 </tbody>
 </table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onLocation</span><span class="p">((</span><span class="n">Location</span><span class="w"> </span><span class="n">location</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Location received: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">uuid</span><span class="p">);</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">});</span>
+</code></pre></div>
 <hr />
 <h5 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="n">getLog</span><span class="p">();</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[log] </span><span class="si">${</span><span class="n">log</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="n">uploadLog</span><span class="p">(</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="s2">&quot;https://my.server.com/users/123/logs&quot;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="n">emailLog</span><span class="p">(</span><span class="s2">&quot;support@example.com&quot;</span><span class="p">);</span>
+</code></pre></div>
+<h5 id="fetch-and-display-the-full-log">Fetch and display the full log<a class="headerlink" href="#fetch-and-display-the-full-log" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="n">getLog</span><span class="p">();</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[log] </span><span class="si">${</span><span class="n">log</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h5 id="upload-log-to-your-server">Upload log to your server<a class="headerlink" href="#upload-log-to-your-server" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="n">uploadLog</span><span class="p">(</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="s2">&quot;https://my.server.com/users/123/logs&quot;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">);</span>
+</code></pre></div>
+<h5 id="email-log-with-a-date-range">Email log with a date range<a class="headerlink" href="#email-log-with-a-date-range" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">await</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="n">emailLog</span><span class="p">(</span><span class="s2">&quot;support@example.com&quot;</span><span class="p">);</span>
+</code></pre></div>
 <hr />
-<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="debug">debug<a class="headerlink" href="#debug" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">static</span><span class="w"> </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">debug</span><span class="p">(</span><span class="kt">String</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+</code></pre></div>
 <p>Insert a debug-level message into the SDK's log database.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>D TSLocationManager: [c.t.l.logger.TSLog log] This is a debug message
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;This is a debug message&quot;</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>D TSLocationManager: [c.t.l.logger.TSLog log] This is a debug message
 </code></pre></div>
 <h3 id="destroylog">destroyLog<a class="headerlink" href="#destroylog" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">static</span><span class="w"> </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">destroyLog</span><span class="p">()</span>
+</code></pre></div>
 <p>Delete all records from the SDK's log database.</p>
 <p><strong>See also</strong>
 - <a href="../LoggerConfig/#loglevel">LoggerConfig.logLevel</a>
@@ -12317,7 +12274,10 @@ your app's actions with location events.</p>
 - <code>emailLog</code>
 - <code>uploadLog</code>
 - 📘<a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Debugging">Debugging Guide</a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">Logger</span><span class="p">.</span><span class="n">destroyLog</span><span class="p">();</span>
+</code></pre></div>
 <h3 id="emaillog">emailLog<a class="headerlink" href="#emaillog" title="Permanent link">&para;</a></h3>
+<p><code>static Future&lt;bool&gt; emailLog(String email, [</code><a href="../SQLQuery/"><code>SQLQuery</code></a><code>? query])</code></p>
 <p>Send the SDK's log database to an email address via the device mail client.</p>
 <p>Provide an optional <a href="../SQLQuery/">SQLQuery</a> to constrain which records are included.</p>
 <p><strong>See also</strong>
@@ -12325,12 +12285,33 @@ your app's actions with location events.</p>
 - <code>getLog</code>
 - <code>uploadLog</code>
 - 📘<a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Debugging">Debugging Guide</a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">Logger</span><span class="p">.</span><span class="n">emailLog</span><span class="p">(</span><span class="s1">&#39;foo@bar.com&#39;</span><span class="p">).</span><span class="n">then</span><span class="p">((</span><span class="kt">bool</span><span class="w"> </span><span class="n">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[emailLog] success&#39;</span><span class="p">);</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">}).</span><span class="n">catchError</span><span class="p">((</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[emailLog] FAILURE: </span><span class="si">${</span><span class="n">error</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">});</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="c1">// Or constrain results by providing a [SQLQuery]:</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="n">Logger</span><span class="p">.</span><span class="n">emailLog</span><span class="p">(</span><span class="s1">&#39;foo@bar.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">SQLQuery</span><span class="p">(</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">  </span><span class="nl">start:</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;2019-10-20 09:00&#39;</span><span class="p">),</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">  </span><span class="nl">end:</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;2019-10-20 11:59&#39;</span><span class="p">)</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="p">)).</span><span class="n">then</span><span class="p">((</span><span class="kt">bool</span><span class="w"> </span><span class="n">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[emailLog] success&#39;</span><span class="p">);</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="p">}).</span><span class="n">catchError</span><span class="p">((</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[emailLog] FAILURE: </span><span class="si">${</span><span class="n">error</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="p">});</span>
+</code></pre></div>
 <h3 id="error">error<a class="headerlink" href="#error" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kd">static</span><span class="w"> </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">error</span><span class="p">(</span><span class="kt">String</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+</code></pre></div>
 <p>Insert an error-level message into the SDK's log database.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>E TSLocationManager: [c.t.l.logger.TSLog log]
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>E TSLocationManager: ‼ Something BAD
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">Logger</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Something BAD&quot;</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>E TSLocationManager: [c.t.l.logger.TSLog log]
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>E TSLocationManager: ‼ Something BAD
 </code></pre></div>
 <h3 id="getlog">getLog<a class="headerlink" href="#getlog" title="Permanent link">&para;</a></h3>
+<p><code>static Future&lt;String&gt; getLog([</code><a href="../SQLQuery/"><code>SQLQuery</code></a><code>? query])</code></p>
 <p>Fetch the SDK's log database as a string.</p>
 <p>Provide an optional <a href="../SQLQuery/">SQLQuery</a> to constrain results by date range,
 sort order, and record count. Depending on <a href="../LoggerConfig/#loglevel">LoggerConfig.logLevel</a>,
@@ -12341,17 +12322,47 @@ the result may be several megabytes.</p>
 - <code>emailLog</code>
 - <code>uploadLog</code>
 - 📘<a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Debugging">Debugging Guide</a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1">// Fetch entire contents of log.</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="kt">String</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="n">getLog</span><span class="p">();</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="c1">// Warning:  this string could be several megabytes.</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[log] success: </span><span class="si">${</span><span class="n">log</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="c1">// Or constrain results between optionl start/end dates using a SQLQuery</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="kt">String</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="n">getLog</span><span class="p">(</span><span class="n">SQLQuery</span><span class="p">(</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">  </span><span class="nl">start:</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;2019-10-21 13:00&#39;</span><span class="p">),</span><span class="w">  </span><span class="c1">// &lt;-- optional HH:mm:ss</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">  </span><span class="nl">end:</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;2019-10-22&#39;</span><span class="p">)</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="p">));</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="c1">// Or just a start date</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="kt">String</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="n">getLog</span><span class="p">(</span><span class="n">SQLQuery</span><span class="p">(</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="w">  </span><span class="nl">start:</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;2019-10-21 13:00&#39;</span><span class="p">)</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="p">));</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>
+<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="c1">// Or just an end date</span>
+<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a><span class="kt">String</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="n">getLog</span><span class="p">(</span><span class="n">SQLQuery</span><span class="p">(</span>
+<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a><span class="w">  </span><span class="nl">end:</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;2019-10-21&#39;</span><span class="p">)</span>
+<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a><span class="p">));</span>
+</code></pre></div>
 <h3 id="info">info<a class="headerlink" href="#info" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kd">static</span><span class="w"> </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">info</span><span class="p">(</span><span class="kt">String</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+</code></pre></div>
 <p>Insert an info-level message into the SDK's log database.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>I TSLocationManager: [c.t.l.logger.TSLog log]
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>I TSLocationManager:   ℹ️  Something informative
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">Logger</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Something informative&quot;</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>I TSLocationManager: [c.t.l.logger.TSLog log]
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>I TSLocationManager:   ℹ️  Something informative
 </code></pre></div>
 <h3 id="notice">notice<a class="headerlink" href="#notice" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kd">static</span><span class="w"> </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">notice</span><span class="p">(</span><span class="kt">String</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+</code></pre></div>
 <p>Insert a notice-level message into the SDK's log database.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>I TSLocationManager: [c.t.l.logger.TSLog log]
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>I TSLocationManager:   🔵  A Notice
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">Logger</span><span class="p">.</span><span class="n">notice</span><span class="p">(</span><span class="s2">&quot;A Notice&quot;</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>I TSLocationManager: [c.t.l.logger.TSLog log]
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>I TSLocationManager:   🔵  A Notice
 </code></pre></div>
 <h3 id="uploadlog">uploadLog<a class="headerlink" href="#uploadlog" title="Permanent link">&para;</a></h3>
+<p><code>static Future&lt;bool&gt; uploadLog(String url, [</code><a href="../SQLQuery/"><code>SQLQuery</code></a><code>? query])</code></p>
 <p>Upload the SDK's log database to a URL as a gzipped multipart file.</p>
 <p>Provide an optional <a href="../SQLQuery/">SQLQuery</a> to constrain which records are included.
 The upload includes your configured <a href="../HttpConfig/#headers">HttpConfig.headers</a> for
@@ -12396,16 +12407,31 @@ fields:</p>
 - <code>emailLog</code>
 - <code>destroyLog</code>
 - 📘<a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Debugging">Debugging Guide</a></p>
-<h3 id="warn">warn<a class="headerlink" href="#warn" title="Permanent link">&para;</a></h3>
-<p>Insert a warning-level message into the SDK's log database.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>E TSLocationManager: [c.t.l.logger.TSLog log]
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>E TSLocationManager: ⚠️  Something WEIRD
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">Logger</span><span class="p">.</span><span class="n">uploadLog</span><span class="p">(</span><span class="s1">&#39;https://my.server.com/users/123/logs&#39;</span><span class="p">).</span><span class="n">then</span><span class="p">((</span><span class="kt">bool</span><span class="w"> </span><span class="n">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[uploadLog] success&#39;</span><span class="p">);</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="p">}).</span><span class="n">catchError</span><span class="p">((</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[uploadLog] FAILURE: </span><span class="si">${</span><span class="n">error</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="p">});</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="c1">// Or constrain results by providing a [SQLQuery]:</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="n">Logger</span><span class="p">.</span><span class="n">uploadLog</span><span class="p">(</span><span class="s1">&#39;https://my.server.com/users/123/logs&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">SQLQuery</span><span class="p">(</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a><span class="w">  </span><span class="nl">start:</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;2019-10-20 09:00&#39;</span><span class="p">),</span>
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="w">  </span><span class="nl">end:</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;2019-10-20 11:59&#39;</span><span class="p">)</span>
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a><span class="p">)).</span><span class="n">then</span><span class="p">((</span><span class="kt">bool</span><span class="w"> </span><span class="n">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[uploadLog] success&#39;</span><span class="p">);</span>
+<a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a><span class="p">}).</span><span class="n">catchError</span><span class="p">((</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-14" name="__codelineno-26-14" href="#__codelineno-26-14"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[uploadLog] FAILURE: </span><span class="si">${</span><span class="n">error</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-26-15" name="__codelineno-26-15" href="#__codelineno-26-15"></a><span class="p">});</span>
 </code></pre></div>
-<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
-<h3 id="order_asc">ORDER_ASC<a class="headerlink" href="#order_asc" title="Permanent link">&para;</a></h3>
-<p>Sort-order constant for ascending log queries (oldest first).</p>
-<h3 id="order_desc">ORDER_DESC<a class="headerlink" href="#order_desc" title="Permanent link">&para;</a></h3>
-<p>Sort-order constant for descending log queries (newest first).</p>
+<h3 id="warn">warn<a class="headerlink" href="#warn" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kd">static</span><span class="w"> </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="w"> </span><span class="n">warn</span><span class="p">(</span><span class="kt">String</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+</code></pre></div>
+<p>Insert a warning-level message into the SDK's log database.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">Logger</span><span class="p">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Something WEIRD&quot;</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>E TSLocationManager: [c.t.l.logger.TSLog log]
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>E TSLocationManager: ⚠️  Something WEIRD
+</code></pre></div>
 
 
 

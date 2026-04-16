@@ -6765,28 +6765,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#odometer_error" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        odometer_error
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#provider" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        provider
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#recorded_at" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12188,28 +12166,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#odometer_error" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        odometer_error
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#provider" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        provider
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#recorded_at" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12340,39 +12296,124 @@ delivered by the SDK.</p>
 </table>
 <hr />
 <h5 id="javascript-schema">JavaScript schema<a class="headerlink" href="#javascript-schema" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Location object properties:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">// location.timestamp         // String (ISO-8601 UTC)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">// location.uuid              // String</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// location.isMoving          // bool</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// location.event             // String (motionchange|geofence|heartbeat)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">// location.age               // double (milliseconds)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">// location.odometer          // double (meters)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">// location.coords.latitude   // double</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1">// location.coords.longitude  // double</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">// location.coords.accuracy   // double</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">// location.coords.speed      // double</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1">// location.coords.heading    // double</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1">// location.coords.altitude   // double</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1">// location.activity.type     // String (still|on_foot|walking|running|in_vehicle|on_bicycle)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1">// location.activity.confidence // int (0-100)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1">// location.battery.level     // double</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1">// location.battery.isCharging // bool</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1">// location.extras            // Map? (optional custom metadata)</span>
+</code></pre></div>
 <hr />
 <h5 id="http-post-schema">HTTP POST schema<a class="headerlink" href="#http-post-schema" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// HTTP POST schema — the JSON body posted to your server:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">// {</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">//   &quot;location&quot;: {</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">//     &quot;coords&quot;: {</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">//       &quot;latitude&quot;:   double,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1">//       &quot;longitude&quot;:  double,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">//       &quot;accuracy&quot;:   double,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1">//       &quot;speed&quot;:      double,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1">//       &quot;heading&quot;:    double,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1">//       &quot;altitude&quot;:   double,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1">//       &quot;ellipsoidal_altitude&quot;: double</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1">//     },</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1">//     &quot;extras&quot;: { ... },</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c1">//     &quot;activity&quot;: { &quot;type&quot;: String, &quot;confidence&quot;: int },</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1">//     &quot;geofence&quot;: { &quot;identifier&quot;: String, &quot;action&quot;: String },</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1">//     &quot;battery&quot;:  { &quot;level&quot;: double, &quot;is_charging&quot;: bool },</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="c1">//     &quot;timestamp&quot;: String,   // ISO-8601 UTC</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="c1">//     &quot;uuid&quot;:      String,</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="c1">//     &quot;event&quot;:     String,   // motionchange|geofence|heartbeat</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="c1">//     &quot;is_moving&quot;: bool,</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="c1">//     &quot;odometer&quot;:  double    // meters</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="c1">//   }</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="c1">// }</span>
+</code></pre></div>
 <hr />
 <h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
 <h3 id="activity">activity<a class="headerlink" href="#activity" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Activity</span><span class="w"> </span><span class="n">activity</span>
+</code></pre></div>
 <p>Motion activity detected by the device at the time this location was
 recorded (e.g. <code>still</code>, <code>on_foot</code>, <code>in_vehicle</code>).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onLocation</span><span class="p">((</span><span class="n">Location</span><span class="w"> </span><span class="n">location</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="n">activityType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">activity</span><span class="p">.</span><span class="n">type</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">confidence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">activity</span><span class="p">.</span><span class="n">confidence</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;[onLocation] Motion activity, type: </span><span class="si">$</span><span class="n">activityType</span><span class="s2">, confidence: </span><span class="si">$</span><span class="n">confidence</span><span class="s2">&quot;</span><span class="p">);</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">});</span>
+</code></pre></div>
 <h3 id="age">age<a class="headerlink" href="#age" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">age</span>
+</code></pre></div>
 <p>Age of the location in milliseconds, measured from the device system
 clock at the time the location was received.</p>
 <p><code>location.timestamp</code> + <code>location.age</code> = device system time when the
 SDK received the location from the native API.</p>
 <h3 id="battery">battery<a class="headerlink" href="#battery" title="Permanent link">&para;</a></h3>
+<p><a href="../Battery/"><code>Battery</code></a><code>battery</code></p>
 <p>Device battery state at the time this location was recorded.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onLocation</span><span class="p">((</span><span class="n">Location</span><span class="w"> </span><span class="n">location</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">isCharging</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">battery</span><span class="p">.</span><span class="n">isCharging</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">level</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">battery</span><span class="p">.</span><span class="n">level</span><span class="p">;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;[onLocation] Battery state, isCharging: </span><span class="si">$</span><span class="n">isCharging</span><span class="s2">, level: </span><span class="si">$</span><span class="n">level</span><span class="s2">&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">});</span>
+</code></pre></div>
 <h3 id="coords">coords<a class="headerlink" href="#coords" title="Permanent link">&para;</a></h3>
+<p><a href="../Coords/"><code>Coords</code></a><code>coords</code></p>
 <p>Geographic coordinates: latitude, longitude, accuracy, speed, heading,
 and altitude.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onLocation</span><span class="p">((</span><span class="n">Location</span><span class="w"> </span><span class="n">location</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">accuracy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">coords</span><span class="p">.</span><span class="n">accuracy</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">lat</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">coords</span><span class="p">.</span><span class="n">latitude</span><span class="p">;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">lng</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">coords</span><span class="p">.</span><span class="n">longitude</span><span class="p">;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">speed</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">coords</span><span class="p">.</span><span class="n">speed</span><span class="p">;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">heading</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">coords</span><span class="p">.</span><span class="n">heading</span><span class="p">;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">altitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">coords</span><span class="p">.</span><span class="n">altitude</span><span class="p">;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;[onLocation] </span><span class="si">$</span><span class="n">location</span><span class="s2">&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="p">});</span>
+</code></pre></div>
 <h3 id="event">event<a class="headerlink" href="#event" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">event</span>
+</code></pre></div>
 <p>SDK event that triggered this location record.</p>
 <p>One of: <code>"motionchange"</code>, <code>"providerchange"</code>, <code>"geofence"</code>, <code>"heartbeat"</code>.</p>
 <h3 id="extras">extras<a class="headerlink" href="#extras" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">Map</span><span class="o">?</span><span class="w"> </span><span class="n">extras</span>
+</code></pre></div>
 <p>Optional arbitrary metadata attached to this location.</p>
 <p>Merged with configured <a href="../PersistenceConfig/#extras">PersistenceConfig.extras</a> before persisting
 and included in the payload posted to <a href="../HttpConfig/#url">HttpConfig.url</a>.</p>
 <h3 id="geofence">geofence<a class="headerlink" href="#geofence" title="Permanent link">&para;</a></h3>
+<p><a href="../GeofenceEvent/"><code>GeofenceEvent</code></a><code>? geofence</code></p>
 <p>The geofence event that triggered this location, if applicable.</p>
 <p>Present only when <code>event</code> is <code>"geofence"</code>.</p>
 <h3 id="is_moving">is_moving<a class="headerlink" href="#is_moving" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">isMoving</span>
+</code></pre></div>
 <p><code>true</code> when the SDK was in the <strong>moving</strong> state when this location was
 recorded.</p>
 <h3 id="mock">mock<a class="headerlink" href="#mock" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">mock</span>
+</code></pre></div>
 <p><code>true</code> when the location was generated by a mock location app or simulator.</p>
 <h3 id="odometer">odometer<a class="headerlink" href="#odometer" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">odometer</span>
+</code></pre></div>
 <p>Accumulated distance traveled in meters since the last odometer reset.</p>
 <p>The SDK integrates the distance between each pair of accepted locations
 to maintain a running total. This value survives app restarts unless
@@ -12401,30 +12442,24 @@ explicitly reset.</p>
 - <a href="../LocationFilter/#odometeraccuracythreshold">LocationFilter.odometerAccuracyThreshold</a>
 - <a href="../BackgroundGeolocation/#resetodometer">BackgroundGeolocation.resetOdometer</a>
 - <a href="../BackgroundGeolocation/#getodometer">BackgroundGeolocation.getOdometer</a></p>
-<h3 id="odometer_error">odometer_error<a class="headerlink" href="#odometer_error" title="Permanent link">&para;</a></h3>
-<p>Accumulated odometer drift in meters.</p>
-<p>Represents the uncertainty that has built up in the <code>odometer</code>
-value due to GPS noise, tunnel blackouts, and other inaccurate samples.</p>
-<h5 id="how-to-use-it">How to use it<a class="headerlink" href="#how-to-use-it" title="Permanent link">&para;</a></h5>
-<p>Treat this as a confidence interval for <code>odometer</code>. For example,
-if <code>odometer = 12000</code> and <code>odometer_error = 40</code>, the true traveled
-distance is likely within ±40 meters of the reported value.</p>
-<p>Resetting or setting a new <code>odometer</code> value automatically resets
-<code>odometer_error</code> to <code>0</code>. Values typically remain low (&lt; 10 m) under
-good GPS conditions but grow during long tunnels, dense urban canyons, or
-extended indoor tracking.</p>
-<p><strong>See also</strong>
-- <code>odometer</code></p>
-<h3 id="provider">provider<a class="headerlink" href="#provider" title="Permanent link">&para;</a></h3>
-<p>Location-services provider state at the time this location was recorded.</p>
-<p>Present only when <code>event</code> is <code>"providerchange"</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onLocation</span><span class="p">((</span><span class="n">Location</span><span class="w"> </span><span class="n">location</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;Distance traveled: </span><span class="si">${</span><span class="n">location</span><span class="p">.</span><span class="n">odometer</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">});</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="c1">// Reset at the start of a trip</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="kd">await</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">resetOdometer</span><span class="p">();</span>
+</code></pre></div>
 <h3 id="recorded_at">recorded_at<a class="headerlink" href="#recorded_at" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">dynamic</span><span class="w"> </span><span class="n">recordedAt</span>
+</code></pre></div>
 <p>Timestamp when the SDK received the location from the native API.</p>
 <ul>
 <li>When <a href="../PersistenceConfig/#timestampformat">PersistenceConfig.timestampFormat</a> is <code>"iso"</code> (default): ISO-8601 UTC <code>string</code>.</li>
 <li>When <a href="../PersistenceConfig/#timestampformat">PersistenceConfig.timestampFormat</a> is <code>"epoch"</code>: epoch milliseconds <code>number</code>.</li>
 </ul>
 <h3 id="sample">sample<a class="headerlink" href="#sample" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">sample</span>
+</code></pre></div>
 <p><code>true</code> for intermediate sample locations collected during accuracy
 convergence.</p>
 <p>The SDK collects multiple samples when transitioning between motion states
@@ -12433,12 +12468,16 @@ most accurate fix. These samples are delivered to
 <a href="../BackgroundGeolocation/#onlocation">BackgroundGeolocation.onLocation</a> but are <strong>not</strong> persisted to
 SQLite. Filter them out before manually posting locations to your server.</p>
 <h3 id="timestamp">timestamp<a class="headerlink" href="#timestamp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">dynamic</span><span class="w"> </span><span class="n">timestamp</span>
+</code></pre></div>
 <p>Timestamp provided by the native location API.</p>
 <ul>
 <li>When <a href="../PersistenceConfig/#timestampformat">PersistenceConfig.timestampFormat</a> is <code>"iso"</code> (default): ISO-8601 UTC <code>string</code> (eg <code>"2025-04-10T12:00:01.123Z"</code>).</li>
 <li>When <a href="../PersistenceConfig/#timestampformat">PersistenceConfig.timestampFormat</a> is <code>"epoch"</code>: epoch milliseconds <code>number</code>.</li>
 </ul>
 <h3 id="uuid">uuid<a class="headerlink" href="#uuid" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">String</span><span class="w"> </span><span class="n">uuid</span>
+</code></pre></div>
 <p>Universally unique identifier for this location record.</p>
 <p>Use this to correlate locations in your server database with those in the
 SDK logs, or to detect whether a location has been delivered more than once.</p>
