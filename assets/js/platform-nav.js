@@ -8,68 +8,82 @@
 (function () {
   'use strict';
 
-  function detectPlatform(url) {
-    if (/\/swift\//.test(url))        return 'swift';
-    if (/\/kotlin\//.test(url))       return 'kotlin';
-    if (/\/flutter\//.test(url))      return 'dart';
-    if (/\/typescript\//.test(url))   return 'ts';
-    return 'ts';
+  // Maps every URL prefix to the peer-map key used in BGEO_PEERS.
+  // Multiple URL prefixes share "ts" because they use the same TypeScript API.
+  var _PEER_KEY = {
+    'react-native': 'ts',
+    'capacitor':    'ts',
+    'cordova':      'ts',
+    'typescript':   'ts',
+    'flutter':      'dart',
+    'swift':        'swift',
+    'kotlin':       'kotlin'
+  };
+
+  // All known platform root segments (used to detect index pages).
+  var _ROOTS = Object.keys(_PEER_KEY);
+
+  function urlPrefix(url) {
+    var m = (new URL(url)).pathname.match(/^\/([^\/]+)/);
+    return m ? m[1] : '';
   }
 
-  // Platform-specific URL prefix (used when building redirect targets)
-  var _PREFIX = { ts: 'typescript/', dart: 'flutter/', swift: 'swift/', kotlin: 'kotlin/' };
+  function peerKey(url) {
+    return _PEER_KEY[urlPrefix(url)] || 'ts';
+  }
 
   function pageSlug(url) {
-    // http://host/swift/GeolocationConfig/     → "GeolocationConfig"
-    // http://host/typescript/BackgroundGeolocation/ → "BackgroundGeolocation"
-    // Operate on pathname only so the host/port never leaks into the slug.
     var path = (new URL(url)).pathname.replace(/\/$/, '');
     var m = path.match(/\/([^\/]+)$/);
     var s = m ? m[1] : '';
-    // Ignore platform root segments
-    return (s === 'typescript' || s === 'flutter' || s === 'swift' || s === 'kotlin') ? '' : s;
+    return _ROOTS.indexOf(s) !== -1 ? '' : s;
   }
 
-  var here  = window.location.href;
-  var plat  = detectPlatform(here);
-  var slug  = pageSlug(here);
-  var isIdx = !slug;
+  function siteBase(url) {
+    var pfx = urlPrefix(url);
+    if (!pfx) return url;
+    var i = url.indexOf('/' + pfx + '/');
+    return i !== -1 ? url.substring(0, i + 1) : url;
+  }
 
-  // Persist current page and active platform
+  var here    = window.location.href;
+  var herePfx = urlPrefix(here);
+  var herePK  = peerKey(here);
+  var slug    = pageSlug(here);
+  var isIdx   = !slug;
+
+  // Persist current page and active platform prefix
   try {
-    localStorage.setItem('bgeo-platform', plat);
-    if (!isIdx) { localStorage.setItem('bgGeo_nav_' + plat, here); }
+    localStorage.setItem('bgeo-platform', herePfx);
+    if (!isIdx) { localStorage.setItem('bgGeo_nav_' + herePfx, here); }
   } catch (_) {}
 
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.md-tabs__link').forEach(function (link) {
       link.addEventListener('click', function (e) {
-        var targetPlat = detectPlatform(link.href);
-        if (targetPlat === plat || isIdx) return;
+        var targetPfx = urlPrefix(link.href);
+        var targetPK  = peerKey(link.href);
+        if (targetPfx === herePfx || isIdx) return;
 
-        // Derive site root (strip everything from platform prefix onward)
-        var base = here
-          .replace(/\/typescript\/.*$/, '/')
-          .replace(/\/flutter\/.*$/, '/')
-          .replace(/\/swift\/.*$/, '/')
-          .replace(/\/kotlin\/.*$/, '/');
+        var base = siteBase(here);
 
         // 1. Try peer mapping
         if (typeof BGEO_PEERS !== 'undefined' && slug) {
           var peers = BGEO_PEERS[slug] || {};
-          var peerSlug = peers[targetPlat];
+          var peerSlug = peers[targetPK];
           if (peerSlug) {
             e.preventDefault();
-            window.location.href = base + _PREFIX[targetPlat] + peerSlug + '/';
+            window.location.href = base + targetPfx + '/' + peerSlug + '/';
             return;
           }
         }
 
-        // 2. Fall back to last visited page in target platform — validate path
+        // 2. Fall back to last visited page in target platform
         try {
-          var saved = localStorage.getItem('bgGeo_nav_' + targetPlat);
-          if (saved && saved.indexOf('/' + _PREFIX[targetPlat]) !== -1) {
-            e.preventDefault(); window.location.href = saved;
+          var saved = localStorage.getItem('bgGeo_nav_' + targetPfx);
+          if (saved && saved.indexOf('/' + targetPfx + '/') !== -1) {
+            e.preventDefault();
+            window.location.href = saved;
           }
         } catch (_) {}
       });
