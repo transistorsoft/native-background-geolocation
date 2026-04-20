@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.1.6 &mdash; 2026-04-20
+- test: drain main queue in flushForTesting to deflake LRS tests
+
 ## 4.1.3 &mdash; 2026-04-16
 - DemoApp2: fix tracking-mode toggle and add lily-pad geofence test
 - remove unused import in TSReachability.m
