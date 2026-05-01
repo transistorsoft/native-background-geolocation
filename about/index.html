@@ -11997,11 +11997,12 @@
 <p>The Background Geolocation SDK is built and maintained by <a href="https://www.transistorsoft.com">Transistor Software</a> — a small team of engineers obsessed with one problem: tracking a device's location reliably, accurately, and without draining the battery.</p>
 <hr />
 <h2 id="origin-story">Origin Story<a class="headerlink" href="#origin-story" title="Permanent link">&para;</a></h2>
-<p>The SDK was born in <strong>2013</strong> out of a real-world emergency management problem.</p>
-<p>A disaster response organization needed to track first-responders — firefighters, EMTs, search-and-rescue teams — deployed into the field during hurricanes and earthquakes. The requirements were brutal:</p>
+<p>The SDK was born in <strong>2013</strong> out of an emergency management problem.</p>
+<p>A disaster response organization needed to track first responders — firefighters, EMTs, search-and-rescue teams — deployed into the field during hurricanes and earthquakes. The requirements were brutal:</p>
 <ul>
 <li>The <strong>cellular network</strong> is likely <strong>degraded or destroyed</strong>. Data must be stored locally and uploaded whenever connectivity returns.</li>
-<li>The app <strong>will be terminated</strong> by the OS under memory pressure. Tracking must survive and resume automatically on reboot.</li>
+<li>The app <strong>will be terminated</strong> by the OS under memory pressure — tracking must survive without it.</li>
+<li>The device <strong>will be rebooted</strong> during multi-day deployments — tracking must resume automatically.</li>
 <li>Responders carry the same devices all day. <strong>Battery life is non-negotiable.</strong></li>
 </ul>
 <p>These constraints shaped the SDK's architecture from day one:</p>
@@ -12039,10 +12040,10 @@
 <li><strong>Activates</strong> GPS automatically when motion is detected</li>
 <li><strong>Scales</strong> GPS frequency and accuracy to the device's speed and <code>distanceFilter</code></li>
 </ul>
-<p>The result: location tracking at a fraction of the battery cost of naive continuous GPS.</p>
+<p>The result: continuous tracking that doesn't show up at the top of the user's battery-usage screen — so users don't uninstall and the App Store doesn't reject the app for power abuse.</p>
 <hr />
 <h2 id="platform-coverage">Platform Coverage<a class="headerlink" href="#platform-coverage" title="Permanent link">&para;</a></h2>
-<p>What began as a single iOS SDK has expanded to every major mobile development platform:</p>
+<p>The SDK started on iOS in 2013 and now ships for every major mobile platform:</p>
 <table>
 <thead>
 <tr>
@@ -12077,10 +12078,10 @@
 </tr>
 </tbody>
 </table>
-<p>A single native core — <strong>TSLocationManager</strong> on iOS, <strong>TSLocationManager</strong> on Android — powers all platforms. Framework SDKs are thin bridges. One codebase, one set of algorithms, everywhere.</p>
+<p>A single native core — <strong>TSLocationManager</strong>, ported to Swift on iOS and Kotlin on Android — powers every platform. Framework SDKs are thin bridges. Same design, same algorithms, everywhere.</p>
 <hr />
 <h2 id="built-for-production">Built for Production<a class="headerlink" href="#built-for-production" title="Permanent link">&para;</a></h2>
-<p>The SDK is trusted by thousands of production apps across logistics, field services, fleet management, emergency response, fitness, and more.</p>
+<p>The SDK runs in <strong>20,816 apps across 142 countries</strong> — logistics, field services, fleet management, emergency response, fitness, and beyond.</p>
 <p>Key production features:</p>
 <ul>
 <li><strong>Durable HTTP upload queue</strong> — automatic retry with exponential back-off</li>
