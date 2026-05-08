@@ -46,14 +46,12 @@
 
 /* ── Landing page — platform selector cards ─────────────────────────────── */
 .bgeo-platform-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
     margin: 2rem 0 2.5rem;
-    flex-wrap: wrap;
 }
 .bgeo-platform-card {
-    flex: 1;
-    min-width: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
