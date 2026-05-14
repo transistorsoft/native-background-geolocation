@@ -15312,7 +15312,7 @@ no longer needed:</p>
 </code></pre></div>
 <p>activitychange</p>
 <h3 id="onauthorization">onAuthorization<a class="headerlink" href="#onauthorization" title="Permanent link">&para;</a></h3>
-<p><code>public func on</code><a href="../Authorization/"><code>Authorization</code></a><code>(_ callback: @escaping (</code><a href="../AuthorizationEvent/"><code>AuthorizationEvent</code></a><code>) -&gt; Void) -&gt; EventSubscription</code></p>
+<p><code>public func onAuthorization(_ callback: @escaping (</code><a href="../AuthorizationEvent/"><code>AuthorizationEvent</code></a><code>) -&gt; Void) -&gt; EventSubscription</code></p>
 <p>Subscribe to <a href="../Config/#authorization">Config.authorization</a> events.</p>
 <p>Fires when <a href="../AuthorizationConfig/#refreshurl">AuthorizationConfig.refreshUrl</a> responds, either
 successfully or not. On success, <a href="../AuthorizationEvent/#success">AuthorizationEvent.success</a> is
@@ -15356,7 +15356,7 @@ an upload to <a href="../HttpConfig/#url">HttpConfig.url</a>.</p>
 </code></pre></div>
 <p>enabledchange</p>
 <h3 id="ongeofence">onGeofence<a class="headerlink" href="#ongeofence" title="Permanent link">&para;</a></h3>
-<p><code>public func on</code><a href="../Geofence/"><code>Geofence</code></a><code>(_ callback: @escaping (</code><a href="../GeofenceEvent/"><code>GeofenceEvent</code></a><code>) -&gt; Void) -&gt; EventSubscription</code></p>
+<p><code>public func onGeofence(_ callback: @escaping (</code><a href="../GeofenceEvent/"><code>GeofenceEvent</code></a><code>) -&gt; Void) -&gt; EventSubscription</code></p>
 <p>Subscribe to geofence transition events.</p>
 <p>Fires when any monitored geofence crossing occurs.</p>
 <p><strong>See also</strong>
@@ -15445,7 +15445,7 @@ fetch a fresh location inside your callback, call <code>getCurrentPosition</code
 </code></pre></div>
 <p>http</p>
 <h3 id="onlocation">onLocation<a class="headerlink" href="#onlocation" title="Permanent link">&para;</a></h3>
-<p><code>public func on</code><a href="../LocationEvent/"><code>Location</code></a><code>(_ callback: @escaping (</code><a href="../LocationEvent/"><code>LocationEvent</code></a><code>) -&gt; Void) -&gt; EventSubscription</code></p>
+<p><code>public func onLocation(_ callback: @escaping (</code><a href="../LocationEvent/"><code>LocationEvent</code></a><code>) -&gt; Void) -&gt; EventSubscription</code></p>
 <p>Subscribe to location events.</p>
 <p>Every location recorded by the SDK is delivered to your callback, including
 locations from <code>onMotionChange</code>, <code>getCurrentPosition</code>, and
