@@ -17,7 +17,8 @@
     'typescript':   'ts',
     'flutter':      'dart',
     'swift':        'swift',
-    'kotlin':       'kotlin'
+    'kotlin':       'kotlin',
+    'native':       'native'   // hub page — no per-page peer mapping
   };
 
   // All known platform root segments (used to detect index pages).

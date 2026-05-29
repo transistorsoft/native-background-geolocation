@@ -767,15 +767,14 @@ h1 .platform-badge { font-size: 0.5rem; }
 }
 
 /* Platform icons in top nav tabs — pure CSS via ::before pseudo-elements.
-   Tab order is fixed by docs.yml platforms: 1=React Native  2=Capacitor  3=Cordova  4=Flutter  5=Swift  6=Kotlin */
+   Tab order is fixed by docs.yml platforms: 1=React Native  2=Capacitor  3=Cordova  4=Flutter  5=Native */
 
-/* Shared base for all six platform tabs */
+/* Shared base for all five platform tabs */
 .md-tabs__list > .md-tabs__item:nth-child(1) > a.md-tabs__link::before,
 .md-tabs__list > .md-tabs__item:nth-child(2) > a.md-tabs__link::before,
 .md-tabs__list > .md-tabs__item:nth-child(3) > a.md-tabs__link::before,
 .md-tabs__list > .md-tabs__item:nth-child(4) > a.md-tabs__link::before,
-.md-tabs__list > .md-tabs__item:nth-child(5) > a.md-tabs__link::before,
-.md-tabs__list > .md-tabs__item:nth-child(6) > a.md-tabs__link::before {
+.md-tabs__list > .md-tabs__item:nth-child(5) > a.md-tabs__link::before {
     content: "";
     display: inline-block;
     height: 16px;
@@ -816,18 +815,12 @@ h1 .platform-badge { font-size: 0.5rem; }
     background-position: center;
 }
 
-/* Swift */
+/* Native — swift + kotlin */
 .md-tabs__list > .md-tabs__item:nth-child(5) > a.md-tabs__link::before {
-    width: 16px;
-    background-image: url('../images/platforms/swift.svg');
-    background-position: center;
-}
-
-/* Kotlin */
-.md-tabs__list > .md-tabs__item:nth-child(6) > a.md-tabs__link::before {
-    width: 16px;
-    background-image: url('../images/platforms/kotlin.svg');
-    background-position: center;
+    width: 35px; /* 2 × 16px + 1 × 3px gap */
+    background-image: url('../images/platforms/swift.svg'),
+                      url('../images/platforms/kotlin.svg');
+    background-position: 0 center, 19px center;
 }
 
 /* Right-align the Help + About + Contact tabs; hide Purchase from tab bar */

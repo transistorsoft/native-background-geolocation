@@ -24,8 +24,11 @@
  */
 (function () {
 
-  var PLATFORMS      = ['react-native', 'capacitor', 'flutter', 'swift', 'kotlin', 'cordova', 'typescript'];
-  var PLATFORM_LABELS = { faq: 'FAQ' };
+  var PLATFORMS      = ['react-native', 'capacitor', 'flutter', 'swift', 'kotlin', 'cordova', 'typescript', 'native'];
+  var PLATFORM_LABELS = { faq: 'FAQ', native: 'Native (Swift / Kotlin)' };
+  // Hub platforms whose scope spans their child platforms' result URLs.
+  // On `/native/`, results from `/swift/*` and `/kotlin/*` are still in-scope.
+  var HUB_CHILDREN   = { native: ['swift', 'kotlin'] };
   var MAX_CUSTOM     = 10;
   var MIN_QUERY_LEN  = 2;
 
@@ -41,9 +44,15 @@
   function resultPlatform(anchor) {
     if (anchor.href && anchor.href.indexOf('/help/faq') !== -1) { return 'faq'; }
     var m = anchor.href && anchor.href.match(
-      /\/(react-native|capacitor|flutter|swift|kotlin|cordova|typescript)\//
+      /\/(react-native|capacitor|flutter|swift|kotlin|cordova|typescript|native)\//
     );
     return m ? m[1] : null;
+  }
+
+  function inScope(rp, platform) {
+    if (rp === platform) { return true; }
+    var children = HUB_CHILDREN[platform];
+    return !!(children && children.indexOf(rp) !== -1);
   }
 
   // ── Custom index ──────────────────────────────────────────────────────────
@@ -170,7 +179,7 @@
       var a    = item.querySelector('a');
       if (!a) { continue; }
       var rp   = resultPlatform(a);
-      var hide = filterEnabled && rp !== null && rp !== platform;
+      var hide = filterEnabled && rp !== null && !inScope(rp, platform);
       item.style.display = hide ? 'none' : '';
       if (hide) {
         hidden++;
