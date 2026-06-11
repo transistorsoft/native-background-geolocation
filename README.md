@@ -27,6 +27,13 @@ The SDK uses **motion-detection** APIs (accelerometer, gyroscope, magnetometer) 
 
 ---
 
+## :memo: Changelogs
+
+- <img src="assets/images/platforms/swift.svg" width="16" height="16"> [iOS — `TSLocationManager.xcframework`](CHANGELOG-iOS.md)
+- <img src="assets/images/platforms/kotlin.svg" width="16" height="16"> [Android — `tslocationmanager`](CHANGELOG-Android.md)
+
+---
+
 ## :open_file_folder: Example Apps
 
 See [`/example`](example/README.md) — example apps are included in this repo.
