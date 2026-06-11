@@ -1,4 +1,4 @@
-# [Android] CHANGELOG (`tslocationmanager`)
+# [Android] CHANGELOG ([`tslocationmanager`](https://central.sonatype.com/artifact/com.transistorsoft/tslocationmanager))
 
 ## 4.1.8 &mdash; 2026-06-05
 - Fix `setConfig({schedule: [...]})` not re-arming a running scheduler. The scheduler's config-change handler was subscribed to the wrong event bus and never fired; the same dead subscription affected `TSLocationManager` and `TrackingService` config-change handlers. All three now respond to config changes correctly.
