@@ -1,4 +1,4 @@
-# CHANGELOG
+# [iOS] CHANGELOG (`TSLocationManager`)
 
 ## 4.1.6 &mdash; 2026-04-20
 - test: drain main queue in flushForTesting to deflake LRS tests
