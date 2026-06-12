@@ -1,4 +1,12 @@
-# [Android] CHANGELOG ([`tslocationmanager`](https://central.sonatype.com/artifact/com.transistorsoft/tslocationmanager))
+# CHANGELOG
+
+## 4.1.9 &mdash; 2026-06-12
+- chore(demoapp): point tracker host back at production
+- feat(demoapp): Location Filter section in Settings sheet
+- test(android): odometer Conservative e2e, cold-start, geofence-exit coverage
+- feat(android): odometerPolicy in LocationFilter + live filter config listeners
+- feat(android): add geolocation.filter.odometerPolicy config option
+- Publish changelog to dist repo as CHANGELOG-Android.md
 
 ## 4.1.8 &mdash; 2026-06-05
 - Fix `setConfig({schedule: [...]})` not re-arming a running scheduler. The scheduler's config-change handler was subscribed to the wrong event bus and never fired; the same dead subscription affected `TSLocationManager` and `TrackingService` config-change handlers. All three now respond to config changes correctly.
