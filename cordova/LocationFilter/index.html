@@ -5916,6 +5916,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#odometerpolicy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        odometerPolicy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#odometerusekalmanfilter" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -14601,6 +14612,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#odometerpolicy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        odometerPolicy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#odometerusekalmanfilter" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -14753,6 +14775,10 @@ jitter, and improve odometer stability.</p>
 <td><code>odometerAccuracyThreshold</code></td>
 <td>Maximum accuracy (meters) allowed for a sample to affect the odometer. Default: <code>20</code>.</td>
 </tr>
+<tr>
+<td><code>odometerPolicy</code></td>
+<td>Filtering policy for odometer samples — use <code>Conservative</code> to reject GPS teleports entirely. Default: <code>Adjust</code>.</td>
+</tr>
 </tbody>
 </table>
 <ul>
@@ -14860,8 +14886,53 @@ unrealistic outlier and discarded by the filter.</p>
 odometer. Defaults to <code>20</code> meters. Valid range: 0–500.</p>
 <p>Any location whose accuracy exceeds this threshold is ignored for odometer
 updates.</p>
+<h3 id="odometerpolicy">odometerPolicy<a class="headerlink" href="#odometerpolicy" title="Permanent link">&para;</a></h3>
+<p><code>odometerPolicy?:</code><a href="../LocationFilterPolicy/"><code>LocationFilterPolicy</code></a><code>;</code></p>
+<p>Selects the filtering policy applied to odometer-relevant location samples.
+Defaults to <code>LocationFilterPolicy.Adjust</code>.</p>
+<p>This property controls how the odometer handles anomalous GPS samples
+(teleports, unrealistic speed jumps) independently of the tracking
+<a href="./#policy">LocationFilter.policy</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Policy</th>
+<th>Odometer behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../LocationFilterPolicy/#passthrough">LocationFilterPolicy.PassThrough</a></td>
+<td>No filtering — every sample contributes to the odometer.</td>
+</tr>
+<tr>
+<td><a href="../LocationFilterPolicy/#adjust">LocationFilterPolicy.Adjust</a></td>
+<td>Anomalous samples are capped (kinematic/accuracy limits) but still accumulated. <em>(Default)</em></td>
+</tr>
+<tr>
+<td><a href="../LocationFilterPolicy/#conservative">LocationFilterPolicy.Conservative</a></td>
+<td>Anomalous samples are <strong>rejected entirely</strong> — zero phantom distance from GPS teleports.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="warning">⚠️ Warning<a class="headerlink" href="#warning" title="Permanent link">&para;</a></h6>
+<p>On devices with poor GPS behavior (certain chipsets, indoor/urban-canyon
+conditions), the default <code>Adjust</code> policy can accumulate significant phantom
+distance from repeatedly capped anomalies. If distance integrity is more
+important than capturing every meter of movement, use <code>Conservative</code>.</p>
+<h5 id="distance-integrity-configuration-for-fleetfield-sales-tracking">Distance-integrity configuration for fleet/field-sales tracking:<a class="headerlink" href="#distance-integrity-configuration-for-fleetfield-sales-tracking" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">      </span><span class="nx">odometerPolicy</span><span class="o">:</span><span class="w"> </span><span class="kt">LocationFilterPolicy.Conservative</span><span class="p">,</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">      </span><span class="nx">odometerAccuracyThreshold</span><span class="o">:</span><span class="w"> </span><span class="kt">25</span><span class="p">,</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">      </span><span class="nx">maxImpliedSpeed</span><span class="o">:</span><span class="w"> </span><span class="kt">28</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="p">});</span>
+</code></pre></div>
 <h3 id="odometerusekalmanfilter">odometerUseKalmanFilter<a class="headerlink" href="#odometerusekalmanfilter" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">odometerUseKalmanFilter?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">odometerUseKalmanFilter?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 </code></pre></div>
 <p>Applies a Kalman filter to odometer calculations, independent of
 <a href="./#usekalman">LocationFilter.useKalman</a>. Defaults to <code>true</code>.</p>
@@ -14924,18 +14995,10 @@ For more granular tuning, see <a href="./#trackingaccuracythreshold">LocationFil
 - <a href="./">LocationFilter</a>
 - <a href="../KalmanProfile/">KalmanProfile</a></p>
 </div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">      </span><span class="nx">policy</span><span class="o">:</span><span class="w"> </span><span class="kt">LocationFilterPolicy.Adjust</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">});</span>
-</code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">      </span><span class="nx">policy</span><span class="o">:</span><span class="w"> </span><span class="kt">LocationFilterPolicy.PassThrough</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">      </span><span class="nx">policy</span><span class="o">:</span><span class="w"> </span><span class="kt">LocationFilterPolicy.Adjust</span>
 <a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="p">});</span>
@@ -14943,54 +15006,62 @@ For more granular tuning, see <a href="./#trackingaccuracythreshold">LocationFil
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">      </span><span class="nx">policy</span><span class="o">:</span><span class="w"> </span><span class="kt">LocationFilterPolicy.Conservative</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">      </span><span class="nx">policy</span><span class="o">:</span><span class="w"> </span><span class="kt">LocationFilterPolicy.PassThrough</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="p">});</span>
 </code></pre></div>
-<h5 id="balanced-default-filtering">Balanced default filtering<a class="headerlink" href="#balanced-default-filtering" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">      </span><span class="nx">policy</span><span class="o">:</span><span class="w"> </span><span class="kt">LocationFilterPolicy.Adjust</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">      </span><span class="nx">policy</span><span class="o">:</span><span class="w"> </span><span class="kt">LocationFilterPolicy.Conservative</span>
 <a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="p">});</span>
 </code></pre></div>
-<h5 id="no-filtering-capture-all-raw-locations">No filtering — capture all raw locations:<a class="headerlink" href="#no-filtering-capture-all-raw-locations" title="Permanent link">&para;</a></h5>
+<h5 id="balanced-default-filtering">Balanced default filtering<a class="headerlink" href="#balanced-default-filtering" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">      </span><span class="nx">policy</span><span class="o">:</span><span class="w"> </span><span class="kt">LocationFilterPolicy.PassThrough</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">      </span><span class="nx">policy</span><span class="o">:</span><span class="w"> </span><span class="kt">LocationFilterPolicy.Adjust</span>
 <a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="p">});</span>
 </code></pre></div>
-<h5 id="maximum-smoothing-for-analytics">Maximum smoothing for analytics:<a class="headerlink" href="#maximum-smoothing-for-analytics" title="Permanent link">&para;</a></h5>
+<h5 id="no-filtering-capture-all-raw-locations">No filtering — capture all raw locations:<a class="headerlink" href="#no-filtering-capture-all-raw-locations" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">      </span><span class="nx">policy</span><span class="o">:</span><span class="w"> </span><span class="kt">LocationFilterPolicy.Conservative</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">      </span><span class="nx">policy</span><span class="o">:</span><span class="w"> </span><span class="kt">LocationFilterPolicy.PassThrough</span>
 <a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">});</span>
 </code></pre></div>
+<h5 id="maximum-smoothing-for-analytics">Maximum smoothing for analytics:<a class="headerlink" href="#maximum-smoothing-for-analytics" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">      </span><span class="nx">policy</span><span class="o">:</span><span class="w"> </span><span class="kt">LocationFilterPolicy.Conservative</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="p">});</span>
+</code></pre></div>
 <h3 id="rollingwindow">rollingWindow<a class="headerlink" href="#rollingwindow" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nx">rollingWindow?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nx">rollingWindow?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
 </code></pre></div>
 <p>Number of samples in the rolling window used for burst averaging. Defaults
 to <code>5</code>. Valid range: 3–20.</p>
 <p>Higher values produce smoother averaged locations but introduce greater
 latency in responsiveness to movement.</p>
 <h3 id="trackingaccuracythreshold">trackingAccuracyThreshold<a class="headerlink" href="#trackingaccuracythreshold" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nx">trackingAccuracyThreshold?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nx">trackingAccuracyThreshold?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
 </code></pre></div>
 <p>Maximum acceptable horizontal accuracy in meters for a sample to qualify
 for tracking. Defaults to <code>100</code> meters. Valid range: 0–500.</p>
 <p>Locations with an accuracy value greater (worse) than this threshold are
 discarded and not used in path or odometer calculations.</p>
 <h3 id="usekalman">useKalman<a class="headerlink" href="#usekalman" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nx">useKalman?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nx">useKalman?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 </code></pre></div>
 <p>Enables the Kalman filter to smooth incoming location speed and position.
 Defaults to <code>true</code>.</p>
