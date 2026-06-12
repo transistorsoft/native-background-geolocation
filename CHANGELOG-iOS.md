@@ -1,4 +1,12 @@
-# [iOS] CHANGELOG (`TSLocationManager`)
+# CHANGELOG
+
+## 4.1.10 &mdash; 2026-06-12
+- chore(DemoApp2): point tracker host back at production
+- feat(DemoApp2): odometerPolicy picker + labeled policy controls in Settings
+- test(ios): odometer policy, Kalman seed, geofence-exit coverage
+- feat(ios): apply odometerPolicy in TSLocationFilter odometer path
+- feat(ios): add geolocation.filter.odometerPolicy config option
+- Publish changelog to dist repo as CHANGELOG-iOS.md
 
 ## 4.1.6 &mdash; 2026-04-20
 - test: drain main queue in flushForTesting to deflake LRS tests

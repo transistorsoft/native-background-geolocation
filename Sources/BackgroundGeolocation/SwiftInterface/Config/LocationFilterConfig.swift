@@ -78,5 +78,9 @@ extension BGGeo {
             get { module.filterDebug }
             set { module.filterDebug = newValue }
         }
+        public var odometerPolicy: LocationFilterPolicy {
+            get { LocationFilterPolicy(module.odometerPolicy) }
+            set { module.odometerPolicy = newValue.objc }
+        }
     }
 }
