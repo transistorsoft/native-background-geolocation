@@ -4,7 +4,7 @@
 > Capacitor, Cordova, iOS (Swift), and Android (Kotlin).
 > Features: intelligent motion detection, polygon geofencing, durable HTTP+SQLite
 > upload queue, headless operation after app termination, odometer & trip metrics.
-> Used in 21,591+ production apps across 140+ countries.
+> Used in 21,808+ production apps across 140+ countries.
 
 ## SDKs
 
@@ -55,7 +55,9 @@
 - [Location](https://docs.transistorsoft.com/react-native/Location/): A location record captured by the device's native location API and delivered by the SDK.
 - [LocationError](https://docs.transistorsoft.com/react-native/LocationError/): Error codes returned when the native location API fails to fetch a location.
 - [LocationFilter](https://docs.transistorsoft.com/react-native/LocationFilter/): Filters, denoises, and smooths raw GPS samples before they are recorded or used for odometer calculations.
+- [LocationFilterEvent](https://docs.transistorsoft.com/react-native/LocationFilterEvent/): Delivered to {@link BackgroundGeolocation.onLocationFilter} when the SDK's tracking location-filter rejects a raw location sample.
 - [LocationFilterPolicy](https://docs.transistorsoft.com/react-native/LocationFilterPolicy/): Defines the filtering policy applied to incoming raw GPS samples before they are accepted, averaged, or rejected by the {@link LocationFilter}.
+- [LocationFilterReason](https://docs.transistorsoft.com/react-native/LocationFilterReason/): Reason a location was rejected by the tracking location-filter, delivered to {@link BackgroundGeolocation.onLocationFilter} via {@link LocationFilterEvent.reason}.
 - [LocationRequest](https://docs.transistorsoft.com/react-native/LocationRequest/): Indicates what level of location authorization the SDK should request.
 - [LogLevel](https://docs.transistorsoft.com/react-native/LogLevel/): Controls the verbosity of plugin logging.
 - [Logger](https://docs.transistorsoft.com/react-native/Logger/): SDK logging API — access via {@link BackgroundGeolocation.logger}.
@@ -84,7 +86,7 @@
 
 ## Notable Public Company Customers
 
-ABBN, ABNB, AEP, AFX, ALL, ANGI, AOF, ASAP, ATNI, BABA, BC, BOXD, BZZT, CA, CAE, CAR, CCL, CJ, CLGX, CNA, CNCO, CNHI, CRG, CS, CSGP, CSU, DASH, DB, DLG, DODO, DOKA, DSV, DTG, DTS, EDV, ELM, ENTRA, ERJ, ESCORTS, EVBG, FARM, FORTUM, G, GASCO, GEM, GLE, GNSS, GNTX, GOOGL, HD, HEI, HEXA-B, HHFA, HOLN, HPG, HSV, HUBG, IAG, IPS, IQG, JBHT, JOBY, LHA, MANH, MATX, MFC, ML, MODV, MTL, MTM, NPN, ORA, OVER, OXY, PALTEL, PBI, PIZZA, PNTR, RALLIS, RDY, REZI, RMD, RMH, ROOT, ROP, ROVR, RRTS, SAN, SAP, SAWAD, SLM, SNDR, SPG, SPTN, SPZ, SSTI, SU, SWVL, TEF, TFG, TGT, TIDE, TKWY, TMDX, TPG, TRMB, TVSSCS, UBER, URB, VEON, VNT, WEX, XPLR, XPO, YNDX, ZF, ZURN
+ABBN, ABNB, AEP, AFX, ALL, ANGI, AOF, ASAP, ATNI, BABA, BC, BOXD, BZZT, CA, CAE, CAR, CCL, CJ, CLGX, CNA, CNCO, CNHI, CRG, CS, CSGP, CSU, DASH, DB, DLG, DODO, DOKA, DSV, DTG, DTS, EDV, ELM, ENTRA, ERJ, ESCORTS, EVBG, FARM, FORTUM, G, GASCO, GEM, GLE, GNSS, GNTX, GOOGL, HD, HEI, HEXA-B, HHFA, HOLN, HPG, HSV, HUBG, IAG, IPS, IQG, JBHT, JOBY, LHA, MAERSK-B, MANH, MATX, MFC, ML, MODV, MTL, MTM, NPN, ORA, OVER, OXY, PALTEL, PBI, PIZZA, PNTR, RALLIS, RDY, REZI, RMD, RMH, ROOT, ROP, ROVR, RRTS, SAN, SAP, SAWAD, SLM, SNDR, SPG, SPTN, SPZ, SSTI, SU, SWVL, TEF, TFG, TGT, TIDE, TKWY, TMDX, TPG, TRMB, TVSSCS, UBER, URB, VEON, VNT, WEX, XPLR, XPO, YNDX, ZF, ZURN
 
 ## Use Cases
 
