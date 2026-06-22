@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.2.0 &mdash; 2026-06-22
+- feat: add onLocationFilter event for filter-rejected locations
+- fix: Remove SwiftUI being imported by TSLocationManager.xcframework
+
 ## 4.1.10 &mdash; 2026-06-12
 - chore(DemoApp2): point tracker host back at production
 - feat(DemoApp2): odometerPolicy picker + labeled policy controls in Settings

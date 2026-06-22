@@ -282,6 +282,19 @@ public class BGGeo {
         }
     }
 
+    /// Subscribe to location-filter rejection events.
+    ///
+    /// The `callback` fires each time the tracking location-filter **rejects** a raw
+    /// location sample (eg: horizontal accuracy worse than `trackingAccuracyThreshold`).
+    /// Rejected locations are **not** delivered to ``onLocation(_:)``.
+    @discardableResult
+    public func onLocationFilter(_ callback: @escaping (LocationFilterEvent) -> Void) -> EventSubscription {
+        let token = manager.onLocationFilter { callback(LocationFilterEvent($0)) }
+        return EventSubscription { [weak self] in
+            self?.manager.removeListener(TSEventNameLocationFilter, token: token)
+        }
+    }
+
     @discardableResult
     public func onProviderChange(_ callback: @escaping (ProviderChangeEvent) -> Void) -> EventSubscription {
         let token = manager.onProviderChange { callback(ProviderChangeEvent($0)) }
