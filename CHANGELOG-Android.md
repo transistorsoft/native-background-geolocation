@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.2.0 &mdash; 2026-06-22
+- feat(demoapp): add Firebase Crashlytics for crash + ANR reporting
+- feat: add onLocationFilter event for filter-rejected locations
+
 ## 4.1.9 &mdash; 2026-06-12
 - chore(demoapp): point tracker host back at production
 - feat(demoapp): Location Filter section in Settings sheet
