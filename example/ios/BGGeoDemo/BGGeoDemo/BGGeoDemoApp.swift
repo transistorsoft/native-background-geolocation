@@ -12,7 +12,7 @@ import BackgroundGeolocation
 struct BGGeoDemoApp: App {
     init() {
         let fetchManager = TSBackgroundFetch.sharedInstance()
-        fetchManager?.didFinishLaunching()
+        fetchManager.didFinishLaunching()
     }
     var body: some Scene {
         WindowGroup {
