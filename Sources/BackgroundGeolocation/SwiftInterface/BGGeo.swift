@@ -146,7 +146,7 @@ public class BGGeo {
         maximumAge: Int = 0,
         samples: Int = 3,
         allowStale: Bool = true,
-        persist: Bool = true,
+        persist: Bool? = nil,
         label: String? = "getCurrentPosition",
         extras: [String: Any]? = nil
     ) async throws -> LocationEvent {
@@ -161,7 +161,9 @@ public class BGGeo {
             request.maximumAge = maximumAge
             request.samples = samples
             request.allowStale = allowStale
-            request.persist = persist
+            // Only assign when the caller supplied a value — an explicit persist
+            // overrides persistMode; omitting it lets persistMode decide.
+            if let persist { request.persist = persist }
             request.label = label
             request.extras = extras as NSDictionary? as? [String: any Sendable]
             manager.getCurrentPosition(request)
@@ -212,7 +214,7 @@ public class BGGeo {
     public func watchPosition(
         interval: Double = 1000,
         timeout: TimeInterval = 60,
-        persist: Bool = false,
+        persist: Bool? = nil,
         extras: [String: Any]? = nil,
         success: @escaping (LocationEvent) -> Void,
         failure: @escaping (Error) -> Void
@@ -223,7 +225,9 @@ public class BGGeo {
             failure: { failure($0) }
         )
         request.timeout = timeout
-        request.persist = persist
+        // Only assign when the caller supplied a value — an explicit persist
+        // overrides persistMode; omitting it lets persistMode decide.
+        if let persist { request.persist = persist }
         request.extras = extras as NSDictionary? as? [String: any Sendable]
         return manager.watchPosition(request)
     }

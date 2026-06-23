@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 4.2.1 &mdash; 2026-06-23
+- fix(persistence): honor persistMode for all location types; persistMode-aware getCurrentPosition/watchPosition.
+
+Geofence and motionchange locations were force-persisted (and uploaded) regardless of PersistenceConfig.persistMode, because the per-request persist flag was mapped onto the persistMode force-override in TSDataStore. forcePersist
+is now derived from location type (Current/Watch only); geofence/motionchange route through shouldPersist: and honor
+persistMode. Also fixes the direct force:YES motionchange re-persist in TSTrackingService.
+
+    getCurrentPosition/watchPosition gain explicit-vs-omitted persist semantics via TSConfig.resolvePersistForUserReq
+uest:provided: — an explicit persist overrides persistMode + enabled; an omitted value follows the location bucket (e
+nabled && persistMode in {All, Location}). Adds a persistProvided tri-state to TSCurrentPositionRequest/TSWatchPositi
+onRequest and threads persist: Bool? through SwiftInterface.
+
+    Adds TSPersistMode_Pipeline_Tests integration coverage (persistMode pipeline + resolver + maxRecordsToPersist:0 m
+aster switch).
+
 ## 4.2.0 &mdash; 2026-06-22
 - feat: add onLocationFilter event for filter-rejected locations
 - fix: Remove SwiftUI being imported by TSLocationManager.xcframework
