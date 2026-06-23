@@ -123,7 +123,7 @@ final class LocationManagerModel: ObservableObject {
     private var cancellables = Set<BGGeo.EventSubscription>()
     
     // Tracker Host: (prod: https://tracker.transistorsoft.com)
-    private let trackerHost = "https://bg-console-staging.herokuapp.com"
+    private let trackerHost = "https://tracker.transistorsoft.com"
 
     // MARK: - Init
 
