@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.2.1 &mdash; 2026-06-23
+- feat(persistence): persistMode-aware getCurrentPosition/watchPosition (iOS parity)
+
 ## 4.2.0 &mdash; 2026-06-22
 - feat(demoapp): add Firebase Crashlytics for crash + ANR reporting
 - feat: add onLocationFilter event for filter-rejected locations
