@@ -321,7 +321,7 @@ struct SettingsSheet: View {
     private func loadFromConfig() {
         let cfg = BGGeo.shared.config
 
-        trackingModeIsFull = BGGeo.shared.state.trackingMode == .location
+        trackingModeIsFull = model.trackingModeIsFull
         initialTrackingModeIsFull = trackingModeIsFull
         locationAuthorizationRequest = cfg.geolocation.locationAuthorizationRequest
         desiredAccuracy = cfg.geolocation.desiredAccuracy
@@ -418,6 +418,9 @@ struct SettingsSheet: View {
 
         if trackingModeIsFull != initialTrackingModeIsFull {
             initialTrackingModeIsFull = trackingModeIsFull
+            // Persist the choice so it survives while stopped and is applied on the next start.
+            model.trackingModeIsFull = trackingModeIsFull
+            // If currently tracking, switch mode live.
             if bg.state.enabled {
                 Task {
                     do {

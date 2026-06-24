@@ -91,6 +91,15 @@ final class LocationManagerModel: ObservableObject {
     // UI state
     @Published var isEnabled: Bool = false
     @Published var isMoving: Bool = false
+
+    /// User's desired tracking mode (true = Location + Geofences, false = Geofences only).
+    /// The SDK only changes `trackingMode` via `start()` / `startGeofences()`, so this
+    /// persisted preference lets the choice survive while tracking is stopped and be
+    /// applied on the next `start`. Seeded from the SDK's restored mode on first launch.
+    @Published var trackingModeIsFull: Bool = true {
+        didSet { UserDefaults.standard.set(trackingModeIsFull, forKey: Self.trackingModePrefKey) }
+    }
+    private static let trackingModePrefKey = "BGGeoDemo.trackingModeIsFull"
     @Published var odometer: Double = 0.0
     @Published var odometerError: Double = 0.0
 
@@ -297,6 +306,14 @@ final class LocationManagerModel: ObservableObject {
         }
         isEnabled = bgGeoNew.state.enabled
         isMoving = bgGeoNew.state.isMoving
+
+        // Restore the persisted tracking-mode preference, or seed it from the SDK's
+        // restored mode on first launch.
+        if let stored = UserDefaults.standard.object(forKey: Self.trackingModePrefKey) as? Bool {
+            trackingModeIsFull = stored
+        } else {
+            trackingModeIsFull = (bgGeoNew.state.trackingMode == .location)
+        }
     }
     
     
@@ -314,7 +331,8 @@ final class LocationManagerModel: ObservableObject {
         } else {
             Task {
                 do {
-                    if bgGeoNew.state.trackingMode == .location {
+                    // Start in the user's chosen mode (preference survives while stopped).
+                    if trackingModeIsFull {
                         try await bgGeoNew.start()
                     } else {
                         try await bgGeoNew.startGeofences()
