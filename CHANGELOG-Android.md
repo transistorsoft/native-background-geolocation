@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.2.2 &mdash; 2026-06-30
+- fix(android): NullPointerException in TSLocationManagerActivity.onPostCreate on some devices (eg, Samsung / Android 16). The activity hosting the location-services resolution dialog no longer uses AppCompat, avoiding a crash in AppCompat's sub-decor inflation (ContentFrameLayout).
+
 ## 4.2.1 &mdash; 2026-06-23
 - feat(persistence): persistMode-aware getCurrentPosition/watchPosition (iOS parity)
 
