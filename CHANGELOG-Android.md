@@ -1,7 +1,30 @@
 # CHANGELOG
 
-## 4.2.2 &mdash; 2026-06-30
-- fix(android): NullPointerException in TSLocationManagerActivity.onPostCreate on some devices (eg, Samsung / Android 16). The activity hosting the location-services resolution dialog no longer uses AppCompat, avoiding a crash in AppCompat's sub-decor inflation (ContentFrameLayout).
+## 4.3.0 &mdash; 2026-07-05
+- feat: surface rejected geofence triggers on the onLocationFilter event
+- feat(geofence): path-evidence ladder for missed-ENTER transits
+- feat: best-effort location requests without foreground-service permissions
+- feat(fgs): enforce SignificantChanges routing when the FGS permissions are removed from the merged manifest
+- chore(service): Phase-4 Stage 0 — delete dead vendor heuristic and the write-only foregroundServiceType plumbing
+- feat(fgs)!: non-FGS delivery is now the DEFAULT for geofencing, stationary region, and motion activity
+- feat(fgs): drain deferred FGS launches on authorization windows
+- chore(service): delete BackgroundTaskService — dead since the 2023 WorkManager refactor
+- docs(scheduler): correct exact-alarm log guidance — USE_EXACT_ALARM is Play-restricted
+- refactor(geofence): extract static domain API from GeofencingService into TSGeofenceManager
+- feat(upgrade): RegistrationMigrator — one-time sweep of stale GMS registrations from earlier SDK versions
+- refactor(motion): extract subscription lifecycle from ActivityRecognitionService into motion/MotionActivityManager
+- feat(motion): Phase 3 — non-FGS MotionActivityReceiver delivery path (experimental gate)
+- refactor(motion): extract MotionActivityProcessor from ActivityRecognitionService
+- refactor(motion): drop ActivityRecognitionService's motionTriggerDelay FGS keep-alive
+- feat(geofence): delivery-mode stamp — one-time forced re-registration on transition-routing change
+- feat(geofence): experimental non-FGS transition-delivery gate + stop-path dual-PI cleanup + 5s confirm timeout
+- refactor(geofence): non-FGS delivery for TSGeofenceManager's stationary region (Phase 3, gated)
+- refactor(geofence): dedicated StationaryGeofenceReceiver + pluggable exit strategy (Phase 2)
+- refactor(geofence): extract SLC stationary-geofence lifecycle into StationaryGeofenceMonitor
+- feat(service): StartNotAllowed retry + epoch-scoped gate accounting + force-reopen watchdog
+- hardening(service): migrate TrackingService stop to context.stopService (promotion-free)
+- hardening(service): route direct FGS-START sites through FgsLaunchGate
+- hardening(service): eagerly de-register from sActiveServices on stop()
 
 ## 4.2.1 &mdash; 2026-06-23
 - feat(persistence): persistMode-aware getCurrentPosition/watchPosition (iOS parity)
