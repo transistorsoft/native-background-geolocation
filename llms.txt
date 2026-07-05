@@ -4,7 +4,7 @@
 > Capacitor, Cordova, iOS (Swift), and Android (Kotlin).
 > Features: intelligent motion detection, polygon geofencing, durable HTTP+SQLite
 > upload queue, headless operation after app termination, odometer & trip metrics.
-> Used in 21,808+ production apps across 140+ countries.
+> Used in 21,980+ production apps across 140+ countries.
 
 ## SDKs
 
@@ -44,6 +44,7 @@
 - [Geofence](https://docs.transistorsoft.com/react-native/Geofence/): A geofence definition for monitoring circular or polygon regions.
 - [GeofenceAction](https://docs.transistorsoft.com/react-native/GeofenceAction/): Geofence transition actions emitted by the SDK  Used with {@link GeofenceEvent} from {@link BackgroundGeolocation.onGeofence}.
 - [GeofenceEvent](https://docs.transistorsoft.com/react-native/GeofenceEvent/): Geofence transition delivered to {@link BackgroundGeolocation.onGeofence}.
+- [GeofenceFilterInfo](https://docs.transistorsoft.com/react-native/GeofenceFilterInfo/): Identifies the geofence trigger that {@link LocationFilterEvent} reports as rejected: the fence, the rejected transition (ENTER | EXIT), why it was rejected, and the trigger-vs-fence geometry when it was evaluated.
 - [GeofenceManager](https://docs.transistorsoft.com/react-native/GeofenceManager/): Manages the geofence database — add, remove, query, and check geofences.
 - [GeofencesChangeEvent](https://docs.transistorsoft.com/react-native/GeofencesChangeEvent/): Geofence monitoring change delivered to {@link BackgroundGeolocation.onGeofencesChange}.
 - [HeadlessEvent](https://docs.transistorsoft.com/react-native/HeadlessEvent/): [Android only] Event delivered to a headless task registered via {@link BackgroundGeolocation.registerHeadlessTask}.
@@ -55,7 +56,7 @@
 - [Location](https://docs.transistorsoft.com/react-native/Location/): A location record captured by the device's native location API and delivered by the SDK.
 - [LocationError](https://docs.transistorsoft.com/react-native/LocationError/): Error codes returned when the native location API fails to fetch a location.
 - [LocationFilter](https://docs.transistorsoft.com/react-native/LocationFilter/): Filters, denoises, and smooths raw GPS samples before they are recorded or used for odometer calculations.
-- [LocationFilterEvent](https://docs.transistorsoft.com/react-native/LocationFilterEvent/): Delivered to {@link BackgroundGeolocation.onLocationFilter} when the SDK's tracking location-filter rejects a raw location sample.
+- [LocationFilterEvent](https://docs.transistorsoft.com/react-native/LocationFilterEvent/): Delivered to {@link BackgroundGeolocation.onLocationFilter} when the SDK rejects data before it reaches your event stream — either a raw tracking sample rejected by the location-filter, or a geofence trigger rejected as spurious or duplicate.
 - [LocationFilterPolicy](https://docs.transistorsoft.com/react-native/LocationFilterPolicy/): Defines the filtering policy applied to incoming raw GPS samples before they are accepted, averaged, or rejected by the {@link LocationFilter}.
 - [LocationFilterReason](https://docs.transistorsoft.com/react-native/LocationFilterReason/): Reason a location was rejected by the tracking location-filter, delivered to {@link BackgroundGeolocation.onLocationFilter} via {@link LocationFilterEvent.reason}.
 - [LocationRequest](https://docs.transistorsoft.com/react-native/LocationRequest/): Indicates what level of location authorization the SDK should request.
