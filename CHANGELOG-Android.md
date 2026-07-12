@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.3.1 &mdash; 2026-07-12
+- feat(kotlin): DataStore.all(limit/offset/page/order) named params
+- feat(data): getLocations(query) — paged/queryable location reads (Android)
+
 ## 4.3.0 &mdash; 2026-07-05
 - feat: surface rejected geofence triggers on the onLocationFilter event
 - feat(geofence): path-evidence ladder for missed-ENTER transits
@@ -25,6 +29,9 @@
 - hardening(service): migrate TrackingService stop to context.stopService (promotion-free)
 - hardening(service): route direct FGS-START sites through FgsLaunchGate
 - hardening(service): eagerly de-register from sActiveServices on stop()
+
+## 4.2.2 &mdash; 2026-06-30
+- fix(android): NullPointerException in TSLocationManagerActivity.onPostCreate on some devices (eg, Samsung / Android 16). The activity hosting the location-services resolution dialog no longer uses AppCompat, avoiding a crash in AppCompat's sub-decor inflation (ContentFrameLayout).
 
 ## 4.2.1 &mdash; 2026-06-23
 - feat(persistence): persistMode-aware getCurrentPosition/watchPosition (iOS parity)
