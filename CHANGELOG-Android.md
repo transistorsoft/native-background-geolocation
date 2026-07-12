@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.3.2 &mdash; 2026-07-12
+- fix(proguard): keep LocationQuery in release minification + consumer rules
+
 ## 4.3.1 &mdash; 2026-07-12
 - feat(kotlin): DataStore.all(limit/offset/page/order) named params
 - feat(data): getLocations(query) — paged/queryable location reads (Android)
