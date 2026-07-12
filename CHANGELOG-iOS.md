@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.3.0 &mdash; 2026-07-12
+- feat(data): getLocations(query) — paged/queryable location reads (iOS)
+
 ## 4.2.1 &mdash; 2026-06-23
 - fix(persistence): honor persistMode for all location types; persistMode-aware getCurrentPosition/watchPosition.
 
