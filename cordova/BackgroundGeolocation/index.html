@@ -2592,6 +2592,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../react-native/LocationQuery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LocationQuery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../react-native/MotionActivity/" class="md-nav__link">
         
   
@@ -5087,6 +5115,34 @@
     
   
     Coords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../capacitor/LocationQuery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LocationQuery
   
 
     
@@ -8593,6 +8649,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../LocationQuery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LocationQuery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../MotionActivity/" class="md-nav__link">
         
   
@@ -11088,6 +11172,34 @@
     
   
     Coords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flutter/LocationQuery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LocationQuery
   
 
     
@@ -17609,13 +17721,25 @@ identifier.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">getCount</span><span class="p">();</span>
 </code></pre></div>
 <h4 id="getlocations">getLocations<a class="headerlink" href="#getlocations" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="nx">getLocations</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nb">Object</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">;</span>
-</code></pre></div>
-<p>Retrieve all <a href="../Location/">Location</a> records stored in the SDK's SQLite database.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">locations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">getLocations</span><span class="p">();</span>
+<p><code>getLocations(query?:</code><a href="../LocationQuery/"><code>LocationQuery</code></a><code>): Promise&lt;Object[]&gt;;</code></p>
+<p>Retrieve <a href="../Location/">Location</a> records stored in the SDK's SQLite database.</p>
+<p>Provide an optional <a href="../LocationQuery/">LocationQuery</a> to page through a large table,
+constraining results by limit, starting offset (or page), and sort order.
+Without a query, every record is returned in a single call — which can exhaust
+memory on a table of several thousand records, so prefer paging for large
+datasets. Size your paging with <a href="./#getcount">BackgroundGeolocation.getCount</a>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="c1">// All records</span>
+<a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">locations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">getLocations</span><span class="p">();</span>
+<a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a>
+<a id="__codelineno-70-4" name="__codelineno-70-4" href="#__codelineno-70-4"></a><span class="c1">// One page of 500, newest first</span>
+<a id="__codelineno-70-5" name="__codelineno-70-5" href="#__codelineno-70-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">getLocations</span><span class="p">({</span>
+<a id="__codelineno-70-6" name="__codelineno-70-6" href="#__codelineno-70-6"></a><span class="w">  </span><span class="nx">limit</span><span class="o">:</span><span class="w"> </span><span class="kt">500</span><span class="p">,</span>
+<a id="__codelineno-70-7" name="__codelineno-70-7" href="#__codelineno-70-7"></a><span class="w">  </span><span class="nx">page</span><span class="o">:</span><span class="w"> </span><span class="kt">0</span><span class="p">,</span>
+<a id="__codelineno-70-8" name="__codelineno-70-8" href="#__codelineno-70-8"></a><span class="w">  </span><span class="nx">order</span><span class="o">:</span><span class="w"> </span><span class="kt">SQLQueryOrder.Desc</span>
+<a id="__codelineno-70-9" name="__codelineno-70-9" href="#__codelineno-70-9"></a><span class="p">});</span>
 </code></pre></div>
 <h4 id="sync">sync<a class="headerlink" href="#sync" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="nx">sync</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nb">Object</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a><span class="nx">sync</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nb">Object</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">;</span>
 </code></pre></div>
 <p>Manually upload all queued locations to <a href="../HttpConfig/#url">HttpConfig.url</a>.</p>
 <p>Initiates a POST of all records in the SQLite database to your configured
@@ -17626,8 +17750,8 @@ location. If no HTTP service is configured, all records are deleted from
 the database.</p>
 <p><strong>See also</strong>
 - <code>HTTP Guide</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">records</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">sync</span><span class="p">();</span>
-<a id="__codelineno-73-2" name="__codelineno-73-2" href="#__codelineno-73-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[sync] success: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">records</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">records</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">sync</span><span class="p">();</span>
+<a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[sync] success: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">records</span><span class="p">);</span>
 </code></pre></div>
 <h3 class="bgeo-method-group" id="authorization">Authorization<a class="headerlink" href="#authorization" title="Permanent link">&para;</a></h3>
 <h4 id="getproviderstate">getProviderState<a class="headerlink" href="#getproviderstate" title="Permanent link">&para;</a></h4>
@@ -17635,8 +17759,8 @@ the database.</p>
 <p>Retrieve the current location-services authorization state.</p>
 <p><strong>See also</strong>
 - <code>onProviderChange</code> to subscribe to future authorization changes.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">providerState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">getProviderState</span><span class="p">();</span>
-<a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;- Provider state: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">providerState</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">providerState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">getProviderState</span><span class="p">();</span>
+<a id="__codelineno-73-2" name="__codelineno-73-2" href="#__codelineno-73-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;- Provider state: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">providerState</span><span class="p">);</span>
 </code></pre></div>
 <h4 id="requestpermission">requestPermission<a class="headerlink" href="#requestpermission" title="Permanent link">&para;</a></h4>
 <p><code>requestPermission(): Promise&lt;</code><a href="../AuthorizationStatus/"><code>AuthorizationStatus</code></a><code>&gt;;</code></p>
@@ -17660,20 +17784,20 @@ call this method in typical use.</p>
 - <a href="../AppConfig/#backgroundpermissionrationale">AppConfig.backgroundPermissionRationale</a> (Android)
 - <code>requestTemporaryFullAccuracy</code> (iOS 14+)</p>
 </div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">onProviderChange</span><span class="p">((</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[providerchange]&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">event</span><span class="p">);</span>
-<a id="__codelineno-75-3" name="__codelineno-75-3" href="#__codelineno-75-3"></a><span class="p">});</span>
-<a id="__codelineno-75-4" name="__codelineno-75-4" href="#__codelineno-75-4"></a>
-<a id="__codelineno-75-5" name="__codelineno-75-5" href="#__codelineno-75-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
-<a id="__codelineno-75-6" name="__codelineno-75-6" href="#__codelineno-75-6"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">locationAuthorizationRequest</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Always&#39;</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-75-7" name="__codelineno-75-7" href="#__codelineno-75-7"></a><span class="p">});</span>
-<a id="__codelineno-75-8" name="__codelineno-75-8" href="#__codelineno-75-8"></a>
-<a id="__codelineno-75-9" name="__codelineno-75-9" href="#__codelineno-75-9"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-75-10" name="__codelineno-75-10" href="#__codelineno-75-10"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">requestPermission</span><span class="p">();</span>
-<a id="__codelineno-75-11" name="__codelineno-75-11" href="#__codelineno-75-11"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[requestPermission] success: &#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="p">);</span>
-<a id="__codelineno-75-12" name="__codelineno-75-12" href="#__codelineno-75-12"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">status</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-75-13" name="__codelineno-75-13" href="#__codelineno-75-13"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;[requestPermission] FAILURE: &#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="p">);</span>
-<a id="__codelineno-75-14" name="__codelineno-75-14" href="#__codelineno-75-14"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">onProviderChange</span><span class="p">((</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[providerchange]&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">event</span><span class="p">);</span>
+<a id="__codelineno-74-3" name="__codelineno-74-3" href="#__codelineno-74-3"></a><span class="p">});</span>
+<a id="__codelineno-74-4" name="__codelineno-74-4" href="#__codelineno-74-4"></a>
+<a id="__codelineno-74-5" name="__codelineno-74-5" href="#__codelineno-74-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
+<a id="__codelineno-74-6" name="__codelineno-74-6" href="#__codelineno-74-6"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">locationAuthorizationRequest</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Always&#39;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-74-7" name="__codelineno-74-7" href="#__codelineno-74-7"></a><span class="p">});</span>
+<a id="__codelineno-74-8" name="__codelineno-74-8" href="#__codelineno-74-8"></a>
+<a id="__codelineno-74-9" name="__codelineno-74-9" href="#__codelineno-74-9"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-74-10" name="__codelineno-74-10" href="#__codelineno-74-10"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">requestPermission</span><span class="p">();</span>
+<a id="__codelineno-74-11" name="__codelineno-74-11" href="#__codelineno-74-11"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[requestPermission] success: &#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="p">);</span>
+<a id="__codelineno-74-12" name="__codelineno-74-12" href="#__codelineno-74-12"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">status</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-74-13" name="__codelineno-74-13" href="#__codelineno-74-13"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;[requestPermission] FAILURE: &#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="p">);</span>
+<a id="__codelineno-74-14" name="__codelineno-74-14" href="#__codelineno-74-14"></a><span class="p">}</span>
 </code></pre></div>
 <h4 id="requesttemporaryfullaccuracy">requestTemporaryFullAccuracy<a class="headerlink" href="#requesttemporaryfullaccuracy" title="Permanent link">&para;</a></h4>
 <p><code>requestTemporaryFullAccuracy(purposeKey: string): Promise&lt;</code><a href="../AccuracyAuthorization/"><code>AccuracyAuthorization</code></a><code>&gt;;</code></p>
@@ -17701,24 +17825,24 @@ purpose of your request.</p>
 <p><strong>See also</strong>
 - <a href="../ProviderChangeEvent/#accuracyauthorization">ProviderChangeEvent.accuracyAuthorization</a></p>
 </div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">onProviderChange</span><span class="p">((</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">accuracyAuthorization</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">AccuracyAuthorization</span><span class="p">.</span><span class="nx">Reduced</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-76-3" name="__codelineno-76-3" href="#__codelineno-76-3"></a><span class="w">    </span><span class="c1">// Supply &quot;Purpose&quot; key from Info.plist as 1st argument.</span>
-<a id="__codelineno-76-4" name="__codelineno-76-4" href="#__codelineno-76-4"></a><span class="w">    </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">requestTemporaryFullAccuracy</span><span class="p">(</span><span class="s2">&quot;Delivery&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">accuracyAuthorization</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-76-5" name="__codelineno-76-5" href="#__codelineno-76-5"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">accuracyAuthorization</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">AccuracyAuthorization</span><span class="p">.</span><span class="nx">Full</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-76-6" name="__codelineno-76-6" href="#__codelineno-76-6"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[requestTemporaryFullAccuracy] GRANTED: &#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">accuracyAuthorization</span><span class="p">);</span>
-<a id="__codelineno-76-7" name="__codelineno-76-7" href="#__codelineno-76-7"></a><span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-76-8" name="__codelineno-76-8" href="#__codelineno-76-8"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[requestTemporaryFullAccuracy] DENIED: &#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">accuracyAuthorization</span><span class="p">);</span>
-<a id="__codelineno-76-9" name="__codelineno-76-9" href="#__codelineno-76-9"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-76-10" name="__codelineno-76-10" href="#__codelineno-76-10"></a><span class="w">    </span><span class="p">}).</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-76-11" name="__codelineno-76-11" href="#__codelineno-76-11"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s2">&quot;[requestTemporaryFullAccuracy] FAILED TO SHOW DIALOG: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
-<a id="__codelineno-76-12" name="__codelineno-76-12" href="#__codelineno-76-12"></a><span class="w">    </span><span class="p">});</span>
-<a id="__codelineno-76-13" name="__codelineno-76-13" href="#__codelineno-76-13"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-76-14" name="__codelineno-76-14" href="#__codelineno-76-14"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">onProviderChange</span><span class="p">((</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">accuracyAuthorization</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">AccuracyAuthorization</span><span class="p">.</span><span class="nx">Reduced</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-75-3" name="__codelineno-75-3" href="#__codelineno-75-3"></a><span class="w">    </span><span class="c1">// Supply &quot;Purpose&quot; key from Info.plist as 1st argument.</span>
+<a id="__codelineno-75-4" name="__codelineno-75-4" href="#__codelineno-75-4"></a><span class="w">    </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">requestTemporaryFullAccuracy</span><span class="p">(</span><span class="s2">&quot;Delivery&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">accuracyAuthorization</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-75-5" name="__codelineno-75-5" href="#__codelineno-75-5"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">accuracyAuthorization</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">AccuracyAuthorization</span><span class="p">.</span><span class="nx">Full</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-75-6" name="__codelineno-75-6" href="#__codelineno-75-6"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[requestTemporaryFullAccuracy] GRANTED: &#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">accuracyAuthorization</span><span class="p">);</span>
+<a id="__codelineno-75-7" name="__codelineno-75-7" href="#__codelineno-75-7"></a><span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-75-8" name="__codelineno-75-8" href="#__codelineno-75-8"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[requestTemporaryFullAccuracy] DENIED: &#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">accuracyAuthorization</span><span class="p">);</span>
+<a id="__codelineno-75-9" name="__codelineno-75-9" href="#__codelineno-75-9"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-75-10" name="__codelineno-75-10" href="#__codelineno-75-10"></a><span class="w">    </span><span class="p">}).</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-75-11" name="__codelineno-75-11" href="#__codelineno-75-11"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s2">&quot;[requestTemporaryFullAccuracy] FAILED TO SHOW DIALOG: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<a id="__codelineno-75-12" name="__codelineno-75-12" href="#__codelineno-75-12"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-75-13" name="__codelineno-75-13" href="#__codelineno-75-13"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-75-14" name="__codelineno-75-14" href="#__codelineno-75-14"></a><span class="p">});</span>
 </code></pre></div>
 <h3 class="bgeo-method-group" id="background-tasks">Background Tasks<a class="headerlink" href="#background-tasks" title="Permanent link">&para;</a></h3>
 <h4 id="startbackgroundtask">startBackgroundTask<a class="headerlink" href="#startbackgroundtask" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a><span class="nx">startBackgroundTask</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">number</span><span class="o">&gt;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="nx">startBackgroundTask</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">number</span><span class="o">&gt;</span><span class="p">;</span>
 </code></pre></div>
 <p>Signal to the OS that you need to perform a long-running task.</p>
 <p>The OS keeps the app running in the background until you signal completion
@@ -17729,48 +17853,48 @@ even if an error occurs, to avoid hanging the background task.</p>
 <p>Uses <a href="https://developer.apple.com/documentation/uikit/uiapplication/1623031-beginbackgroundtaskwithexpiratio"><code>beginBackgroundTaskWithExpirationHandler</code></a>.
 iOS provides exactly <strong>180 seconds</strong> of background time. The SDK
 automatically stops the task before the OS force-kills the app.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a>✅-[BackgroundTaskManager createBackgroundTask] 1
-<a id="__codelineno-78-2" name="__codelineno-78-2" href="#__codelineno-78-2"></a>✅-[BackgroundTaskManager stopBackgroundTask:]_block_invoke 1 OF (1)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a>✅-[BackgroundTaskManager createBackgroundTask] 1
+<a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a>✅-[BackgroundTaskManager stopBackgroundTask:]_block_invoke 1 OF (1)
 </code></pre></div>
 <h5 id="android_2">Android<a class="headerlink" href="#android_2" title="Permanent link">&para;</a></h5>
 <p>Uses <a href="https://developer.android.com/topic/libraries/architecture/workmanager"><code>WorkManager</code></a>.
 The SDK imposes a <strong>3-minute</strong> limit before automatically force-killing
 the task.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a> I TSLocationManager: [c.t.l.u.BackgroundTaskManager onStartJob] ⏳ startBackgroundTask: 6
-<a id="__codelineno-79-2" name="__codelineno-79-2" href="#__codelineno-79-2"></a> I TSLocationManager: [c.t.l.u.BackgroundTaskManager$Task stop] ⏳ stopBackgroundTask: 6
+<div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a> I TSLocationManager: [c.t.l.u.BackgroundTaskManager onStartJob] ⏳ startBackgroundTask: 6
+<a id="__codelineno-78-2" name="__codelineno-78-2" href="#__codelineno-78-2"></a> I TSLocationManager: [c.t.l.u.BackgroundTaskManager$Task stop] ⏳ stopBackgroundTask: 6
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a><span class="nx">onLocation</span><span class="p">(</span><span class="nx">location</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-80-2" name="__codelineno-80-2" href="#__codelineno-80-2"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[location] &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">location</span><span class="p">);</span>
-<a id="__codelineno-80-3" name="__codelineno-80-3" href="#__codelineno-80-3"></a>
-<a id="__codelineno-80-4" name="__codelineno-80-4" href="#__codelineno-80-4"></a><span class="w">  </span><span class="c1">// Perform some long-running task (eg: HTTP request)</span>
-<a id="__codelineno-80-5" name="__codelineno-80-5" href="#__codelineno-80-5"></a><span class="w">  </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">startBackgroundTask</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">taskId</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-80-6" name="__codelineno-80-6" href="#__codelineno-80-6"></a><span class="w">    </span><span class="nx">performLongRunningTask</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-80-7" name="__codelineno-80-7" href="#__codelineno-80-7"></a><span class="w">      </span><span class="c1">// When your long-running task is complete, signal completion of taskId.</span>
-<a id="__codelineno-80-8" name="__codelineno-80-8" href="#__codelineno-80-8"></a><span class="w">      </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">stopBackgroundTask</span><span class="p">(</span><span class="nx">taskId</span><span class="p">);</span>
-<a id="__codelineno-80-9" name="__codelineno-80-9" href="#__codelineno-80-9"></a><span class="w">    </span><span class="p">}).</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-80-10" name="__codelineno-80-10" href="#__codelineno-80-10"></a><span class="w">      </span><span class="c1">// Be sure to catch errors: never leave your background-task hanging.</span>
-<a id="__codelineno-80-11" name="__codelineno-80-11" href="#__codelineno-80-11"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
-<a id="__codelineno-80-12" name="__codelineno-80-12" href="#__codelineno-80-12"></a><span class="w">      </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">stopBackgroundTask</span><span class="p">(</span><span class="nx">taskId</span><span class="p">);</span>
-<a id="__codelineno-80-13" name="__codelineno-80-13" href="#__codelineno-80-13"></a><span class="w">    </span><span class="p">});</span>
-<a id="__codelineno-80-14" name="__codelineno-80-14" href="#__codelineno-80-14"></a><span class="w">  </span><span class="p">});</span>
-<a id="__codelineno-80-15" name="__codelineno-80-15" href="#__codelineno-80-15"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a><span class="nx">onLocation</span><span class="p">(</span><span class="nx">location</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-79-2" name="__codelineno-79-2" href="#__codelineno-79-2"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[location] &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">location</span><span class="p">);</span>
+<a id="__codelineno-79-3" name="__codelineno-79-3" href="#__codelineno-79-3"></a>
+<a id="__codelineno-79-4" name="__codelineno-79-4" href="#__codelineno-79-4"></a><span class="w">  </span><span class="c1">// Perform some long-running task (eg: HTTP request)</span>
+<a id="__codelineno-79-5" name="__codelineno-79-5" href="#__codelineno-79-5"></a><span class="w">  </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">startBackgroundTask</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">taskId</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-79-6" name="__codelineno-79-6" href="#__codelineno-79-6"></a><span class="w">    </span><span class="nx">performLongRunningTask</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-79-7" name="__codelineno-79-7" href="#__codelineno-79-7"></a><span class="w">      </span><span class="c1">// When your long-running task is complete, signal completion of taskId.</span>
+<a id="__codelineno-79-8" name="__codelineno-79-8" href="#__codelineno-79-8"></a><span class="w">      </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">stopBackgroundTask</span><span class="p">(</span><span class="nx">taskId</span><span class="p">);</span>
+<a id="__codelineno-79-9" name="__codelineno-79-9" href="#__codelineno-79-9"></a><span class="w">    </span><span class="p">}).</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-79-10" name="__codelineno-79-10" href="#__codelineno-79-10"></a><span class="w">      </span><span class="c1">// Be sure to catch errors: never leave your background-task hanging.</span>
+<a id="__codelineno-79-11" name="__codelineno-79-11" href="#__codelineno-79-11"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<a id="__codelineno-79-12" name="__codelineno-79-12" href="#__codelineno-79-12"></a><span class="w">      </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">stopBackgroundTask</span><span class="p">(</span><span class="nx">taskId</span><span class="p">);</span>
+<a id="__codelineno-79-13" name="__codelineno-79-13" href="#__codelineno-79-13"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-79-14" name="__codelineno-79-14" href="#__codelineno-79-14"></a><span class="w">  </span><span class="p">});</span>
+<a id="__codelineno-79-15" name="__codelineno-79-15" href="#__codelineno-79-15"></a><span class="p">}</span>
 </code></pre></div>
 <h4 id="stopbackgroundtask">stopBackgroundTask<a class="headerlink" href="#stopbackgroundtask" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a><span class="nx">stopBackgroundTask</span><span class="p">(</span><span class="nx">taskId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a><span class="nx">stopBackgroundTask</span><span class="p">(</span><span class="nx">taskId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span><span class="p">;</span>
 </code></pre></div>
 <p>Signal completion of a <code>startBackgroundTask</code> to the OS.</p>
 <p>The OS may now suspend the app if appropriate.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">startBackgroundTask</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">taskId</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-82-2" name="__codelineno-82-2" href="#__codelineno-82-2"></a><span class="w">  </span><span class="c1">// Perform some long-running task (eg: HTTP request)</span>
-<a id="__codelineno-82-3" name="__codelineno-82-3" href="#__codelineno-82-3"></a><span class="w">  </span><span class="nx">performLongRunningTask</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-82-4" name="__codelineno-82-4" href="#__codelineno-82-4"></a><span class="w">    </span><span class="c1">// When your long-running task is complete, signal completion of taskId.</span>
-<a id="__codelineno-82-5" name="__codelineno-82-5" href="#__codelineno-82-5"></a><span class="w">    </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">stopBackgroundTask</span><span class="p">(</span><span class="nx">taskId</span><span class="p">);</span>
-<a id="__codelineno-82-6" name="__codelineno-82-6" href="#__codelineno-82-6"></a><span class="w">  </span><span class="p">});</span>
-<a id="__codelineno-82-7" name="__codelineno-82-7" href="#__codelineno-82-7"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">startBackgroundTask</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">taskId</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-81-2" name="__codelineno-81-2" href="#__codelineno-81-2"></a><span class="w">  </span><span class="c1">// Perform some long-running task (eg: HTTP request)</span>
+<a id="__codelineno-81-3" name="__codelineno-81-3" href="#__codelineno-81-3"></a><span class="w">  </span><span class="nx">performLongRunningTask</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-81-4" name="__codelineno-81-4" href="#__codelineno-81-4"></a><span class="w">    </span><span class="c1">// When your long-running task is complete, signal completion of taskId.</span>
+<a id="__codelineno-81-5" name="__codelineno-81-5" href="#__codelineno-81-5"></a><span class="w">    </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">stopBackgroundTask</span><span class="p">(</span><span class="nx">taskId</span><span class="p">);</span>
+<a id="__codelineno-81-6" name="__codelineno-81-6" href="#__codelineno-81-6"></a><span class="w">  </span><span class="p">});</span>
+<a id="__codelineno-81-7" name="__codelineno-81-7" href="#__codelineno-81-7"></a><span class="p">});</span>
 </code></pre></div>
 <h3 class="bgeo-method-group" id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h3>
 <h4 id="playsound">playSound<a class="headerlink" href="#playsound" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a><span class="nx">playSound</span><span class="p">(</span><span class="nx">soundId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a><span class="nx">playSound</span><span class="p">(</span><span class="nx">soundId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
 </code></pre></div>
 <p>Play a system sound.</p>
 <h5 id="ios_3">iOS<a class="headerlink" href="#ios_3" title="Permanent link">&para;</a></h5>
@@ -17788,11 +17912,11 @@ magnetometer.</p>
 <p>These sensors power the motion activity-recognition system. When any
 sensor is absent (particularly on low-end Android devices), motion
 recognition performance degrades significantly.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">sensors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">getSensors</span><span class="p">();</span>
-<a id="__codelineno-84-2" name="__codelineno-84-2" href="#__codelineno-84-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sensors</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">sensors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">getSensors</span><span class="p">();</span>
+<a id="__codelineno-83-2" name="__codelineno-83-2" href="#__codelineno-83-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sensors</span><span class="p">);</span>
 </code></pre></div>
 <h4 id="ispowersavemode">isPowerSaveMode<a class="headerlink" href="#ispowersavemode" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a><span class="nx">isPowerSaveMode</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">boolean</span><span class="o">&gt;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="nx">isPowerSaveMode</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">boolean</span><span class="o">&gt;</span><span class="p">;</span>
 </code></pre></div>
 <p>Returns the current state of the operating system's power-saving mode.</p>
 <p>Power-saving mode can throttle background services such as GPS and HTTP
@@ -17807,7 +17931,7 @@ automatic OS prompt.</p>
 <p>Battery Saver is enabled manually in <strong>Settings → Battery → Battery Saver</strong>
 or automatically when the battery drops below a configured threshold.</p>
 <p><img alt="" src="https://dl.dropboxusercontent.com/s/raz8lagrqayowia/Screenshot%202017-09-19%2010.33.49.png?dl=1" /></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">isPowerSaveMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">isPowerSaveMode</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">isPowerSaveMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">isPowerSaveMode</span><span class="p">();</span>
 </code></pre></div>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
 <h3 id="accuracyauthorization">AccuracyAuthorization<a class="headerlink" href="#accuracyauthorization" title="Permanent link">&para;</a></h3>
@@ -17816,12 +17940,12 @@ or automatically when the battery drops below a configured threshold.</p>
 accuracy. [iOS 14+]</p>
 <p>Used by <code>ProviderChangeEvent.accuracyAuthorization</code> and
 <code>requestTemporaryFullAccuracy</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">onProviderChange</span><span class="p">((</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-87-2" name="__codelineno-87-2" href="#__codelineno-87-2"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">accuracyAuthorization</span><span class="w"> </span><span class="o">===</span>
-<a id="__codelineno-87-3" name="__codelineno-87-3" href="#__codelineno-87-3"></a><span class="w">      </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">AccuracyAuthorization</span><span class="p">.</span><span class="nx">Reduced</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-87-4" name="__codelineno-87-4" href="#__codelineno-87-4"></a><span class="w">    </span><span class="c1">// Handle reduced-accuracy case</span>
-<a id="__codelineno-87-5" name="__codelineno-87-5" href="#__codelineno-87-5"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-87-6" name="__codelineno-87-6" href="#__codelineno-87-6"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">onProviderChange</span><span class="p">((</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-86-2" name="__codelineno-86-2" href="#__codelineno-86-2"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">accuracyAuthorization</span><span class="w"> </span><span class="o">===</span>
+<a id="__codelineno-86-3" name="__codelineno-86-3" href="#__codelineno-86-3"></a><span class="w">      </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">AccuracyAuthorization</span><span class="p">.</span><span class="nx">Reduced</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-86-4" name="__codelineno-86-4" href="#__codelineno-86-4"></a><span class="w">    </span><span class="c1">// Handle reduced-accuracy case</span>
+<a id="__codelineno-86-5" name="__codelineno-86-5" href="#__codelineno-86-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-86-6" name="__codelineno-86-6" href="#__codelineno-86-6"></a><span class="p">});</span>
 </code></pre></div>
 <h3 id="activitytype">ActivityType<a class="headerlink" href="#activitytype" title="Permanent link">&para;</a></h3>
 <p><a href="../ActivityType/"><code>ActivityType</code></a><code>: object;</code></p>
@@ -17833,30 +17957,30 @@ accuracy. [iOS 14+]</p>
 <p>Enum namespace representing the OS-level authorization state for
 location services (Denied, Restricted, Always, WhenInUse).</p>
 <p>Returned from <code>requestPermission()</code> and <code>onProviderChange</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">requestPermission</span><span class="p">();</span>
-<a id="__codelineno-88-2" name="__codelineno-88-2" href="#__codelineno-88-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">AuthorizationStatus</span><span class="p">.</span><span class="nx">Always</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-88-3" name="__codelineno-88-3" href="#__codelineno-88-3"></a><span class="w">  </span><span class="c1">// Good to start tracking</span>
-<a id="__codelineno-88-4" name="__codelineno-88-4" href="#__codelineno-88-4"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">requestPermission</span><span class="p">();</span>
+<a id="__codelineno-87-2" name="__codelineno-87-2" href="#__codelineno-87-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">AuthorizationStatus</span><span class="p">.</span><span class="nx">Always</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-87-3" name="__codelineno-87-3" href="#__codelineno-87-3"></a><span class="w">  </span><span class="c1">// Good to start tracking</span>
+<a id="__codelineno-87-4" name="__codelineno-87-4" href="#__codelineno-87-4"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="authorizationstrategy">AuthorizationStrategy<a class="headerlink" href="#authorizationstrategy" title="Permanent link">&para;</a></h3>
 <p><a href="../AuthorizationStrategy/"><code>AuthorizationStrategy</code></a><code>: object;</code></p>
 <p>Enum namespace defining how the HTTP service performs authorization.</p>
 <p>Includes basic, JWT, and custom strategies. Used by <code>AuthorizationConfig.strategy</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
-<a id="__codelineno-89-2" name="__codelineno-89-2" href="#__codelineno-89-2"></a><span class="w">  </span><span class="nx">authorization</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-89-3" name="__codelineno-89-3" href="#__codelineno-89-3"></a><span class="w">    </span><span class="nx">strategy</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.AuthorizationStrategy.Jwt</span>
-<a id="__codelineno-89-4" name="__codelineno-89-4" href="#__codelineno-89-4"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-89-5" name="__codelineno-89-5" href="#__codelineno-89-5"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
+<a id="__codelineno-88-2" name="__codelineno-88-2" href="#__codelineno-88-2"></a><span class="w">  </span><span class="nx">authorization</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-88-3" name="__codelineno-88-3" href="#__codelineno-88-3"></a><span class="w">    </span><span class="nx">strategy</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.AuthorizationStrategy.Jwt</span>
+<a id="__codelineno-88-4" name="__codelineno-88-4" href="#__codelineno-88-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-88-5" name="__codelineno-88-5" href="#__codelineno-88-5"></a><span class="p">});</span>
 </code></pre></div>
 <h3 id="desiredaccuracy">DesiredAccuracy<a class="headerlink" href="#desiredaccuracy" title="Permanent link">&para;</a></h3>
 <p><a href="../DesiredAccuracy/"><code>DesiredAccuracy</code></a><code>: object;</code></p>
 <p>Enum namespace controlling the native location engine's target accuracy.</p>
 <p>Higher accuracy consumes more battery. Used by <code>GeoConfig.desiredAccuracy</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-90-1" name="__codelineno-90-1" href="#__codelineno-90-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
-<a id="__codelineno-90-2" name="__codelineno-90-2" href="#__codelineno-90-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-90-3" name="__codelineno-90-3" href="#__codelineno-90-3"></a><span class="w">    </span><span class="nx">desiredAccuracy</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.DesiredAccuracy.High</span>
-<a id="__codelineno-90-4" name="__codelineno-90-4" href="#__codelineno-90-4"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-90-5" name="__codelineno-90-5" href="#__codelineno-90-5"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
+<a id="__codelineno-89-2" name="__codelineno-89-2" href="#__codelineno-89-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-89-3" name="__codelineno-89-3" href="#__codelineno-89-3"></a><span class="w">    </span><span class="nx">desiredAccuracy</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.DesiredAccuracy.High</span>
+<a id="__codelineno-89-4" name="__codelineno-89-4" href="#__codelineno-89-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-89-5" name="__codelineno-89-5" href="#__codelineno-89-5"></a><span class="p">});</span>
 </code></pre></div>
 <h3 id="event">Event<a class="headerlink" href="#event" title="Permanent link">&para;</a></h3>
 <p><a href="../Event/"><code>Event</code></a><code>: object;</code></p>
@@ -17866,94 +17990,94 @@ location services (Denied, Restricted, Always, WhenInUse).</p>
 <p><a href="../HttpMethod/"><code>HttpMethod</code></a><code>: object;</code></p>
 <p>Enum namespace defining the HTTP method used for location uploads (POST, PUT, etc).</p>
 <p>Used by <code>HttpConfig.method</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-91-1" name="__codelineno-91-1" href="#__codelineno-91-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
-<a id="__codelineno-91-2" name="__codelineno-91-2" href="#__codelineno-91-2"></a><span class="w">  </span><span class="nx">http</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-91-3" name="__codelineno-91-3" href="#__codelineno-91-3"></a><span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.HttpMethod.Post</span>
-<a id="__codelineno-91-4" name="__codelineno-91-4" href="#__codelineno-91-4"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-91-5" name="__codelineno-91-5" href="#__codelineno-91-5"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-90-1" name="__codelineno-90-1" href="#__codelineno-90-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
+<a id="__codelineno-90-2" name="__codelineno-90-2" href="#__codelineno-90-2"></a><span class="w">  </span><span class="nx">http</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-90-3" name="__codelineno-90-3" href="#__codelineno-90-3"></a><span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.HttpMethod.Post</span>
+<a id="__codelineno-90-4" name="__codelineno-90-4" href="#__codelineno-90-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-90-5" name="__codelineno-90-5" href="#__codelineno-90-5"></a><span class="p">});</span>
 </code></pre></div>
 <h3 id="kalmanprofile">KalmanProfile<a class="headerlink" href="#kalmanprofile" title="Permanent link">&para;</a></h3>
 <p><a href="../KalmanProfile/"><code>KalmanProfile</code></a><code>: object;</code></p>
 <p>Enum namespace selecting a preset Kalman filter tuning profile
 (aggressive, moderate, or relaxed smoothing).</p>
 <p>Used by <code>LocationFilter.kalmanProfile</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-92-1" name="__codelineno-92-1" href="#__codelineno-92-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
-<a id="__codelineno-92-2" name="__codelineno-92-2" href="#__codelineno-92-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-92-3" name="__codelineno-92-3" href="#__codelineno-92-3"></a><span class="w">    </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-92-4" name="__codelineno-92-4" href="#__codelineno-92-4"></a><span class="w">      </span><span class="nx">kalmanProfile</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.KalmanProfile.Aggressive</span>
-<a id="__codelineno-92-5" name="__codelineno-92-5" href="#__codelineno-92-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-92-6" name="__codelineno-92-6" href="#__codelineno-92-6"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-92-7" name="__codelineno-92-7" href="#__codelineno-92-7"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-91-1" name="__codelineno-91-1" href="#__codelineno-91-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
+<a id="__codelineno-91-2" name="__codelineno-91-2" href="#__codelineno-91-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-91-3" name="__codelineno-91-3" href="#__codelineno-91-3"></a><span class="w">    </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-91-4" name="__codelineno-91-4" href="#__codelineno-91-4"></a><span class="w">      </span><span class="nx">kalmanProfile</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.KalmanProfile.Aggressive</span>
+<a id="__codelineno-91-5" name="__codelineno-91-5" href="#__codelineno-91-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-91-6" name="__codelineno-91-6" href="#__codelineno-91-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-91-7" name="__codelineno-91-7" href="#__codelineno-91-7"></a><span class="p">});</span>
 </code></pre></div>
 <h3 id="locationfilterpolicy">LocationFilterPolicy<a class="headerlink" href="#locationfilterpolicy" title="Permanent link">&para;</a></h3>
 <p><a href="../LocationFilterPolicy/"><code>LocationFilterPolicy</code></a><code>: object;</code></p>
 <p>Enum namespace selecting the filtering engine policy for noise-reduction and smoothing.</p>
 <p>Used by <code>LocationFilter.policy</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-93-1" name="__codelineno-93-1" href="#__codelineno-93-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
-<a id="__codelineno-93-2" name="__codelineno-93-2" href="#__codelineno-93-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-93-3" name="__codelineno-93-3" href="#__codelineno-93-3"></a><span class="w">    </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-93-4" name="__codelineno-93-4" href="#__codelineno-93-4"></a><span class="w">      </span><span class="nx">policy</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.LocationFilterPolicy.Adjust</span>
-<a id="__codelineno-93-5" name="__codelineno-93-5" href="#__codelineno-93-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-93-6" name="__codelineno-93-6" href="#__codelineno-93-6"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-93-7" name="__codelineno-93-7" href="#__codelineno-93-7"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-92-1" name="__codelineno-92-1" href="#__codelineno-92-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
+<a id="__codelineno-92-2" name="__codelineno-92-2" href="#__codelineno-92-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-92-3" name="__codelineno-92-3" href="#__codelineno-92-3"></a><span class="w">    </span><span class="nx">filter</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-92-4" name="__codelineno-92-4" href="#__codelineno-92-4"></a><span class="w">      </span><span class="nx">policy</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.LocationFilterPolicy.Adjust</span>
+<a id="__codelineno-92-5" name="__codelineno-92-5" href="#__codelineno-92-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-92-6" name="__codelineno-92-6" href="#__codelineno-92-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-92-7" name="__codelineno-92-7" href="#__codelineno-92-7"></a><span class="p">});</span>
 </code></pre></div>
 <h3 id="locationrequest">LocationRequest<a class="headerlink" href="#locationrequest" title="Permanent link">&para;</a></h3>
 <p><a href="../LocationRequest/"><code>LocationRequest</code></a><code>: object;</code></p>
 <p><span class="platform-badge platform-badge--ios">iOS only</span> Enum namespace defining the type of location permission request
 (Always, WhenInUse, or Any). Used by <code>GeoConfig.locationAuthorizationRequest</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
-<a id="__codelineno-94-2" name="__codelineno-94-2" href="#__codelineno-94-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-94-3" name="__codelineno-94-3" href="#__codelineno-94-3"></a><span class="w">    </span><span class="nx">locationAuthorizationRequest</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.LocationRequest.Always</span>
-<a id="__codelineno-94-4" name="__codelineno-94-4" href="#__codelineno-94-4"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-94-5" name="__codelineno-94-5" href="#__codelineno-94-5"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-93-1" name="__codelineno-93-1" href="#__codelineno-93-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
+<a id="__codelineno-93-2" name="__codelineno-93-2" href="#__codelineno-93-2"></a><span class="w">  </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-93-3" name="__codelineno-93-3" href="#__codelineno-93-3"></a><span class="w">    </span><span class="nx">locationAuthorizationRequest</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.LocationRequest.Always</span>
+<a id="__codelineno-93-4" name="__codelineno-93-4" href="#__codelineno-93-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-93-5" name="__codelineno-93-5" href="#__codelineno-93-5"></a><span class="p">});</span>
 </code></pre></div>
 <h3 id="loglevel">LogLevel<a class="headerlink" href="#loglevel" title="Permanent link">&para;</a></h3>
 <p><a href="../LogLevel/"><code>LogLevel</code></a><code>: object;</code></p>
 <p>Enum namespace controlling verbosity of the SDK logger.</p>
 <p>Used by <code>LoggerConfig.logLevel</code>. Values range from silent (<code>Off</code>) to
 extremely verbose (<code>Verbose</code>).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-95-1" name="__codelineno-95-1" href="#__codelineno-95-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
-<a id="__codelineno-95-2" name="__codelineno-95-2" href="#__codelineno-95-2"></a><span class="w">  </span><span class="nx">logger</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-95-3" name="__codelineno-95-3" href="#__codelineno-95-3"></a><span class="w">    </span><span class="nx">logLevel</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.LogLevel.Verbose</span>
-<a id="__codelineno-95-4" name="__codelineno-95-4" href="#__codelineno-95-4"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-95-5" name="__codelineno-95-5" href="#__codelineno-95-5"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
+<a id="__codelineno-94-2" name="__codelineno-94-2" href="#__codelineno-94-2"></a><span class="w">  </span><span class="nx">logger</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-94-3" name="__codelineno-94-3" href="#__codelineno-94-3"></a><span class="w">    </span><span class="nx">logLevel</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.LogLevel.Verbose</span>
+<a id="__codelineno-94-4" name="__codelineno-94-4" href="#__codelineno-94-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-94-5" name="__codelineno-94-5" href="#__codelineno-94-5"></a><span class="p">});</span>
 </code></pre></div>
 <h3 id="notificationpriority">NotificationPriority<a class="headerlink" href="#notificationpriority" title="Permanent link">&para;</a></h3>
 <p><a href="../NotificationPriority/"><code>NotificationPriority</code></a><code>: object;</code></p>
 <p><span class="platform-badge platform-badge--android">Android only</span> Enum namespace controlling Android foreground-service notification priority
 and icon placement (top, bottom, hidden).</p>
 <p>Used by <code>NotificationConfig.priority</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
-<a id="__codelineno-96-2" name="__codelineno-96-2" href="#__codelineno-96-2"></a><span class="w">  </span><span class="nx">app</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-96-3" name="__codelineno-96-3" href="#__codelineno-96-3"></a><span class="w">    </span><span class="nx">notification</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-96-4" name="__codelineno-96-4" href="#__codelineno-96-4"></a><span class="w">      </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.NotificationPriority.High</span>
-<a id="__codelineno-96-5" name="__codelineno-96-5" href="#__codelineno-96-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-96-6" name="__codelineno-96-6" href="#__codelineno-96-6"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-96-7" name="__codelineno-96-7" href="#__codelineno-96-7"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-95-1" name="__codelineno-95-1" href="#__codelineno-95-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
+<a id="__codelineno-95-2" name="__codelineno-95-2" href="#__codelineno-95-2"></a><span class="w">  </span><span class="nx">app</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-95-3" name="__codelineno-95-3" href="#__codelineno-95-3"></a><span class="w">    </span><span class="nx">notification</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-95-4" name="__codelineno-95-4" href="#__codelineno-95-4"></a><span class="w">      </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.NotificationPriority.High</span>
+<a id="__codelineno-95-5" name="__codelineno-95-5" href="#__codelineno-95-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-95-6" name="__codelineno-95-6" href="#__codelineno-95-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-95-7" name="__codelineno-95-7" href="#__codelineno-95-7"></a><span class="p">});</span>
 </code></pre></div>
 <h3 id="persistmode">PersistMode<a class="headerlink" href="#persistmode" title="Permanent link">&para;</a></h3>
 <p><a href="../PersistMode/"><code>PersistMode</code></a><code>: object;</code></p>
 <p>Enum namespace controlling which records the SDK persists to SQLite:
 locations only, geofences only, both, or none.</p>
 <p>Used by <code>PersistenceConfig.persistMode</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-97-1" name="__codelineno-97-1" href="#__codelineno-97-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
-<a id="__codelineno-97-2" name="__codelineno-97-2" href="#__codelineno-97-2"></a><span class="w">  </span><span class="nx">persistence</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-97-3" name="__codelineno-97-3" href="#__codelineno-97-3"></a><span class="w">    </span><span class="nx">persistMode</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.PersistMode.All</span>
-<a id="__codelineno-97-4" name="__codelineno-97-4" href="#__codelineno-97-4"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-97-5" name="__codelineno-97-5" href="#__codelineno-97-5"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
+<a id="__codelineno-96-2" name="__codelineno-96-2" href="#__codelineno-96-2"></a><span class="w">  </span><span class="nx">persistence</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-96-3" name="__codelineno-96-3" href="#__codelineno-96-3"></a><span class="w">    </span><span class="nx">persistMode</span><span class="o">:</span><span class="w"> </span><span class="kt">BackgroundGeolocation.PersistMode.All</span>
+<a id="__codelineno-96-4" name="__codelineno-96-4" href="#__codelineno-96-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-96-5" name="__codelineno-96-5" href="#__codelineno-96-5"></a><span class="p">});</span>
 </code></pre></div>
 <h3 id="triggeractivity">TriggerActivity<a class="headerlink" href="#triggeractivity" title="Permanent link">&para;</a></h3>
 <p><a href="../TriggerActivity/"><code>TriggerActivity</code></a><code>: object;</code></p>
 <p>Enum namespace defining which physical motion activities can trigger
 motion-detection transitions (still → moving).</p>
 <p>Used by <code>ActivityConfig.triggerActivities</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-98-1" name="__codelineno-98-1" href="#__codelineno-98-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
-<a id="__codelineno-98-2" name="__codelineno-98-2" href="#__codelineno-98-2"></a><span class="w">  </span><span class="nx">activity</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-98-3" name="__codelineno-98-3" href="#__codelineno-98-3"></a><span class="w">    </span><span class="nx">triggerActivities</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-98-4" name="__codelineno-98-4" href="#__codelineno-98-4"></a><span class="w">      </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">TriggerActivity</span><span class="p">.</span><span class="nx">InVehicle</span>
-<a id="__codelineno-98-5" name="__codelineno-98-5" href="#__codelineno-98-5"></a><span class="w">    </span><span class="p">]</span>
-<a id="__codelineno-98-6" name="__codelineno-98-6" href="#__codelineno-98-6"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-98-7" name="__codelineno-98-7" href="#__codelineno-98-7"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-97-1" name="__codelineno-97-1" href="#__codelineno-97-1"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
+<a id="__codelineno-97-2" name="__codelineno-97-2" href="#__codelineno-97-2"></a><span class="w">  </span><span class="nx">activity</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-97-3" name="__codelineno-97-3" href="#__codelineno-97-3"></a><span class="w">    </span><span class="nx">triggerActivities</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-97-4" name="__codelineno-97-4" href="#__codelineno-97-4"></a><span class="w">      </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">TriggerActivity</span><span class="p">.</span><span class="nx">InVehicle</span>
+<a id="__codelineno-97-5" name="__codelineno-97-5" href="#__codelineno-97-5"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-97-6" name="__codelineno-97-6" href="#__codelineno-97-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-97-7" name="__codelineno-97-7" href="#__codelineno-97-7"></a><span class="p">});</span>
 </code></pre></div>
 <h3 id="devicesettings">deviceSettings<a class="headerlink" href="#devicesettings" title="Permanent link">&para;</a></h3>
 <p><code>deviceSettings:</code><a href="../DeviceSettings/"><code>DeviceSettings</code></a><code>;</code></p>
