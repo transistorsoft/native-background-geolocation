@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 4.3.3 &mdash; 2026-07-23
+- fix(geofence): polygon geofence could fire a phantom ENTER hit-tested against a stale (out-of-order) location sample immediately after a valid EXIT, then cease monitoring on the enclosing-circle exit with the published state stuck "inside". Unconfirmed polygon state-changes are now discarded — never promoted to real events — when monitoring ceases, and polygon hit-testing enforces timestamp monotonicity, rejecting samples older than ones already evaluated.
+- fix(geofence): close a polygon MEC-exit race — a transition scored on one thread could complete concurrently with the enclosing-circle EXIT ceasing monitoring on another, stranding the published state "inside". Polygon transition commits and the enclosing-circle cease are now serialized so the terminal state is deterministic; a transition that completes after monitoring has ceased is suppressed.
+- fix(geofence): heal polygons left stuck "inside" while unmonitored (the terminal state of the above bugs on already-affected devices), and stop re-firing a spurious polygon ENTER on every app restart. A polygon's enclosing-circle ENTER is no longer suppressed by the duplicate-ENTER guard, so re-entering a site re-engages monitoring; on re-engagement the hit-tester is seeded from the persisted entryState, so a polygon that is still inside stays inside (no phantom re-ENTER) and one the device has actually left fires a correctly-located EXIT. Reconciliation happens through the live hit-tester, never a fabricated event.
+
 ## 4.3.2 &mdash; 2026-07-12
 - fix(proguard): keep LocationQuery in release minification + consumer rules
 
