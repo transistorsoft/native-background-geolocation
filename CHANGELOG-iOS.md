@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.4.0 &mdash; 2026-07-24
+- feat: implement insertLocation (was an unimplemented stub that hung callers)
+- fix: poisoned lastLocation from clock skew
+
 ## 4.3.0 &mdash; 2026-07-12
 - feat(data): getLocations(query) — paged/queryable location reads (iOS)
 

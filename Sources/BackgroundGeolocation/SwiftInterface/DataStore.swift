@@ -83,6 +83,12 @@ extension BGGeo {
             manager.destroyLocation(uuid)
         }
 
+        /// Manually insert a location record into the SDK database (import-as-is).
+        ///
+        /// `params` must contain a `coords` dictionary with `latitude` and `longitude`; a missing or
+        /// unparseable `timestamp` defaults to the current time. Deliberately bypasses `persistMode` —
+        /// an explicit insert always writes. Returns the `uuid` of the inserted record (generated when
+        /// `params` omits one).
         public func insert(_ params: [String: Any]) async throws -> String {
             try await withCheckedThrowingContinuation { continuation in
                 manager.insertLocation(params,
