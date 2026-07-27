@@ -211,9 +211,13 @@ public class BGGeo {
                               persist: persist, extras: extras)
     }
 
+    /// Stream locations until `stopWatchPosition(_:)` is called.
+    ///
+    /// There is deliberately no `timeout`: a watch runs for as long as the caller wants it,
+    /// matching the Android SDK. Bounding the session is the caller's job via
+    /// `stopWatchPosition(_:)`.
     public func watchPosition(
         interval: Double = 1000,
-        timeout: TimeInterval = 60,
         persist: Bool? = nil,
         extras: [String: Any]? = nil,
         success: @escaping (LocationEvent) -> Void,
@@ -224,7 +228,6 @@ public class BGGeo {
             success: { success(LocationEvent($0.locationEvent)) },
             failure: { failure($0) }
         )
-        request.timeout = timeout
         // Only assign when the caller supplied a value — an explicit persist
         // overrides persistMode; omitting it lets persistMode decide.
         if let persist { request.persist = persist }

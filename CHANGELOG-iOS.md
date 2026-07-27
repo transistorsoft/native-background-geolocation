@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 4.4.1 &mdash; 2026-07-27
+- test(ios): fix TSHttpService_Tests 401 flake (cold main-queue stall); partial
+- test(ios): restore process-global state between test classes; 18 failures ->
+- fix(ios): watchPosition must stream until stopWatchPosition, not stop at 60s
+- fix(ios): stop watchPosition crash when a stream is torn down mid-emission
+- Add insertLocation test feature to context menu in settings screen
+
 ## 4.4.0 &mdash; 2026-07-24
 - feat: implement insertLocation (was an unimplemented stub that hung callers)
 - fix: poisoned lastLocation from clock skew
