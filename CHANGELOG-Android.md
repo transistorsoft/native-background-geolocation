@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## 4.4.1 &mdash; 2026-07-27
+- fix(geofence): recover from a failed deregistration during a geofence re-add
+- fix(geofence): allWithinRadius dropped entry_state, hits, state_updated_at
+- fix(geofence): revive the coalescing queue; force buffered re-evaluations
+- fix(boot): re-arm geofences, tracking and the stationary region after a reboot
+- feat(device): recognise Motorola's power-manager screen; first DeviceSettings tests
+- feat(demoapp): add Power Manager and Ignore Battery Optimizations menu items
+- fix(location): materialize Location extras at ingestion (Android 7 NPE)
+- fix(persistence): database failures must degrade, not kill the app
+- fix(robustness): guard three recoverable exceptions that killed the app
+- hardening(crash): never let last-chance cleanup swallow the crash report
+- fix(geofencing): guarantee every delivery releases its startId
+- hardening(geofencing): config-driven sticky must respect enabled
+- fix(fgs-gate): never queue a warm launch with no drain left to run
+- fix(service): keep shared LocationRequestService alive under watch + getCurrentPosition
+- fix(service): launch-aware stop to end Motorola FGS DidNotStartInTime crashes
+- Add insertLocation test feature in Settings context menu
+- feat: implement insertLocation import-as-is; fix uuid column, timestamp, errors
+
+## 4.4.0 &mdash; 2026-07-24
+- feat: implement insertLocation import-as-is; fix uuid column, timestamp, errors
+
 ## 4.3.3 &mdash; 2026-07-23
 - fix(geofence): polygon geofence could fire a phantom ENTER hit-tested against a stale (out-of-order) location sample immediately after a valid EXIT, then cease monitoring on the enclosing-circle exit with the published state stuck "inside". Unconfirmed polygon state-changes are now discarded — never promoted to real events — when monitoring ceases, and polygon hit-testing enforces timestamp monotonicity, rejecting samples older than ones already evaluated.
 - fix(geofence): close a polygon MEC-exit race — a transition scored on one thread could complete concurrently with the enclosing-circle EXIT ceasing monitoring on another, stranding the published state "inside". Polygon transition commits and the enclosing-circle cease are now serialized so the terminal state is deterministic; a transition that completes after monitoring has ceased is suppressed.
