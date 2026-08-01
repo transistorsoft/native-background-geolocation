@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 4.4.2 &mdash; 2026-08-01
+- Demo app notification update odometer
+- Update odometer in notification.text
+- hardening(service): guarded stop when a promotion throws, never a bare stopSelf()
+- feat(motion): add activity.activities[] to location + activitychange payloads
+- test(service): assert the GUARDED self-stop, not merely "stopped by self"
+- fix(service): promote on EVERY launch — a stale FGS latch was killing restricted apps
+- fix(publish): release the staging repo, and gate on Maven Central before tagging
+
 ## 4.4.1 &mdash; 2026-07-27
 - fix(geofence): recover from a failed deregistration during a geofence re-add
 - fix(geofence): allWithinRadius dropped entry_state, hits, state_updated_at
