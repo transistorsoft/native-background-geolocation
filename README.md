@@ -44,6 +44,8 @@ See [`/example`](example/README.md) — example apps are included in this repo.
 
 > [!TIP]
 > The SDK is **fully functional in `DEBUG` builds** — no license required. Try before you buy.
+>
+> Need to test a `RELEASE` build? [Generate a free 30-day trial license](https://transistorsoft.com/shop/trials/new).
 
 A license is required for **App Store** (iOS) and **Release** (Android) builds.
 [Purchase a license](https://docs.transistorsoft.com/purchase/?platform=swift)
