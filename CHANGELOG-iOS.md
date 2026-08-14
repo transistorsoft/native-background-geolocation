@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.4.2 &mdash; 2026-08-04
+- feat(motion): add activities[] to location + activitychange; log raw CMMotionActivity
+- fix(tracking): recover from stationary-with-no-region wedge after failed motionchange fetch
+
 ## 4.4.1 &mdash; 2026-07-27
 - test(ios): fix TSHttpService_Tests 401 flake (cold main-queue stall); partial
 - test(ios): restore process-global state between test classes; 18 failures ->
