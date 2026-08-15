@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 4.5.0 &mdash; 2026-08-15
+- fix(config): preserve useCLLocationAccuracy across reset() — stop desiredAccuracy domain oscillation
+- feat(geofence): missed-exit sentinel — audit every internal location against the stationary anchor
+- fix(geofence): stationary-exit verification, forced re-registration, silent-motion fallback, watchdog
+
 ## 4.4.2 &mdash; 2026-08-01
 - Demo app notification update odometer
 - Update odometer in notification.text
