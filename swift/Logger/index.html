@@ -15213,6 +15213,7 @@ can be fetched as a string, emailed from the device, or uploaded to a URL.</p>
 <ul>
 <li><a href="#overview">Overview</a></li>
 <li><a href="#retrieving-logs">Retrieving logs</a></li>
+<li><a href="#analyzing-a-log">Analyzing a log</a></li>
 <li><a href="#writing-log-entries">Writing log entries</a></li>
 <li><a href="#examples">Examples</a></li>
 </ul>
@@ -15280,6 +15281,21 @@ records up to <a href="../LoggerConfig/#logmaxdays">LoggerConfig.logMaxDays</a> 
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>09-19 11:12:22.100   ✅  DESTROY: bca5acc8-e358-4d8f-827f-b8c0d556b7bb
 </code></pre></div>
 <hr />
+<h5 id="analyzing-a-log">Analyzing a log<a class="headerlink" href="#analyzing-a-log" title="Permanent link">&para;</a></h5>
+<p>A multi-day capture runs to hundreds of thousands of lines.
+<a href="https://github.com/transistorsoft/loganalyzer"><code>loganalyzer</code></a> reads one and
+produces a triage <strong>digest</strong> — what the SDK did and what went wrong — plus an
+interactive <strong>map</strong> of where it did it:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>npx<span class="w"> </span>@transistorsoft/loganalyzer<span class="w"> </span>background-geolocation.log.gz
+</code></pre></div>
+<p>It accepts the exports produced by <code>getLog</code>, <code>emailLog</code> and
+<code>uploadLog</code> — <code>.log</code> or <code>.log.gz</code>, one file or several.</p>
+<p><code>digest.md</code> is pseudonymized (coordinates become <code>COORD-A</code>, geofences <code>GF-1</code>),
+which makes it the artifact to attach to a support issue. <code>map.html</code> plots
+full-precision coordinates and is a local instrument — do not share it.</p>
+<p>See <a href="../../help/debugging/#log-analyzer">Debugging → Log Analyzer</a> for the full
+walkthrough.</p>
+<hr />
 <h5 id="writing-log-entries">Writing log entries<a class="headerlink" href="#writing-log-entries" title="Permanent link">&para;</a></h5>
 <p>Insert custom messages into the SDK's log database at any severity level.
 Custom entries appear inline with SDK entries, making it easy to correlate
@@ -15325,16 +15341,16 @@ your app's actions with location events.</p>
 <hr />
 <h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
 <h3 id="debug">debug<a class="headerlink" href="#debug" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="nf">debug</span><span class="p">(</span><span class="kc">_</span><span class="w"> </span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="nf">debug</span><span class="p">(</span><span class="kc">_</span><span class="w"> </span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">)</span>
 </code></pre></div>
 <p>Insert a debug-level message into the SDK's log database.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;This is a debug message&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;This is a debug message&quot;</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>D TSLocationManager: [c.t.l.logger.TSLog log] This is a debug message
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>D TSLocationManager: [c.t.l.logger.TSLog log] This is a debug message
 </code></pre></div>
 <h3 id="destroylog">destroyLog<a class="headerlink" href="#destroylog" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="nf">destroyLog</span><span class="p">()</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kr">throws</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="nf">destroyLog</span><span class="p">()</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kr">throws</span>
 </code></pre></div>
 <p>Delete all records from the SDK's log database.</p>
 <p><strong>See also</strong>
@@ -15343,8 +15359,8 @@ your app's actions with location events.</p>
 - <code>emailLog</code>
 - <code>uploadLog</code>
 - 📘<a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Debugging">Debugging Guide</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">destroyLog</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">destroyLog</span><span class="p">()</span>
 </code></pre></div>
 <h3 id="emaillog">emailLog<a class="headerlink" href="#emaillog" title="Permanent link">&para;</a></h3>
 <p><code>public func emailLog( to email: String, start: Int64 = 0, end: Int64 = 0, order: Int =</code><a href="./"><code>Logger</code></a><code>.ORDER_ASC, limit: Int = 0 ) async throws</code></p>
@@ -15354,27 +15370,28 @@ your app's actions with location events.</p>
 - <a href="../LoggerConfig/#loglevel">LoggerConfig.logLevel</a>
 - <code>getLog</code>
 - <code>uploadLog</code>
-- 📘<a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Debugging">Debugging Guide</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">emailLog</span><span class="p">(</span><span class="n">to</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;foo@bar.com&quot;</span><span class="p">)</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">        </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;[emailLog] success&quot;</span><span class="p">)</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">        </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;[emailLog] FAILURE: </span><span class="si">\(</span><span class="n">error</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="p">}</span>
+- 📘<a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Debugging">Debugging Guide</a>
+- 🔎<a href="../../help/debugging/#log-analyzer">Analyzing a log</a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">emailLog</span><span class="p">(</span><span class="n">to</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;foo@bar.com&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">        </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;[emailLog] success&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">        </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;[emailLog] FAILURE: </span><span class="si">\(</span><span class="n">error</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="error">error<a class="headerlink" href="#error" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="nf">error</span><span class="p">(</span><span class="kc">_</span><span class="w"> </span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="nf">error</span><span class="p">(</span><span class="kc">_</span><span class="w"> </span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">)</span>
 </code></pre></div>
 <p>Insert an error-level message into the SDK's log database.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="s">&quot;Something BAD&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="s">&quot;Something BAD&quot;</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>E TSLocationManager: [c.t.l.logger.TSLog log]
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>E TSLocationManager: ‼ Something BAD
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>E TSLocationManager: [c.t.l.logger.TSLog log]
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>E TSLocationManager: ‼ Something BAD
 </code></pre></div>
 <h3 id="getlog">getLog<a class="headerlink" href="#getlog" title="Permanent link">&para;</a></h3>
 <p><code>public func getLog( start: Int64 = 0, end: Int64 = 0, order: Int =</code><a href="./"><code>Logger</code></a><code>.ORDER_ASC, limit: Int = 0 ) async throws -&gt; String</code></p>
@@ -15388,43 +15405,43 @@ the result may be several megabytes.</p>
 - <code>emailLog</code>
 - <code>uploadLog</code>
 - 📘<a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Debugging">Debugging Guide</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">        </span><span class="c1">// Warning: this string could be several megabytes.</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nv">log</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">getLog</span><span class="p">()</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">        </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;[log] success: </span><span class="si">\(</span><span class="n">log</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">        </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;[getLog] error: </span><span class="si">\(</span><span class="n">error</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">        </span><span class="c1">// Warning: this string could be several megabytes.</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nv">log</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">getLog</span><span class="p">()</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">        </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;[log] success: </span><span class="si">\(</span><span class="n">log</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">        </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;[getLog] error: </span><span class="si">\(</span><span class="n">error</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="info">info<a class="headerlink" href="#info" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="nf">info</span><span class="p">(</span><span class="kc">_</span><span class="w"> </span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="nf">info</span><span class="p">(</span><span class="kc">_</span><span class="w"> </span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">)</span>
 </code></pre></div>
 <p>Insert an info-level message into the SDK's log database.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Something informative&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Something informative&quot;</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>I TSLocationManager: [c.t.l.logger.TSLog log]
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>I TSLocationManager:   ℹ️  Something informative
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>I TSLocationManager: [c.t.l.logger.TSLog log]
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>I TSLocationManager:   ℹ️  Something informative
 </code></pre></div>
 <h3 id="loglevel">logLevel<a class="headerlink" href="#loglevel" title="Permanent link">&para;</a></h3>
 <p><code>public var logLevel:</code><a href="../BGGeo/"><code>BGGeo</code></a><code>.</code><a href="../LogLevel/"><code>LogLevel</code></a></p>
 <p>Sets the <a href="../LoggerConfig/#loglevel">LoggerConfig.logLevel</a>.</p>
 <h3 id="notice">notice<a class="headerlink" href="#notice" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="nf">notice</span><span class="p">(</span><span class="kc">_</span><span class="w"> </span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="nf">notice</span><span class="p">(</span><span class="kc">_</span><span class="w"> </span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">)</span>
 </code></pre></div>
 <p>Insert a notice-level message into the SDK's log database.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">notice</span><span class="p">(</span><span class="s">&quot;A Notice&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">notice</span><span class="p">(</span><span class="s">&quot;A Notice&quot;</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>I TSLocationManager: [c.t.l.logger.TSLog log]
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>I TSLocationManager:   🔵  A Notice
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>I TSLocationManager: [c.t.l.logger.TSLog log]
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>I TSLocationManager:   🔵  A Notice
 </code></pre></div>
 <h3 id="playsound">playSound<a class="headerlink" href="#playsound" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="nf">playSound</span><span class="p">(</span><span class="kc">_</span><span class="w"> </span><span class="n">soundId</span><span class="p">:</span><span class="w"> </span><span class="n">SystemSoundID</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="nf">playSound</span><span class="p">(</span><span class="kc">_</span><span class="w"> </span><span class="n">soundId</span><span class="p">:</span><span class="w"> </span><span class="n">SystemSoundID</span><span class="p">)</span>
 </code></pre></div>
 <p>Play a system sound.</p>
 <h5 id="ios">iOS<a class="headerlink" href="#ios" title="Permanent link">&para;</a></h5>
@@ -15477,25 +15494,25 @@ fields:</p>
 - <code>emailLog</code>
 - <code>destroyLog</code>
 - 📘<a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Debugging">Debugging Guide</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1">// Not available in native Swift API</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1">// Not available in native Swift API</span>
 </code></pre></div>
 <h3 id="warn">warn<a class="headerlink" href="#warn" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="nf">warn</span><span class="p">(</span><span class="kc">_</span><span class="w"> </span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">func</span><span class="w"> </span><span class="nf">warn</span><span class="p">(</span><span class="kc">_</span><span class="w"> </span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">)</span>
 </code></pre></div>
 <p>Insert a warning-level message into the SDK's log database.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">warn</span><span class="p">(</span><span class="s">&quot;Something WEIRD&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">warn</span><span class="p">(</span><span class="s">&quot;Something WEIRD&quot;</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>E TSLocationManager: [c.t.l.logger.TSLog log]
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>E TSLocationManager: ⚠️  Something WEIRD
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>E TSLocationManager: [c.t.l.logger.TSLog log]
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>E TSLocationManager: ⚠️  Something WEIRD
 </code></pre></div>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
 <h3 id="order_asc">ORDER_ASC<a class="headerlink" href="#order_asc" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">ORDER_ASC</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">ORDER_ASC</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span>
 </code></pre></div>
 <p>Sort-order constant for ascending log queries (oldest first).</p>
 <h3 id="order_desc">ORDER_DESC<a class="headerlink" href="#order_desc" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">ORDER_DESC</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">ORDER_DESC</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
 </code></pre></div>
 <p>Sort-order constant for descending log queries (newest first).</p>
 

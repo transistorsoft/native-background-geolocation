@@ -14799,6 +14799,100 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#log-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Analyzer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Log Analyzer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-it-reads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it reads
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The map
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-digest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The digest
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drilling-into-a-moment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drilling into a moment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-safe-to-share" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is safe to share
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flags
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporting-an-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reporting an issue
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#demo-app" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -15065,6 +15159,100 @@
     <span class="md-ellipsis">
       
         Example log output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Analyzer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Log Analyzer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-it-reads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it reads
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The map
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-digest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The digest
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drilling-into-a-moment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drilling into a moment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-safe-to-share" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is safe to share
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flags
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporting-an-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reporting an issue
       
     </span>
   </a>
@@ -15606,6 +15794,215 @@
 </div>
 </div>
 </div>
+<hr />
+<h2 id="log-analyzer">Log Analyzer<a class="headerlink" href="#log-analyzer" title="Permanent link">&para;</a></h2>
+<p>The log database is thorough to a fault: a three-day capture runs to hundreds of thousands of lines, and the twenty that explain your problem are somewhere in the middle. <strong>loganalyzer</strong> reads one and produces two things — a <strong>digest</strong> of what the SDK did, and an <strong>interactive map</strong> of where it did it.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>npx<span class="w"> </span>@transistorsoft/loganalyzer<span class="w"> </span>background-geolocation.log.gz
+</code></pre></div>
+<p>That is the entire setup. <code>npx</code> fetches the tool, analyzes the file, writes the map and opens it in your browser. It is a Python program behind a Node launcher, so if you would rather skip Node:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>uvx<span class="w"> </span>transistorsoft-loganalyzer<span class="w"> </span>background-geolocation.log.gz
+</code></pre></div>
+<p>The tool is MIT-licensed and open source — <a href="https://github.com/transistorsoft/loganalyzer">transistorsoft/loganalyzer</a>.</p>
+<h3 id="what-it-reads">What it reads<a class="headerlink" href="#what-it-reads" title="Permanent link">&para;</a></h3>
+<p>The input is the SDK's own log export — exactly what <code>emailLog()</code>, <code>getLog()</code> and <code>uploadLog()</code> produce (see <a href="#log-database">Log Database</a> above). Both <code>.log</code> and <code>.log.gz</code> are accepted, as is the raw <code>transistor_log.db</code> pulled off a device, and you can pass several files in one command. Platform is detected from the log's grammar rather than the filename, so a mislabelled capture still analyzes correctly.</p>
+<div class="admonition warning">
+<p class="admonition-title"><code>adb logcat</code> output is a different format</p>
+<p>The analyzer parses the SDK's own log export, not console or <code>logcat</code> capture. Use <code>emailLog()</code> — it is also the only source that survives app termination, since it comes from the on-device database rather than an attached console.</p>
+</div>
+<h3 id="the-map">The map<a class="headerlink" href="#the-map" title="Permanent link">&para;</a></h3>
+<p><a href="../../assets/images/screenshots/loganalyzer.png"><img alt="loganalyzer map view — track, event layers, and the time navigator" src="../../assets/images/screenshots/loganalyzer.png" /></a></p>
+<p><em>A 7-day capture — 3,024 features across 27 tracking sessions, windowed down to one afternoon. Click to enlarge.</em></p>
+<p>One self-contained HTML file: no CDN, no sibling assets, no build step. OpenStreetMap tiles are its only network dependency, so it can be archived next to a ticket and reopened months later.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Track</strong></td>
+<td>the route, optionally coloured by speed</td>
+</tr>
+<tr>
+<td><strong>Fixes</strong></td>
+<td>chevrons pointing in the direction of travel — a dot when course is unknown</td>
+</tr>
+<tr>
+<td><strong>Layers</strong></td>
+<td>launch, lifecycle, errors, warnings, geofence, motion, HTTP, rejections, gaps, mock. High-volume layers start hidden.</td>
+</tr>
+<tr>
+<td><strong>Time navigator</strong></td>
+<td>the strip along the bottom: an activity histogram over the whole capture with a window you can drag, stretch or zoom. Everything above filters to it, and the track is genuinely clipped, not merely hidden.</td>
+</tr>
+<tr>
+<td><strong>Sessions</strong></td>
+<td>the ruler under the histogram. A capture is split into tracking sessions at silences in the location stream; click one to jump to it, or step with <code>‹ ›</code>. Each reports its distance and what ended it — <code>death</code>, <code>scheduler-window</code>, <code>suspension</code>, <code>wedge-candidate</code>.</td>
+</tr>
+<tr>
+<td><strong>Popups</strong></td>
+<td>the log record in its original two-line shape, plus a copy-ready <code>--slice</code> for drilling into that moment</td>
+</tr>
+</tbody>
+</table>
+<p>Markers are tinted semantically: <strong>green</strong> = tracking resumes / geofence <code>ENTER</code>, <strong>red</strong> = tracking parks / <code>EXIT</code> / failure, <strong>amber</strong> = geofence <code>DWELL</code> / app foreground. Dashed red circles are stationary regions, drawn at the radius read from the log.</p>
+<h3 id="the-digest">The digest<a class="headerlink" href="#the-digest" title="Permanent link">&para;</a></h3>
+<p><code>digest.md</code> is the written half — the same capture read as a report rather than a picture:</p>
+<table>
+<thead>
+<tr>
+<th>section</th>
+<th>what it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header</td>
+<td>platform, SDK version, span, record count, and the effective config the SDK was actually running</td>
+</tr>
+<tr>
+<td>Timeline</td>
+<td>app launches and segments, the foreground / background / headless lane, and every silence ≥ 15 min with a classification for what caused it</td>
+</tr>
+<tr>
+<td>Warnings &amp; Errors</td>
+<td>grouped by kind with counts, rather than one line per occurrence</td>
+</tr>
+<tr>
+<td>Health</td>
+<td>HTTP (attempts, status histogram, retries, queue depth, connectivity), record lifecycle, geofence, motion, auth, power</td>
+</tr>
+<tr>
+<td>State at end of log</td>
+<td>what the SDK believed about itself when the capture ended</td>
+</tr>
+<tr>
+<td>Anomalies</td>
+<td>contradictions worth a second look</td>
+</tr>
+<tr>
+<td>Unknown lines</td>
+<td>anything the analyzer did not recognise, so nothing is silently dropped</td>
+</tr>
+<tr>
+<td>Missing evidence</td>
+<td>the questions this capture cannot answer — what to enable before capturing again</td>
+</tr>
+</tbody>
+</table>
+<p>The gap table is usually the most valuable thing in it, because it names what a silence actually <em>was</em> — and shows the evidence it read that from:</p>
+<table>
+<thead>
+<tr>
+<th>silence from</th>
+<th>duration</th>
+<th>classification</th>
+<th>app state</th>
+<th>boundary evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-07-28 14:05:05.942</td>
+<td>28.7 min</td>
+<td>suspension</td>
+<td>background</td>
+<td>no fresh banner and no schedule alarm appear at the gap boundary</td>
+</tr>
+</tbody>
+</table>
+<p>The digest never asserts that an event <em>did not happen</em> — SDK log emissions are level-gated and conditional, so it reports only what does or does not appear in the capture.</p>
+<h3 id="drilling-into-a-moment">Drilling into a moment<a class="headerlink" href="#drilling-into-a-moment" title="Permanent link">&para;</a></h3>
+<p>Every map popup shows a copy-ready <code>--slice</code> string. Paste it back to print the raw records around that instant instead of writing outputs:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>npx<span class="w"> </span>@transistorsoft/loganalyzer<span class="w"> </span>background-geolocation.log.gz<span class="w"> </span>--slice<span class="w"> </span><span class="s2">&quot;07-04 13:49:29±120s&quot;</span>
+</code></pre></div>
+<h3 id="what-is-safe-to-share">What is safe to share<a class="headerlink" href="#what-is-safe-to-share" title="Permanent link">&para;</a></h3>
+<p>Output lands in <code>./loganalyzer-out/</code> unless you pass <code>--out</code>, one folder per input file:</p>
+<table>
+<thead>
+<tr>
+<th>file</th>
+<th>contents</th>
+<th>safe to share?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>digest.md</code></td>
+<td>the triage summary</td>
+<td>✅ <strong>pseudonymized</strong> — the artifact to attach to an issue</td>
+</tr>
+<tr>
+<td><code>digest.json</code></td>
+<td>the same analysis, machine-readable</td>
+<td>❌ full precision</td>
+</tr>
+<tr>
+<td><code>map.html</code></td>
+<td>the interactive map</td>
+<td>❌ full-precision coordinates</td>
+</tr>
+<tr>
+<td><code>locations.geojson</code></td>
+<td>raw layer geometry (<code>--locations</code>)</td>
+<td>❌ full-precision coordinates</td>
+</tr>
+<tr>
+<td><code>aliases.local.json</code></td>
+<td>alias → real value mapping</td>
+<td>❌ never send this — it un-redacts <code>digest.md</code></td>
+</tr>
+</tbody>
+</table>
+<p>Redaction is <strong>pseudonymizing, not deleting</strong>: coordinates become <code>COORD-A</code>, geofences <code>GF-1</code>, packages <code>PKG-1</code>, devices <code>DEV-1</code>, URLs <code>URL-1</code>. The same real value always gets the same alias, so the digest still reads as a coherent story — <em>"the device left <code>GF-1</code> at <code>COORD-A</code>"</em> — while identifying nothing.</p>
+<div class="admonition warning">
+<p class="admonition-title">The map plots exactly where the device went</p>
+<p><code>digest.md</code> and <code>--slice</code> output are the only artifacts meant for a public issue. Everything else is a local instrument.</p>
+</div>
+<p>A freshly created output directory writes its own <code>.gitignore</code> containing <code>*</code>, so running this inside a repository cannot commit somebody's movements by accident. A directory that already existed is never modified.</p>
+<h3 id="flags">Flags<a class="headerlink" href="#flags" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>flag</th>
+<th>effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--out DIR</code></td>
+<td>output root (default <code>loganalyzer-out/</code>); one subfolder per input</td>
+</tr>
+<tr>
+<td><code>--map</code> / <code>--no-map</code></td>
+<td>write <code>map.html</code> — <strong>on by default</strong></td>
+</tr>
+<tr>
+<td><code>--open</code> / <code>--no-open</code></td>
+<td>open the map — <strong>on by default in a terminal</strong>, off when piped or in CI</td>
+</tr>
+<tr>
+<td><code>--locations</code></td>
+<td>also write <code>locations.geojson</code></td>
+</tr>
+<tr>
+<td><code>--slice "&lt;ts&gt;±&lt;N&gt;[s\|m]"</code></td>
+<td>print raw records around a moment instead of writing outputs</td>
+</tr>
+<tr>
+<td><code>--year YYYY</code></td>
+<td>base year for Android's year-less timestamps (inferred otherwise)</td>
+</tr>
+<tr>
+<td><code>--no-redact</code></td>
+<td>disable pseudonymization — local drill-down only</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reporting-an-issue">Reporting an issue<a class="headerlink" href="#reporting-an-issue" title="Permanent link">&para;</a></h3>
+<p>Attach <code>digest.md</code>. It carries the SDK version, the effective config, the timeline, the gap classifications and the health counters — most of what the first round of questions would have asked for, and none of your users' locations.</p>
 <hr />
 <h2 id="demo-app">Demo App<a class="headerlink" href="#demo-app" title="Permanent link">&para;</a></h2>
 <p>Each SDK ships with a fully functional demo application. Run it to verify your installation and license key before integrating into your own app. The demo app uses <code>debug: true</code> and displays a live event log on screen, making it the most complete debugging environment available.</p>
