@@ -898,3 +898,64 @@ h1 .platform-badge { font-size: 0.5rem; }
 }
 
 
+
+/* ── AI prompt blocks (assets/js/ai-prompt.js) ──────────────────────────── */
+.bgeo-ai-prompt {
+  margin: 1em 0 1.5em;
+}
+.bgeo-ai-prompt__bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: center;
+}
+.bgeo-ai-prompt__bar button {
+  display: inline-flex;
+  align-items: center;
+  gap: .4em;
+  padding: .45em .9em;
+  font-size: .72rem;
+  font-weight: 700;
+  line-height: 1.4;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 2rem;
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.bgeo-ai-prompt__bar button:hover {
+  background: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color);
+}
+.bgeo-ai-prompt__copy {
+  border-color: var(--md-accent-fg-color) !important;
+  color: var(--md-accent-fg-color) !important;
+}
+.bgeo-ai-prompt__copy:hover {
+  background: var(--md-accent-fg-color) !important;
+  color: var(--md-primary-bg-color) !important;
+}
+.bgeo-ai-prompt__copy.is-copied {
+  background: var(--md-accent-fg-color) !important;
+  color: var(--md-primary-bg-color) !important;
+}
+.bgeo-ai-icon {
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+}
+.bgeo-ai-prompt__toggle .bgeo-ai-icon {
+  transition: transform .18s ease;
+}
+.bgeo-ai-prompt__toggle.is-open .bgeo-ai-icon {
+  transform: rotate(180deg);
+}
+.bgeo-ai-prompt__body {
+  margin-top: .75rem;
+}
+.bgeo-ai-prompt__body > .highlight {
+  max-height: 32rem;
+  overflow: auto;
+}
