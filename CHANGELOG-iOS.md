@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.4.4 &mdash; 2026-08-26
+- fix: getCurrentPosition returns cached fix at timeout instead of 408; stop erasing LRS cache
+
 ## 4.4.2 &mdash; 2026-08-04
 - feat(motion): add activities[] to location + activitychange; log raw CMMotionActivity
 - fix(tracking): recover from stationary-with-no-region wedge after failed motionchange fetch
