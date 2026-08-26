@@ -383,6 +383,10 @@
 }
 .bgeo-pricing__btn {
     display: block;
+    width: 100%;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
     text-align: center;
     padding: 0.65em 1em;
     border-radius: 8px;
@@ -401,53 +405,6 @@
     color: var(--md-default-fg-color--light);
     margin-top: 1em;
 }
-.bgeo-pricing__platform-tabs {
-    display: flex;
-    gap: 0.5em;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 1em;
-}
-.bgeo-pricing__ptab {
-    display: flex;
-    align-items: center;
-    gap: 0.4em;
-    padding: 0.45em 1em;
-    border: 1px solid var(--md-default-fg-color--lightest);
-    border-radius: 6px;
-    background: var(--md-default-bg-color);
-    color: var(--md-default-fg-color--light);
-    font-size: 0.88em;
-    font-weight: 500;
-    cursor: pointer;
-    transition: border-color 0.15s, color 0.15s;
-}
-.bgeo-pricing__ptab:hover {
-    border-color: var(--md-accent-fg-color);
-    color: var(--md-default-fg-color);
-}
-.bgeo-pricing__ptab--active {
-    border-color: var(--md-accent-fg-color);
-    color: var(--md-default-fg-color);
-    font-weight: 600;
-}
-.bgeo-pricing__ptab .bgeo-platform-heading-icon {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-}
-.bgeo-pricing__btn--unavailable {
-    display: block;
-    text-align: center;
-    padding: 0.65em 1em;
-    border-radius: 8px;
-    background: var(--md-default-fg-color--lightest);
-    color: var(--md-default-fg-color--light) !important;
-    font-size: 0.88em;
-    margin-top: auto;
-    cursor: default;
-}
-
 /* ── Purchase page — suppress Material wrapper whitespace ───────────────── */
 .md-main__inner:has(.bgeo-pricing)          { margin-top: 0; }
 .md-content__inner:has(.bgeo-pricing)       { padding-top: 0; margin-bottom: 0; }
@@ -475,9 +432,11 @@
     background: var(--md-default-bg-color);
     border: 1px solid var(--md-default-fg-color--lightest);
     border-radius: 14px;
-    padding: 2rem 2.25rem;
-    max-width: 420px;
+    padding: 1.5rem 1.75rem;
+    max-width: 460px;
     width: calc(100% - 2rem);
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
     box-shadow: 0 24px 60px rgba(0,0,0,0.4);
     text-align: center;
 }
@@ -486,32 +445,18 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--md-default-fg-color--light);
-    margin: 0 0 0.75rem;
-}
-.bgeo-confirm__icons {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-bottom: 0.6rem;
-}
-.bgeo-confirm__icons .bgeo-platform-heading-icon {
-    width: 52px;
-    height: 52px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 0;
+    margin: 0 0 0.5rem;
 }
 .bgeo-confirm__title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.35rem;
     border: none;
     padding: 0;
     color: var(--md-default-fg-color);
 }
 .bgeo-confirm__price {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--md-accent-fg-color);
     margin: 0 0 0.75rem;
@@ -519,7 +464,103 @@
 .bgeo-confirm__note {
     font-size: 0.8rem;
     color: var(--md-default-fg-color--light);
-    margin: 0 0 1.5rem;
+    margin: 0 0 1rem;
+}
+
+/* ── Confirm modal — platform radio selector ─────────────────────────────── */
+/* No platform is pre-selected: customers were checking out on whichever
+   platform tab happened to be active and buying the wrong product. */
+.bgeo-confirm__prompt {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--md-default-fg-color);
+    margin: 0 0 0.5rem;
+}
+.bgeo-confirm__platforms {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: left;
+    padding: 0.3rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    transition: border-color 0.15s;
+}
+.bgeo-confirm__platforms--error {
+    border-color: #e5534b;
+}
+.bgeo-confirm__platform {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--md-default-fg-color--light);
+    transition: border-color 0.15s, color 0.15s, background-color 0.15s;
+}
+.bgeo-confirm__platform:hover {
+    border-color: var(--md-accent-fg-color);
+    color: var(--md-default-fg-color);
+}
+.bgeo-confirm__platform input[type="radio"] {
+    flex-shrink: 0;
+    width: 1.05em;
+    height: 1.05em;
+    margin: 0;
+    accent-color: var(--md-accent-fg-color);
+    cursor: inherit;
+}
+.bgeo-confirm__platform:has(input:checked) {
+    border-color: var(--md-accent-fg-color);
+    background: var(--md-default-fg-color--lightest);
+    color: var(--md-default-fg-color);
+    font-weight: 600;
+}
+.bgeo-confirm__platform:has(input:focus-visible) {
+    outline: 2px solid var(--md-accent-fg-color);
+    outline-offset: 2px;
+}
+.bgeo-confirm__platform-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.15rem;
+    flex-shrink: 0;
+}
+.bgeo-confirm__platform-icons .bgeo-platform-heading-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 0;
+    top: 0;
+}
+.bgeo-confirm__platform-label {
+    flex: 1;
+}
+.bgeo-confirm__platform-note {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--md-default-fg-color--light);
+}
+.bgeo-confirm__platform--unavailable {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.bgeo-confirm__platform--unavailable:hover {
+    border-color: var(--md-default-fg-color--lightest);
+    color: var(--md-default-fg-color--light);
+}
+.bgeo-confirm__error {
+    display: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #e5534b;
+    margin: 0 0 0.75rem;
+}
+.bgeo-confirm__error--visible {
+    display: block;
 }
 .bgeo-confirm__actions {
     display: flex;
@@ -557,6 +598,12 @@
     transition: opacity 0.15s;
 }
 .bgeo-confirm__ok:hover { opacity: 0.85; }
+.bgeo-confirm__ok[aria-disabled="true"] {
+    background: var(--md-default-fg-color--lightest);
+    color: var(--md-default-fg-color--light) !important;
+    cursor: not-allowed;
+}
+.bgeo-confirm__ok[aria-disabled="true"]:hover { opacity: 1; }
 
 /* ── Platform badge: [Android only] ─────────────────────────────────────── */
 .platform-badge {
