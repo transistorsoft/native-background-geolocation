@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.4.5 &mdash; 2026-08-27
+- fix: getCurrentPosition gate failure must never resolve from cache; source the freshest cached fix
+
 ## 4.4.4 &mdash; 2026-08-26
 - fix: getCurrentPosition returns cached fix at timeout instead of 408; stop erasing LRS cache
 
