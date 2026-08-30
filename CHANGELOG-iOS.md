@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.5.0 &mdash; 2026-08-30
+- feat(WO-006): pause location updates in polygon geofence when the sentinel says the device has stopped
+- feat(WO-006): TSStationarySentinel — detect stationarity iOS refuses to report
+
 ## 4.4.5 &mdash; 2026-08-27
 - fix: getCurrentPosition gate failure must never resolve from cache; source the freshest cached fix
 
