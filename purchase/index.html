@@ -14927,9 +14927,19 @@
     'swift': 'Swift / Kotlin',
   };
 
-  // platform key → { plan key → shop variant id }
-  var VARIANTS  = {"capacitor": {"pro": 39361428521063, "starter": 39361428455527, "studio": 39361428553831, "venture": 39361428488295}, "cordova": {"pro": 4586749057, "starter": 7059204865, "studio": 18239688833, "venture": 16545668417}, "flutter": {"pro": 12694924329063, "starter": 12694924263527, "studio": 12694924361831, "venture": 12694924296295}, "kotlin": {"pro": 42329273761895, "starter": 2902439745, "studio": 16690629697, "venture": 16690629633}, "react-native": {"pro": 16545930369, "starter": 8243334721, "studio": 18240073921, "venture": 5870758593}, "swift": {"pro": 42329273761895, "starter": 2902439745, "studio": 16690629697, "venture": 16690629633}};
-  var CART_BASE = 'https://shop.transistorsoft.com/cart';
+  // plan key → shop variant id.  Platform is NOT a variant: it travels as a
+  // line-item property, so every plan is buyable on every platform.
+  var VARIANTS          = {"pro": 42207677448295, "starter": 42207677513831, "studio": 42207677415527, "venture": 42207677481063};
+  var PLATFORM_VALUES   = {"capacitor": "capacitor", "cordova": "cordova", "flutter": "flutter", "kotlin": "native", "react-native": "react-native", "swift": "native"};
+  var PLATFORM_PROPERTY = "Platform";
+  var CART_BASE         = 'https://shop.transistorsoft.com/cart';
+
+  // Shopify takes cart-permalink line-item properties as base64url-encoded
+  // JSON with the padding stripped.
+  function encodeProperties(props) {
+    return btoa(JSON.stringify(props))
+      .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  }
 
   var modal    = document.getElementById('bgeo-confirm-modal');
   var okBtn    = document.getElementById('bgeo-confirm-ok');
@@ -14944,8 +14954,12 @@
 
   var current = { planKey: '', platform: '' };
 
-  function variantFor(platform, planKey) {
-    return (VARIANTS[platform] || {})[planKey];
+  function variantFor(planKey) {
+    return VARIANTS[planKey];
+  }
+
+  function platformValueFor(platform) {
+    return PLATFORM_VALUES[platform];
   }
 
   function clearError() {
@@ -14961,11 +14975,15 @@
   }
 
   function selectPlatform(platform) {
-    var variantId = variantFor(platform, current.planKey);
-    if (!variantId) return;
+    var variantId     = variantFor(current.planKey);
+    var platformValue = platformValueFor(platform);
+    if (!variantId || !platformValue) return;
     current.platform = platform;
     platEl.textContent = (platformLabels[platform] || platform) + ' — ';
-    okBtn.href = CART_BASE + '/' + variantId + ':1';
+    var props = {};
+    props[PLATFORM_PROPERTY] = platformValue;
+    okBtn.href = CART_BASE + '/' + variantId + ':1'
+               + '?properties=' + encodeProperties(props);
     okBtn.setAttribute('aria-disabled', 'false');
     clearError();
   }
@@ -14980,7 +14998,7 @@
     // Nothing pre-selected — the customer must state the platform.
     var firstEnabled = null;
     radios.forEach(function (radio) {
-      var available  = !!variantFor(radio.value, planKey);
+      var available  = !!(variantFor(planKey) && platformValueFor(radio.value));
       radio.checked  = false;
       radio.disabled = !available;
       var row  = radio.closest('.bgeo-confirm__platform');
