@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.5.1 &mdash; 2026-09-01
+- fix(WO-009): tracking manager now seeds `activityType` from config at init — the change-listener fires only on value transitions, so the previous hardcoded `AutomotiveNavigation` governed every steady-state launch and road-snapped iOS tracks regardless of the configured value (flutter #1707). Apps that never configure `activityType` now track with the documented default `Other` (no road-snapping) instead of `AutomotiveNavigation`. As a safety net, `startUpdatingLocation` also re-asserts the configured value on every tracking engage.
+
 ## 4.5.0 &mdash; 2026-08-30
 - feat(WO-006): pause location updates in polygon geofence when the sentinel says the device has stopped
 - feat(WO-006): TSStationarySentinel — detect stationarity iOS refuses to report
