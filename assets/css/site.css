@@ -688,7 +688,9 @@ h1 .platform-badge { font-size: 0.5rem; }
 
 .md-sidebar--primary .md-nav[data-md-level="1"] > ul > li:nth-child(1) > a.md-nav__link::before,
 .md-sidebar--primary .md-nav[data-md-level="1"] > ul > li:nth-child(2) > a.md-nav__link::before,
-.md-sidebar--primary .md-nav[data-md-level="1"] > ul > li:nth-child(3) > a.md-nav__link::before {
+.md-sidebar--primary .md-nav[data-md-level="1"] > ul > li:nth-child(3) > a.md-nav__link::before,
+.md-sidebar--primary .md-nav[data-md-level="1"] > ul > li > a.md-nav__link[href$="license/"]::before,
+.md-sidebar--primary .md-nav[data-md-level="1"] > ul > li:nth-child(4) > a.md-nav__link--active::before {
     content: "";
     display: inline-block;
     width: 0.85em;
@@ -722,6 +724,15 @@ h1 .platform-badge { font-size: 0.5rem; }
 .md-sidebar--primary .md-nav[data-md-level="1"] > ul > li:nth-child(3) > a.md-nav__link::before {
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m18 16 4-4-4-4'/%3E%3Cpath d='m6 8-4 4 4 4'/%3E%3Cpath d='m14.5 4-5 16'/%3E%3C/svg%3E");
             mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m18 16 4-4-4-4'/%3E%3Cpath d='m6 8-4 4 4 4'/%3E%3Cpath d='m14.5 4-5 16'/%3E%3C/svg%3E");
+}
+
+/* License Agreement — scale icon. Keyed on the link target (non-active state) plus the
+   Help list's 4th item when active (Material rewrites the active link's href to "./").
+   Platform sidebars have at most 3 level-1 items, so the positional half cannot leak. */
+.md-sidebar--primary .md-nav[data-md-level="1"] > ul > li > a.md-nav__link[href$="license/"]::before,
+.md-sidebar--primary .md-nav[data-md-level="1"] > ul > li:nth-child(4) > a.md-nav__link--active::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v18'/%3E%3Cpath d='m19 8 3 8a5 5 0 0 1-6 0zV7'/%3E%3Cpath d='M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1'/%3E%3Cpath d='m5 8 3 8a5 5 0 0 1-6 0zV7'/%3E%3Cpath d='M7 21h10'/%3E%3C/svg%3E");
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v18'/%3E%3Cpath d='m19 8 3 8a5 5 0 0 1-6 0zV7'/%3E%3Cpath d='M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1'/%3E%3Cpath d='m5 8 3 8a5 5 0 0 1-6 0zV7'/%3E%3Cpath d='M7 21h10'/%3E%3C/svg%3E");
 }
 
 /* ── TOC Lucide icons ────────────────────────────────────────────────────── */
@@ -915,6 +926,24 @@ h1 .platform-badge { font-size: 0.5rem; }
 /* Contact — mail, green */
 .md-tabs__list > .md-tabs__item:nth-last-child(2) > a.md-tabs__link::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='20' height='16' x='2' y='4' rx='2'/%3E%3Cpath d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/%3E%3C/svg%3E");
+}
+
+/* ── License page: PDF download link ─────────────────────────────────────── */
+.bgeo-doc-download { margin: 0 0 1.4em; }
+.bgeo-doc-download a {
+    display: inline-flex; align-items: center; gap: .45em;
+    font-size: .78rem; font-weight: 600; letter-spacing: .01em;
+    padding: .42em .95em; border-radius: 999px;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    color: var(--md-typeset-a-color); text-decoration: none;
+}
+.bgeo-doc-download a:hover,
+.bgeo-doc-download a:focus-visible { background: var(--md-default-fg-color--lightest); }
+.bgeo-doc-download a::before {
+    content: ""; width: 1em; height: 1em; flex-shrink: 0;
+    background-color: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 15V3'/%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3E%3Cpath d='m7 10 5 5 5-5'/%3E%3C/svg%3E") center / contain no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 15V3'/%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3E%3Cpath d='m7 10 5 5 5-5'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 /* ── FAQ inline search ──────────────────────────────────────────────────── */

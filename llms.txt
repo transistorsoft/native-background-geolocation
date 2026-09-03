@@ -4,7 +4,7 @@
 > Capacitor, Cordova, iOS (Swift), and Android (Kotlin).
 > Features: intelligent motion detection, polygon geofencing, durable HTTP+SQLite
 > upload queue, headless operation after app termination, odometer & trip metrics.
-> Used in 22,895+ production apps across 140+ countries.
+> Used in 22,948+ production apps across 140+ countries.
 
 ## SDKs
 
@@ -109,3 +109,4 @@ Software Agencies, Fleet Tracking, Field Service, Delivery & Logistics, Workforc
 
 - [Purchase](https://docs.transistorsoft.com/purchase/) — commercial license required for production. Per-platform, perpetual, 1-year updates included.
 - [Pricing](https://docs.transistorsoft.com/purchase/) — visit the purchase page for current per-platform prices across Starter, Venture, Pro, and Studio tiers.
+- [License Agreement](https://docs.transistorsoft.com/license/) — the software license agreement (terms and conditions) that governs every purchase.
