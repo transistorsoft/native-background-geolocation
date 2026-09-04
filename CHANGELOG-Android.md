@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 4.5.1 &mdash; 2026-09-04
+- fix(WO-012): toggling `useSignificantChangesOnly` at runtime no longer restarts the whole tracking session. Both directions of the FGS/significant-change transition routed through a full stop, whose teardown resets each geofence's entry state — so the re-registration that followed delivered a phantom ENTER for a geofence the device was parked inside, and emitted a spurious `enabledchange` pair. Each direction now sheds only what the mechanism change actually requires. A real `stop()` still resets entry state, as before (WO-012)
+- feat(permissions): requestPermission(String) accepts "location" / "motion" — request each permission separately with truthful per-permission status (WO-007)
+- feat(permissions): PERMISSION_DENIED_ALWAYS status — motion permanently denied, only the app-settings screen can recover (WO-007)
+- fix(permissions): serialize all permission requests through an app-global FIFO queue; an OS-cancelled request (empty result array) re-dispatches instead of spuriously reporting granted (WO-007)
+- fix(permissions): concurrent permission callers each resolve against their own request — the second caller's permission list is no longer silently discarded (WO-007)
+- fix(permissions): duplicate queued requests coalesce onto one OS result — a denied dialog no longer instantly re-appears, which could permanently deny in a single user decision (WO-007)
+- hardening(permissions): watchdog + retained host fragment — a result lost to rotation or a finished activity no longer wedges permission requests for the life of the process (WO-007)
+- fix(permissions): concurrent flows coalesce onto ONE backgroundPermissionRationale — cancelling no longer reveals a second identical dialog behind the first (WO-008)
+- fix(permissions): an externally-dismissed rationale (backgrounded app, phone call) now completes its flow instead of orphaning it — and, unlike click-cancel, does not persist the don't-re-offer suppression (WO-008)
+- fix(config): import the persisted v4 (3.x) TSConfig on the first launch after a 4.x -> 5.x plugin upgrade — enabled/trackingMode/schedulerEnabled, the odometer and the full config (url/headers/params/schedule/notification/authorization/...) are carried over so headless fleet devices resume tracking on MY_PACKAGE_REPLACED; strict no-op when v5 state already exists; the legacy TSLocationManager:TSConfig file is retained for rollback, and a rollback followed by a re-upgrade does not re-import (WO-001, flutter #1713)
+
 ## 4.5.0 &mdash; 2026-08-15
 - fix(config): preserve useCLLocationAccuracy across reset() — stop desiredAccuracy domain oscillation
 - feat(geofence): missed-exit sentinel — audit every internal location against the stationary anchor
