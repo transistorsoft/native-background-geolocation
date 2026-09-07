@@ -1380,6 +1380,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../react-native/Permission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permission
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../react-native/PersistMode/" class="md-nav__link">
         
   
@@ -3928,6 +3956,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../Permission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permission
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../PersistMode/" class="md-nav__link">
         
   
@@ -4639,6 +4695,17 @@
     <span class="md-ellipsis">
       
         Denied
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deniedalways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DeniedAlways
       
     </span>
   </a>
@@ -6546,6 +6613,34 @@
     
   
     NotificationPriority
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cordova/Permission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permission
   
 
     
@@ -9109,6 +9204,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../flutter/Permission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permission
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../flutter/PersistMode/" class="md-nav__link">
         
   
@@ -11590,6 +11713,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../swift/Permission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permission
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../swift/PersistMode/" class="md-nav__link">
         
   
@@ -13516,6 +13667,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../kotlin/Permission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permission
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../kotlin/PersistMode/" class="md-nav__link">
         
   
@@ -14959,6 +15138,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#deniedalways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DeniedAlways
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#notdetermined" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -15051,6 +15241,11 @@
 <td style="text-align: center;">4</td>
 <td>iOS &amp; Android 10+</td>
 </tr>
+<tr>
+<td>DeniedAlways</td>
+<td style="text-align: center;">5</td>
+<td>iOS &amp; Android</td>
+</tr>
 </tbody>
 </table>
 <hr />
@@ -15059,6 +15254,13 @@
 <p>Location permissions authorized for always use.</p>
 <h3 id="denied">Denied<a class="headerlink" href="#denied" title="Permanent link">&para;</a></h3>
 <p>Location permissions denied by the user.</p>
+<h3 id="deniedalways">DeniedAlways<a class="headerlink" href="#deniedalways" title="Permanent link">&para;</a></h3>
+<p>Permanently denied — the OS will not show the permission dialog again and only
+the device's Settings app can restore the permission.</p>
+<p>Reported by <a href="../BackgroundGeolocation/#requestpermission">BackgroundGeolocation.requestPermission</a> for the motion
+permission on both platforms: Android promotes to this state after two user
+denials; on iOS a single motion denial is already permanent (iOS never
+re-prompts), so a denied motion request reports it immediately.</p>
 <h3 id="notdetermined">NotDetermined<a class="headerlink" href="#notdetermined" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">NotDetermined</span><span class="o">:</span><span class="w"> </span><span class="kt">0</span><span class="p">,</span>
 </code></pre></div>

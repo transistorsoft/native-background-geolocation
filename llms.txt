@@ -4,7 +4,7 @@
 > Capacitor, Cordova, iOS (Swift), and Android (Kotlin).
 > Features: intelligent motion detection, polygon geofencing, durable HTTP+SQLite
 > upload queue, headless operation after app termination, odometer & trip metrics.
-> Used in 22,952+ production apps across 140+ countries.
+> Used in 22,972+ production apps across 140+ countries.
 
 ## SDKs
 
@@ -70,6 +70,7 @@
 - [MotionChangeEvent](https://docs.transistorsoft.com/react-native/MotionChangeEvent/): Motion-state change delivered to {@link BackgroundGeolocation.onMotionChange}.
 - [NotificationConfig](https://docs.transistorsoft.com/react-native/NotificationConfig/): [Android only] Foreground service notification configuration for the background geolocation SDK.
 - [NotificationPriority](https://docs.transistorsoft.com/react-native/NotificationPriority/): Defines the priority / visibility of the Android foreground-service notification.
+- [Permission](https://docs.transistorsoft.com/react-native/Permission/): A specific permission to request via {@link BackgroundGeolocation.requestPermission}.
 - [PermissionRationale](https://docs.transistorsoft.com/react-native/PermissionRationale/): [Android only] Configures the background location permission rationale dialog on Android 11 and later.
 - [PersistMode](https://docs.transistorsoft.com/react-native/PersistMode/): Persistence modes for BackgroundGeolocation SDK.
 - [PersistenceConfig](https://docs.transistorsoft.com/react-native/PersistenceConfig/): Persistence and storage configuration for the background geolocation SDK.

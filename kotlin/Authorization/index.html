@@ -1380,6 +1380,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../react-native/Permission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permission
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../react-native/PersistMode/" class="md-nav__link">
         
   
@@ -3923,6 +3951,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../capacitor/Permission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permission
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../capacitor/PersistMode/" class="md-nav__link">
         
   
@@ -6418,6 +6474,34 @@
     
   
     NotificationPriority
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cordova/Permission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permission
   
 
     
@@ -8981,6 +9065,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../flutter/Permission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permission
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../flutter/PersistMode/" class="md-nav__link">
         
   
@@ -11467,6 +11579,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../swift/Permission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permission
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../swift/PersistMode/" class="md-nav__link">
         
   
@@ -12792,6 +12932,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="requestPermission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Android
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -13474,6 +13642,34 @@
     
   
     NotificationPriority
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Permission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permission
   
 
     
@@ -14934,6 +15130,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="requestPermission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Android
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -14987,36 +15211,98 @@
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;- Provider state: </span><span class="si">$</span><span class="n">providerState</span><span class="s">&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="requestpermission">requestPermission<a class="headerlink" href="#requestpermission" title="Permanent link">&para;</a></h3>
-<p><code>suspend fun requestPermission():</code><a href="../PermissionStatus/"><code>PermissionStatus</code></a></p>
-<p>Manually request location permission using the configured
-<a href="../GeolocationConfig/#locationauthorizationrequest">GeolocationConfig.locationAuthorizationRequest</a>.</p>
-<p>Resolves successfully if either <code>WhenInUse</code> or <code>Always</code> is granted,
-regardless of the requested level. Rejects if the user denies.</p>
-<p>If permission is already granted, resolves immediately. If iOS has
-already shown the authorization dialog and the current grant does not
-match the configured request, the SDK presents an alert offering to
-direct the user to your app's Settings page.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The SDK automatically requests permission when you call <code>start</code>,
-<code>startGeofences</code>, or <code>getCurrentPosition</code>. You do not need to
-call this method in typical use.</p>
+<p><code>suspend fun requestPermission():</code><a href="../PermissionStatus/"><code>PermissionStatus</code></a><code>suspend fun requestPermission(permission:</code><a href="../Permission/"><code>Permission</code></a><code>):</code><a href="../PermissionStatus/"><code>PermissionStatus</code></a></p>
+<p>Requests location and motion permission — together, or each one separately.</p>
+<p>With no argument, requests everything the current configuration requires:
+location per <a href="../GeolocationConfig/#locationauthorizationrequest">GeolocationConfig.locationAuthorizationRequest</a>, then the motion
+permission — the same set <code>start</code> requests. Pass a <a href="../Permission/">Permission</a> to
+request one permission at a time and control exactly when each system dialog
+appears:</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Requests</th>
+<th>Resolves with</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>(none)</em></td>
+<td>Location per configuration, then motion</td>
+<td>The location <a href="../PermissionStatus/">PermissionStatus</a>; the motion outcome stays silent</td>
+</tr>
+<tr>
+<td><code>Permission.Location</code></td>
+<td>Location only — motion untouched</td>
+<td>The location <a href="../PermissionStatus/">PermissionStatus</a></td>
+</tr>
+<tr>
+<td><code>Permission.Motion</code></td>
+<td>Motion only</td>
+<td><a href="../PermissionStatus/#always">PermissionStatus.Always</a> when granted</td>
+</tr>
+</tbody>
+</table>
+<p>The location forms resolve when either <code>WhenInUse</code> or <code>Always</code> is granted,
+regardless of the configured level, and resolve immediately when permission is
+already granted. Denial rejects with the bare <a href="../PermissionStatus/">PermissionStatus</a> value.</p>
+<p>The no-argument form skips the motion step when
+<a href="../ActivityConfig/#disablemotionactivityupdates">ActivityConfig.disableMotionActivityUpdates</a> is <code>true</code> — and, on iOS, when
+<code>NSMotionUsageDescription</code> is absent from <code>Info.plist</code> (requesting motion without
+it would terminate the app).</p>
+<p>Each call is independently awaitable: the returned promise settles only when
+its own request fully resolves, and the SDK serializes permission requests
+internally — <code>await</code> one call, then issue the next, and each dialog appears in
+order, never stacked.</p>
+<h4 id="android">Android<a class="headerlink" href="#android" title="Permanent link">&para;</a></h4>
+<p>A motion denial rejects with <a href="../PermissionStatus/#denied">PermissionStatus.Denied</a> while a new
+request can still show the system dialog, and with
+<a href="../PermissionStatus/#deniedalways">PermissionStatus.DeniedAlways</a> once Android permanently denies the
+permission (two user denials) — after that, only the device's app-settings
+screen can restore it.</p>
+<h4 id="ios">iOS<a class="headerlink" href="#ios" title="Permanent link">&para;</a></h4>
+<p>The motion permission is one-shot — iOS never re-prompts. A user denial rejects
+with <a href="../PermissionStatus/#deniedalways">PermissionStatus.DeniedAlways</a>: the state is permanent and only
+the Settings app can restore it (the motion form never rejects with plain
+<a href="../PermissionStatus/#denied">PermissionStatus.Denied</a>). The rejection can also carry
+<a href="../PermissionStatus/#restricted">PermissionStatus.Restricted</a> (system-wide Fitness Tracking is off or
+the hardware is absent — not recoverable from the app's own Settings page) or
+<a href="../PermissionStatus/#notdetermined">PermissionStatus.NotDetermined</a> (no dialog could be shown, e.g. the
+app was backgrounded). If the location dialog has already been shown and the
+current grant does not match the configured request, the SDK presents an alert
+offering to direct the user to the app's Settings page.</p>
+<h6 id="note">Note<a class="headerlink" href="#note" title="Permanent link">&para;</a></h6>
+<p>The SDK automatically requests every required permission when you call
+<code>start</code>, <code>startGeofences</code>, or <code>getCurrentPosition</code>. Calling
+this method first resolves the dialogs ahead of time, so those methods find
+everything granted and show nothing.</p>
 <p><strong>See also</strong>
+- <a href="../Permission/">Permission</a>
 - <a href="../GeolocationConfig/#locationauthorizationrequest">GeolocationConfig.locationAuthorizationRequest</a>
+- <a href="../ActivityConfig/#disablemotionactivityupdates">ActivityConfig.disableMotionActivityUpdates</a>
 - <a href="../GeolocationConfig/#disablelocationauthorizationalert">GeolocationConfig.disableLocationAuthorizationAlert</a>
 - <a href="../GeolocationConfig/#locationauthorizationalert">GeolocationConfig.locationAuthorizationAlert</a>
 - <a href="../AppConfig/#backgroundpermissionrationale">AppConfig.backgroundPermissionRationale</a> (Android)
 - <code>requestTemporaryFullAccuracy</code> (iOS 14+)</p>
-</div>
+<h5 id="request-each-permission-separately">Request each permission separately<a class="headerlink" href="#request-each-permission-separately" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Within a coroutine scope</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="na">authorization</span><span class="p">.</span><span class="na">requestPermission</span><span class="p">()</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[requestPermission] success: </span><span class="si">$</span><span class="n">status</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="n">Log</span><span class="p">.</span><span class="na">w</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[requestPermission] FAILURE: </span><span class="si">$</span><span class="n">e</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kd">val</span><span class="w"> </span><span class="nv">locationStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="na">authorization</span><span class="p">.</span><span class="na">requestPermission</span><span class="p">(</span><span class="n">Permission</span><span class="p">.</span><span class="na">LOCATION</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[requestPermission] location: </span><span class="si">$</span><span class="n">locationStatus</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="kd">val</span><span class="w"> </span><span class="nv">motionStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="na">authorization</span><span class="p">.</span><span class="na">requestPermission</span><span class="p">(</span><span class="n">Permission</span><span class="p">.</span><span class="na">MOTION</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">motionStatus</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">PermissionStatus</span><span class="p">.</span><span class="na">DENIED_ALWAYS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="c1">// Only the app-settings screen can restore the motion permission now.</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
+</code></pre></div>
+<h5 id="request-everything-at-once">Request everything at once<a class="headerlink" href="#request-everything-at-once" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Within a coroutine scope</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kd">val</span><span class="w"> </span><span class="nv">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="na">authorization</span><span class="p">.</span><span class="na">requestPermission</span><span class="p">()</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[requestPermission] status: </span><span class="si">$</span><span class="n">status</span><span class="s">&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="requesttemporaryfullaccuracy">requestTemporaryFullAccuracy<a class="headerlink" href="#requesttemporaryfullaccuracy" title="Permanent link">&para;</a></h3>
 <p><code>suspend fun requestTemporaryFullAccuracy(purpose: String):</code><a href="../AccuracyAuthorization/"><code>AccuracyAuthorization</code></a></p>
@@ -15044,24 +15330,24 @@ purpose of your request.</p>
 <p><strong>See also</strong>
 - <a href="../ProviderChangeEvent/#accuracyauthorization">ProviderChangeEvent.accuracyAuthorization</a></p>
 </div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">onProviderChange</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">AccuracyAuthorization</span><span class="p">.</span><span class="na">fromValue</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="na">accuracyAuthorization</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">AccuracyAuthorization</span><span class="p">.</span><span class="na">REDUCED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">accuracyAuthorization</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kotlinx</span><span class="p">.</span><span class="na">coroutines</span><span class="p">.</span><span class="na">runBlocking</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">                </span><span class="n">bgGeo</span><span class="p">.</span><span class="na">authorization</span><span class="p">.</span><span class="na">requestTemporaryFullAccuracy</span><span class="p">(</span><span class="s">&quot;Delivery&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">accuracyAuthorization</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">AccuracyAuthorization</span><span class="p">.</span><span class="na">FULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">                </span><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[requestTemporaryFullAccuracy] GRANTED: </span><span class="si">$</span><span class="n">accuracyAuthorization</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">                </span><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[requestTemporaryFullAccuracy] DENIED: </span><span class="si">$</span><span class="n">accuracyAuthorization</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">            </span><span class="n">Log</span><span class="p">.</span><span class="na">w</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[requestTemporaryFullAccuracy] FAILED TO SHOW DIALOG: </span><span class="si">$</span><span class="n">e</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">onProviderChange</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">AccuracyAuthorization</span><span class="p">.</span><span class="na">fromValue</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="na">accuracyAuthorization</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">AccuracyAuthorization</span><span class="p">.</span><span class="na">REDUCED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">accuracyAuthorization</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kotlinx</span><span class="p">.</span><span class="na">coroutines</span><span class="p">.</span><span class="na">runBlocking</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">                </span><span class="n">bgGeo</span><span class="p">.</span><span class="na">authorization</span><span class="p">.</span><span class="na">requestTemporaryFullAccuracy</span><span class="p">(</span><span class="s">&quot;Delivery&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">accuracyAuthorization</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">AccuracyAuthorization</span><span class="p">.</span><span class="na">FULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">                </span><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[requestTemporaryFullAccuracy] GRANTED: </span><span class="si">$</span><span class="n">accuracyAuthorization</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">                </span><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[requestTemporaryFullAccuracy] DENIED: </span><span class="si">$</span><span class="n">accuracyAuthorization</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">            </span><span class="n">Log</span><span class="p">.</span><span class="na">w</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[requestTemporaryFullAccuracy] FAILED TO SHOW DIALOG: </span><span class="si">$</span><span class="n">e</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="p">}</span>
 </code></pre></div>
 
 
