@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.7.0 &mdash; 2026-09-23
+- test(ios): make the suite independent of main-queue scheduling and of test order
+
 ## 4.6.1 &mdash; 2026-09-07
 - fix(WO-018): a stationary pause no longer interrupts single-location requests. `TSStationarySentinel` exists to disengage long-lived location *streams*; it was also cancelling every in-flight single-shot request, including the `motionchange` the SDK issues at `stopTimeout` to fix the position where you stopped. Because issuing that request is what turns the radio on, its own first delivered fix was what pushed the sentinel past its window — so the pause reliably destroyed the request that had woken it. Tracking then sat in the stationary state with no stationary-region, discarding every location it received, until the app was relaunched (react-native #2655). Requests now run to their own timeout, and the radio is released when nothing is left to serve. `getCurrentPosition` and geofence trigger-location requests issued during a pause are also no longer failed with a spurious "request was cancelled". Also released as 4.5.2 on the 4.5.x line (WO-018)
 - fix(WO-018): the stationary sentinel is no longer armed when no location stream is registered. With no stream there is nothing for a pause to disengage, so its only possible effect was to interrupt whatever single request had turned the radio on (WO-018)
