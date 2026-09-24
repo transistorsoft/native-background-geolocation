@@ -30,6 +30,15 @@ Pod::Spec.new do |s|
 
   s.pod_target_xcconfig   = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
 
+  # (2026-09-23) The framework's one Swift object — TSEd25519VerifierSwift, the Ed25519 licence
+  # verifier — force-loads the Swift back-deployment compatibility libraries, because the
+  # deployment target is below the OS releases that carry those fixes in the runtime. A consumer
+  # with no Swift of its own never gets the toolchain's Swift library directory on its link line,
+  # so those force-loads come out as undefined `__swift_FORCE_LOAD_$_swiftCompatibility51/56/
+  # Concurrency`. `pod spec lint` builds exactly such an app, which is how it surfaced (Xcode 26.5
+  # rejected what 26.x accepted for 4.6.1 — the binary carries the same symbols in both).
+  s.user_target_xcconfig  = { 'LIBRARY_SEARCH_PATHS' => '$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)' }
+
   s.documentation_url      = 'https://github.com/transistorsoft/native-background-geolocation'
   s.social_media_url       = 'https://x.com/transistorsoft'
 end
