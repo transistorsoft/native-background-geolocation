@@ -2632,6 +2632,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../react-native/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../react-native/LocationQuery/" class="md-nav__link">
         
   
@@ -5203,6 +5231,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../capacitor/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../capacitor/LocationQuery/" class="md-nav__link">
         
   
@@ -7726,6 +7782,34 @@
     
   
     Coords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cordova/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -10297,6 +10381,34 @@
     
   
     Coords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flutter/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -12893,6 +13005,34 @@
     
   
     DataStore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -16438,10 +16578,18 @@ that path, tracking will not resume.</p>
 </code></pre></div>
 <h3 id="resetodometer">resetOdometer<a class="headerlink" href="#resetodometer" title="Permanent link">&para;</a></h3>
 <p><code>public func resetOdometer( timeout: TimeInterval = 10, desiredAccuracy: CLLocationAccuracy = kCLLocationAccuracyBest, maximumAge: Int = 5000, samples: Int = 3, persist: Bool = true, extras: [String: Any]? = nil ) async throws -&gt;</code><a href="../LocationEvent/"><code>LocationEvent</code></a></p>
+<p><strong>Deprecated.</strong> Use <code>setOdometer</code> with <code>0</code> — this method is an alias for it in every
+SDK that has it, and the Dart API does not have it at all.</p>
 <p>Reset the odometer to <code>0</code>.</p>
 <p>Internally performs a <code>getCurrentPosition</code> to record the exact
 location where the odometer was reset. Equivalent to
 <code>.setOdometer(0)</code>.</p>
+<h5 id="while-tracking-is-disabled">While tracking is disabled<a class="headerlink" href="#while-tracking-is-disabled" title="Permanent link">&para;</a></h5>
+<p>The SDK will not switch location-services on just to set the odometer. When
+<a href="../State/#enabled">State.enabled</a> is <code>false</code> — or location-services are off, or location permission has not
+been granted — no fix is acquired and the resolved <a href="../LocationEvent/">LocationEvent</a> is <strong>synthetic</strong>: it carries
+the new odometer value, a timestamp and a <code>uuid</code>, but its <code>coords</code> are zeroes rather than a
+position. Check <a href="../State/#enabled">State.enabled</a> first if you need the location to be real.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
@@ -16458,6 +16606,12 @@ location where the odometer was reset. Equivalent to
 <p>Set the odometer to an arbitrary value.</p>
 <p>Internally performs a <code>getCurrentPosition</code> to record the exact
 location where the odometer was set.</p>
+<h5 id="while-tracking-is-disabled_1">While tracking is disabled<a class="headerlink" href="#while-tracking-is-disabled_1" title="Permanent link">&para;</a></h5>
+<p>The SDK will not switch location-services on just to set the odometer. When
+<a href="../State/#enabled">State.enabled</a> is <code>false</code> — or location-services are off, or location permission has not
+been granted — no fix is acquired and the resolved <a href="../LocationEvent/">LocationEvent</a> is <strong>synthetic</strong>: it carries
+the new odometer value, a timestamp and a <code>uuid</code>, but its <code>coords</code> are zeroes rather than a
+position. Check <a href="../State/#enabled">State.enabled</a> first if you need the location to be real.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
@@ -16551,6 +16705,7 @@ scheduled tracking, call <code>stopSchedule</code>.</p>
 <p><strong>See also</strong>
 - <a href="../AppConfig/#schedule">AppConfig.schedule</a>
 - <code>stopSchedule</code></p>
+<p>Resolves the <a href="../State/">State</a> once the scheduler is active, like <code>start</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
 <a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">startSchedule</span><span class="p">()</span>
 <a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="bp">print</span><span class="p">(</span><span class="s">&quot;[startSchedule] success&quot;</span><span class="p">)</span>
@@ -16584,6 +16739,7 @@ tracking. Call <code>stop</code> explicitly if you also want to end the current
 tracking session.</p>
 <p><strong>See also</strong>
 - <code>startSchedule</code></p>
+<p>Resolves the <a href="../State/">State</a> once the scheduler is halted, like <code>stop</code>.</p>
 </div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
 <a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">stopSchedule</span><span class="p">()</span>

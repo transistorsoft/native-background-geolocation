@@ -2632,6 +2632,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../react-native/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../react-native/LocationQuery/" class="md-nav__link">
         
   
@@ -5203,6 +5231,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../capacitor/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../capacitor/LocationQuery/" class="md-nav__link">
         
   
@@ -6031,17 +6087,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#reset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        reset
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#schedulerenabled" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6057,17 +6102,6 @@
     <span class="md-ellipsis">
       
         trackingMode
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transistorauthorizationtoken" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        transistorAuthorizationToken
       
     </span>
   </a>
@@ -7995,6 +8029,34 @@
     
   
     Coords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -10586,6 +10648,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../flutter/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../flutter/LocationQuery/" class="md-nav__link">
         
   
@@ -12681,6 +12771,34 @@
     
   
     DataStore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../swift/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -15400,17 +15518,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#reset" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        reset
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#schedulerenabled" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -15426,17 +15533,6 @@
     <span class="md-ellipsis">
       
         trackingMode
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transistorauthorizationtoken" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        transistorAuthorizationToken
       
     </span>
   </a>
@@ -15585,24 +15681,8 @@ low-accuracy samples from odometer calculations.</p>
 <h3 id="persistence">persistence<a class="headerlink" href="#persistence" title="Permanent link">&para;</a></h3>
 <p><code>persistence?:</code><a href="../PersistenceConfig/"><code>PersistenceConfig</code></a><code>;</code></p>
 <p>SQLite storage, TTL, record limits, and custom extras. See <a href="../PersistenceConfig/">PersistenceConfig</a>.</p>
-<h3 id="reset">reset<a class="headerlink" href="#reset" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">reset?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
-</code></pre></div>
-<p>Controls whether the SDK resets to factory defaults before applying this
-configuration. Defaults to <code>true</code>.</p>
-<p>When <code>true</code> (the default), every call to <a href="../BackgroundGeolocation/#ready">BackgroundGeolocation.ready</a>
-applies the supplied <code>Config</code> on top of fresh defaults. When <code>false</code>, the SDK
-applies the supplied <code>Config</code> only on the first install. On subsequent launches
-it ignores the <code>Config</code> argument entirely — the only way to change settings is
-via <a href="../BackgroundGeolocation/#setconfig">BackgroundGeolocation.setConfig</a>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>During development, always leave <code>reset: true</code> (or omit it). Setting <code>reset:
-false</code> causes the SDK to ignore your <code>Config</code> after the first launch, so
-configuration changes made between development builds will not take effect.</p>
-</div>
 <h3 id="schedulerenabled">schedulerEnabled<a class="headerlink" href="#schedulerenabled" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">schedulerEnabled</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">schedulerEnabled</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 </code></pre></div>
 <p><code>true</code> when a <a href="../AppConfig/#schedule">AppConfig.schedule</a> is configured and
 <a href="../BackgroundGeolocation/#startschedule">BackgroundGeolocation.startSchedule</a> has been called.
@@ -15631,32 +15711,15 @@ configuration changes made between development builds will not take effect.</p>
 </tr>
 </tbody>
 </table>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">getState</span><span class="p">();</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Tracking mode:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">trackingMode</span><span class="p">);</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1">// &gt; &#39;Tracking mode: 1&#39;</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">startGeofences</span><span class="p">();</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">getState</span><span class="p">();</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Tracking mode:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">trackingMode</span><span class="p">);</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c1">// &gt; &#39;Tracking mode: 0&#39;</span>
-</code></pre></div>
-<h3 id="transistorauthorizationtoken">transistorAuthorizationToken<a class="headerlink" href="#transistorauthorizationtoken" title="Permanent link">&para;</a></h3>
-<p><code>transistorAuthorizationToken?:</code><a href="../TransistorAuthorizationToken/"><code>TransistorAuthorizationToken</code></a><code>;</code></p>
-<p>Convenience option that automatically configures the SDK to upload locations
-to the Transistor Software demo server at tracker.transistorsoft.com, or a
-local instance of <a href="https://github.com/transistorsoft/background-geolocation-console">background-geolocation-console</a>.</p>
-<p>Setting this option automatically sets <a href="../HttpConfig/#url">HttpConfig.url</a> and the required
-<a href="../AuthorizationConfig/">AuthorizationConfig</a> values. See <a href="../TransistorAuthorizationService/">TransistorAuthorizationService</a>
-for how to obtain a token.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">findOrCreateTransistorAuthorizationToken</span><span class="p">(</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="s2">&quot;my-company-name&quot;</span><span class="p">,</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="s2">&quot;my-username&quot;</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">);</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">ready</span><span class="p">({</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span><span class="nx">transistorAuthorizationToken</span><span class="o">:</span><span class="w"> </span><span class="kt">token</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">getState</span><span class="p">();</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Tracking mode:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">trackingMode</span><span class="p">);</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1">// &gt; &#39;Tracking mode: 1&#39;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">startGeofences</span><span class="p">();</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">BackgroundGeolocation</span><span class="p">.</span><span class="nx">getState</span><span class="p">();</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Tracking mode:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">state</span><span class="p">.</span><span class="nx">trackingMode</span><span class="p">);</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="c1">// &gt; &#39;Tracking mode: 0&#39;</span>
 </code></pre></div>
 
 

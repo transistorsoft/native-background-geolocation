@@ -2632,6 +2632,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../react-native/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../react-native/LocationQuery/" class="md-nav__link">
         
   
@@ -5203,6 +5231,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../capacitor/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../capacitor/LocationQuery/" class="md-nav__link">
         
   
@@ -7726,6 +7782,34 @@
     
   
     Coords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cordova/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -10399,6 +10483,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../LocationQuery/" class="md-nav__link">
         
   
@@ -12494,6 +12606,34 @@
     
   
     DataStore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../swift/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -15093,7 +15233,9 @@
 
 <h1 id="headlessevent-android-only">HeadlessEvent <span class="platform-badge platform-badge--android">Android only</span><a class="headerlink" href="#headlessevent-android-only" title="Permanent link">&para;</a></h1>
 <p>Event delivered to a headless task registered via
-<a href="../BackgroundGeolocation/#registerheadlesstask">BackgroundGeolocation.registerHeadlessTask</a>.</p>
+<a href="../BackgroundGeolocation/#registerheadlesstask">BackgroundGeolocation.registerHeadlessTask</a> (React Native and Flutter). Cordova
+and Capacitor never deliver it to JavaScript: their headless events go to a native
+Android class instead — see <a href="../AppConfig/#enableheadless">AppConfig.enableHeadless</a>.</p>
 <p>Headless tasks allow the app to handle SDK events while running in the
 background without a UI — including after the app has been terminated by the
 user. Each task invocation receives a <code>HeadlessEvent</code> describing which SDK
@@ -15105,6 +15247,10 @@ event occurred and carrying the associated payload.</p>
 </code></pre></div>
 <p>The SDK event that triggered this headless task invocation (e.g.
 <code>location</code>, <code>http</code>, <code>geofence</code>, <code>heartbeat</code>, <code>terminate</code>).</p>
+<p>Also <code>locationerror</code>, which has no listener of its own: in the foreground a
+location error reaches the failure callback of <code>onLocation</code>. On React Native
+its <code>params</code> is the <a href="../LocationError/">LocationError</a> code. For <code>notificationaction</code>,
+<code>params</code> is the <code>buttonId</code> of the tapped action.</p>
 
 
 

@@ -2632,6 +2632,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../react-native/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../react-native/LocationQuery/" class="md-nav__link">
         
   
@@ -5203,6 +5231,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../capacitor/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../capacitor/LocationQuery/" class="md-nav__link">
         
   
@@ -7726,6 +7782,34 @@
     
   
     Coords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cordova/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -10317,6 +10401,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../flutter/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../flutter/LocationQuery/" class="md-nav__link">
         
   
@@ -11422,6 +11534,17 @@
     <span class="md-ellipsis">
       
         locationAuthorizationRequest
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locationtimeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        locationTimeout
       
     </span>
   </a>
@@ -12683,6 +12806,34 @@
     
   
     DataStore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -15380,6 +15531,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#locationtimeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        locationTimeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pauseslocationupdatesautomatically" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -15498,7 +15660,7 @@ permissions, geofence proximity, and GPS noise filtering.</p>
 <tbody>
 <tr>
 <td><strong>Accuracy</strong></td>
-<td><code>desiredAccuracy</code>, <code>distanceFilter</code>, <code>locationUpdateInterval</code>, <code>fastestLocationUpdateInterval</code></td>
+<td><code>desiredAccuracy</code>, <code>distanceFilter</code>, <code>locationUpdateInterval</code>, <code>fastestLocationUpdateInterval</code>, <code>locationTimeout</code></td>
 </tr>
 <tr>
 <td><strong>Elasticity</strong></td>
@@ -15506,7 +15668,7 @@ permissions, geofence proximity, and GPS noise filtering.</p>
 </tr>
 <tr>
 <td><strong>Motion detection</strong></td>
-<td><code>stationaryRadius</code>, <code>stopTimeout</code>, <code>stopAfterElapsedMinutes</code>, <code>disableStopDetection</code></td>
+<td><code>stationaryRadius</code>, <code>stopTimeout</code>, <code>stopAfterElapsedMinutes</code>, <a href="../ActivityConfig/#disablestopdetection">ActivityConfig.disableStopDetection</a></td>
 </tr>
 <tr>
 <td><strong>Permissions</strong></td>
@@ -15595,9 +15757,9 @@ turning location services off when the device is idle to save power.</p>
 <li><code>stopTimeout</code> — minutes to wait after the activity recognition system reports
   <code>STILL</code> before transitioning to the stationary state.</li>
 <li><code>stopAfterElapsedMinutes</code> — automatically stop tracking after N minutes.</li>
-<li><code>stopOnStationary</code> — automatically call <a href="../BGGeo/#stop">BGGeo.stop</a>
+<li><a href="../ActivityConfig/#stoponstationary">ActivityConfig.stopOnStationary</a> — automatically call <a href="../BGGeo/#stop">BGGeo.stop</a>
   when the device enters the stationary state.</li>
-<li><code>disableStopDetection</code> — disable the motion-activity–based stop-detection
+<li><a href="../ActivityConfig/#disablestopdetection">ActivityConfig.disableStopDetection</a> — disable the motion-activity–based stop-detection
   system entirely.</li>
 <li><code>pausesLocationUpdatesAutomatically</code> — <span class="platform-badge platform-badge--ios">iOS only</span> whether iOS may
   automatically suspend location updates.</li>
@@ -15923,7 +16085,7 @@ jitter, and improve odometer stability.</p>
 </tr>
 <tr>
 <td><strong><a href="../LocationFilterConfig/#trackingaccuracythreshold">LocationFilterConfig.trackingAccuracyThreshold</a></strong></td>
-<td>Minimum GPS horizontal accuracy (meters) required to accept a location. Default: <code>100</code>.</td>
+<td>Maximum GPS horizontal accuracy (meters) required to accept a location. Default: <code>100</code>.</td>
 </tr>
 <tr>
 <td><strong><a href="../LocationFilterConfig/#maximpliedspeed">LocationFilterConfig.maxImpliedSpeed</a></strong></td>
@@ -15939,7 +16101,7 @@ jitter, and improve odometer stability.</p>
 </tr>
 <tr>
 <td><strong><a href="../LocationFilterConfig/#odometeraccuracythreshold">LocationFilterConfig.odometerAccuracyThreshold</a></strong></td>
-<td>Maximum accuracy (meters) allowed for a sample to affect the odometer. Default: <code>100</code>.</td>
+<td>Maximum accuracy (meters) allowed for a sample to affect the odometer. Default: <code>20</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -15947,7 +16109,7 @@ jitter, and improve odometer stability.</p>
 <p class="admonition-title">Note</p>
 <ul>
 <li>Distances are in <strong>meters</strong>.</li>
-<li>Time fields are in <strong>milliseconds</strong> unless otherwise specified.</li>
+<li>Time fields are in <strong>seconds</strong> unless otherwise specified.</li>
 <li>Filtering affects <strong>recorded</strong> locations only — it does not influence real-time motion detection.</li>
 </ul>
 </div>
@@ -16087,8 +16249,21 @@ when configured.</p>
 <p><img alt="" src="https://dl.dropbox.com/s/4fq4erz2lpqz00m/android11-location-permission-rationale-dialog.png?dl=1" /></p>
 <p><strong>3. When <code>locationAuthorizationRequest: "Any"</code></strong></p>
 <p>Treated the same as <code>"Always"</code>.</p>
+<h3 id="locationtimeout">locationTimeout<a class="headerlink" href="#locationtimeout" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">locationTimeout</span><span class="p">:</span><span class="w"> </span><span class="n">TimeInterval</span>
+</code></pre></div>
+<p>Seconds <a href="../BGGeo/#getcurrentposition">BGGeo.getCurrentPosition</a> waits for a location when the call
+does not pass its own <code>CurrentPositionRequest.timeout</code>.</p>
+<p>Defaults to <code>60</code> seconds.</p>
+<p>When the time runs out, the request resolves with the best location it has received. It
+rejects with <code>LocationError.Timeout</code> (<code>408</code>) only if no location arrived at all.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the Kotlin and Swift APIs, <code>getCurrentPosition</code> always passes its own <code>timeout</code>, so this
+value does not apply to it there.</p>
+</div>
 <h3 id="pauseslocationupdatesautomatically">pausesLocationUpdatesAutomatically<a class="headerlink" href="#pauseslocationupdatesautomatically" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">pausesLocationUpdatesAutomatically</span><span class="p">:</span><span class="w"> </span><span class="nb">Bool</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">pausesLocationUpdatesAutomatically</span><span class="p">:</span><span class="w"> </span><span class="nb">Bool</span>
 </code></pre></div>
 <p><span class="platform-badge platform-badge--ios">iOS only</span> Prevents the iOS location API from automatically pausing location updates. When set to <code>false</code>, iOS location services never turn off automatically. By default
 (<code>true</code>), the SDK manages this automatically — turning location services off after
@@ -16104,7 +16279,7 @@ example, a workout app that calls <a href="../BGGeo/#changepace">BGGeo.changePac
 <a href="../AppConfig/#preventsuspend">AppConfig.preventSuspend</a> will no longer function in this mode.</p>
 </div>
 <h3 id="showsbackgroundlocationindicator">showsBackgroundLocationIndicator<a class="headerlink" href="#showsbackgroundlocationindicator" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">showsBackgroundLocationIndicator</span><span class="p">:</span><span class="w"> </span><span class="nb">Bool</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">showsBackgroundLocationIndicator</span><span class="p">:</span><span class="w"> </span><span class="nb">Bool</span>
 </code></pre></div>
 <p><span class="platform-badge platform-badge--ios">iOS only</span> Controls whether the status bar indicator appears when location services are active
 in the background with <code>Always</code> authorization. Defaults to <code>true</code>. When <code>true</code>, iOS displays a blue bar or pill in the status bar
@@ -16114,7 +16289,7 @@ to your app.</p>
 When-In-Use authorization, iOS always changes the status bar appearance when
 location services are active in the background.</p>
 <h3 id="stationaryradius">stationaryRadius<a class="headerlink" href="#stationaryradius" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">stationaryRadius</span><span class="p">:</span><span class="w"> </span><span class="n">CLLocationDistance</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">stationaryRadius</span><span class="p">:</span><span class="w"> </span><span class="n">CLLocationDistance</span>
 </code></pre></div>
 <p>The minimum distance the device must move beyond the stationary location before
 aggressive background-tracking re-engages.</p>
@@ -16135,26 +16310,27 @@ stationary radius:
 - <em>Red circles</em>: locations where the SDK entered the stationary state.</p>
 <p><img alt="" src="https://dl.dropboxusercontent.com/s/vnio90swhs6xmqm/screenshot-ios-stationary-exit.png?dl=1" /></p>
 <p><strong>See also</strong>
-- 📘 <a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Philosophy-of-Operation">Philosophy of Operation</a></p>
+- 📘 <a href="../../help/philosophy/">Philosophy of Operation</a></p>
 </div>
 <h3 id="stopafterelapsedminutes">stopAfterElapsedMinutes<a class="headerlink" href="#stopafterelapsedminutes" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">stopAfterElapsedMinutes</span><span class="p">:</span><span class="w"> </span><span class="n">TimeInterval</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">stopAfterElapsedMinutes</span><span class="p">:</span><span class="w"> </span><span class="n">TimeInterval</span>
 </code></pre></div>
 <p>Automatically stops tracking after the specified number of minutes.</p>
-<p>Disabled by default. When set, the SDK automatically calls
+<p>Defaults to <code>-1</code> on iOS and <code>0</code> on Android. Any value of <code>0</code> or less disables
+it. When set to a positive value, the SDK automatically calls
 <a href="../BGGeo/#stop">BGGeo.stop</a> after this many minutes have elapsed since
 <a href="../BGGeo/#start">BGGeo.start</a> was called.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
-<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">ready</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="k">in</span>
-<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">    </span><span class="n">config</span><span class="p">.</span><span class="n">geolocation</span><span class="p">.</span><span class="n">stopAfterElapsedMinutes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">30</span>
-<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="p">}</span>
-<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>
-<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">start</span><span class="p">()</span><span class="w">  </span><span class="c1">// &lt;-- plugin will automatically stop in 30 minutes</span>
-<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="n">bgGeo</span><span class="p">.</span><span class="n">ready</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="k">in</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w">    </span><span class="n">config</span><span class="p">.</span><span class="n">geolocation</span><span class="p">.</span><span class="n">stopAfterElapsedMinutes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">30</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="p">}</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">start</span><span class="p">()</span><span class="w">  </span><span class="c1">// &lt;-- plugin will automatically stop in 30 minutes</span>
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="stoptimeout">stopTimeout<a class="headerlink" href="#stoptimeout" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">stopTimeout</span><span class="p">:</span><span class="w"> </span><span class="n">TimeInterval</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">stopTimeout</span><span class="p">:</span><span class="w"> </span><span class="n">TimeInterval</span>
 </code></pre></div>
 <p>Minutes to wait in the <em>moving</em> state with no detected movement before transitioning
 to the <em>stationary</em> state.</p>
@@ -16169,10 +16345,10 @@ potentially motionless for extended periods, which may significantly impact batt
 life.</p>
 <p><strong>See also</strong>
 - <a href="../BGGeo/#onmotionchange">BGGeo.onMotionChange</a>
-- 📘 <a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Philosophy-of-Operation">Philosophy of Operation</a></p>
+- 📘 <a href="../../help/philosophy/">Philosophy of Operation</a></p>
 </div>
 <h3 id="usesignificantchangesonly">useSignificantChangesOnly<a class="headerlink" href="#usesignificantchangesonly" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">useSignificantChangesOnly</span><span class="p">:</span><span class="w"> </span><span class="nb">Bool</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">useSignificantChangesOnly</span><span class="p">:</span><span class="w"> </span><span class="nb">Bool</span>
 </code></pre></div>
 <p>Disables continuous background tracking in favour of periodic, coarse location
 updates.</p>
@@ -16206,9 +16382,9 @@ foreground-service permissions entirely — and with them, every Google Play
 Console foreground-service declaration.  The SDK's own manifest declares
 these permissions, so removal requires manifest-merger overrides in your
 application's <code>AndroidManifest.xml</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nt">&lt;manifest</span><span class="w"> </span><span class="na">xmlns:tools=</span><span class="s">&quot;http://schemas.android.com/tools&quot;</span><span class="w"> </span><span class="err">...</span><span class="nt">&gt;</span>
-<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">  </span><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.FOREGROUND_SERVICE&quot;</span><span class="w"> </span><span class="na">tools:node=</span><span class="s">&quot;remove&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">  </span><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.FOREGROUND_SERVICE_LOCATION&quot;</span><span class="w"> </span><span class="na">tools:node=</span><span class="s">&quot;remove&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nt">&lt;manifest</span><span class="w"> </span><span class="na">xmlns:tools=</span><span class="s">&quot;http://schemas.android.com/tools&quot;</span><span class="w"> </span><span class="err">...</span><span class="nt">&gt;</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">  </span><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.FOREGROUND_SERVICE&quot;</span><span class="w"> </span><span class="na">tools:node=</span><span class="s">&quot;remove&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="w">  </span><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.permission.FOREGROUND_SERVICE_LOCATION&quot;</span><span class="w"> </span><span class="na">tools:node=</span><span class="s">&quot;remove&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
 </code></pre></div>
 <p>When <code>android.permission.FOREGROUND_SERVICE</code> /
 <code>android.permission.FOREGROUND_SERVICE_LOCATION</code> are absent from the merged

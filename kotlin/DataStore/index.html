@@ -2632,6 +2632,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../react-native/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../react-native/LocationQuery/" class="md-nav__link">
         
   
@@ -5203,6 +5231,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../capacitor/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../capacitor/LocationQuery/" class="md-nav__link">
         
   
@@ -7726,6 +7782,34 @@
     
   
     Coords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cordova/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -10317,6 +10401,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../flutter/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../flutter/LocationQuery/" class="md-nav__link">
         
   
@@ -12417,6 +12529,34 @@
     
   
     DataStore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../swift/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -15239,6 +15379,7 @@ datasets. Size your paging with <a href="../BGGeo/#getcount">BGGeo.getCount</a>.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">destroy</span><span class="p">(</span><span class="n">uuid</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span>
 </code></pre></div>
 <p>Remove a single location by <a href="../LocationEvent/#uuid">LocationEvent.uuid</a>.</p>
+<p>Resolves <code>true</code> once the record is removed.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// Within a coroutine scope</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">uuid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;some-location-uuid&quot;</span>
@@ -15248,6 +15389,7 @@ datasets. Size your paging with <a href="../BGGeo/#getcount">BGGeo.getCount</a>.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">destroyAll</span><span class="p">()</span>
 </code></pre></div>
 <p>Remove all records from the SDK's SQLite database.</p>
+<p>Resolves <code>true</code> once the store is cleared, like the geofence mutators.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// Within a coroutine scope</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>

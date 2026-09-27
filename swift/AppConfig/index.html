@@ -2632,6 +2632,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../react-native/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../react-native/LocationQuery/" class="md-nav__link">
         
   
@@ -5203,6 +5231,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../capacitor/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../capacitor/LocationQuery/" class="md-nav__link">
         
   
@@ -7726,6 +7782,34 @@
     
   
     Coords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cordova/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -10317,6 +10401,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../flutter/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../flutter/LocationQuery/" class="md-nav__link">
         
   
@@ -12540,6 +12652,34 @@
     
   
     DataStore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -15528,21 +15668,19 @@ user. Defaults to <code>true</code>.</p>
 to keep tracking alive after termination — iOS and Android behave differently
 in this state.</p>
 <h5 id="ios_3">iOS<a class="headerlink" href="#ios_3" title="Permanent link">&para;</a></h5>
-<p>Before termination, the SDK registers a stationary geofence of
-<a href="../GeolocationConfig/#stationaryradius">GeolocationConfig.stationaryRadius</a> meters around the last known position.
-When the device exits that geofence (~200 m), iOS fully relaunches the app
-in the background and tracking resumes automatically. This mechanism survives
-device reboot because iOS monitors geofences at the OS level.</p>
+<p>Before termination, the SDK registers a geofence around the last known position.
+When the device exits that geofence, iOS fully relaunches the app in the background
+and tracking resumes automatically. This mechanism survives device reboot because iOS
+monitors geofences at the OS level.</p>
 <p>Demo video: https://www.youtube.com/watch?v=aR6r8qV1TI8&amp;t=214s</p>
 <p><img alt="" src="https://dl.dropboxusercontent.com/s/1uip231l3gds68z/screenshot-stopOnTerminate-ios.png?dl=0" /></p>
 <h5 id="android_3">Android<a class="headerlink" href="#android_3" title="Permanent link">&para;</a></h5>
 <p>Android does not pause tracking when the user terminates the app. The native
-background service continues running headlessly without the JS/UI process.
+background service continues running headlessly without your app's UI.
 Configure <a href="../HttpConfig/#url">HttpConfig.url</a> so the service can continue uploading
-locations to your server.</p>
-<p><strong>See also</strong>
-- <a href="./#enableheadless">AppConfig.enableHeadless</a>
-- <a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Android-Headless-Mode">Android Headless Mode</a></p>
+locations to your server. To run your own code in this state, see
+<a href="./#enableheadless">AppConfig.enableHeadless</a> and
+<a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Android-Headless-Mode">Android Headless Mode</a>.</p>
 
 
 

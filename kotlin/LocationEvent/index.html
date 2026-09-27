@@ -2632,6 +2632,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../react-native/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../react-native/LocationQuery/" class="md-nav__link">
         
   
@@ -5203,6 +5231,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../capacitor/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../capacitor/LocationQuery/" class="md-nav__link">
         
   
@@ -7726,6 +7782,34 @@
     
   
     Coords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cordova/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -10317,6 +10401,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../flutter/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../flutter/LocationQuery/" class="md-nav__link">
         
   
@@ -12417,6 +12529,34 @@
     
   
     DataStore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../swift/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -15784,7 +15924,7 @@ delivered by the SDK.</p>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1">//     },</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1">//     &quot;extras&quot;: { ... },</span>
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1">//     &quot;activity&quot;: { &quot;type&quot;: String, &quot;confidence&quot;: Int },</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c1">//     &quot;geofence&quot;: { &quot;identifier&quot;: String, &quot;action&quot;: String },</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c1">//     &quot;geofence&quot;: { &quot;identifier&quot;: String, &quot;action&quot;: String, &quot;timestamp&quot;: String },</span>
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1">//     &quot;battery&quot;:  { &quot;level&quot;: Double, &quot;is_charging&quot;: Boolean },</span>
 <a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1">//     &quot;timestamp&quot;: String,   // ISO-8601 UTC</span>
 <a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="c1">//     &quot;uuid&quot;:      String,</span>
@@ -15807,10 +15947,18 @@ recorded (e.g. <code>still</code>, <code>on_foot</code>, <code>in_vehicle</code>
 <h3 id="age">age<a class="headerlink" href="#age" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">age</span><span class="p">:</span><span class="w"> </span><span class="kt">Double?</span>
 </code></pre></div>
-<p>Age of the location in milliseconds, measured from the device system
-clock at the time the location was received.</p>
-<p><code>location.timestamp</code> + <code>location.age</code> = device system time when the
-SDK received the location from the native API.</p>
+<p>Age of the location in seconds, with millisecond precision (e.g. <code>1.234</code>): how long
+before the SDK received the location the native API had fixed it.</p>
+<p><code>recorded_at</code> is the time the SDK received the location, so <code>recorded_at</code> is
+roughly <code>timestamp</code> plus <code>age</code> seconds. <code>CurrentPositionRequest.maximumAge</code>, by
+contrast, is in milliseconds.</p>
+<p>In the Swift API, <code>LocationEvent.age</code> is an <code>Int</code> of whole seconds, rounded down; read
+<code>data["age"]</code> for the fractional value.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before version 5, <code>age</code> was an integer number of milliseconds. If your code compares it
+against a millisecond value, divide that value by 1000.</p>
+</div>
 <h3 id="altitude">altitude<a class="headerlink" href="#altitude" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">altitude</span><span class="p">:</span><span class="w"> </span><span class="kt">Double?</span>
 </code></pre></div>
@@ -15856,7 +16004,7 @@ and altitude.</p>
 <p>Merged with configured <a href="../PersistenceConfig/#extras">PersistenceConfig.extras</a> before persisting
 and included in the payload posted to <a href="../HttpConfig/#url">HttpConfig.url</a>.</p>
 <h3 id="geofence">geofence<a class="headerlink" href="#geofence" title="Permanent link">&para;</a></h3>
-<p><code>val geofence:</code><a href="./"><code>LocationEvent</code></a><code>.GeofenceTrigger?</code></p>
+<p><code>val geofence:</code><a href="./"><code>LocationEvent</code></a><code>.</code><a href="../../react-native/GeofenceTrigger/"><code>GeofenceTrigger</code></a><code>?</code></p>
 <p>The geofence event that triggered this location, if applicable.</p>
 <p>Present only when <code>event</code> is <code>"geofence"</code>.</p>
 <h3 id="heading">heading<a class="headerlink" href="#heading" title="Permanent link">&para;</a></h3>

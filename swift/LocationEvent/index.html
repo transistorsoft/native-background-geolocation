@@ -2632,6 +2632,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../react-native/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../react-native/LocationQuery/" class="md-nav__link">
         
   
@@ -5203,6 +5231,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../capacitor/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../capacitor/LocationQuery/" class="md-nav__link">
         
   
@@ -7726,6 +7782,34 @@
     
   
     Coords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cordova/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -10317,6 +10401,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../flutter/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../flutter/LocationQuery/" class="md-nav__link">
         
   
@@ -12650,6 +12762,34 @@
     
   
     DataStore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -15499,7 +15639,7 @@ delivered by the SDK.</p>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1">//     },</span>
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1">//     &quot;extras&quot;: { ... },</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c1">//     &quot;activity&quot;: { &quot;type&quot;: String, &quot;confidence&quot;: Int },</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1">//     &quot;geofence&quot;: { &quot;identifier&quot;: String, &quot;action&quot;: String },</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1">//     &quot;geofence&quot;: { &quot;identifier&quot;: String, &quot;action&quot;: String, &quot;timestamp&quot;: String },</span>
 <a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1">//     &quot;battery&quot;:  { &quot;level&quot;: Double, &quot;is_charging&quot;: Bool },</span>
 <a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="c1">//     &quot;timestamp&quot;: String,   // ISO-8601 UTC</span>
 <a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="c1">//     &quot;uuid&quot;:      String,</span>
@@ -15518,10 +15658,18 @@ recorded (e.g. <code>still</code>, <code>on_foot</code>, <code>in_vehicle</code>
 <h3 id="age">age<a class="headerlink" href="#age" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">age</span><span class="p">:</span><span class="w"> </span><span class="nb">Int</span><span class="p">?</span>
 </code></pre></div>
-<p>Age of the location in milliseconds, measured from the device system
-clock at the time the location was received.</p>
-<p><code>location.timestamp</code> + <code>location.age</code> = device system time when the
-SDK received the location from the native API.</p>
+<p>Age of the location in seconds, with millisecond precision (e.g. <code>1.234</code>): how long
+before the SDK received the location the native API had fixed it.</p>
+<p><code>recorded_at</code> is the time the SDK received the location, so <code>recorded_at</code> is
+roughly <code>timestamp</code> plus <code>age</code> seconds. <code>CurrentPositionRequest.maximumAge</code>, by
+contrast, is in milliseconds.</p>
+<p>In the Swift API, <code>LocationEvent.age</code> is an <code>Int</code> of whole seconds, rounded down; read
+<code>data["age"]</code> for the fractional value.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before version 5, <code>age</code> was an integer number of milliseconds. If your code compares it
+against a millisecond value, divide that value by 1000.</p>
+</div>
 <h3 id="battery">battery<a class="headerlink" href="#battery" title="Permanent link">&para;</a></h3>
 <p><code>public let battery:</code><a href="../Battery/"><code>Battery</code></a><code>?</code></p>
 <p>Device battery state at the time this location was recorded.</p>
@@ -15541,21 +15689,20 @@ and altitude.</p>
 <p>Merged with configured <a href="../PersistenceConfig/#extras">PersistenceConfig.extras</a> before persisting
 and included in the payload posted to <a href="../HttpConfig/#url">HttpConfig.url</a>.</p>
 <h3 id="geofence">geofence<a class="headerlink" href="#geofence" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">geofence</span><span class="p">:</span><span class="w"> </span><span class="n">GeofenceTrigger</span><span class="p">?</span>
-</code></pre></div>
+<p><code>public let geofence:</code><a href="../GeofenceTrigger/"><code>GeofenceTrigger</code></a><code>?</code></p>
 <p>The geofence event that triggered this location, if applicable.</p>
 <p>Present only when <code>event</code> is <code>"geofence"</code>.</p>
 <h3 id="ismoving">isMoving<a class="headerlink" href="#ismoving" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">isMoving</span><span class="p">:</span><span class="w"> </span><span class="nb">Bool</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">isMoving</span><span class="p">:</span><span class="w"> </span><span class="nb">Bool</span>
 </code></pre></div>
 <p><code>true</code> when the SDK was in the <strong>moving</strong> state when this location was
 recorded.</p>
 <h3 id="mock">mock<a class="headerlink" href="#mock" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">mock</span><span class="p">:</span><span class="w"> </span><span class="nb">Bool</span><span class="p">?</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">mock</span><span class="p">:</span><span class="w"> </span><span class="nb">Bool</span><span class="p">?</span>
 </code></pre></div>
 <p><code>true</code> when the location was generated by a mock location app or simulator.</p>
 <h3 id="odometer">odometer<a class="headerlink" href="#odometer" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">odometer</span><span class="p">:</span><span class="w"> </span><span class="nb">Double</span><span class="p">?</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">odometer</span><span class="p">:</span><span class="w"> </span><span class="nb">Double</span><span class="p">?</span>
 </code></pre></div>
 <p>Accumulated distance traveled in meters since the last odometer reset.</p>
 <p>The SDK integrates the distance between each pair of accepted locations
@@ -15585,23 +15732,23 @@ explicitly reset.</p>
 - <a href="../LocationFilterConfig/#odometeraccuracythreshold">LocationFilterConfig.odometerAccuracyThreshold</a>
 - <a href="../BGGeo/#resetodometer">BGGeo.resetOdometer</a>
 - <a href="../BGGeo/#getodometer">BGGeo.getOdometer</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kd">let</span><span class="w"> </span><span class="nv">sub</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">onLocation</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">location</span><span class="w"> </span><span class="k">in</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;Distance traveled:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">odometer</span><span class="p">)</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">}</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="c1">// Reset at start of a trip</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">setOdometer</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">        </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;[setOdometer] error: </span><span class="si">\(</span><span class="n">error</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kd">let</span><span class="w"> </span><span class="nv">sub</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">onLocation</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">location</span><span class="w"> </span><span class="k">in</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;Distance traveled:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">odometer</span><span class="p">)</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">}</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1">// Reset at start of a trip</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">setOdometer</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">        </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;[setOdometer] error: </span><span class="si">\(</span><span class="n">error</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="odometererror">odometerError<a class="headerlink" href="#odometererror" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">odometerError</span><span class="p">:</span><span class="w"> </span><span class="nb">Double</span><span class="p">?</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">odometerError</span><span class="p">:</span><span class="w"> </span><span class="nb">Double</span><span class="p">?</span>
 </code></pre></div>
 <p>Accumulated odometer drift in meters.</p>
 <p>Represents the uncertainty that has built up in the <code>odometer</code>
@@ -15616,15 +15763,15 @@ good GPS conditions but grow during long tunnels, dense urban canyons, or
 extended indoor tracking.</p>
 <p><strong>See also</strong>
 - <code>odometer</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kd">let</span><span class="w"> </span><span class="nv">sub</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">onLocation</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">location</span><span class="w"> </span><span class="k">in</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;Odometer:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">odometer</span><span class="p">)</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="c1">// Note: odometer_error may be available via location.data dictionary</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">let</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="n">shared</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="kd">let</span><span class="w"> </span><span class="nv">sub</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="n">onLocation</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">location</span><span class="w"> </span><span class="k">in</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;Odometer:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">odometer</span><span class="p">)</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="c1">// Note: odometer_error may be available via location.data dictionary</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="recordedat">recordedAt<a class="headerlink" href="#recordedat" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">recordedAt</span><span class="p">:</span><span class="w"> </span><span class="n">Date</span><span class="p">?</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">recordedAt</span><span class="p">:</span><span class="w"> </span><span class="n">Date</span><span class="p">?</span>
 </code></pre></div>
 <p>Timestamp when the SDK received the location from the native API.</p>
 <ul>
@@ -15632,7 +15779,7 @@ extended indoor tracking.</p>
 <li>When <a href="../PersistenceConfig/#timestampformat">PersistenceConfig.timestampFormat</a> is <code>"epoch"</code>: epoch milliseconds <code>number</code>.</li>
 </ul>
 <h3 id="sample">sample<a class="headerlink" href="#sample" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">sample</span><span class="p">:</span><span class="w"> </span><span class="nb">Bool</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">sample</span><span class="p">:</span><span class="w"> </span><span class="nb">Bool</span>
 </code></pre></div>
 <p><code>true</code> for intermediate sample locations collected during accuracy
 convergence.</p>
@@ -15642,7 +15789,7 @@ most accurate fix. These samples are delivered to
 <a href="../BGGeo/#onlocation">BGGeo.onLocation</a> but are <strong>not</strong> persisted to
 SQLite. Filter them out before manually posting locations to your server.</p>
 <h3 id="timestamp">timestamp<a class="headerlink" href="#timestamp" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">timestamp</span><span class="p">:</span><span class="w"> </span><span class="n">Date</span><span class="p">?</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">timestamp</span><span class="p">:</span><span class="w"> </span><span class="n">Date</span><span class="p">?</span>
 </code></pre></div>
 <p>Timestamp provided by the native location API.</p>
 <ul>
@@ -15650,7 +15797,7 @@ SQLite. Filter them out before manually posting locations to your server.</p>
 <li>When <a href="../PersistenceConfig/#timestampformat">PersistenceConfig.timestampFormat</a> is <code>"epoch"</code>: epoch milliseconds <code>number</code>.</li>
 </ul>
 <h3 id="uuid">uuid<a class="headerlink" href="#uuid" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">uuid</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">?</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nv">uuid</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">?</span>
 </code></pre></div>
 <p>Universally unique identifier for this location record.</p>
 <p>Use this to correlate locations in your server database with those in the

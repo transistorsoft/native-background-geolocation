@@ -14,7 +14,7 @@
         <link rel="prev" href="../Battery/">
       
       
-        <link rel="next" href="../LocationQuery/">
+        <link rel="next" href="../GeofenceTrigger/">
       
       
         
@@ -2632,6 +2632,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../react-native/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../react-native/LocationQuery/" class="md-nav__link">
         
   
@@ -5203,6 +5231,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../capacitor/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../capacitor/LocationQuery/" class="md-nav__link">
         
   
@@ -7726,6 +7782,34 @@
     
   
     Coords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cordova/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -10509,6 +10593,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../LocationQuery/" class="md-nav__link">
         
   
@@ -12604,6 +12716,34 @@
     
   
     DataStore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../swift/GeofenceTrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeofenceTrigger
   
 
     
@@ -15348,8 +15488,11 @@ altitude has a 68% probability of falling.</p>
 <h3 id="floor">floor<a class="headerlink" href="#floor" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">floor</span>
 </code></pre></div>
-<p><span class="platform-badge platform-badge--ios">iOS only</span> Floor within a building, when indoor-positioning hardware (e.g. Bluetooth
-beacons) is available.</p>
+<p><span class="platform-badge platform-badge--ios">iOS only</span> The floor within a building, when the device is in a venue with indoor
+positioning.</p>
+<p>iOS sends <code>null</code> when it reports no floor, which is almost always. Android never sends
+it. Test it with <code>floor != null</code>. In TypeScript, a <code>floor !== undefined</code> check lets
+iOS's <code>null</code> through, and <code>if (floor)</code> skips floor <code>0</code>.</p>
 <h3 id="heading">heading<a class="headerlink" href="#heading" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">heading</span>
 </code></pre></div>
