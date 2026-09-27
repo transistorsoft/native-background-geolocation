@@ -45,8 +45,8 @@ public class BGGeo {
     /// }
     ///
     /// // With Transistor demo token
-    /// let token = try await TransistorAuthorizationService.findOrCreateToken(
-    ///     org: "my-org", username: "my-user"
+    /// let token = try await BGGeo.TransistorAuthorizationService.findOrCreateToken(
+    ///     org: "my-org", username: "my-user", url: "https://tracker.transistorsoft.com"
     /// )
     /// bgGeo.ready(transistorAuthorizationToken: token) { config in
     ///     config.geolocation.distanceFilter = 50

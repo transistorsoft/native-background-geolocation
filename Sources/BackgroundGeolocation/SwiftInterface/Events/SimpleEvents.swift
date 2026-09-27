@@ -11,10 +11,10 @@ import TSLocationManager
 
 extension BGGeo {
     public struct ScheduleEvent {
-        /// The full plugin state dictionary at the time the schedule fired.
+        /// The full plugin state dictionary, after the schedule started or stopped tracking.
         public let state: [String: Any]
 
-        /// Whether this is a scheduled **ON** (`true`) or **OFF** (`false`) event.
+        /// Whether the schedule started (`true`) or stopped (`false`) tracking.
         public var enabled: Bool { state["enabled"] as? Bool ?? false }
 
         /// The tracking mode for this schedule slot: `.location` or `.geofence`.
