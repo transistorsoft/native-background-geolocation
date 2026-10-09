@@ -15740,6 +15740,7 @@ unrealistic outlier and discarded by the filter.</p>
 odometer. Defaults to <code>20</code> meters. Valid range: 0–500.</p>
 <p>Any location whose accuracy exceeds this threshold is ignored for odometer
 updates.</p>
+<p><code>0</code> means no accuracy limit: no location is ignored for its accuracy.</p>
 <h3 id="odometerpolicy">odometerPolicy<a class="headerlink" href="#odometerpolicy" title="Permanent link">&para;</a></h3>
 <p><a href="../LocationFilterPolicy/"><code>LocationFilterPolicy</code></a><code>? odometerPolicy</code></p>
 <p>Selects the filtering policy applied to odometer-relevant location samples.
@@ -15916,6 +15917,7 @@ latency in responsiveness to movement.</p>
 for tracking. Defaults to <code>100</code> meters. Valid range: 0–500.</p>
 <p>Locations with an accuracy value greater (worse) than this threshold are
 discarded and not used in path or odometer calculations.</p>
+<p><code>0</code> means no accuracy limit: no location is discarded for its accuracy.</p>
 <h3 id="usekalman">useKalman<a class="headerlink" href="#usekalman" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">bool</span><span class="o">?</span><span class="w"> </span><span class="n">useKalman</span>
 </code></pre></div>

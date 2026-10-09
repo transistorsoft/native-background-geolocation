@@ -15739,6 +15739,7 @@ unrealistic outlier and discarded by the filter.</p>
 odometer. Defaults to <code>20</code> meters. Valid range: 0–500.</p>
 <p>Any location whose accuracy exceeds this threshold is ignored for odometer
 updates.</p>
+<p><code>0</code> means no accuracy limit: no location is ignored for its accuracy.</p>
 <h3 id="odometerpolicy">odometerPolicy<a class="headerlink" href="#odometerpolicy" title="Permanent link">&para;</a></h3>
 <p><code>public var odometerPolicy:</code><a href="../LocationFilterPolicy/"><code>LocationFilterPolicy</code></a></p>
 <p>Selects the filtering policy applied to odometer-relevant location samples.
@@ -15883,6 +15884,7 @@ latency in responsiveness to movement.</p>
 for tracking. Defaults to <code>100</code> meters. Valid range: 0–500.</p>
 <p>Locations with an accuracy value greater (worse) than this threshold are
 discarded and not used in path or odometer calculations.</p>
+<p><code>0</code> means no accuracy limit: no location is discarded for its accuracy.</p>
 <h3 id="usekalman">useKalman<a class="headerlink" href="#usekalman" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">useKalman</span><span class="p">:</span><span class="w"> </span><span class="nb">Bool</span>
 </code></pre></div>
