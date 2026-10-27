@@ -25,8 +25,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "TSLocationManager",
-            url: "https://github.com/transistorsoft/native-background-geolocation/releases/download/4.8.2/TSLocationManager.xcframework.zip",
-            checksum: "5f6b5c7e148b4a3d4335e6c11e32a829af92de5ad6cd07def31a66239697a871"
+            url: "https://github.com/transistorsoft/native-background-geolocation/releases/download/4.8.3/TSLocationManager.xcframework.zip",
+            checksum: "ffb66badd555c238e6f4f43d79fac1581841f50685dca109fc94bac2f440eaf0"
         ),
 
         // Swift overlay that reexports the binary + TSBackgroundFetch

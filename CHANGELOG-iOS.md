@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.8.3 &mdash; 2026-10-27
+- fix(WO-188): the SDK's two alerts now show in an app built on a UIScene template. One reports a location or geofence template that fails to render (with `logger.debug` on); the other, a device the demo server (tracker.transistorsoft.com) has banned. Both were presented on the view controller the plugin found at startup, which it looks for on the app delegate's window. In a scene app that window belongs to the scene, so the plugin can find none (the Capacitor plugin finds none on Capacitor 8.5's template, nor the Flutter plugin on Flutter 3.47's), and the alert was dropped without a word; the error was still logged. When no view controller was found, the alert is now presented on the foreground scene's top view controller, as the location-permission alert already is. An app that never sets `viewController` (the native SDK used directly) now sees these alerts too
+
 ## 4.8.2 &mdash; 2026-10-23
 - fix(WO-185): with `preventSuspend`, a stationary app in the background no longer stops renewing its background time. When it stopped, iOS suspended the app about 30 seconds after it went to the background, and no heartbeat fired until the device moved or the app was opened (react-native-background-geolocation #2674). Two things stopped the renewal: a reading of unlimited background time while in the background, which iOS can report for a moment after the app enters the background (also when the app returned to the background within 3 seconds of leaving it) and which the SDK took to mean no renewal was needed; and a stationary `motionchange` completing while the heartbeat ran, which released the heartbeat's background task along with the stop-detection one, and nothing created it again
 
