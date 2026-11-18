@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'TSLocationManager'
-  s.version      = '4.8.3'
+  s.version      = '4.9.0'
   s.summary      = 'Enterprise-grade background geolocation.'
   s.description  = 'Reliable background location with SQLite-first persistence and robust HTTP uploader.'
 
@@ -15,18 +15,20 @@ Pod::Spec.new do |s|
   s.author       = { 'Transistor Software' => 'info@transistorsoft.com' }
 
   # Binary distribution
-  s.source       = { :http => 'https://github.com/transistorsoft/native-background-geolocation/releases/download/4.8.3/TSLocationManager.xcframework.zip' }
+  s.source       = { :http => 'https://github.com/transistorsoft/native-background-geolocation/releases/download/4.9.0/TSLocationManager.xcframework.zip' }
   s.vendored_frameworks   = 'TSLocationManager.xcframework'
   s.static_framework      = true
 
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '15.0'
 
   s.frameworks            = 'CoreLocation', 'SystemConfiguration', 'CoreTelephony'
   s.weak_frameworks       = 'BackgroundTasks'
   s.libraries             = 'sqlite3', 'z', 'c++'
 
-  # TSBackgroundFetch dependency (allow patch updates)
-  s.dependency 'TSBackgroundFetch', '~> 4.1.0'
+  # TSBackgroundFetch 4.2.1 or any later 4.x. The background-fetch plugins require 4.2 (iOS 15), so
+  # an app that uses one of them with a geolocation plugin needs this range. Not `~> 4.2.1`, which
+  # would refuse a 4.3 the fetch plugins accept. (WO-193)
+  s.dependency 'TSBackgroundFetch', '>= 4.2.1', '< 5.0'
 
   s.pod_target_xcconfig   = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
 
@@ -34,9 +36,11 @@ Pod::Spec.new do |s|
   # verifier — force-loads the Swift back-deployment compatibility libraries, because the
   # deployment target is below the OS releases that carry those fixes in the runtime. A consumer
   # with no Swift of its own never gets the toolchain's Swift library directory on its link line,
-  # so those force-loads come out as undefined `__swift_FORCE_LOAD_$_swiftCompatibility51/56/
-  # Concurrency`. `pod spec lint` builds exactly such an app, which is how it surfaced (Xcode 26.5
-  # rejected what 26.x accepted for 4.6.1 — the binary carries the same symbols in both).
+  # so those force-loads come out as undefined. `pod spec lint` builds exactly such an app, which is
+  # how it surfaced (Xcode 26.5 rejected what 26.x accepted for 4.6.1 — the binary carries the same
+  # symbols in both). At iOS 13 they were `swiftCompatibility51/56/Concurrency`; at iOS 15 only
+  # `__swift_FORCE_LOAD_$_swiftCompatibility56` remains (`nm -u`), and it stays until the
+  # deployment target reaches 15.4, so this setting stays too. (WO-193)
   s.user_target_xcconfig  = { 'LIBRARY_SEARCH_PATHS' => '$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)' }
 
   s.documentation_url      = 'https://github.com/transistorsoft/native-background-geolocation'

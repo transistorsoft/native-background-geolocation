@@ -9,24 +9,25 @@ import PackageDescription
 let package = Package(
     name: "TSLocationManager",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v15)
     ],
     products: [
         // Consumers: import BackgroundGeolocation
         .library(name: "BackgroundGeolocation", targets: ["BackgroundGeolocation"])
     ],
     dependencies: [
-        // SPM dependency on TSBackgroundFetch (allow patch updates)
+        // TSBackgroundFetch 4.2.1 or any later 4.x: the background-fetch plugins require 4.2,
+        // so an app that uses one of them with a geolocation plugin needs this range. (WO-193)
         .package(
             url: "https://github.com/transistorsoft/transistor-background-fetch.git",
-            .upToNextMinor(from: "4.1.0")
+            from: "4.2.1"
         )
     ],
     targets: [
         .binaryTarget(
             name: "TSLocationManager",
-            url: "https://github.com/transistorsoft/native-background-geolocation/releases/download/4.8.3/TSLocationManager.xcframework.zip",
-            checksum: "ffb66badd555c238e6f4f43d79fac1581841f50685dca109fc94bac2f440eaf0"
+            url: "https://github.com/transistorsoft/native-background-geolocation/releases/download/4.9.0/TSLocationManager.xcframework.zip",
+            checksum: "850dab52b8405509c079723a6511e9c864b16591effafa8f2244ac0db096d66d"
         ),
 
         // Swift overlay that reexports the binary + TSBackgroundFetch
