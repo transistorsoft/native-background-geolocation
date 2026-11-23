@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Resource-shrinking keep rules for this app (WO-200).
+  - ic_service_icon: named only by a string, in app.notification.smallIcon (LocationManager.kt).
+  - The SDK's debug sounds: the settings screen can turn on logger.debug, and a shrunk release build drops them
+    otherwise.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/ic_service_icon,@raw/tslocationmanager_*" />
