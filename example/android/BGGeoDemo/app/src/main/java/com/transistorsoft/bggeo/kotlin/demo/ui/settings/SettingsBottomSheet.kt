@@ -401,15 +401,19 @@ class SettingsBottomSheet : BottomSheetDialogFragment() {
 
     // --- Helper Methods for Value Mapping ---
 
+    // (WO-203) Every member and no else, so a member the SDK adds fails this build instead of getting a wrong label.
+    // NAVIGATION and VERY_LOW read back as HIGH and LOWEST: Android has no finer or coarser priority.
     private fun accuracyToString(accuracy: DesiredAccuracy): String = when (accuracy) {
+        DesiredAccuracy.NAVIGATION -> "Navigation"
         DesiredAccuracy.HIGH -> "High"
         DesiredAccuracy.MEDIUM -> "Medium"
         DesiredAccuracy.LOW -> "Low"
-        DesiredAccuracy.LOWEST -> "Minimum"
+        DesiredAccuracy.VERY_LOW, DesiredAccuracy.LOWEST -> "Minimum"
     }
 
     private fun stringToAccuracy(label: String): DesiredAccuracy = when (label) {
-        "Navigation", "High" -> DesiredAccuracy.HIGH
+        "Navigation" -> DesiredAccuracy.NAVIGATION
+        "High" -> DesiredAccuracy.HIGH
         "Medium" -> DesiredAccuracy.MEDIUM
         "Low" -> DesiredAccuracy.LOW
         "Minimum" -> DesiredAccuracy.LOWEST

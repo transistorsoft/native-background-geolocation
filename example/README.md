@@ -75,14 +75,9 @@ The bundleId is `com.transistorsoft.bggeo.swift.demo`. A matching license key is
 
 The `applicationId` is `com.transistorsoft.bggeo.kotlin.demo`. A matching license key is set in `AndroidManifest.xml` — replace it with your own if you change the application identifier.
 
-#### Gradle ext vars
+#### SDK version
 
-Pin SDK versions in the root `android/BGGeoDemo/build.gradle.kts`:
-
-```kotlin
-ext["playServicesLocationVersion"] = "21.3.0"
-ext["tslocationmanagerVersion"]    = "4.0.+"
-```
+The demo pins `com.transistorsoft:tslocationmanager` and `play-services-location` in the `dependencies` block of `android/BGGeoDemo/app/build.gradle.kts`.
 
 ---
 
