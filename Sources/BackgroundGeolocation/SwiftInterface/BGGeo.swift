@@ -242,8 +242,10 @@ public class BGGeo {
     }
 
     // MARK: - Event Listeners
+    //
+    // No @discardableResult on these (WO-199): releasing the returned EventSubscription removes the
+    // listener, so an ignored result is a listener that never fires, and the compiler has to say so.
 
-    @discardableResult
     public func onLocation(_ callback: @escaping (LocationEvent) -> Void) -> EventSubscription {
         let token = manager.onLocation({ callback(LocationEvent($0)) }, failure: { _ in })
         return EventSubscription { [weak self] in
@@ -251,7 +253,6 @@ public class BGGeo {
         }
     }
 
-    @discardableResult
     public func onMotionChange(_ callback: @escaping (LocationEvent) -> Void) -> EventSubscription {
         let token = manager.onMotionChange { callback(LocationEvent($0)) }
         return EventSubscription { [weak self] in
@@ -259,7 +260,6 @@ public class BGGeo {
         }
     }
 
-    @discardableResult
     public func onHttp(_ callback: @escaping (HttpEvent) -> Void) -> EventSubscription {
         let token = manager.onHttp { callback(HttpEvent($0)) }
         return EventSubscription { [weak self] in
@@ -267,7 +267,6 @@ public class BGGeo {
         }
     }
 
-    @discardableResult
     public func onGeofence(_ callback: @escaping (GeofenceEvent) -> Void) -> EventSubscription {
         let token = manager.onGeofence { callback(GeofenceEvent($0)) }
         return EventSubscription { [weak self] in
@@ -275,7 +274,6 @@ public class BGGeo {
         }
     }
 
-    @discardableResult
     public func onHeartbeat(_ callback: @escaping (HeartbeatEvent) -> Void) -> EventSubscription {
         let token = manager.onHeartbeat { callback(HeartbeatEvent($0)) }
         return EventSubscription { [weak self] in
@@ -283,7 +281,6 @@ public class BGGeo {
         }
     }
 
-    @discardableResult
     public func onActivityChange(_ callback: @escaping (ActivityChangeEvent) -> Void) -> EventSubscription {
         let token = manager.onActivityChange { callback(ActivityChangeEvent($0)) }
         return EventSubscription { [weak self] in
@@ -296,7 +293,6 @@ public class BGGeo {
     /// The `callback` fires each time the tracking location-filter **rejects** a raw
     /// location sample (eg: horizontal accuracy worse than `trackingAccuracyThreshold`).
     /// Rejected locations are **not** delivered to ``onLocation(_:)``.
-    @discardableResult
     public func onLocationFilter(_ callback: @escaping (LocationFilterEvent) -> Void) -> EventSubscription {
         let token = manager.onLocationFilter { callback(LocationFilterEvent($0)) }
         return EventSubscription { [weak self] in
@@ -304,7 +300,6 @@ public class BGGeo {
         }
     }
 
-    @discardableResult
     public func onProviderChange(_ callback: @escaping (ProviderChangeEvent) -> Void) -> EventSubscription {
         let token = manager.onProviderChange { callback(ProviderChangeEvent($0)) }
         return EventSubscription { [weak self] in
@@ -312,7 +307,6 @@ public class BGGeo {
         }
     }
 
-    @discardableResult
     public func onGeofencesChange(_ callback: @escaping (GeofencesChangeEvent) -> Void) -> EventSubscription {
         let token = manager.onGeofencesChange { callback(GeofencesChangeEvent($0)) }
         return EventSubscription { [weak self] in
@@ -320,7 +314,6 @@ public class BGGeo {
         }
     }
 
-    @discardableResult
     public func onSchedule(_ callback: @escaping (ScheduleEvent) -> Void) -> EventSubscription {
         let token = manager.onSchedule { callback(ScheduleEvent($0)) }
         return EventSubscription { [weak self] in
@@ -328,7 +321,6 @@ public class BGGeo {
         }
     }
 
-    @discardableResult
     public func onPowerSaveChange(_ callback: @escaping (PowerSaveChangeEvent) -> Void) -> EventSubscription {
         let token = manager.onPowerSaveChange { callback(PowerSaveChangeEvent($0)) }
         return EventSubscription { [weak self] in
@@ -336,7 +328,6 @@ public class BGGeo {
         }
     }
 
-    @discardableResult
     public func onConnectivityChange(_ callback: @escaping (ConnectivityChangeEvent) -> Void) -> EventSubscription {
         let token = manager.onConnectivityChange { callback(ConnectivityChangeEvent($0)) }
         return EventSubscription { [weak self] in
@@ -344,7 +335,6 @@ public class BGGeo {
         }
     }
 
-    @discardableResult
     public func onEnabledChange(_ callback: @escaping (EnabledChangeEvent) -> Void) -> EventSubscription {
         let token = manager.onEnabledChange { callback(EnabledChangeEvent($0)) }
         return EventSubscription { [weak self] in
@@ -352,7 +342,6 @@ public class BGGeo {
         }
     }
 
-    @discardableResult
     public func onAuthorization(_ callback: @escaping (AuthorizationEvent) -> Void) -> EventSubscription {
         let token = manager.onAuthorization { callback(AuthorizationEvent($0)) }
         return EventSubscription { [weak self] in

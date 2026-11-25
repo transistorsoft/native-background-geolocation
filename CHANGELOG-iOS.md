@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.9.1 &mdash; 2026-11-25
+- fix: in the Swift API, ignoring the `EventSubscription` an `on*` method returns is now a compiler warning (`result of call to 'onHttp' is unused`). Releasing a subscription removes its listener, so `bgGeo.onHttp { … }` with the result ignored registered the listener and removed it on the same line, and the listener never fired. Keep the subscription for as long as you want events, e.g. in a property of a long-lived object: `.store(in: &subscriptions)` (WO-199)
+- feat: `EventSubscription.cancel()` removes the listener without waiting for the subscription to be released. Calling it again, or releasing the subscription afterwards, does nothing more (WO-199)
+
 ## 4.9.0 &mdash; 2026-11-18
 - fix: the SDK now requires TSBackgroundFetch 4.2.1 or any later 4.x, was 4.1.x, on CocoaPods (`>= 4.2.1`, `< 5.0`) and Swift Package Manager (`from: "4.2.1"`). The latest background-fetch plugins require TSBackgroundFetch 4.2, so an app that used one of them with a Background Geolocation plugin could not resolve its packages. TSBackgroundFetch 4.2 requires iOS 15, as the SDK now does. With CocoaPods, run `pod update TSLocationManager TSBackgroundFetch`: `pod install` alone keeps the versions in `Podfile.lock` (WO-193)
 - fix: the framework builds with Xcode 27 again. Xcode 27 refuses any deployment target below iOS 15.0 (an
