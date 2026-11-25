@@ -15612,7 +15612,7 @@
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>Add the dependency to <code>pubspec.yaml</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">dependencies</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">flutter_background_geolocation</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;^5.9.1&#39;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">flutter_background_geolocation</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;^5.10.1&#39;</span>
 </code></pre></div>
 <p>Then fetch:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>flutter<span class="w"> </span>pub<span class="w"> </span>get
@@ -15781,7 +15781,7 @@ pinning an exact release).</p>
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="n">buildTypes</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">        </span><span class="n">release</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">            </span><span class="n">isMinifyEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">            </span><span class="n">isShrinkResources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w">   </span><span class="c1">// required</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">            </span><span class="n">isShrinkResources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
 <a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="p">}</span>
@@ -15795,7 +15795,7 @@ pinning an exact release).</p>
 <a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="n">buildTypes</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">        </span><span class="n">release</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">            </span><span class="n">minifyEnabled</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">            </span><span class="n">shrinkResources</span><span class="w"> </span><span class="kc">false</span><span class="w">   </span><span class="c1">// required</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">            </span><span class="n">shrinkResources</span><span class="w"> </span><span class="kc">true</span>
 <a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">        </span><span class="o">}</span>
 <a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="o">}</span>
 <a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="o">}</span>
@@ -15803,35 +15803,48 @@ pinning an exact release).</p>
 </div>
 </div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Resource shrinking</p>
+<p>The SDK keeps every resource it needs when the build shrinks resources. If you set <code>shrinkResources false</code>
+for an older version of the plugin, you can remove it.</p>
+<p>The resources you name in your config, <code>app.notification.smallIcon</code>, <code>largeIcon</code> and <code>layout</code>, are up to
+your app. Your app names them only in a string, so the shrinker removes them, and the notification falls
+back to your app icon and the SDK's default layout. Keep them with a keep file of your own, such as
+<code>android/app/src/main/res/raw/keep_my_app.xml</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nt">&lt;resources</span><span class="w"> </span><span class="na">xmlns:tools=</span><span class="s">&quot;http://schemas.android.com/tools&quot;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="na">tools:keep=</span><span class="s">&quot;@drawable/my_notification_icon,@layout/my_notification_layout&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div>
+</div>
 <h3 id="androidmanifestxml"><code>AndroidManifest.xml</code><a class="headerlink" href="#androidmanifestxml" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">&lt;application&gt;</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="nt">&lt;meta-data</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">        </span><span class="na">android:name=</span><span class="s">&quot;com.transistorsoft.locationmanager.license&quot;</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">        </span><span class="na">android:value=</span><span class="s">&quot;YOUR_LICENSE_KEY_JWT&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="nt">&lt;/application&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nt">&lt;application&gt;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="nt">&lt;meta-data</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">        </span><span class="na">android:name=</span><span class="s">&quot;com.transistorsoft.locationmanager.license&quot;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">        </span><span class="na">android:value=</span><span class="s">&quot;YOUR_LICENSE_KEY_JWT&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="nt">&lt;/application&gt;</span>
 </code></pre></div>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">import</span><span class="w"> </span><span class="s1">&#39;package:flutter_background_geolocation/flutter_background_geolocation.dart&#39;</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">bg</span><span class="p">;</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="c1">// Use the &#39;bg&#39; namespace to avoid conflicts with Flutter&#39;s own Location/State types.</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">bg</span><span class="p">.</span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">bg</span><span class="p">.</span><span class="n">Config</span><span class="p">(</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">bg</span><span class="p">.</span><span class="n">GeoConfig</span><span class="p">(</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="nl">desiredAccuracy:</span><span class="w"> </span><span class="n">bg</span><span class="p">.</span><span class="n">DesiredAccuracy</span><span class="p">.</span><span class="n">high</span><span class="p">,</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">    </span><span class="nl">distanceFilter:</span><span class="w"> </span><span class="m">10.0</span><span class="p">,</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">  </span><span class="p">),</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">bg</span><span class="p">.</span><span class="n">AppConfig</span><span class="p">(</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span><span class="nl">stopOnTerminate:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">    </span><span class="nl">startOnBoot:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">  </span><span class="p">),</span>
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">  </span><span class="nl">logger:</span><span class="w"> </span><span class="n">bg</span><span class="p">.</span><span class="n">LoggerConfig</span><span class="p">(</span>
-<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">    </span><span class="nl">debug:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">    </span><span class="nl">logLevel:</span><span class="w"> </span><span class="n">bg</span><span class="p">.</span><span class="n">LogLevel</span><span class="p">.</span><span class="n">verbose</span><span class="p">,</span>
-<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">  </span><span class="p">),</span>
-<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="p">)).</span><span class="n">then</span><span class="p">((</span><span class="n">bg</span><span class="p">.</span><span class="n">State</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">state</span><span class="p">.</span><span class="n">enabled</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">    </span><span class="n">bg</span><span class="p">.</span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
-<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">import</span><span class="w"> </span><span class="s1">&#39;package:flutter_background_geolocation/flutter_background_geolocation.dart&#39;</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">bg</span><span class="p">;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="c1">// Use the &#39;bg&#39; namespace to avoid conflicts with Flutter&#39;s own Location/State types.</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="n">bg</span><span class="p">.</span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">bg</span><span class="p">.</span><span class="n">Config</span><span class="p">(</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">  </span><span class="nl">geolocation:</span><span class="w"> </span><span class="n">bg</span><span class="p">.</span><span class="n">GeoConfig</span><span class="p">(</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="nl">desiredAccuracy:</span><span class="w"> </span><span class="n">bg</span><span class="p">.</span><span class="n">DesiredAccuracy</span><span class="p">.</span><span class="n">high</span><span class="p">,</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="nl">distanceFilter:</span><span class="w"> </span><span class="m">10.0</span><span class="p">,</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">  </span><span class="p">),</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">  </span><span class="nl">app:</span><span class="w"> </span><span class="n">bg</span><span class="p">.</span><span class="n">AppConfig</span><span class="p">(</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">    </span><span class="nl">stopOnTerminate:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">    </span><span class="nl">startOnBoot:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">  </span><span class="p">),</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">  </span><span class="nl">logger:</span><span class="w"> </span><span class="n">bg</span><span class="p">.</span><span class="n">LoggerConfig</span><span class="p">(</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">    </span><span class="nl">debug:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">    </span><span class="nl">logLevel:</span><span class="w"> </span><span class="n">bg</span><span class="p">.</span><span class="n">LogLevel</span><span class="p">.</span><span class="n">verbose</span><span class="p">,</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">  </span><span class="p">),</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="p">)).</span><span class="n">then</span><span class="p">((</span><span class="n">bg</span><span class="p">.</span><span class="n">State</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">state</span><span class="p">.</span><span class="n">enabled</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">    </span><span class="n">bg</span><span class="p">.</span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="p">});</span>
 </code></pre></div>
 
 

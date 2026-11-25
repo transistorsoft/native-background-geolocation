@@ -15247,6 +15247,11 @@
 <p><code>Subscription</code> exposes a single <code>remove</code> method used to stop
 listening to an event and free associated resources. Always call <code>remove()</code>
 when a listener is no longer needed to prevent memory leaks.</p>
+<p><strong>Swift:</strong> the handle is a <code>BGGeo.EventSubscription</code>, and releasing it removes
+the listener. Keep it for as long as you want events, in a property of a
+long-lived object (<code>store(in:)</code> adds it to a <code>Set</code>), and call <code>cancel()</code> to
+remove the listener sooner. A subscription that is ignored, or held in a local
+variable, removes its listener as soon as it is released.</p>
 <h5 id="removing-an-event-listener">Removing an event-listener<a class="headerlink" href="#removing-an-event-listener" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Subscription</span><span class="w"> </span><span class="n">subscription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BackgroundGeolocation</span><span class="p">.</span><span class="n">onLocation</span><span class="p">((</span><span class="n">Location</span><span class="w"> </span><span class="n">location</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;[onLocation] </span><span class="si">${</span><span class="n">location</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>

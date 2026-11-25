@@ -15757,6 +15757,10 @@ name is visible to users under:</p>
 <li>Specify the resource <strong>type</strong> (<code>drawable</code> or <code>mipmap</code>) followed by the icon
   name in the format <code>type/icon_name</code>.</li>
 <li>Do not include the file extension (e.g. <code>.png</code>).</li>
+<li>If your release build shrinks resources (<code>isShrinkResources = true</code>), keep the
+  icon with a <code>tools:keep</code> rule in a keep file such as <code>res/raw/keep_my_app.xml</code>.
+  Your app names it only in a string, so otherwise the shrinker removes it and the
+  notification shows no large icon.</li>
 </ul>
 <p><strong>See also</strong>
 - <code>smallIcon</code></p>
@@ -15783,6 +15787,14 @@ name is visible to users under:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">layout?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 </code></pre></div>
 <p>Name of a custom Android Layout XML file for the foreground notification.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>If your release build shrinks resources (<code>isShrinkResources = true</code>), keep the
+  layout with a <code>tools:keep</code> rule in a keep file such as <code>res/raw/keep_my_app.xml</code>.
+  Your app names it only in a string, so otherwise the shrinker removes it and the
+  SDK falls back to its default layout.</li>
+</ul>
 <p><strong>See also</strong>
 - <a href="https://github.com/transistorsoft/react-native-background-geolocation/wiki/Android-Custom-Notification-Layout">Android Custom Notification Layout</a></p>
 <p><img alt="" src="https://dl.dropbox.com/s/whcb6q1gxxdk9t1/android-foreground-notification-transistor.png?dl=1" /></p>
@@ -15790,6 +15802,7 @@ name is visible to users under:</p>
 The SDK fills the special elements below by their fixed <code>android:id</code>. Your own
 elements may use any <code>android:id</code>: you reference it from <code>strings</code> or
 <code>actions</code>.</p>
+</div>
 <h5 id="layout-special-elements">Layout special elements<a class="headerlink" href="#layout-special-elements" title="Permanent link">&para;</a></h5>
 <p>When rendering a custom notification, the SDK searches for the following IDs and
 populates them from the associated data source:</p>
@@ -16038,6 +16051,10 @@ and the position/visibility of the small status-bar icon.</p>
 <li>Specify the resource <strong>type</strong> (<code>drawable</code> or <code>mipmap</code>) followed by the icon
   name in the format <code>type/icon_name</code>.</li>
 <li>Do not include the file extension (e.g. <code>.png</code>).</li>
+<li>If your release build shrinks resources (<code>isShrinkResources = true</code>), keep the
+  icon with a <code>tools:keep</code> rule in a keep file such as <code>res/raw/keep_my_app.xml</code>.
+  Your app names it only in a string, so otherwise the shrinker removes it and the
+  notification shows your app icon.</li>
 </ul>
 <p><strong>See also</strong>
 - <code>largeIcon</code></p>

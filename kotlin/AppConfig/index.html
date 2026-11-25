@@ -15750,11 +15750,20 @@ running. Where your code receives events in this state depends on the SDK:</p>
   custom work during the headless state (for example, posting a local
   notification).</li>
 </ul>
+<p>With R8 (<code>isMinifyEnabled</code>), an Android (Kotlin) app's class must survive minification, because the
+SDK loads it only by name. Versions after 4.7.8 keep a class named <code>BackgroundGeolocationHeadlessTask</code>
+for you. With 4.7.8 or earlier, or a class named otherwise through <code>AppConfig.headlessJobService</code>, keep
+it in your <code>proguard-rules.pro</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>-keep class com.example.app.BackgroundGeolocationHeadlessTask {
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    public &lt;init&gt;();
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    @org.greenrobot.eventbus.Subscribe &lt;methods&gt;;
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>}
+</code></pre></div>
 <p><strong>See also</strong>
 - <a href="https://github.com/transistorsoft/native-background-geolocation/wiki/Android-Headless-Mode">Android Headless Mode</a></p>
 </div>
 <h3 id="heartbeatinterval">heartbeatInterval<a class="headerlink" href="#heartbeatinterval" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">heartbeatInterval</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">heartbeatInterval</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span>
 </code></pre></div>
 <p>Rate in seconds at which <a href="../BGGeo/#onheartbeat">BGGeo.onHeartbeat</a> events
 fire while the app is in the background.</p>
@@ -15774,45 +15783,45 @@ least <code>60</code> to enable it. Values below <code>60</code> are not support
 <p><strong>See also</strong>
 - <a href="../BGGeo/#onheartbeat">BGGeo.onHeartbeat</a></p>
 </div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1">// Within a coroutine scope</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">ready</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">heartbeatInterval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">60.0</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">}</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">onHeartbeat</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[onHeartbeat] </span><span class="si">$</span><span class="n">event</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="c1">// Optionally request a new location during heartbeat.</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="n">kotlinx</span><span class="p">.</span><span class="na">coroutines</span><span class="p">.</span><span class="na">runBlocking</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="na">getCurrentPosition</span><span class="p">(</span><span class="n">samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">persist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[getCurrentPosition] </span><span class="si">$</span><span class="n">location</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1">// Within a coroutine scope</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">ready</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">heartbeatInterval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">60.0</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">}</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">onHeartbeat</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[onHeartbeat] </span><span class="si">$</span><span class="n">event</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="c1">// Optionally request a new location during heartbeat.</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="n">kotlinx</span><span class="p">.</span><span class="na">coroutines</span><span class="p">.</span><span class="na">runBlocking</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bgGeo</span><span class="p">.</span><span class="na">getCurrentPosition</span><span class="p">(</span><span class="n">samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">persist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[getCurrentPosition] </span><span class="si">$</span><span class="n">location</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="notification">notification<a class="headerlink" href="#notification" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">notification</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">notification</span>
 </code></pre></div>
 <p><span class="platform-badge platform-badge--android">Android only</span> Configures the persistent foreground-service notification required by
 Android.</p>
 <p><img alt="" src="https://dl.dropbox.com/s/acuhy5cu4p7uofr/android-foreground-service-default.png?dl=1" /></p>
 <p>See <a href="../NotificationConfig/">NotificationConfig</a> for detailed usage.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="c1">// Within a coroutine scope</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">ready</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="c1">// notification is configured via AndroidManifest.xml or at runtime</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="c1">// using the Android notification API directly</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c1">// Within a coroutine scope</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">ready</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="c1">// notification is configured via AndroidManifest.xml or at runtime</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="c1">// using the Android notification API directly</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="schedule">schedule<a class="headerlink" href="#schedule" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">schedule</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">schedule</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>Configures a cron-like automated schedule that tells the SDK when to
 <code>start</code> and
 <code>stop</code> tracking.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="s">&quot;DAY(s) START_TIME-END_TIME&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="s">&quot;DAY(s) START_TIME-END_TIME&quot;</span>
 </code></pre></div>
 <ul>
 <li>Times are in <strong>24h format</strong>.</li>
@@ -15820,74 +15829,74 @@ Android.</p>
 <li>Day values may be a single day (<code>"1"</code>), a comma-separated list (<code>"2,4,6"</code>),
   or a range (<code>"2-6"</code>).</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">// Within a coroutine scope</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">ready</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">schedule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">        </span><span class="s">&quot;1 17:30-21:00&quot;</span><span class="p">,</span><span class="w">     </span><span class="c1">// Sunday: 5:30pm-9pm</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">        </span><span class="s">&quot;2-6 09:00-17:00&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1">// Mon-Fri: 9am-5pm</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">        </span><span class="s">&quot;2,4,6 20:00-00:00&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Mon, Wed, Fri: 8pm-midnight</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">        </span><span class="s">&quot;7 10:00-19:00&quot;</span><span class="w">      </span><span class="c1">// Saturday: 10am-7pm</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="p">)</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="p">}</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
-<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="c1">// Start the Scheduler</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">startSchedule</span><span class="p">()</span>
-<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>
-<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="c1">// Listen for schedule state changes</span>
-<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">onSchedule</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">    </span><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[onSchedule] enabled? </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="na">state</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="p">}</span>
-<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>
-<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="c1">// Later (e.g., user logout)</span>
-<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">stopSchedule</span><span class="p">()</span>
-<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">stop</span><span class="p">()</span><span class="w">  </span><span class="c1">// if tracking is currently enabled</span>
-<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>
-<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="c1">// Modify schedule using config.edit</span>
-<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">config</span><span class="p">.</span><span class="na">edit</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">schedule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span>
-<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="w">        </span><span class="s">&quot;1-7 09:00-10:00&quot;</span><span class="p">,</span>
-<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="w">        </span><span class="s">&quot;1-7 11:00-12:00&quot;</span><span class="p">,</span>
-<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="w">        </span><span class="s">&quot;1-7 13:00-14:00&quot;</span><span class="p">,</span>
-<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="w">        </span><span class="s">&quot;1-7 15:00-16:00&quot;</span><span class="p">,</span>
-<a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a><span class="w">        </span><span class="s">&quot;1-7 17:00-18:00&quot;</span><span class="p">,</span>
-<a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="w">        </span><span class="s">&quot;2,4,6 19:00-22:00&quot;</span>
-<a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a><span class="w">    </span><span class="p">)</span>
-<a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">// Within a coroutine scope</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">ready</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">schedule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">        </span><span class="s">&quot;1 17:30-21:00&quot;</span><span class="p">,</span><span class="w">     </span><span class="c1">// Sunday: 5:30pm-9pm</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">        </span><span class="s">&quot;2-6 09:00-17:00&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1">// Mon-Fri: 9am-5pm</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">        </span><span class="s">&quot;2,4,6 20:00-00:00&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Mon, Wed, Fri: 8pm-midnight</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">        </span><span class="s">&quot;7 10:00-19:00&quot;</span><span class="w">      </span><span class="c1">// Saturday: 10am-7pm</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="p">}</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="c1">// Start the Scheduler</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">startSchedule</span><span class="p">()</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="c1">// Listen for schedule state changes</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">onSchedule</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">    </span><span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[onSchedule] enabled? </span><span class="si">${</span><span class="n">event</span><span class="p">.</span><span class="na">state</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="p">}</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="c1">// Later (e.g., user logout)</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">stopSchedule</span><span class="p">()</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">stop</span><span class="p">()</span><span class="w">  </span><span class="c1">// if tracking is currently enabled</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="c1">// Modify schedule using config.edit</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">config</span><span class="p">.</span><span class="na">edit</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">schedule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a><span class="w">        </span><span class="s">&quot;1-7 09:00-10:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a><span class="w">        </span><span class="s">&quot;1-7 11:00-12:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a><span class="w">        </span><span class="s">&quot;1-7 13:00-14:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a><span class="w">        </span><span class="s">&quot;1-7 15:00-16:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a><span class="w">        </span><span class="s">&quot;1-7 17:00-18:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a><span class="w">        </span><span class="s">&quot;2,4,6 19:00-22:00&quot;</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a><span class="p">}</span>
 </code></pre></div>
 <h5 id="literal-dates">Literal dates<a class="headerlink" href="#literal-dates" title="Permanent link">&para;</a></h5>
 <p>A schedule entry may use a literal date range:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&quot;yyyy-mm-dd HH:mm-HH:mm&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>&quot;yyyy-mm-dd HH:mm-HH:mm&quot;
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="c1">// Within a coroutine scope</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">ready</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">schedule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;2018-01-01 09:00-17:00&quot;</span><span class="p">)</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="c1">// Within a coroutine scope</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">ready</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">schedule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;2018-01-01 09:00-17:00&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">}</span>
 </code></pre></div>
 <p>Or specify distinct start <strong>and</strong> stop dates:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>&quot;yyyy-mm-dd-HH:mm yyyy-mm-dd-HH:mm&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>&quot;yyyy-mm-dd-HH:mm yyyy-mm-dd-HH:mm&quot;
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="c1">// Within a coroutine scope</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">ready</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">schedule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;2018-01-01-09:00 2019-01-01-17:00&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// track for 1 year</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="p">}</span>
-</code></pre></div>
-<h5 id="scheduling-modes">Scheduling modes<a class="headerlink" href="#scheduling-modes" title="Permanent link">&para;</a></h5>
-<p>Append <code>geofence</code> or <code>location</code> to explicitly choose a tracking mode.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="c1">// Within a coroutine scope</span>
 <a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">ready</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">schedule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span>
-<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">        </span><span class="s">&quot;1-7 09:00-17:00 location&quot;</span><span class="p">,</span>
-<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">        </span><span class="s">&quot;1-7 18:00-12:00 geofence&quot;</span>
-<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">    </span><span class="p">)</span>
-<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="p">}</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">schedule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;2018-01-01-09:00 2019-01-01-17:00&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// track for 1 year</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="p">}</span>
+</code></pre></div>
+<h5 id="scheduling-modes">Scheduling modes<a class="headerlink" href="#scheduling-modes" title="Permanent link">&para;</a></h5>
+<p>Append <code>geofence</code> or <code>location</code> to explicitly choose a tracking mode.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="c1">// Within a coroutine scope</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">ready</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">schedule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">        </span><span class="s">&quot;1-7 09:00-17:00 location&quot;</span><span class="p">,</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">        </span><span class="s">&quot;1-7 18:00-12:00 geofence&quot;</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="p">}</span>
 </code></pre></div>
 <h5 id="ios_1">iOS<a class="headerlink" href="#ios_1" title="Permanent link">&para;</a></h5>
 <ul>
@@ -15912,18 +15921,18 @@ Battery-whitelisted apps evaluate exactly, on-the-minute.</p>
 - <a href="../BGGeo/#startschedule">BGGeo.startSchedule</a>
 - <a href="../BGGeo/#stopschedule">BGGeo.stopSchedule</a></p>
 <h5 id="since-location-is-the-default-mode-it-may-be-omitted">Since <code>location</code> is the default mode, it may be omitted<a class="headerlink" href="#since-location-is-the-default-mode-it-may-be-omitted" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="c1">// Within a coroutine scope</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">ready</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">schedule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span>
-<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">        </span><span class="s">&quot;1-7 09:00-17:00 location&quot;</span><span class="p">,</span>
-<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">        </span><span class="s">&quot;1-7 18:00-12:00 geofence&quot;</span>
-<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">    </span><span class="p">)</span>
-<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="c1">// Within a coroutine scope</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">ready</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">schedule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">        </span><span class="s">&quot;1-7 09:00-17:00 location&quot;</span><span class="p">,</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">        </span><span class="s">&quot;1-7 18:00-12:00 geofence&quot;</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="scheduleusealarmmanager">scheduleUseAlarmManager<a class="headerlink" href="#scheduleusealarmmanager" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">scheduleUseAlarmManager</span><span class="p">:</span><span class="w"> </span><span class="kt">Boolean</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">scheduleUseAlarmManager</span><span class="p">:</span><span class="w"> </span><span class="kt">Boolean</span>
 </code></pre></div>
 <p><span class="platform-badge platform-badge--android">Android only</span> Forces the Android scheduler to use <code>AlarmManager</code> instead
 of its default <code>JobScheduler</code>. Defaults to <code>false</code>.</p>
@@ -15950,16 +15959,16 @@ boundary on an awake device.</p>
 permission: Google Play policy restricts it to alarm-clock and calendar
 apps.</p>
 </div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="c1">// Within a coroutine scope</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">ready</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">schedule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;1-7 09:00-17:00&quot;</span><span class="p">)</span>
-<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">scheduleUseAlarmManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">bgGeo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BGGeo</span><span class="p">.</span><span class="na">instance</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="c1">// Within a coroutine scope</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="n">bgGeo</span><span class="p">.</span><span class="na">ready</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">schedule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;1-7 09:00-17:00&quot;</span><span class="p">)</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="na">scheduleUseAlarmManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="startonboot">startOnBoot<a class="headerlink" href="#startonboot" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">startOnBoot</span><span class="p">:</span><span class="w"> </span><span class="kt">Boolean</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">startOnBoot</span><span class="p">:</span><span class="w"> </span><span class="kt">Boolean</span>
 </code></pre></div>
 <p>Controls whether tracking resumes automatically after the device reboots.
 Defaults to <code>false</code>.</p>
@@ -15978,7 +15987,7 @@ tracking resumes even before the JS/UI layer starts.</p>
 - <a href="./#enableheadless">AppConfig.enableHeadless</a>
 - <a href="./#stoponterminate">AppConfig.stopOnTerminate</a></p>
 <h3 id="stoponterminate">stopOnTerminate<a class="headerlink" href="#stoponterminate" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">stopOnTerminate</span><span class="p">:</span><span class="w"> </span><span class="kt">Boolean</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">stopOnTerminate</span><span class="p">:</span><span class="w"> </span><span class="kt">Boolean</span>
 </code></pre></div>
 <p>Controls whether tracking stops when the application is terminated by the
 user. Defaults to <code>true</code>.</p>
